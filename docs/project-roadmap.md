@@ -38,7 +38,7 @@ The phases are deliberately broad. Rules will change during playtesting, so this
 
 **Exit test:** We can describe what each role does during a typical five-minute portion of a game.
 
-**Status:** Next
+**Status:** Complete for the prototype draft
 
 ## Phase 3: Build the smallest playable prototype
 
@@ -133,12 +133,9 @@ For each phase:
 
 ## Current focus
 
-We are starting in **Phase 1**. The immediate task is to settle the project's basic targets:
+We are moving into **Phase 3: Build the smallest playable prototype**. The immediate task is to turn the Phase 2 operating procedure into a complete, infantry-only test packet:
 
-- The smallest number of players for a complete game.
-- The game master's responsibilities and decision authority.
-- How action time is estimated from terrain, weather, distance, and other factors.
-- How the game expands when additional commanders are added.
-- The intended length of an introductory session.
-- The experience the game should prioritize above all others.
-- The first small scenario to use for prototyping.
+- One town-scale map and two opposing infantry companies.
+- Commander role sheets and a game-master setup checklist.
+- The order form, timing aids, report format, and filtered map procedure.
+- One complete seven-day daytime-active/nighttime-frozen playtest.

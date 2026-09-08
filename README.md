@@ -39,6 +39,8 @@ The first prototype's commander and game master responsibilities are outlined in
 
 The initial scenario concept is documented in [`docs/game-design/05-first-prototype-scenario.md`](docs/game-design/05-first-prototype-scenario.md).
 
+The prototype operating procedure is documented in [`docs/game-design/06-prototype-operating-procedure.md`](docs/game-design/06-prototype-operating-procedure.md), with timing aids in [`docs/game-design/07-timing-and-action-aids.md`](docs/game-design/07-timing-and-action-aids.md) and draft control conditions in [`docs/game-design/08-control-and-victory-conditions.md`](docs/game-design/08-control-and-victory-conditions.md).
+
 See [`docs/project-roadmap.md`](docs/project-roadmap.md) for the project phases and the current design focus.
 
 ## Design principles
