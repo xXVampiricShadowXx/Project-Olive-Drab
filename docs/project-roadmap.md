@@ -42,7 +42,7 @@ The phases are deliberately broad. Rules will change during playtesting, so this
 
 ## Phase 3: Build the smallest playable prototype
 
-**Goal:** Make a deliberately tiny version that can be played asynchronously with maps, written orders, communication channels, and a game master.
+**Goal:** Make a deliberately tiny version that can be played in live, supervised sessions with maps, written orders, communication channels, and a game master.
 
 **Deliverables:**
 
@@ -60,7 +60,7 @@ The phases are deliberately broad. Rules will change during playtesting, so this
 - Basic movement and conflict rules
 - A simple method for estimating action time
 - Infantry-only forces for the first test
-- An asynchronous order and communication procedure
+- A live order and communication procedure
 - A short setup and rules document
 
 **Exit test:** People unfamiliar with the project can play a complete test session using only the prototype materials.
@@ -69,7 +69,7 @@ The phases are deliberately broad. Rules will change during playtesting, so this
 
 ## Phase 4: Run focused playtests
 
-**Goal:** Find out whether the core experience works across separate player sessions.
+**Goal:** Find out whether the core experience works during live, supervised sessions.
 
 **Deliverables:**
 

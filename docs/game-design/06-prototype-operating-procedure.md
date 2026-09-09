@@ -1,6 +1,6 @@
 # Prototype Operating Procedure
 
-This document is the game master's runbook for the first asynchronous campaign. It is written so a new group can understand what happens during an active day, what happens at night, and how a player can participate without being online continuously.
+This document is the game master's runbook for the first live, supervised campaign. It is written so a new group can understand what happens during an active day, what happens at night, and how the game handles a player who is temporarily unavailable.
 
 ## Campaign clock
 
@@ -85,9 +85,9 @@ Use plain confidence labels: **confirmed**, **reported**, or **suspected**. A su
 
 The game master issues a commander-map update when a friendly unit moves, a known condition changes, a report changes the side's usable information, or control of a location changes. Each update replaces the previous marker and cites the order or report that caused it.
 
-## Separate sessions and continuity
+## Shared session and continuity
 
-The campaign is asynchronous, but it has one authoritative operational record. The game master keeps:
+The campaign is simultaneous during each active window: all players begin the day together at 08:00, act during the same live period, and remain under the game master's active supervision. It still has one authoritative operational record. The game master keeps:
 
 - A master clock log with active/frozen boundaries.
 - An order register containing every order, status, timer, and result.
@@ -95,9 +95,31 @@ The campaign is asynchronous, but it has one authoritative operational record. T
 - A report register showing which side received each report and when.
 - A short decisions log for temporary rulings and unresolved questions.
 
-When a commander joins from a separate session, the game master sends a compact handoff containing the current time, friendly status, known reports, in-progress orders, pending decisions, and the next deadline. The commander confirms receipt before issuing a new order. The handoff does not include information that role has not earned.
+At 08:00, the game master gives each commander a compact private briefing containing the current time, friendly status, known reports, in-progress orders, pending decisions, and the next deadline. The commander confirms receipt before issuing a new order. The briefing does not include information that role has not earned.
+
+During the active window, the game master actively manages the session: acknowledging orders, tracking timers, resolving contacts, updating the master map, and sending reports as events occur. Players may take short breaks, but the game remains live and the game master continues to apply the rules and record events.
 
 If records conflict, the latest time-stamped master log and map snapshot take precedence. The game master announces the correction, preserves the earlier entry for auditability, and applies the same correction standard to both sides.
+
+## Temporary command and player absence
+
+The game is live during the active window, but a player may be unable to attend because of illness, an emergency, or another real-world obligation. The game master records the absence and appoints temporary command before that player's forces need a decision. The absent player does not receive retroactive knowledge when they return; they receive the normal handoff for their role.
+
+Use this succession order:
+
+1. A superior commander on the absent commander's side takes temporary command of the absent commander's forces.
+2. If no superior is available, a commander at the same level on the absent commander's side may take temporary command.
+3. If no superior or equivalent commander is available, a subordinate from the absent commander's own company is preferred.
+4. If no suitable player from that company is available or willing, the game master may temporarily promote another available player from the same side.
+5. If no player from that side can take the role, the game master controls the company using the same limited-information and decision standards that apply to a non-player company.
+
+Temporary command never crosses faction lines. The temporary commander receives the absent role's current orders, status, reports, and pending decisions, but not information that role has not earned. The game master records who assumed command, when the transfer began, and what authority was delegated.
+
+- A subordinate temporarily promoted to company commander controls the absent company for the duration of the appointment. When the appointment ends, they return to their original unit and retain only that unit's authority.
+- A commander at the same level who assumes the absent role controls both their original forces and the temporary forces until the appointment ends.
+- A superior commander does not micromanage the temporary company. They issue objectives, priorities, and broad instructions, while the company is handled under the same higher-level abstraction used for subordinate or non-player formations.
+
+When the original player returns, or another eligible commander formally assumes the role, the game master announces the transfer, updates the command record, and returns the temporary commander to their normal authority. Orders already accepted remain valid unless the newly recognized commander changes or cancels them through the normal order procedure.
 
 ## Fairness and continuity rules
 

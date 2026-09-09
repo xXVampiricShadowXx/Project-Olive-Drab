@@ -8,7 +8,7 @@ Project Olive Drab is a real-time, roleplaying wargame where commanders coordina
 
 ## What kind of game is this?
 
-- **Medium:** Human-moderated, asynchronous campaign using maps, written orders, and agreed communication methods.
+- **Medium:** Human-moderated, live campaign using maps, written orders, and agreed communication methods.
 - **Players:** Multiple players, divided among opposing factions and command roles.
 - **Time model:** Real time, with a clock driving pressure and coordination.
 - **Setting:** A fictionalized present-day conflict, initially focused on Europe.
@@ -51,7 +51,7 @@ These are working assumptions for the first complete prototype. They are deliber
 - **First map:** A small town and its surrounding terrain, rather than an entire country or theater.
 - **First scenario:** A small, fictionalized near-future U.S.-Russia crisis around a town, using asymmetric company forces without attempting to simulate real national militaries in detail.
 - **Prototype schedule:** A real-time week with daytime play active and nighttime play frozen. All players are assumed to share one local time zone.
-- **Prototype participation:** Players may act independently rather than remaining continuously present. Communication happens through agreed channels and procedures.
+- **Prototype participation:** Players act together during the active window under game-master supervision. Short breaks are allowed, and the absence procedure covers players who cannot attend.
 - **Prototype scenario duration:** One week on the scenario clock, with the town-control objective lasting until the seven-day clock expires.
 - **Primary experience:** Making real-time command decisions while accounting for terrain, weather, distance, logistics, uncertainty, and communication.
 - **Game master:** Resolves engagements and hidden information, controls scenario events, interprets unusual situations, moderates fair play, and keeps the game moving.

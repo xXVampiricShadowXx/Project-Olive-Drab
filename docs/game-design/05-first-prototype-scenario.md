@@ -35,7 +35,7 @@ The exact troop counts should remain abstract in the first test. We can use unit
 
 The scenario lasts for **one real-time week of play**, ending after seven days on the scenario clock. The commanders' shared operational objective is to secure the town and hold it until the clock runs out.
 
-For the prototype, daytime is active and nighttime is frozen. All players are assumed to use the same local time zone. Players may participate at different times during the active window; they do not need to remain continuously online. Orders and reports use predetermined communication methods, and the game master maintains the authoritative shared record.
+For the prototype, daytime is active and nighttime is frozen. All players are assumed to use the same local time zone. Players act together during the active window under the game master's supervision, with short breaks allowed. Orders and reports use predetermined communication methods, and the game master maintains the authoritative shared record.
 
 Suggested side objectives:
 
