@@ -40,7 +40,7 @@ This is the working outline for the rules. A section is not complete until it ha
 - [ ] Movement
 - [ ] Position and terrain
 - [ ] Supply and logistics
-- [ ] Combat
+- [x] Combat — prototype procedure in [Prototype Combat and Contested Actions](13-prototype-combat-and-contested-actions.md)
 - [ ] Morale and readiness
 - [ ] Reinforcements and replacements
 - [ ] Non-combat operations

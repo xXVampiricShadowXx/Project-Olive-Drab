@@ -13,8 +13,9 @@ This index is the smallest complete packet for the first live, supervised Olive 
 7. [Prototype operating procedure](06-prototype-operating-procedure.md) — clock, orders, reports, and continuity.
 8. [Timing and action aids](07-timing-and-action-aids.md) — routine movement and action times.
 9. [GM setup checklist](10-gm-setup-checklist.md) — prepare and start a session.
-10. [Commander role sheets](11-commander-role-sheets.md) — hand one private sheet to each commander.
-11. [Quick reference](../assets/quick-reference.md) — keep visible during play.
+10. [Prototype combat and contested actions](13-prototype-combat-and-contested-actions.md) — resolve contact without a full combat simulation.
+11. [Commander role sheets](11-commander-role-sheets.md) — hand one private sheet to each commander.
+12. [Quick reference](../assets/quick-reference.md) — keep visible during play.
 
 ## Required physical or shared materials
 
@@ -26,6 +27,7 @@ This index is the smallest complete packet for the first live, supervised Olive 
 - Printed or shared copies of the GM checklist, commander sheets, order form, timing aid, and report format.
 - One Discord server with a group channel for non-sensitive game communication, GM-visible role-based commander/superior/subordinate channels where needed, and a GM-visible path for any approved opposing-side contact.
 - A dice or other agreed simple resolution aid for GM adjudication.
+- A contact register with response deadlines and outcome records.
 
 ## Packet boundaries
 

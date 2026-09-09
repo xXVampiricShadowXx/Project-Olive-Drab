@@ -13,9 +13,11 @@ During the active window:
 1. Review your filtered map, status, and reports.
 2. Decide what matters and what remains uncertain.
 3. Submit one clear order per purpose.
-4. Use the timing aid for predictable, uncontested actions.
-5. Report observations and requests through the role-based chain and agreed game channel.
-6. Confirm the result or correction from the GM before changing the plan.
+4. Attach a standing behavior when you need the unit to act during a flexible-attention period; use the listed behaviors or submit an original behavior for GM approval.
+5. Use the timing aid for predictable, uncontested actions.
+6. Maintain your current force-status record and submit it when the GM requests an engagement snapshot.
+7. Report observations and requests through the role-based chain and agreed game channel.
+8. Confirm the result or correction from the GM before changing the plan.
 
 At 22:00, active timers freeze. At 08:00, the GM briefs you and resumes each order with its recorded remaining time. If you are absent, you receive only the normal role handoff when you return.
 
@@ -31,8 +33,14 @@ Purpose:
 Start condition:
 Route or formation:
 Limits (engage, halt, withdraw, or avoid):
+Behavior (optional):
 Commander:
 ```
+
+When attaching a behavior, include its trigger, action, limits, expiry or cancel
+condition, and what the unit does if you cannot be reached. The GM validates
+the trigger and outcome; a behavior is not an automatic override of hidden
+information or the authoritative log.
 
 ## Status card
 
@@ -48,6 +56,23 @@ Reported information:
 Suspected information:
 Pending decision:
 ```
+
+### Engagement status submission
+
+```text
+Unit:
+Position:
+Posture:
+Preparation:
+Readiness:
+Strength:
+Reserve/commitment:
+Active order or behavior:
+Known changes since last report:
+```
+
+Submit this status when requested. The GM checks it against the authoritative
+record; an unverified self-reported change is not automatically applied.
 
 ## Side A — NATO infantry company
 
