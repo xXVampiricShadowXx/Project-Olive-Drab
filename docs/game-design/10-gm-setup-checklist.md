@@ -30,6 +30,9 @@ Use this checklist before and during the first live, supervised prototype. The G
 - [ ] Choose the starting weather and visibility; write the choice in the master log.
 - [ ] Publish the primary objective and the three control states: controlled, contested, and uncontrolled.
 - [ ] Put the movement aid, routine action aid, order form, report format, and victory conditions where they can be used.
+- [ ] Put the prototype contact procedure, contact register, and response-window aid where they can be used.
+- [ ] Confirm that every player directly impacted by a combat or contested-action outcome can see the resolution roll; keep hidden information and unrevealed situation bands or modifiers under GM control.
+- [ ] Explain standing behaviors, approve any original behavior before acceptance, and require a trigger, action, limits, expiry/cancel condition, and unreachable fallback.
 
 ## 3. Open the authoritative records
 
@@ -63,7 +66,12 @@ Give each order, report, map update, and ruling a sequential ID. Record the sour
 - [ ] Start routine timers only after an order is accepted.
 - [ ] Let commanders resolve predictable, uncontested actions with the timing aid.
 - [ ] Stop a routine timer when contact, opposition, a blocked route, or uncertain control appears.
-- [ ] Adjudicate contested movement, combat, observation, and capture using the agreed simple resolution aid.
+- [ ] Validate any triggered behavior against its accepted trigger, limits, expiry, and fallback before executing it.
+- [ ] Create a contact record, send separate reports, and set a response-by time.
+- [ ] Request each commander's current force-status submission; verify it against the authoritative log and observed outcomes before changing the master state.
+- [ ] Adjudicate contested movement, combat, observation, and capture using the transparent prototype contact sequence.
+- [ ] Show the resolution roll to every directly impacted player without exposing hidden information or unrevealed GM assessments.
+- [ ] Record posture, preparation, commitment, result pair, and graduated consequences before updating the map.
 - [ ] Update the master map first, then send only the appropriate filtered update to each side.
 - [ ] Send reports when the relevant side could reasonably receive them, including confidence and possible staleness.
 - [ ] Give urgent requests a response-by time; if it expires, use the recorded standing instruction or fallback and log the decision.

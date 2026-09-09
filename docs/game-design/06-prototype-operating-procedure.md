@@ -16,12 +16,17 @@ The clock remains live during the active window, but player attention is flexibl
 
 Every action that can change the shared situation uses the same short lifecycle:
 
-1. **Draft:** The commander writes the order using the standard fields: unit, action, destination or target, purpose, start condition, and any limits.
+1. **Draft:** The commander writes the order using the standard fields: unit, action, destination or target, purpose, start condition, any limits, and an optional standing behavior.
 2. **Submitted:** The commander sends the order to the game master through the agreed channel. The submission time is recorded in the shared log.
 3. **Acknowledged:** The game master confirms that the order is legible, identifies the unit and intended action, and states whether anything is missing. Acknowledgment is not approval and does not reveal hidden information.
 4. **Accepted or returned:** A complete order is accepted for processing. An incomplete, impossible, or contradictory order is returned with one clear question; its timer does not start until the commander resubmits it.
-5. **In progress:** The game master records the start time, expected completion time, route or target, and any conditions that can interrupt it. The commander may clarify an order, but a changed objective is a new order.
+5. **In progress:** The game master records the start time, expected completion time, route or target, and any conditions that can interrupt it. An accepted behavior may execute during the order without a new notification, subject to GM trigger validation. The commander may clarify an order, but a changed objective is a new order.
 6. **Resolved:** The game master updates the master map, affected status, and any reports. The commander receives the information their side could know.
+
+If enemy contact, a contested route, or a threatened control location interrupts an
+order, use [Prototype Combat and Contested Actions](13-prototype-combat-and-contested-actions.md).
+The GM records the order as paused—contact rather than silently completing or
+rewriting it.
 
 Commanders should submit one purpose per order. Short, explicit orders are easier to acknowledge and less likely to be interpreted differently between sessions.
 
@@ -37,10 +42,63 @@ Purpose:
 Start condition:
 Route or formation:
 Limits (engage, halt, withdraw, or avoid):
+Behavior (optional):
 Commander:
 ```
 
 The game master may assign the next sequential order ID if a commander does not provide one.
+
+### Behaviors and standing orders
+
+A commander may attach one or more behaviors to an accepted movement or position
+order. A behavior lets a unit act during a flexible-attention period without
+requiring the commander to answer a notification immediately. It does not bypass
+the GM: the GM validates whether the stated trigger actually occurred, checks
+whether the behavior is still legal and in force, and resolves any contested
+outcome using the prototype combat procedure.
+
+Use this predetermined list for the first test:
+
+- **Continue:** complete the accepted route or position order unless a stated
+  limit is reached.
+- **Prepare:** on arrival, spend the stated preparation time and establish the
+  specified posture.
+- **Observe and report:** when the trigger occurs, observe the named sector or
+  route and send a report without committing the force.
+- **Hold:** when the trigger occurs, stop in the current sector and hold.
+- **Probe:** commit the stated limited portion to learn or pressure, preserving
+  the named reserve.
+- **Withdraw:** on the trigger, withdraw to the named sector by the stated
+  route.
+- **Engage:** on the trigger, enter contact and choose the stated posture or
+  commitment limit; this is not permission to resolve a fight without GM
+  adjudication.
+
+The commander may submit an original behavior, but the GM must approve it before
+the order is accepted and explain its execution in plain language. Every
+behavior, including a listed one, must specify:
+
+```text
+Trigger:
+Action:
+Limits:
+Expiry or cancel condition:
+If commander cannot be reached:
+```
+
+Triggers should name a sector, route, report condition, time, or observable
+unit condition. The GM may reject vague, impossible, contradictory, or
+unverifiable triggers. A behavior expires when its expiry condition occurs, its
+action completes, its parent order is replaced or canceled, or the unit enters
+an unresolved situation outside the approved action. The commander may cancel
+or replace a behavior through a new accepted order; a later order supersedes
+only the behavior it identifies.
+
+If a valid trigger occurs while the commander cannot be reached, the GM follows
+the behavior's recorded fallback. If no fallback is recorded, the GM uses the
+least-committal safe action consistent with the parent order, normally Hold or
+Continue, and records why. Silence never authorizes an unlisted attack or
+unlimited commitment. Behaviors do not resolve during the frozen window.
 
 ### Urgent decisions and response windows
 
@@ -75,9 +133,22 @@ During the active window, the game master:
 2. Acknowledges or returns each order promptly.
 3. Starts routine timers and resolves completed actions.
 4. Interrupts a timer when contact, a blocked route, or another contested condition occurs.
-5. Adjudicates contested movement, combat, captures, and unusual cases.
-6. Sends reports as soon as the relevant side could reasonably receive them.
-7. Updates the master map first, then produces filtered commander-map updates.
+5. Validates triggered behaviors, records their execution or expiry, and pauses them when contact requires adjudication.
+6. Adjudicates contested movement, combat, captures, and unusual cases using the transparent contact sequence.
+7. Sends reports as soon as the relevant side could reasonably receive them.
+8. Updates the master map first, then produces filtered commander-map updates.
+
+For contact, the GM also records the response deadline, each side's stated
+posture and commitment, the resolution band, the result pair, and the graduated
+consequences. A contact report must separate observation from inference and must
+not reveal the master map.
+
+Before an engagement is resolved, each commander submits their current force
+status for the involved unit: position, posture, preparation, readiness,
+strength, reserve/commitment, and any relevant order or behavior. The GM checks
+that submission against the authoritative order and status log, map, reports,
+and observed outcomes. A commander's unverified update is a claim to check, not
+an automatic change to the master state.
 
 At the end of an active window, the game master:
 

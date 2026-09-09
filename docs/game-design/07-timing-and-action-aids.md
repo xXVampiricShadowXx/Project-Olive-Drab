@@ -42,7 +42,7 @@ The game master chooses the smallest adjustment that describes the situation:
 - **Heavy rain or comparable weather:** add 15 minutes to movement and preparation.
 - **Night:** no action resolves because the prototype is frozen.
 - **Readiness or supply problem:** pause the routine timer and request a ruling; do not invent a numerical penalty.
-- **Enemy contact:** stop the timer and adjudicate the contact.
+- **Enemy contact:** stop the timer, create a contact record, and use the prototype contact procedure.
 
 Terrain and weather should be visible on the commander reference when they are known. Hidden conditions are communicated through reports or revealed by the game master when they affect an action.
 
@@ -71,5 +71,9 @@ Remaining at freeze:
 Interruptions or contact:
 Result:
 ```
+
+For a contact, also record the Contact ID, response-by time, paused order,
+posture, preparation, commitment, result pair, consequences, and next decision
+window. Use active time for response windows; pause them at 22:00.
 
 At the end of a frozen window, the game master resumes the recorded remaining time rather than recalculating from memory. If conditions changed overnight in a way that the prototype rules do not cover, record a temporary ruling before resuming and use it symmetrically.

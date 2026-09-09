@@ -58,6 +58,7 @@ The phases are deliberately broad. Rules will change during playtesting, so this
 - Commander role sheets
 - A quick-reference movement and routine-actions aid
 - Basic movement and conflict rules
+- A prototype combat and contested-action procedure with contact triggers, response windows, and graduated outcomes
 - A simple method for estimating action time
 - Infantry-only forces for the first test
 - A live order and communication procedure
@@ -141,4 +142,4 @@ We are in **Phase 3: Build the smallest playable prototype**. The immediate task
 - The order form, timing aids, report format, and filtered map procedure.
 - One complete seven-day daytime-active/nighttime-frozen playtest.
 
-The packet is intentionally documentation-first and live-supervised. The authoritative Brackenford town-map and terrain-sector specification is now drafted; before the first test, the group still needs to prepare its shared digital player-facing implementation and configure the Discord server with GM-visible role-based channels. The GM will handle any uncovered first-engagement situation through a recorded temporary ruling applied symmetrically, without pausing live play. The balanced asymmetric hidden starting zones and readiness conditions are part of the packet procedure, while exact calendar dates remain intentionally unspecified. The shared daily schedule remains 08:00–22:00 active and 22:00–08:00 frozen.
+The packet is intentionally documentation-first and live-supervised. The authoritative Brackenford town-map and terrain-sector specification and the prototype contact procedure are now drafted; before the first test, the group still needs to prepare its shared digital player-facing implementation and configure the Discord server with GM-visible role-based channels. The GM will handle any uncovered first-engagement situation through a recorded temporary ruling applied symmetrically, without pausing live play. The balanced asymmetric hidden starting zones and readiness conditions are part of the packet procedure, while exact calendar dates remain intentionally unspecified. The shared daily schedule remains 08:00–22:00 active and 22:00–08:00 frozen.
