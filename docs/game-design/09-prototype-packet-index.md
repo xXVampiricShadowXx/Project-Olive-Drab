@@ -54,3 +54,6 @@ For human-test preparation, use the [human playtest packet manifest](../playtest
 [readiness guide](../playtesting/human-playtest-readiness-guide.md),
 [communication rehearsal](../playtesting/human-communication-order-rehearsal.md),
 and [participant briefing](../playtesting/consent-safety-participant-briefing.md).
+The complete [pre-test tooling index](../playtesting/pre-test-tooling-index.md)
+adds snapshot preparation, the solo seven-day rehearsal, operational templates,
+external setup checks, onboarding, and post-test decision guidance.

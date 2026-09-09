@@ -1,7 +1,9 @@
 # Playtest Tag and Release Preparation
 
 This is a preparation guide only. Do not publish a release for the first human
-playtest unless the project owner explicitly requests it.
+playtest unless the project owner explicitly requests it. For the repository
+snapshot and go/no-go record, use the more detailed [stable prototype snapshot
+guide](stable-prototype-snapshot-guide.md).
 
 ## Before tagging
 

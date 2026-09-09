@@ -39,6 +39,12 @@ The first prototype's commander and game master responsibilities are outlined in
 
 The initial scenario concept is documented in [`docs/game-design/05-first-prototype-scenario.md`](docs/game-design/05-first-prototype-scenario.md).
 
+The repository-side pre-test materials are collected in the
+[`pre-test tooling index`](docs/playtesting/pre-test-tooling-index.md). They
+prepare a stable snapshot, solo GM rehearsal, operational templates, external
+setup checks, onboarding, and post-test issue/revision decisions without
+publishing a release or claiming a human test.
+
 The prototype operating procedure is documented in [`docs/game-design/06-prototype-operating-procedure.md`](docs/game-design/06-prototype-operating-procedure.md), with timing aids in [`docs/game-design/07-timing-and-action-aids.md`](docs/game-design/07-timing-and-action-aids.md) and draft control conditions in [`docs/game-design/08-control-and-victory-conditions.md`](docs/game-design/08-control-and-victory-conditions.md).
 
 See [`docs/project-roadmap.md`](docs/project-roadmap.md) for the project phases and the current design focus.
