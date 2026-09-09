@@ -116,7 +116,7 @@ Use a role-based chain of command for all game communication:
 - Players may contact opposing players only with permission from their superior and with the GM able to see or review the exchange.
 - Game-related communication must stay separate from personal chat so the GM can request, review, and preserve the operational record.
 
-The first test only requires agreed channels that follow this structure; it does not require a dedicated Discord implementation. A future Discord setup is an optional delivery method, not a prototype rule.
+The first test uses a Discord server with channels that follow this structure. Discord is the communication platform for orders, reports, notifications, and rulings; it does not replace the authoritative log or map. The shared digital map may use another tool, provided its access rules match the master-map and filtered-view rules.
 
 ## Game-master active-window workflow
 
@@ -176,7 +176,7 @@ The game master issues a commander-map update when a friendly unit moves, a know
 
 ## Shared session and continuity
 
-The campaign is simultaneous during each active window: the game clock and GM processing continue from 08:00 to 22:00, while players may participate asynchronously through brief check-ins or longer periods of attention. It still has one authoritative operational record. The game master keeps:
+The campaign is operationally simultaneous during each active window: the game clock and GM processing continue from 08:00 to 22:00, while player participation may be asynchronous through brief check-ins or longer periods of attention. Accepted orders and GM-validated standing behaviors continue under their recorded limits without waiting for everyone to be online. It still has one authoritative operational record. The game master keeps:
 
 - A master clock log with active/frozen boundaries.
 - An order register containing every order, status, timer, and result.

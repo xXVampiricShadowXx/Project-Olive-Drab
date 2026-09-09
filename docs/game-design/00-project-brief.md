@@ -61,21 +61,30 @@ These are working assumptions for the first complete prototype. They are deliber
 
 These targets are provisional. They should be revisited after the first few playtests rather than treated as promises.
 
-## Open questions
+## Resolved prototype decisions
 
-These are design questions, not problems to solve all at once:
+The first prototype packet resolves the initial implementation questions:
 
-- How should the game master estimate time for actions such as movement, attacks, and occupying terrain?
-- Which calculations should be handled by players, and which should be handled by the game master?
-- Which decisions belong to commanders, and which are resolved by the game master?
-- How many players can the smallest complete game support beyond the minimum of three?
-- What is the shortest satisfying session?
-- How is real time measured and paused for rules questions?
-- What information is public, private, delayed, or uncertain?
-- How should separate commander map views be presented and updated during play?
-- How should the active daytime window and frozen nighttime window be defined?
-- How should players submit orders when they are not continuously online?
-- How should a game master maintain continuity across separate player sessions?
-- How should intelligence and counter-intelligence interact with fog of war in later versions?
-- How are victory and non-military success measured?
-- What level of abstraction is appropriate for units, geography, and logistics?
+- The GM uses the timing aid for movement and routine actions, while the GM
+  adjudicates contact, combat, and unusual situations.
+- Commanders submit orders through the role-based Discord channels; the GM
+  acknowledges, accepts, tracks, and records them.
+- The GM maintains the authoritative master map and filtered commander views.
+- The active window is 08:00–22:00, the nighttime window is frozen, and the
+  shared clock uses one local time zone.
+- Player attention may be intermittent. Accepted orders and GM-validated
+  standing behaviors continue under their recorded limits, with response
+  windows, fallbacks, and temporary command covering longer absences.
+
+## Remaining questions
+
+These questions remain for later playtests or expansion:
+
+- How many players can the smallest complete game support beyond the minimum of
+  three, and what is the shortest satisfying session?
+- How should intelligence and counter-intelligence interact with fog of war in
+  later versions?
+- How are victory and non-military success measured beyond the first town-control
+  objective?
+- What level of abstraction is appropriate for units, geography, and logistics
+  as the game expands?

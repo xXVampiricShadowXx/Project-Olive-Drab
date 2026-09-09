@@ -53,4 +53,8 @@ See [`docs/project-roadmap.md`](docs/project-roadmap.md) for the project phases 
 
 ## Project status
 
-This project is in **Phase 3: building the smallest playable prototype**. The packet is still provisional and is intended for live, supervised testing; ideas should be recorded, tested, and revised openly.
+Phase 3 documentation is complete: the smallest playable prototype packet is
+assembled for live, supervised testing. Phase 4 AI rules-testing preparation is
+also complete; the communication/order dry run and first focused playtest are
+still pending. The packet remains provisional, and playtest findings should be
+recorded, tested, and revised openly.
