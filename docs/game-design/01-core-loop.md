@@ -25,8 +25,8 @@ Keep the first prototype small enough to answer these questions:
 - Do terrain and weather meaningfully change the time and risk of an action?
 - Can commanders resolve routine actions themselves with a reference card or table?
 - Does each commander receive enough information to make decisions without accidentally seeing the master map?
-- Can players participate in separate sessions without losing the shared operational picture?
-- Does freezing the game overnight preserve tension while allowing players to disengage?
+- Can all players act together during the active window without the game master becoming overwhelmed?
+- Does freezing the game overnight preserve tension while allowing the group to pause between live sessions?
 
 ## Boundaries for version 0.1
 
@@ -36,7 +36,7 @@ The first rules test should use:
 - Two opposing sides.
 - One commander per side.
 - One game master.
-- A small number of company- or battalion-sized units.
+- A small number of company-sized units.
 - A short scenario with a clear beginning and end.
 - Simple resolution methods, using components already available at home.
 - A quick-reference aid for movement and other routine actions.
