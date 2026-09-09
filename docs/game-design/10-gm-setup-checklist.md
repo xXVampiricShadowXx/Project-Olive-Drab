@@ -10,7 +10,7 @@ Use this checklist before and during the first live, supervised prototype. The G
 - [ ] Confirm one group channel for non-sensitive game communication and public updates.
 - [ ] Confirm the role-based chain: players communicate through available superiors and subordinates; the GM can review all game communication.
 - [ ] Confirm that opposing-player contact requires superior permission and GM visibility.
-- [ ] Confirm game communication is separate from personal chat; a dedicated Discord implementation is not required for this test.
+- [ ] Confirm the selected Discord server is used for game communication and is separate from personal chat; the shared map may use another tool.
 - [ ] Explain that the 08:00–22:00 clock remains live while player attention may be brief or extended.
 - [ ] Define how urgent decisions receive response-by times, notifications, and recorded fallback handling.
 - [ ] Confirm that full-day-or-longer unavailability uses the separate temporary-command and succession procedure.

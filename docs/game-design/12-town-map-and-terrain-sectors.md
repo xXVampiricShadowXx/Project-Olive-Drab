@@ -60,9 +60,10 @@ information boundaries, and reporting clarity while allowing finer positions.
         |    Track     |    (road)   |    Quarter   |    Quarter   |    Blocks    |    Blocks    |
         |    (road)    |    (road)    |    (built)   |    (built)   |    (built)   |    (built)   |
         +--------------+--------------+--------------+--------------+--------------+--------------+
-  5     | A5 South    | B5 South    | C5 River     | D5 River     | E5 South     | F5 South     |
-        |    Woods     |    Fields   |    Crossing  |    Crossing  |    Fields     |    Road      |
-        |    (woods)   |    (open)    |    (difficult)|   (difficult)|   (open)    |    (road)   |
+                 Bluewater River: boundary between rows 4 and 5
+  5     | A5 South    | B5 South    | C5 South     | D5 South     | E5 South     | F5 South    |
+        |    Woods     |    Fields   |    Bank       |    Bank       |    Fields     |    Road      |
+        |    (woods)   |    (open)    |    (open)     |    (open)     |   (open)    |    (road)   |
         +--------------+--------------+--------------+--------------+--------------+--------------+
                          SOUTH: River Road (S)
 ```
@@ -138,7 +139,7 @@ consistently:
 | Road | C2, A4, B4, F5 | 30 min | Known route; road movement does not remove opposition or observation risk |
 | Broken | C1, D1, B3 | 45 min | Orchards, quarry margins, and scattered obstacles limit observation |
 | Built | D2, C3, D3, E3, F3, C4, D4, E4, F4 | 60 min | Dense town movement; observation is sector-limited unless the GM rules otherwise |
-| Difficult crossing | C5, D5 | 60 min | River crossing; use the difficult-crossing guidance and adjudicate opposition |
+| Difficult crossing route | C4–C5, D4–D5 | 60 min | Bluewater River crossings; use the difficult-crossing guidance and adjudicate opposition |
 | Woods | A1, A5 | 45 min | Concealment is stronger; observation across or through the sector is limited |
 
 If a future redraw gives a sector more than one terrain label, the more restrictive
@@ -154,7 +155,7 @@ free route to the objective:
 |---|---|---|---|
 | Pine Road (N) | A1, F1 | Woods at the west end, open fields at the east end | Concealment versus long observation |
 | East Road (E) | F2, F3, F4 | Open approach into built streets | Fast access but easy to observe |
-| River Road (S) | A5, F5 | Woods and fields with a central crossing | Broad frontage, but the crossing is slow and vulnerable |
+| River Road (S) | A5, F5 | Woods and fields with Bluewater River crossings at the row 4/5 boundary | Broad frontage, but the crossings are slow and vulnerable |
 | West Approach (W) | A2, A3, A4 | Open edge feeding the mill and orchard | Several routes, but little concealment before town |
 
 The named roads and approaches are reference features for orders and reports. They

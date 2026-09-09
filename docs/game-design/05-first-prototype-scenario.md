@@ -53,7 +53,7 @@ Suggested side objectives:
 
 The first test should define control clearly: a side controls the town when its forces occupy the required locations and the opposing side cannot contest them under the scenario rules. If neither side holds the town when the clock expires, the result is unresolved rather than an automatic victory.
 
-The prototype uses an agreed daytime window of 08:00–22:00 and a nighttime freeze from 22:00–08:00. It also needs an order format, role-based communication chain, and procedure for resuming play each morning. Exact calendar dates are intentionally unspecified. A future always-on version may support game-master-approved orders that execute automatically while players are offline, but that system is outside the first test.
+The prototype uses an agreed daytime window of 08:00–22:00 and a nighttime freeze from 22:00–08:00. It also needs an order format, role-based communication chain, and procedure for resuming play each morning. Exact calendar dates are intentionally unspecified. A future always-on version may extend the current GM-validated standing behaviors and fallback procedures for longer periods of player absence, but it must not bypass GM validation or turn silence into an unbounded order; that system is outside the first test.
 
 For the first contact or combat situation not covered by the packet, the GM makes a temporary ruling using the stated fairness principles, records the ruling, and applies it symmetrically to equivalent situations. The live game does not pause for a permanent rules decision; the ruling is reviewed after the scenario.
 
