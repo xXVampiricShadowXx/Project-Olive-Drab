@@ -17,6 +17,7 @@ Use this checklist before and during the first live, supervised prototype. The G
 - [ ] Explain that the game is fictional, infantry-only, and about decisions rather than real-world claims.
 - [ ] Complete the five-minute commander identity prompts and confirm each player's roleplay boundaries from the [prototype roleplay layer](14-prototype-roleplay-layer.md).
 - [ ] Explain the table safety rule: any participant may pause for a real-world safety concern; the GM records the pause and resumes only when everyone agrees.
+- [ ] Explain the real-life priority rule: real life always takes precedence. At the GM's discretion, consulting players where practical, the GM may pause, suspend, place the game on hiatus, otherwise adjust play, or end a session. The GM records and preserves the game state and resumes only when appropriate.
 
 ## 2. Prepare the table
 
