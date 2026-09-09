@@ -21,3 +21,11 @@ For each idea, include:
 - **Risk:** Delays may feel arbitrary or create too much bookkeeping.
 - **Test:** Use three simple delay cards in a one-hour scenario.
 - **Status:** Open.
+
+### Real-time combat engagements
+
+- **Idea:** Combat should unfold over elapsed game time rather than resolve instantly. Commanders should receive evolving reports and opportunities to make decisions during an engagement that can influence or change its outcome.
+- **Purpose:** Make combat another command problem, preserving the live pressure and meaningful intervention that define the core experience.
+- **Risk:** Engagements may become too slow, demanding, or difficult for the GM to track alongside other active orders.
+- **Test:** Run a focused engagement with staged reports and decision windows, then compare clarity, agency, and GM workload against an immediate-resolution baseline.
+- **Status:** Accepted as a future combat-system requirement; not implemented in the Phase 3 prototype packet.

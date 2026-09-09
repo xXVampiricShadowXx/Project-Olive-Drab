@@ -49,7 +49,7 @@ These are working assumptions for the first complete prototype. They are deliber
 - **Additional players:** New commanders can be added as the scenario's scale and command structure expand. There is no fixed theoretical maximum; the practical limit is how many players the game master can support clearly.
 - **First command level:** One infantry company commander per side, representing roughly 100–200 troops.
 - **First map:** A small town and its surrounding terrain, rather than an entire country or theater.
-- **First scenario:** A small, fictionalized near-future U.S.-Russia crisis around a town, using asymmetric company forces without attempting to simulate real national militaries in detail.
+- **First scenario:** A small, fictionalized near-future NATO-Russia crisis around a town, using asymmetric company forces without attempting to simulate real national militaries in detail.
 - **Prototype schedule:** A real-time week with daytime play active and nighttime play frozen. All players are assumed to share one local time zone.
 - **Prototype participation:** Players act together during the active window under game-master supervision. Short breaks are allowed, and the absence procedure covers players who cannot attend.
 - **Prototype scenario duration:** One week on the scenario clock, with the town-control objective lasting until the seven-day clock expires.

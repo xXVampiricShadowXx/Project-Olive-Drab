@@ -35,7 +35,7 @@ The repository is organized around game design rather than software development:
 
 Start with [`docs/game-design/00-project-brief.md`](docs/game-design/00-project-brief.md), then use [`docs/game-design/01-core-loop.md`](docs/game-design/01-core-loop.md) to define what players actually do during play.
 
-The first prototype's commander and game master responsibilities are outlined in [`docs/game-design/04-game-master-and-player-roles.md`](docs/game-design/04-game-master-and-player-roles.md).
+The first prototype's commander and game master responsibilities are outlined in [`docs/game-design/04-game-master-and-player-roles.md`](docs/game-design/04-game-master-and-player-roles.md). The assembled live-test materials are indexed in [`docs/game-design/09-prototype-packet-index.md`](docs/game-design/09-prototype-packet-index.md), with a [`GM setup checklist`](docs/game-design/10-gm-setup-checklist.md) and [`commander role sheets`](docs/game-design/11-commander-role-sheets.md).
 
 The initial scenario concept is documented in [`docs/game-design/05-first-prototype-scenario.md`](docs/game-design/05-first-prototype-scenario.md).
 
@@ -53,4 +53,4 @@ See [`docs/project-roadmap.md`](docs/project-roadmap.md) for the project phases 
 
 ## Project status
 
-This project is in the **concept and rules-foundation phase**. Nothing is considered final yet. Ideas should be recorded, tested, and revised openly.
+This project is in **Phase 3: building the smallest playable prototype**. The packet is still provisional and is intended for live, supervised testing; ideas should be recorded, tested, and revised openly.
