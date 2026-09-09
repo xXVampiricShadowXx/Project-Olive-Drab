@@ -63,6 +63,11 @@ messages are never an order, report, ruling, map update, or notification.
 - [ ] Prepare sequential order, report, contact, map, ruling, and event IDs.
 - [ ] Prepare the observer ledger, master clock log, order/report registers,
   decision log, and dated map snapshots.
+- [ ] Read the [GM-only records and data handling
+  guide](gm-private-records-and-data-handling.md); record the access-controlled
+  working location, separate backup, redaction check, restore check, and
+  retention/deletion date without putting those links or details in the
+  repository.
 - [ ] Complete the public and private briefing templates, including map links,
   weather, visibility, starting zones, approved placement, and first deadline.
 - [ ] Publish the objective and control rule before accepting the first order.
@@ -96,6 +101,10 @@ real operational, political, or personal information.
   across factions or grant unearned information.
 - [ ] Preserve the state during a pause or hiatus. Restart only after the GM
   confirms the participants and records the restart time.
+- [ ] Before a pause, hiatus, or overnight freeze, save a labelled snapshot.
+  On restart, verify the snapshot ID, active timers, pending deadlines, and
+  information boundaries before resuming. If the session ends, record closure
+  and apply the agreed retention/deletion date.
 
 ## Final go/no-go
 

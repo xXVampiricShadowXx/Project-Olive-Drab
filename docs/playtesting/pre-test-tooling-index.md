@@ -12,9 +12,10 @@ adding mechanics. The scenario remains fictional, infantry-only, seven days,
 3. [Participant onboarding packet](participant-onboarding-packet.md)
 4. [Solo GM seven-day rehearsal](solo-gm-seven-day-rehearsal.md)
 5. [Operational templates](operational-templates.md)
-6. [Filled fictional example packet](filled-fictional-example-packet.md)
-7. [Feedback, issue, and revision framework](feedback-issue-revision-framework.md)
-8. [First-test scope and post-test decision framework](first-human-test-scope-and-decision-framework.md)
+6. [GM-only records and data handling](gm-private-records-and-data-handling.md)
+7. [Filled fictional example packet](filled-fictional-example-packet.md)
+8. [Feedback, issue, and revision framework](feedback-issue-revision-framework.md)
+9. [First-test scope and post-test decision framework](first-human-test-scope-and-decision-framework.md)
 
 These documents complement, and do not replace, the [prototype packet
 index](../game-design/09-prototype-packet-index.md), [readiness
@@ -32,3 +33,8 @@ test occurred until real participants complete it.
 
 Real-life priority, consent, privacy, the right to pause or withdraw, and the
 fictional framing apply to every rehearsal and test.
+
+Newcomers should start with the [participant onboarding
+packet](participant-onboarding-packet.md), then use the [human playtest
+readiness guide](human-playtest-readiness-guide.md). The GM should read the
+private-records guide before creating any working files or channels.

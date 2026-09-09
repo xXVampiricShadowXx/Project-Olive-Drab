@@ -39,6 +39,7 @@ Read and use these files at the recorded commit:
 | Quick reference | [Quick reference](../assets/quick-reference.md) | Live reference aid |
 | Observer record | [Observer event ledger](observer-event-ledger-template.md) | Append-only event and closeout record |
 | Report | [Playtest report template](playtest-report-template.md) | Rules and human-specific results |
+| Private records | [GM-only records and data handling](gm-private-records-and-data-handling.md) | Access, redaction, backup, and retention boundaries |
 
 The [Phase 4 AI packet](phase-4-ai-rules-operations-playtest.md) and its
 dry-run report are validation context only. They do not replace a human
@@ -70,6 +71,10 @@ Before the final go/no-go, the GM and participants must complete the
 - the scenario briefing, consent/safety briefing, and communication rehearsal;
 - an observer, authoritative registers, backup location, and pause/hiatus
   procedure.
+
+The GM must also establish the private working-record location, backup, and
+retention period before the first order. This is a repository guide, not proof
+that any account, channel, map, backup, or participant arrangement exists.
 
 Completion of these items must be recorded by the GM. This manifest does not
 claim that any external setup or player action has happened.
