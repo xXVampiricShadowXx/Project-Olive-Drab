@@ -15,7 +15,7 @@ Use this checklist before and during the first live, supervised prototype. The G
 - [ ] Define how urgent decisions receive response-by times, notifications, and recorded fallback handling.
 - [ ] Confirm that full-day-or-longer unavailability uses the separate temporary-command and succession procedure.
 - [ ] Explain that the game is fictional, infantry-only, and about decisions rather than real-world claims.
-- [ ] Explain the table safety rule: any participant may pause for a real-world safety concern; the GM records the pause and resumes only when everyone agrees.
+- [ ] Explain the real-life priority rule: real life always takes precedence over the game. Health, safety, work, family, emergencies, rest, and personal obligations may pause, suspend, place the game on hiatus, or end a session without penalty. The GM records the pause or hiatus, preserves the game state, and resumes only when participants are ready.
 
 ## 2. Prepare the table
 

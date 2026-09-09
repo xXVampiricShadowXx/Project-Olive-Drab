@@ -23,6 +23,10 @@ not create an operational result or reveal hidden information.
   resumes at 08:00. Expiry uses the last accepted limits and fallback.
 - Contact reports separate observation from inference and use confirmed,
   reported, or suspected confidence labels.
+- Real life always takes precedence over the game. Health, safety, work, family,
+  emergencies, rest, and personal obligations may pause, suspend, place the game
+  on hiatus, or end a session without penalty. The GM records the pause or
+  hiatus, preserves the game state, and resumes only when participants are ready.
 
 ## GM completion fields
 
@@ -116,6 +120,16 @@ GM-only conditions.
 - [ ] GM resumes the recorded remaining time at 08:00 without recalculating it.
 - [ ] GM demonstrates the morning private briefing and commander receipt
       confirmation.
+
+### 7. Real-life pause and hiatus test
+
+- [ ] GM announces the real-life priority rule and the agreed pause/hiatus signal.
+- [ ] A participant may use the signal for health, safety, work, family,
+      emergency, rest, or another personal obligation without penalty.
+- [ ] GM records the pause or hiatus, preserves the current game state, and
+      stops affected timers and response windows.
+- [ ] GM confirms that play resumes only when participants are ready and records
+      the restart time and any handoff.
 
 ## Dry-run sign-off
 

@@ -9,6 +9,11 @@ both commanders.
 
 - [ ] The scenario is seven scenario days with no exact calendar date required.
 - [ ] The shared clock is 08:00–22:00 active and 22:00–08:00 frozen.
+- [ ] Everyone understands that real life always takes precedence over the game:
+      health, safety, work, family, emergencies, rest, and personal obligations
+      may pause, suspend, place the game on hiatus, or end a session without
+      penalty. The GM records the pause or hiatus, preserves the game state, and
+      resumes only when participants are ready.
 - [ ] Flexible player attention is supported; accepted orders continue during
       brief absences, subject to response windows and fallbacks.
 - [ ] The sides are one NATO infantry company and one Russian infantry company,
@@ -42,7 +47,7 @@ Report register/link:
 Contact register/link:
 Decision/ruling log/link:
 Backup location:
-Safety pause/resume procedure:
+Real-life pause/hiatus procedure:
 ```
 
 ## Blocking readiness checks
@@ -51,7 +56,8 @@ Safety pause/resume procedure:
 
 - [ ] Both commanders understand their authority and information limits.
 - [ ] The GM has a temporary-command contact for each side.
-- [ ] The GM has explained the safety pause and resume procedure.
+- [ ] The GM has explained the real-life priority rule, pause/hiatus recording,
+      game-state preservation, and readiness-based resumption procedure.
 - [ ] Both commanders have received and acknowledged their private briefing.
 
 ### Map and hidden information
