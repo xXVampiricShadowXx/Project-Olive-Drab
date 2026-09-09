@@ -157,7 +157,8 @@ claim about enjoyment, social dynamics, or whether decisions felt meaningful.
 
 | Change | Reason | Priority |
 |--------|--------|----------|
-| Add a compact observer event schema or blank event ledger to the playtest materials. | The run required a manually enforced record shape even though the packet specifies fields. | Medium |
+| Use the new [observer event ledger template](observer-event-ledger-template.md) for the next run. | The dry run required a manually enforced record shape; the reusable schema now standardizes rows and closeout counts. | Medium |
+| Select and name primary and backup same-side succession contacts before the human test. | The dry run used a simulated same-level handoff; concrete contacts and a handoff path must be prepared in advance. | High |
 | Validate Discord permissions, notification delivery, and real human absence handoff in the human preflight. | The temporary channel simulation intentionally did not test integration or delivery. | High |
 
 No Phase 3 rule was changed during the sequence. No minimal documentation fix
@@ -183,9 +184,8 @@ the final GM preflight.
 
 ## Open decisions
 
-- Choose and standardize the observer event-ledger format before the human
-  test.
-- Decide whether the human test will use the same temporary-command contact
-  arrangement or name a concrete superior/subordinate for each side.
-- Complete actual Discord channel and notification validation; this dry run
-  intentionally did not claim that result.
+- Fill the ledger header and event rows for the human test.
+- Name and confirm the primary and backup same-side succession contacts for
+  each faction using the packet's selection order.
+- Complete actual Discord channel and notification validation; this remains a
+  human preflight requirement and was not claimed by this dry run.

@@ -54,6 +54,36 @@ calendar dates in the scenario clock; use scenario day and time.
 Run each role from a separate prompt or document context. Do not give one role
 another role's private state.
 
+Before the human test, the GM must name a concrete same-side succession contact
+for each commander. Select in the published order: available superior, then
+available same-level commander, then a willing subordinate from that company,
+then another available same-side player temporarily promoted by the GM, and
+finally the GM as a last resort. A contact is eligible only if they can receive
+the absent role's current orders, status, earned reports, and pending decisions
+without receiving the opposing side's private information.
+
+Record the contact in the preflight and notify them before the first order:
+
+```text
+Side:
+Primary commander:
+Primary succession contact and role:
+Backup succession contact and role:
+Selection tier (superior / same-level / subordinate / GM):
+Contact channel or delivery path:
+Authority begins:
+Authority ends or return trigger:
+Handoff packet location:
+GM confirmation that opposing private information is excluded:
+```
+
+The primary and backup must be on the same faction. Do not use an opposing
+commander as a succession contact. If no player is available, record the GM as
+the fallback before play rather than discovering the gap during an urgent
+window. This setup requirement does not test whether the channel delivers a
+message; actual permissions and notification delivery remain human preflight
+checks.
+
 ### GM role
 
 The GM is the neutral authority and sole owner of the master state.
@@ -184,6 +214,9 @@ checkpoint `pass`, `fail`, or `blocked`, with evidence.
 | Observer audit | Can an independent observer reconstruct what happened? | Event IDs, timestamps, and links are complete |
 
 ## Event and order transcript format
+
+Use the [observer event ledger template](observer-event-ledger-template.md)
+for a canonical blank ledger and closeout counts.
 
 Use one append-only transcript. Never overwrite an entry; correct mistakes with
 a linked correction.

@@ -55,6 +55,10 @@ Real-life pause/hiatus procedure:
 
 - [ ] Both commanders understand their authority and information limits.
 - [ ] The GM has a temporary-command contact for each side.
+- [ ] For each side, the GM has named a primary and backup same-side
+      succession contact, recorded the selection tier and handoff path, and
+      confirmed that each contact will receive only the absent role's earned
+      information.
 - [ ] The GM has explained the real-life priority rule, GM discretion,
       pause/hiatus recording, game-state preservation, and appropriate resumption
       procedure.
