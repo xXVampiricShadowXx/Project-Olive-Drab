@@ -49,3 +49,8 @@ The group must prepare the shared digital map from the authoritative ASCII speci
 
 Complete the briefing template, run the communication and order dry run, and pass
 the final GM preflight before accepting the first operational order.
+
+For human-test preparation, use the [human playtest packet manifest](../playtesting/human-playtest-packet-manifest.md),
+[readiness guide](../playtesting/human-playtest-readiness-guide.md),
+[communication rehearsal](../playtesting/human-communication-order-rehearsal.md),
+and [participant briefing](../playtesting/consent-safety-participant-briefing.md).
