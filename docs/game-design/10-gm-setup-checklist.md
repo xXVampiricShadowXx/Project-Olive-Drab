@@ -15,6 +15,7 @@ Use this checklist before and during the first live, supervised prototype. The G
 - [ ] Define how urgent decisions receive response-by times, notifications, and recorded fallback handling.
 - [ ] Confirm that full-day-or-longer unavailability uses the separate temporary-command and succession procedure.
 - [ ] Explain that the game is fictional, infantry-only, and about decisions rather than real-world claims.
+- [ ] Complete the five-minute commander identity prompts and confirm each player's roleplay boundaries from the [prototype roleplay layer](14-prototype-roleplay-layer.md).
 - [ ] Explain the table safety rule: any participant may pause for a real-world safety concern; the GM records the pause and resumes only when everyone agrees.
 
 ## 2. Prepare the table

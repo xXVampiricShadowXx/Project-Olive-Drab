@@ -15,7 +15,8 @@ This index is the smallest complete packet for the first live, supervised Olive 
 9. [GM setup checklist](10-gm-setup-checklist.md) — prepare and start a session.
 10. [Prototype combat and contested actions](13-prototype-combat-and-contested-actions.md) — resolve contact without a full combat simulation.
 11. [Commander role sheets](11-commander-role-sheets.md) — hand one private sheet to each commander.
-12. [Quick reference](../assets/quick-reference.md) — keep visible during play.
+12. [Prototype roleplay layer](14-prototype-roleplay-layer.md) — create a lightweight commander identity and run safe, bounded roleplay.
+13. [Quick reference](../assets/quick-reference.md) — keep visible during play.
 
 ## Required physical or shared materials
 

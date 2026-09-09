@@ -56,6 +56,7 @@ The phases are deliberately broad. Rules will change during playtesting, so this
 - One game master guide
 - One infantry company per side
 - Commander role sheets
+- Lightweight prototype roleplay layer for commander identity, relationships, NPC framing, and safety boundaries
 - A quick-reference movement and routine-actions aid
 - Basic movement and conflict rules
 - A prototype combat and contested-action procedure with contact triggers, response windows, and graduated outcomes
@@ -138,7 +139,7 @@ For each phase:
 We are in **Phase 3: Build the smallest playable prototype**. The immediate task is to use the packet documents to run the first complete, infantry-only test:
 
 - One town-scale map and two opposing infantry companies.
-- Commander role sheets and a game-master setup checklist.
+- Commander role sheets, the [prototype roleplay layer](game-design/14-prototype-roleplay-layer.md), and a game-master setup checklist.
 - The order form, timing aids, report format, and filtered map procedure.
 - One complete seven-day daytime-active/nighttime-frozen playtest.
 

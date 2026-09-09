@@ -1,6 +1,6 @@
 # Commander Role Sheets
 
-Print one side-specific sheet for each commander. Both commanders use the same authority, order lifecycle, timing aid, and victory test. The GM fills in the bracketed fields before handing over the private section.
+Print one side-specific sheet for each commander. Both commanders use the same authority, order lifecycle, timing aid, and victory test. Use the [prototype roleplay layer](14-prototype-roleplay-layer.md) for the five-minute identity prompts and roleplay boundaries. The GM fills in the bracketed fields before handing over the private section.
 
 ## Shared commander instructions
 
@@ -18,6 +18,10 @@ During the active window:
 6. Maintain your current force-status record and submit it when the GM requests an engagement snapshot.
 7. Report observations and requests through the role-based chain and agreed game channel.
 8. Confirm the result or correction from the GM before changing the plan.
+
+Keep the commander's identity, motivation, strength, complication, and
+relationship in view as decision prompts. They shape intent and communication,
+not the published rules, hidden information, or resolution outcomes.
 
 At 22:00, active timers freeze. At 08:00, the GM briefs you and resumes each order with its recorded remaining time. If you are absent, you receive only the normal role handoff when you return.
 
