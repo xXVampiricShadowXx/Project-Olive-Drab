@@ -106,7 +106,7 @@ conditions, or hidden situation bands.
 
 ### Observer role
 
-The observer is a silent auditor, not a fourth commander and not a second GM.
+The observer is a silent auditor, not a third commander and not a second GM.
 The observer receives the public transcript and a timestamped observation feed,
 but no unearned private information. If private observation is required to
 measure information boundaries, the observer receives a redacted copy after
