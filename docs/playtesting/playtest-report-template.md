@@ -71,6 +71,21 @@ not a success criterion for an AI-assisted rules and operations test.
 - Did the pace feel too slow, too fast, or useful?
 - Where did players become confused?
 
+## Human-specific metrics
+
+Complete only for a human or mixed playtest. Keep these observations separate
+from the rules and GM metrics above; do not use them to claim rules validity.
+
+| Metric | Result | Evidence or anonymized note |
+|--------|--------|-----------------------------|
+| Meaningful decisions reported | | |
+| Role participation gaps | | |
+| Pace or attention friction | | |
+| Channel or notification friction | | |
+| Pause, withdrawal, or handoff use | | |
+| Consent or safety concern raised | | |
+| Accessibility or privacy adjustment requested | | |
+
 ## Changes for the next version
 
 | Change | Reason | Priority |
