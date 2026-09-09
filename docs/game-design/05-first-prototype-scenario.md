@@ -4,9 +4,9 @@ This is the working scenario for the first playable rules test. It is intentiona
 
 ## Scenario concept
 
-A near-future crisis has brought a smaller U.S. infantry force and a larger Russian infantry force into conflict around a small town and its surrounding approaches.
+A near-future crisis has brought a smaller NATO infantry force and a larger Russian infantry force into conflict around a small town and its surrounding approaches.
 
-The U.S. company has:
+The NATO company has:
 
 - Fewer troops.
 - Better training and cohesion.
@@ -26,32 +26,42 @@ These are scenario attributes, not universal statements about real forces. The f
 
 | Side | Command | Relative strengths | Relative limitations |
 |------|---------|--------------------|----------------------|
-| U.S. | One infantry company commander | Training, cohesion, communications, reconnaissance, precision | Smaller force, fewer replacements, vulnerable to being surrounded or exhausted |
+| NATO | One infantry company commander | Training, cohesion, communications, reconnaissance, precision | Smaller force, fewer replacements, vulnerable to being surrounded or exhausted |
 | Russia | One infantry company commander | Numbers, ability to occupy more ground, massed attacks, redundancy | Training, cohesion, communications, and information are less reliable in this scenario |
 
 The exact troop counts should remain abstract in the first test. We can use unit markers, strength points, or sub-units rather than representing every soldier.
+
+## Starting zones and readiness
+
+The game master defines two hidden starting zones that are balanced in opportunity but asymmetric in terrain, approach, and information. Each commander receives only their own permitted zone and starting readiness conditions.
+
+Before the scenario begins, each commander may choose how to place their troop markers within that zone. The GM reviews and approves the placement before revealing the scenario clock. The GM may require a revision when a placement creates an unfair immediate advantage, including putting the entire company directly on the town objective at scenario start.
+
+The GM records each side's approved starting locations and readiness privately on the master map, then gives each commander the minimum information needed to understand their own force. Starting readiness is a scenario condition, not a hidden penalty invented after play begins.
 
 ## Prototype objectives
 
 The scenario lasts for **one real-time week of play**, ending after seven days on the scenario clock. The commanders' shared operational objective is to secure the town and hold it until the clock runs out.
 
-For the prototype, daytime is active and nighttime is frozen. All players are assumed to use the same local time zone. Players act together during the active window under the game master's supervision, with short breaks allowed. Orders and reports use predetermined communication methods, and the game master maintains the authoritative shared record.
+For the prototype, daytime is active and nighttime is frozen. All players are assumed to use the same local time zone. The clock remains live during the active window, but player attention is flexible: a player may check in briefly from work or another obligation, submit an order, receive a GM notification or sitrep, or remain immersed for a longer period. The GM continues processing accepted orders and events. Orders and reports use predetermined communication methods, and the game master maintains the authoritative shared record.
 
 Suggested side objectives:
 
-- **U.S. objective:** Secure the town and hold it until the seven-day scenario clock expires.
+- **NATO objective:** Secure the town and hold it until the seven-day scenario clock expires.
 - **Russian objective:** Secure the town and hold it until the seven-day scenario clock expires.
 - **Game master objective:** Present a fair, information-limited situation and record how the asymmetry affects player decisions.
 
 The first test should define control clearly: a side controls the town when its forces occupy the required locations and the opposing side cannot contest them under the scenario rules. If neither side holds the town when the clock expires, the result is unresolved rather than an automatic victory.
 
-The prototype will need an agreed daytime window, nighttime freeze, order format, communication channel, and procedure for resuming play each morning. A future always-on version may support game-master-approved orders that execute automatically while players are offline, but that system is outside the first test.
+The prototype uses an agreed daytime window of 08:00–22:00 and a nighttime freeze from 22:00–08:00. It also needs an order format, role-based communication chain, and procedure for resuming play each morning. Exact calendar dates are intentionally unspecified. A future always-on version may support game-master-approved orders that execute automatically while players are offline, but that system is outside the first test.
+
+For the first contact or combat situation not covered by the packet, the GM makes a temporary ruling using the stated fairness principles, records the ruling, and applies it symmetrically to equivalent situations. The live game does not pause for a permanent rules decision; the ruling is reviewed after the scenario.
 
 ## Recommended asymmetry
 
 Use only a few broad factors at first:
 
-| Factor | U.S. starting position | Russia starting position |
+| Factor | NATO starting position | Russia starting position |
 |--------|------------------------|---------------------------|
 | Force size | Smaller | Larger |
 | Training | Higher | Lower |

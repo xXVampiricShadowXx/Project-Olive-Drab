@@ -10,7 +10,7 @@ The prototype uses one shared local time zone and a seven-day scenario clock.
 - **Frozen window:** 22:00–08:00. The clock advances to 08:00, but no new player action resolves and no action timer counts down. The game master may prepare records and private notes, but does not create a new operational result during the freeze.
 - **Daily boundary:** At 22:00, the game master records every in-progress order, its remaining time, and its current conditions. At 08:00, those orders resume with the same remaining time unless a written scenario rule says otherwise.
 
-The schedule is a pacing aid, not a reason to punish players for sleeping. A player who misses an active window may submit an order for the next available processing period.
+The clock remains live during the active window, but player attention is flexible rather than continuously online. Players may check in briefly from work or another obligation, submit orders, receive GM notifications or situation reports, or remain immersed for longer periods. The GM continues processing accepted orders and events even when a player is away. The schedule is a pacing aid, not a reason to punish players for sleeping.
 
 ## Order lifecycle
 
@@ -41,6 +41,24 @@ Commander:
 ```
 
 The game master may assign the next sequential order ID if a commander does not provide one.
+
+### Urgent decisions and response windows
+
+An urgent report or decision request must include a response-by time. The GM sends it through the role-based game channel and records when it was delivered. A player may respond with a decision, a standing instruction, or an explicit request for more time.
+
+If the response window expires, the GM uses the last accepted order and any standing limits or fallback instruction already recorded for that unit. If no safe fallback exists, the GM pauses only that decision, takes the least-committal action consistent with the unit's last accepted order, and records the reason. The active clock and unrelated orders continue. A full-day-or-longer absence still uses the separate temporary-command and succession procedure below.
+
+## Communication and chain of command
+
+Use a role-based chain of command for all game communication:
+
+- One group channel is available for non-sensitive game communication, public updates, and rules procedure.
+- Each player communicates through their superior and subordinate roles where those roles exist. A player should not bypass an available superior or subordinate to issue or request an operational decision.
+- The GM may contact commanders privately when a report, order clarification, or other information is sensitive.
+- Players may contact opposing players only with permission from their superior and with the GM able to see or review the exchange.
+- Game-related communication must stay separate from personal chat so the GM can request, review, and preserve the operational record.
+
+The first test only requires agreed channels that follow this structure; it does not require a dedicated Discord implementation. A future Discord setup is an optional delivery method, not a prototype rule.
 
 ## Game-master active-window workflow
 
@@ -87,7 +105,7 @@ The game master issues a commander-map update when a friendly unit moves, a know
 
 ## Shared session and continuity
 
-The campaign is simultaneous during each active window: all players begin the day together at 08:00, act during the same live period, and remain under the game master's active supervision. It still has one authoritative operational record. The game master keeps:
+The campaign is simultaneous during each active window: the game clock and GM processing continue from 08:00 to 22:00, while players may participate asynchronously through brief check-ins or longer periods of attention. It still has one authoritative operational record. The game master keeps:
 
 - A master clock log with active/frozen boundaries.
 - An order register containing every order, status, timer, and result.
@@ -97,13 +115,13 @@ The campaign is simultaneous during each active window: all players begin the da
 
 At 08:00, the game master gives each commander a compact private briefing containing the current time, friendly status, known reports, in-progress orders, pending decisions, and the next deadline. The commander confirms receipt before issuing a new order. The briefing does not include information that role has not earned.
 
-During the active window, the game master actively manages the session: acknowledging orders, tracking timers, resolving contacts, updating the master map, and sending reports as events occur. Players may take short breaks, but the game remains live and the game master continues to apply the rules and record events.
+During the active window, the game master actively manages the session: acknowledging orders, tracking timers, resolving contacts, updating the master map, and sending reports as events occur. Players may take short breaks or be briefly unavailable, but the game remains live and the GM continues to apply the rules and record events. Urgent decisions use the response-window and fallback procedure above.
 
 If records conflict, the latest time-stamped master log and map snapshot take precedence. The game master announces the correction, preserves the earlier entry for auditability, and applies the same correction standard to both sides.
 
 ## Temporary command and player absence
 
-The game is live during the active window, but a player may be unable to attend because of illness, an emergency, or another real-world obligation. The game master records the absence and appoints temporary command before that player's forces need a decision. The absent player does not receive retroactive knowledge when they return; they receive the normal handoff for their role.
+The game is live during the active window, but a player may be unavailable for a full day or more because of illness, an emergency, or another real-world obligation. The game master records the absence and appoints temporary command before that player's forces need a decision. The absent player does not receive retroactive knowledge when they return; they receive the normal handoff for their role. Brief check-ins and missed response windows do not by themselves trigger succession.
 
 Use this succession order:
 

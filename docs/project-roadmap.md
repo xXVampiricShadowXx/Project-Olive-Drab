@@ -47,7 +47,7 @@ The phases are deliberately broad. Rules will change during playtesting, so this
 **Deliverables:**
 
 - One small town-scale scenario
-- A fictionalized near-future U.S.-Russia asymmetric matchup
+- A fictionalized near-future NATO-Russia asymmetric matchup
 - A seven-day town-control scenario clock
 - A daytime-active, nighttime-frozen prototype schedule
 - One map showing a town and surrounding terrain
@@ -65,7 +65,7 @@ The phases are deliberately broad. Rules will change during playtesting, so this
 
 **Exit test:** People unfamiliar with the project can play a complete test session using only the prototype materials.
 
-**Status:** Planned
+**Status:** In progress — smallest playable packet drafted for supervised testing
 
 ## Phase 4: Run focused playtests
 
@@ -133,9 +133,11 @@ For each phase:
 
 ## Current focus
 
-We are moving into **Phase 3: Build the smallest playable prototype**. The immediate task is to turn the Phase 2 operating procedure into a complete, infantry-only test packet:
+We are in **Phase 3: Build the smallest playable prototype**. The immediate task is to use the packet documents to run the first complete, infantry-only test:
 
 - One town-scale map and two opposing infantry companies.
 - Commander role sheets and a game-master setup checklist.
 - The order form, timing aids, report format, and filtered map procedure.
 - One complete seven-day daytime-active/nighttime-frozen playtest.
+
+The packet is intentionally paper-first and live-supervised. Before the first test, the group still needs to choose the town map and the specific channels that implement the role-based communication chain. The GM will handle any uncovered first-engagement situation through a recorded temporary ruling applied symmetrically, without pausing live play. The balanced asymmetric hidden starting zones and readiness conditions are part of the packet procedure, while exact calendar dates remain intentionally unspecified. The shared daily schedule remains 08:00–22:00 active and 22:00–08:00 frozen.
