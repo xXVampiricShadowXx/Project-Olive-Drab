@@ -94,6 +94,7 @@ The phases are deliberately broad. Rules will change during playtesting, so this
 - Intelligence and reconnaissance
 - Counter-intelligence and cyberwarfare
 - Morale and readiness
+- Real-time combat engagements with evolving reports and commander decision windows
 - More command levels
 - Additional scenarios and factions
 
