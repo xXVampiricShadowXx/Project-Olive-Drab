@@ -14,7 +14,7 @@ Each commander controls one company of roughly 100–200 troops. The numbers are
 
 ## What commanders do
 
-Commanders should spend most of their time making decisions and roleplaying their responsibilities.
+Commanders should spend most of their time making decisions and roleplaying their responsibilities. Use the [prototype roleplay layer](14-prototype-roleplay-layer.md) for lightweight identity, relationship, NPC, and safety guidance; it does not add hidden mechanical advantages.
 
 They are responsible for:
 
