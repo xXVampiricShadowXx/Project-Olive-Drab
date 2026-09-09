@@ -1,0 +1,44 @@
+name: Feature or design proposal
+description: Propose a focused feature, rule, or design experiment
+title: "[Proposal]: "
+labels:
+  - enhancement
+  - game-design
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Proposals should explain the player problem and how the idea can be tested.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: What player decision, design goal, or observed issue motivates this?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe the smallest coherent rule, feature, or experiment.
+    validations:
+      required: true
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: Tradeoffs and alternatives
+      description: What could this complicate, replace, or make less clear?
+    validations:
+      required: true
+  - type: textarea
+    id: test
+    attributes:
+      label: Test plan
+      description: How could a GM or playtest group evaluate whether it works?
+    validations:
+      required: true
+  - type: input
+    id: roadmap
+    attributes:
+      label: Roadmap or phase
+      description: Identify the relevant phase or roadmap item.

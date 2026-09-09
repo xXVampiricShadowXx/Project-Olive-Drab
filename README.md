@@ -43,6 +43,14 @@ The prototype operating procedure is documented in [`docs/game-design/06-prototy
 
 See [`docs/project-roadmap.md`](docs/project-roadmap.md) for the project phases and the current design focus.
 
+## Contributing and playtesting
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the documentation workflow, pull
+request expectations, and how to record playtest findings. Use the repository's
+issue forms for rules questions, playtest findings, documentation
+inconsistencies, and focused design proposals. Keep player-identifying details
+out of public reports.
+
 ## Design principles
 
 1. **Human-moderated first** — Rules should work with people, maps, written orders, communication channels, and simple reference aids before any automated implementation is considered.
