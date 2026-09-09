@@ -1,7 +1,9 @@
 # Stable Prototype Snapshot and Tag Preparation
 
-This is a preparation guide, not a release. Do not create or publish a GitHub
-release or tag unless the project owner explicitly requests it.
+This is a preparation guide, not a release. A repository tag is allowed only
+after the focused readiness PR has merged into `main`, the merged commit has
+passed validation, and the project owner has requested the human-test
+snapshot. Do not publish a GitHub release.
 
 ## Snapshot procedure
 
@@ -28,10 +30,12 @@ Map authority: Brackenford map v1.0
 Status: supervised prototype preparation; not a release
 ```
 
-If a tag is later requested, use the suggested identity as metadata and
-include the commit SHA, packet manifest, map version, observer ledger, and
-report template in the release notes. State that the packet is provisional,
-infantry-only, and does not expand Phase 3 mechanics.
+If requested after merge, create an annotated repository tag named
+`prototype-v0.1-human-test-ready` on the exact merged `main` commit. This is a
+repository tag, not a published release. Record the commit SHA, packet
+manifest, map version, observer ledger, and report template alongside the tag.
+State that the packet is provisional, infantry-only, and does not expand Phase
+3 mechanics.
 
 ## Go/no-go record
 
