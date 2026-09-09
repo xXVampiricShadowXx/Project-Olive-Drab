@@ -21,6 +21,12 @@ This index is the smallest complete packet for the first live, supervised Olive 
 15. [Prototype roleplay layer](14-prototype-roleplay-layer.md) — create a lightweight commander identity and run safe, bounded roleplay.
 16. [Quick reference](../assets/quick-reference.md) — keep visible during play.
 
+## Phase 4 follow-on
+
+Use the [Phase 4 AI-assisted rules and operations playtest packet](../playtesting/phase-4-ai-rules-operations-playtest.md)
+for a documentation-first rehearsal of the Phase 3 rules before a human
+playtest. It does not replace this packet or add rules.
+
 ## Required physical or shared materials
 
 - One shared digital Brackenford town-scale map with named sectors and surrounding terrain, prepared from the [authoritative town map specification](12-town-map-and-terrain-sectors.md).
