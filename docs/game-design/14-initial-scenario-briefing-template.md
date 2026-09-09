@@ -16,10 +16,10 @@ day and time on the shared clock.
   orders and events.
 - One GM runs the authoritative record for two commanders, one NATO infantry
   company, and one Russian infantry company.
-- Real life always takes precedence over the game. Health, safety, work, family,
-  emergencies, rest, and personal obligations may pause, suspend, place the game
-  on hiatus, or end a session without penalty. The GM records the pause or
-  hiatus, preserves the game state, and resumes only when participants are ready.
+- Real life always takes precedence. At the GM's discretion, consulting players
+  where practical, the GM may pause, suspend, place the game on hiatus, otherwise
+  adjust play, or end a session. The GM records and preserves the game state and
+  resumes only when appropriate.
 - The setting is fictionalized and near-future. It is not a claim about real
   national capabilities, plans, or current events.
 - Brackenford and its six-column by five-row named-sector map are authoritative
@@ -92,10 +92,10 @@ Read or send the following, inserting only the completed fields:
 > game communication. Submit clear orders, label uncertainty, and use the
 > standing-behavior fields when you may be unavailable. Contact pauses a routine
 > order and is resolved using the prototype contact procedure. Real life always
-> takes precedence over the game. Health, safety, work, family, emergencies,
-> rest, and personal obligations may pause, suspend, place the game on hiatus,
-> or end a session without penalty. The GM records the pause or hiatus, preserves
-> the game state, and resumes only when participants are ready.
+> takes precedence. At the GM's discretion, consulting players where practical,
+> the GM may pause, suspend, place the game on hiatus, otherwise adjust play, or
+> end a session. The GM records and preserves the game state and resumes only when
+> appropriate.
 
 Then announce:
 

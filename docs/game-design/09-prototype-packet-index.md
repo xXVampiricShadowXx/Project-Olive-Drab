@@ -38,7 +38,7 @@ This packet uses one seven-day scenario clock, a live clock from 08:00–22:00 w
 
 ## Before play
 
-The group must prepare the shared digital map from the authoritative ASCII specification, choose its map platform and access controls, configure the Discord server and its GM-visible role-based channels, and confirm the hidden starting zones and readiness conditions and any scenario-specific terrain or weather. Exact calendar dates are not part of the prototype packet. The shared daily schedule remains 08:00–22:00 active and 22:00–08:00 frozen. The GM publishes the victory test and real-life priority rule before accepting the first order. Personal chat is not part of the game record.
+The group must prepare the shared digital map from the authoritative ASCII specification, choose its map platform and access controls, configure the Discord server and its GM-visible role-based channels, and confirm the hidden starting zones and readiness conditions and any scenario-specific terrain or weather. Exact calendar dates are not part of the prototype packet. The shared daily schedule remains 08:00–22:00 active and 22:00–08:00 frozen. The GM publishes the victory test and the real-life priority rule: real life takes precedence, and the GM may adjust or end play at discretion while preserving the game state. Personal chat is not part of the game record.
 
 Complete the briefing template, run the communication and order dry run, and pass
 the final GM preflight before accepting the first operational order.
