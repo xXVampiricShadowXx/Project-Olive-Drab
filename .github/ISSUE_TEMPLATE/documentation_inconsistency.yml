@@ -1,0 +1,36 @@
+name: Documentation inconsistency
+description: Report conflicting, missing, or broken project documentation
+title: "[Documentation]: "
+labels:
+  - documentation
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for contradictory wording, missing references, or broken internal links.
+  - type: input
+    id: locations
+    attributes:
+      label: Affected locations
+      description: Link each document or section involved.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Explain the inconsistency or missing information.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected documentation
+      description: What should the documents say or link to?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Include the relevant rule version, issue, or playtest context.

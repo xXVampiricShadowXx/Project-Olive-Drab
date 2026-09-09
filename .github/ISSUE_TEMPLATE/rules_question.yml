@@ -1,0 +1,40 @@
+name: Rules question
+description: Ask for clarification about an existing rule or procedure
+title: "[Rules question]: "
+labels:
+  - question
+  - rules
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for an ambiguity or clarification request about an existing rule.
+  - type: input
+    id: document
+    attributes:
+      label: Document or rule
+      description: Link the relevant document and section.
+      placeholder: docs/game-design/06-prototype-operating-procedure.md, "Orders"
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What is unclear, and what interpretations seem possible?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Include the scenario, example, or playtest context that exposed the question.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues and documents for an answer.
+          required: true

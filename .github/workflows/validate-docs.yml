@@ -1,0 +1,53 @@
+name: Validate documentation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  markdown-links:
+    name: Check Markdown links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate relative Markdown links
+        shell: python
+        run: |
+          import pathlib
+          import re
+          import sys
+          from urllib.parse import unquote, urlsplit
+
+          root = pathlib.Path(".").resolve()
+          pattern = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
+          failures = []
+
+          for document in root.rglob("*.md"):
+              if any(part in {".git", "node_modules"} for part in document.parts):
+                  continue
+              text = document.read_text(encoding="utf-8")
+              for raw_target in pattern.findall(text):
+                  target = raw_target.strip().strip("<>")
+                  if not target or target.startswith(("#", "http://", "https://", "mailto:", "tel:")):
+                      continue
+                  target = unquote(urlsplit(target).path)
+                  candidate = (document.parent / target).resolve()
+                  try:
+                      candidate.relative_to(root)
+                  except ValueError:
+                      failures.append(f"{document}: link escapes repository: {raw_target}")
+                      continue
+                  if not candidate.exists():
+                      failures.append(f"{document}: missing target: {raw_target}")
+
+          if failures:
+              print("\n".join(failures))
+              sys.exit(1)
+          print("All relative Markdown links point to existing repository paths.")
