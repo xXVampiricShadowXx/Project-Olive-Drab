@@ -1,7 +1,7 @@
 # Prototype Combat and Contested Actions
 
 This is the minimum contact procedure for the first live Brackenford test. It is
-GM-run, infantry-only, and deliberately abstract. It is not the final real-time
+a GM-run, infantry-only, and deliberately abstract. It is not the final real-time
 combat system: it does not model weapons, ranges, casualties, formations, or
 continuous fire. It tests whether commanders make useful choices when contact
 interrupts a timed order and information arrives imperfectly.
@@ -128,8 +128,9 @@ attendance:
 - **Routine contact:** 30 active minutes.
 - **Immediate close contact or threatened withdrawal route:** 15 active
   minutes.
-- **A planned attack or deliberate probe:** the next mutually observable
-  decision point, normally 30 active minutes.
+- **A planned attack or deliberate probe:** use the next decision point stated
+  in the contact report; if no specific decision point is stated, use 30 active
+  minutes from the time the report is delivered.
 
 The deadline pauses at 22:00 with all other timers. The GM sends one reminder
 when practical. A commander may answer early, give a standing instruction, or
