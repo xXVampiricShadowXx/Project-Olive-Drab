@@ -61,9 +61,9 @@ information boundaries, and reporting clarity while allowing finer positions.
         |    (road)    |    (road)   |    (built)   |    (built)   |    (built)   |    (built)  |
         +--------------+--------------+--------------+--------------+--------------+--------------+
                  Bluewater River: boundary between rows 4 and 5
-  5     | A5 South    | B5 South   | C5 South     | D5 South     | E5 Fields    | F5 South    |
-        |    Woods    |    Fields   |    Bank       |    Bank       |    (open)    |    Road      |
-        |    (woods)  |    (open)   |    (open)     |    (open)     |    (open)    |    (road)   |
+  5     | A5 South    | B5 South    | C5 South     | D5 South     | E5 Fields    | F5 South    |
+        |    Woods    |    Fields    |    Bank       |    Bank       |    (open)    |    Road      |
+        |    (woods)  |    (open)    |    (open)     |    (open)     |    (open)    |    (road)   |
         +--------------+--------------+--------------+--------------+--------------+--------------+
                          SOUTH: River Road (S)
 ```
