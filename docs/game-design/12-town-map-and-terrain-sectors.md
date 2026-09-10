@@ -17,9 +17,17 @@ requiring a detailed real-world map or a scale model.
   they do not guarantee safety or control.
 - **Edges:** The north, east, south, and west map edges are named approaches and are
   the only off-map entry or exit points for the first test.
-- **Force markers:** Put a force marker in the sector it occupies. If a force marker
-  is moving between sectors, the GM records the current sector and next sector in
-  the order register; do not create an unruled halfway position.
+- **Force markers:** A force marker represents one subordinate unit at the active
+  commander's level of the fixed hierarchy. Put the marker in the sector that unit
+  occupies. If the unit is moving between sectors, the GM records the current sector
+  and next sector in the order register; do not create an unruled halfway position.
+
+For the first prototype, the company commander therefore has 1–4 echelon force
+markers. If a lower-echelon commander is separately played, their markers represent
+their immediate subordinate units: an echelon commander has 2 platoon markers, a
+platoon commander 2 section markers, a section commander 2 squad markers, and a
+squad commander 2 fireteam markers. The marker count follows the fixed organization;
+it does not define or alter that organization.
 
 ## Future continuous-playspace model
 
@@ -79,7 +87,7 @@ For the first playtest, prepare a shared digital map from the authoritative ASCI
 specification. Do not choose a platform as part of the rules packet. A suitable
 implementation may be a shared drawing, board, spreadsheet, or other tool, provided
 the GM can maintain the authoritative state and each commander can receive only
-their permitted view.
+ their permitted view.
 
 The digital map should provide:
 
@@ -212,13 +220,13 @@ town, concealment, and route options:
   built sectors.
 
 The GM may swap the side assignments for a repeat test, but must publish the zone
-shapes and reason for the swap before placement. Each commander may distribute
-their company's force markers anywhere inside their own zone, subject to the existing
+shapes and reason for the swap before placement. Each commander may distribute their
+subordinate-unit force markers anywhere inside their own zone, subject to the existing
 fairness check:
 
 - No starting force marker may begin in a central control pair.
-- A company may not begin with its entire force in one sector unless the GM
-  records why that is fair and both sides receive an equivalent opportunity.
+- A company may not begin with all of its subordinate-unit markers in one sector
+  unless the GM records why that is fair and both sides receive an equivalent opportunity.
 - The GM must give each side at least two plausible first routes toward the town.
 - The GM records starting readiness and strength privately before the shared clock
   starts.
@@ -254,7 +262,7 @@ Before play, the GM should:
 3. Mark the two central control pairs and the two approach pairs.
 4. Hide the two starting zones and record each commander's approved placement.
 5. Prepare one filtered starting map per commander with only their zone, public
-   terrain, their own force markers, and the published objective.
+   terrain, their own subordinate-unit force markers, and the published objective.
 6. Keep the full map, hidden conditions, all force markers, and the information-release
    log on the master map.
 

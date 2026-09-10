@@ -12,7 +12,7 @@ Estimate the base time first, then apply one clear condition adjustment. Do not 
 
 ## Movement aid
 
-The following bands are a starting aid for one infantry company moving as a formed unit along a known route. They express elapsed active time, not distance precision.
+The following bands are a starting aid for **one infantry unit moving as a coherent element along a known route**. In the first prototype, the company commander may direct one or more echelon units, so the movement aid applies to each ordered subordinate unit rather than requiring the entire company to move together. It expresses elapsed active time, not distance precision.
 
 | Route condition | Base time for one map sector | Guidance |
 |---|---:|---|
