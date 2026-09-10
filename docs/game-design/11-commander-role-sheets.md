@@ -6,7 +6,7 @@ Print one side-specific sheet for each commander. Both commanders use the same a
 
 You command one infantry company of roughly 100–200 troops. You may choose priorities, routes, formations, positions, and timing within the published scenario objective. You may not see the master map or treat a suspicion as a confirmed fact.
 
-Use the role-based communication chain: post non-sensitive game communication in the group channel, communicate through your superior and subordinate roles where they exist, and contact an opposing player only with superior permission and GM visibility. Keep all game communication separate from personal chat.
+Use the role-based communication chain: post non-sensitive game communication in the group channel, communicate through your superior and subordinate roles where they exist, and contact an opposing player only with GM approval and GM visibility in this first prototype. A superior's permission is required only when a higher player-controlled role actually exists. Keep all game communication separate from personal chat.
 
 During the active window:
 
