@@ -41,11 +41,11 @@ Purpose:
 Start condition:
 Route or formation:
 Limits (engage, halt, withdraw, or avoid):
-Behavior (optional):
+Behaviors (optional; one or more):
 Commander:
 ```
 
-The `Unit` field names the specific subordinate unit receiving the order. When attaching a behavior, include its trigger, action, limits, expiry or cancel condition, and what the unit does if you cannot be reached. The GM validates the trigger and outcome; a behavior is not an automatic override of hidden information or the authoritative log.
+The `Unit` field names the specific subordinate unit receiving the order. Each attached behavior should include its trigger, action, limits, expiry or cancel condition, and what the unit does if you cannot be reached. Repeat the behavior details for each attached behavior. The GM validates the trigger and outcome; a behavior is not an automatic override of hidden information or the authoritative log.
 
 ## Status card
 
@@ -74,7 +74,7 @@ Preparation:
 Readiness:
 Strength:
 Reserve/commitment:
-Active order or behavior:
+Active order or behaviors:
 Known changes since last report:
 ```
 
