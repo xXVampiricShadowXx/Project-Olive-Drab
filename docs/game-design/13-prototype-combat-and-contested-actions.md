@@ -132,13 +132,17 @@ attendance:
   in the contact report; if no specific decision point is stated, use 30 active
   minutes from the time the report is delivered.
 
-The deadline pauses at 22:00 with all other timers. The GM sends one reminder
-when practical. A commander may answer early, give a standing instruction, or
-request one extension before the deadline. An extension is recorded and cannot
-be used to gain information after the original deadline.
+For the broader multi-day prototype, the deadline pauses at 22:00 and resumes
+at 08:00 with the other active timers. For the **first human test**, Day 1 ends
+at the 22:00 final control-state check; the deadline terminates with session
+closure and does not implicitly resume on a later scenario day. The GM sends one
+reminder when practical. A commander may answer early, give a standing
+instruction, or request one extension before the deadline. An extension is
+recorded and cannot be used to gain information after the original deadline.
 
-If the deadline expires, use the unit's last accepted limits and fallback. If
-none exists, the GM chooses **Hold** for a unit in a defensible position,
+If the deadline expires during an active window, use the unit's last accepted
+limits and fallback. If none exists, the GM chooses **Hold** for a unit in a
+ defensible position,
 **Withdraw** along the safest available route for a unit in an untenable
 position, or **Reserve/commit** only as needed to prevent an immediate
 unresolved overlap. Record why; do not treat silence as an attack order.
