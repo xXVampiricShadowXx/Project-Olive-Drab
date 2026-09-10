@@ -11,6 +11,18 @@ The broader prototype uses one shared local time zone and a seven-day scenario c
 - **Daily boundary:** For the broader multi-day campaign, at 22:00 the game master records every in-progress order, its remaining time, and its current conditions. At 08:00, those orders resume with the same remaining time unless a written scenario rule says otherwise.
 - **First-human-test end:** At the end of Day 1 active time, perform the final control-state check and close the first human session. Do not start a second scenario day solely to continue the first test.
 
+## Command hierarchy and unit terminology
+
+The prototype uses a fixed hierarchical organization so command authority and map representation remain consistent at every playable echelon. The player's organization is the echelon they command; **unit** means a subordinate organizational element under that commander's control.
+
+For the first prototype scenario, the player is a company commander. The company contains **1–4 echelons**. Each echelon contains **2 platoons**; each platoon contains **2 sections**; each section contains **2 squads**; and each squad contains **2 fireteams**. This is a deliberate game abstraction rather than a claim about real-world organization.
+
+A company commander therefore has **1–4 echelon units** under command. An echelon commander has **2 platoon units**. A platoon commander has **2 section units**. A section commander has **2 squad units**. A squad commander has **2 fireteam units**. The hierarchy continues by this same relationship wherever the game assigns a player to a lower echelon. Real military terminology and echelon structures vary by country; the prototype uses this rigid hierarchy for repeatable play while preserving the general distinction between a commander's organization and subordinate units. citeturn709621view0
+
+The map mirrors the same relationship: each immediate subordinate unit at the commander's active echelon is represented by one force marker. For the first prototype, the company commander therefore receives **1–4 echelon force markers**. If an echelon is separately player-controlled, its commander receives **2 platoon force markers**, and so on down the hierarchy. A force marker is the map representation of a subordinate unit; it is not itself a separate command authority.
+
+This definition determines the scope of the existing order and status rules. When a rule says **unit**, use the subordinate unit identified by the commander in the order or record. When a commander has several subordinate units, each is a distinct command target and has its own current order/state record. No additional force-management mechanic is implied by this terminology.
+
 The clock remains live during the active window, but player attention is flexible rather than continuously online. Players may check in briefly from work or another obligation, submit an order, receive GM notifications or situation reports, or remain immersed for longer periods. The GM continues processing accepted orders and events even when a player is away. The schedule is a pacing aid, not a reason to punish players for sleeping.
 
 ## Order lifecycle
@@ -24,7 +36,7 @@ Every action that can change the shared situation uses the same short lifecycle:
 5. **In progress:** The game master records the start time, expected completion time, route or target, and any conditions that can interrupt it. An accepted behavior may execute during the order without a new notification, subject to GM trigger validation. The commander may clarify an order, but a changed objective is a new order.
 6. **Resolved:** The game master updates the master map, affected status, and any reports. The commander receives the information their side could know.
 
-For the first prototype, a unit may have only **one active operational order at a time**. A new accepted operational order for that same unit supersedes its previous active operational order, including its attached behaviors, unless the GM explicitly records that the new order is a non-conflicting action that can run concurrently. This prevents two orders from silently controlling the same unit at once.
+For the first prototype, a **unit may have only one active operational order at a time**. Here, unit means the specific subordinate organizational element named in the order. A new accepted operational order for that same unit supersedes its previous active operational order, including its attached behaviors, unless the GM explicitly records that the new order is a non-conflicting action that can run concurrently. This prevents two orders from silently controlling the same subordinate unit at once.
 
 If enemy contact, a contested route, or a threatened control location interrupts an
 order, use [Prototype Combat and Contested Actions](13-prototype-combat-and-contested-actions.md).
