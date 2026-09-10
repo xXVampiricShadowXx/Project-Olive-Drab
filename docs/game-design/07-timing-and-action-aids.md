@@ -21,7 +21,7 @@ The following bands are a starting aid for **one infantry unit moving as a coher
 | Dense town, steep ground, or difficult crossing | 60 minutes | Includes deliberate movement through obstacles |
 | Unknown route or forced detour | Add 30 minutes | Game master confirms the new route |
 
-For a route spanning multiple sectors, **add the applicable base time for each sector traversed** and then round the total up to the next 15-minute mark. Do not choose one terrain category for the entire route when sectors differ. An unknown route or forced detour adds 30 minutes after the GM confirms the revised route. A commander may choose a slower deliberate movement, but the order must say so.
+For a route spanning multiple sectors, **add the applicable base time for each sector traversed**. If the total is not already a multiple of 15 minutes, round it up to the next 15-minute multiple; a total already on a 15-minute multiple remains unchanged. Do not choose one terrain category for the entire route when sectors differ. An unknown route or forced detour adds 30 minutes after the GM confirms the revised route. A commander may choose a slower deliberate movement, but the order must say so.
 
 ## Routine action aid
 
