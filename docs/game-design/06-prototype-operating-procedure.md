@@ -38,6 +38,8 @@ Every action that can change the shared situation uses the same short lifecycle:
 
 For the first prototype, a **unit may have only one active operational order at a time**. Here, unit means the specific subordinate organizational element named in the order. A new accepted operational order for that same unit supersedes its previous active operational order, including its attached behaviors, unless the GM explicitly records that the new order is a non-conflicting action that can run concurrently. This prevents two orders from silently controlling the same subordinate unit at once.
 
+A concurrent action may run only when it clearly does not direct or alter that unit's operational task/state. An action that directs movement, position, posture, destination, or another operational task supersedes the prior active operational order. When concurrency is permitted, the GM records it separately from the unit's single active operational order.
+
 If enemy contact, a contested route, or a threatened control location interrupts an
 order, use [Prototype Combat and Contested Actions](13-prototype-combat-and-contested-actions.md).
 The GM records the order as paused—contact rather than silently completing or
