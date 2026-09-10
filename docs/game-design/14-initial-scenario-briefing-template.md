@@ -9,7 +9,7 @@ day and time on the shared clock.
 
 - The **first human test** runs for one scenario day, from 08:00 through 22:00. The session ends after the Day 1 final control-state check.
 - The broader prototype also defines a seven-day scenario clock with an overnight freeze, but the multi-day schedule is not required for this first human session and is exercised separately in rehearsal when needed.
-- The active window is 08:00–22:00. If the session reaches 22:00, the broader prototype freeze rule applies: timers pause, no new operational result resolves, and orders resume with their recorded remaining time when the next scenario day begins. The first human test should normally end at the Day 1 boundary instead of continuing into a second day.
+- The first human test closes at the Day 1 boundary rather than rolling into a second scenario day. The broader prototype freeze rule—timers pause at 22:00, no new operational result resolves, and recorded remaining time resumes at 08:00—applies only when a multi-day test actually continues.
 - Player attention is flexible during the active window. Players may check in
   briefly or remain engaged for longer; the GM continues processing accepted
   orders and events.
@@ -24,7 +24,7 @@ day and time on the shared clock.
 - Brackenford and its six-column by five-row named-sector map are authoritative
   for this prototype.
 - Town control requires a credible presence in both central control pairs
-  (C3/D3 and C4/D4), with no opposing unit contesting a required sector.
+  (C3/D3 and C4/D4), with no opposing force marker contesting a required sector.
 - Infantry, movement, observation, written orders, reports, and the prototype
   combat and contested-action procedure are in scope. Vehicles, artillery, air
   support, cyberwarfare, national politics, and detailed equipment are out of
@@ -74,8 +74,8 @@ Commander confirmed receipt at:
 ```
 
 The GM must record the approved placement after reviewing the commander's
-proposal. No starting marker may begin in a central control pair, and neither
-side may receive an unfair immediate route or information advantage.
+proposal. No starting force marker may begin in a central control pair, and
+neither side may receive an unfair immediate route or information advantage.
 
 ## Public briefing script
 
