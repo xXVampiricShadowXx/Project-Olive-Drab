@@ -24,10 +24,12 @@ is separate from strength: a force can be intact but shaken, or depleted but
 steady. Do not invent numerical modifiers for these states.
 
 Commanders maintain and submit their own current force-status record for an
-engagement. It should state position, posture, preparation, readiness, strength,
-reserve or commitment, and any active order or behaviors. This is a commander
-report, not an automatic state change. The GM checks it against the authoritative
-log, map, reports, and observed outcomes before accepting any correction.
+engagement. It should identify the **Unit** and state position, posture,
+preparation, readiness, strength, reserve or commitment, and any active order or
+behaviors. This is a commander report, not an automatic state change. The GM
+checks it against the authoritative log, map, reports, and observed outcomes
+before accepting any correction. Repeat the status record separately for each
+involved unit when a commander has more than one unit in the engagement.
 
 ## Contact triggers
 
@@ -84,6 +86,7 @@ receive it. Use the existing confidence labels:
 
 ```text
 Contact ID:
+Unit(s) involved:
 Time observed:
 Sector or route:
 Source:
@@ -209,6 +212,7 @@ For each engagement, the GM retains:
 
 ```text
 Side:
+Unit:
 Commander-submitted status:
 Authoritative status at snapshot:
 Verified changes:
