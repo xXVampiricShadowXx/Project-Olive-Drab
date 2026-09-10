@@ -10,7 +10,9 @@ not create an operational result or reveal hidden information.
   updates, and rules procedure.
 - Private channels must be role-based and GM-visible. They support the
   superior/subordinate communication paths used by the scenario.
-- Opposing-player contact requires superior permission and GM visibility.
+- **For the first prototype, opposing-player contact requires GM approval and GM
+  visibility. A superior's permission is required only when a higher
+  player-controlled role actually exists.**
 - Personal direct messages are not part of the game record.
 - Every order uses the standard fields and one purpose per order.
 - The GM acknowledges receipt, returns incomplete or contradictory orders for

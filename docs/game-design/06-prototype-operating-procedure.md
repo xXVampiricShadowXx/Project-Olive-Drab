@@ -10,7 +10,7 @@ The prototype uses one shared local time zone and a seven-day scenario clock.
 - **Frozen window:** 22:00–08:00. The clock advances to 08:00, but no new player action resolves and no action timer counts down. The game master may prepare records and private notes, but does not create a new operational result during the freeze.
 - **Daily boundary:** At 22:00, the game master records every in-progress order, its remaining time, and its current conditions. At 08:00, those orders resume with the same remaining time unless a written scenario rule says otherwise.
 
-The clock remains live during the active window, but player attention is flexible rather than continuously online. Players may check in briefly from work or another obligation, submit orders, receive GM notifications or situation reports, or remain immersed for longer periods. The GM continues processing accepted orders and events even when a player is away. The schedule is a pacing aid, not a reason to punish players for sleeping.
+The clock remains live during the active window, but player attention is flexible rather than continuously online. Players may check in briefly from work or another obligation, submit an order, receive GM notifications or situation reports, or remain immersed for longer periods. The GM continues processing accepted orders and events even when a player is away. The schedule is a pacing aid, not a reason to punish players for sleeping.
 
 ## Order lifecycle
 
@@ -22,6 +22,8 @@ Every action that can change the shared situation uses the same short lifecycle:
 4. **Accepted or returned:** A complete order is accepted for processing. An incomplete, impossible, or contradictory order is returned with one clear question; its timer does not start until the commander resubmits it.
 5. **In progress:** The game master records the start time, expected completion time, route or target, and any conditions that can interrupt it. An accepted behavior may execute during the order without a new notification, subject to GM trigger validation. The commander may clarify an order, but a changed objective is a new order.
 6. **Resolved:** The game master updates the master map, affected status, and any reports. The commander receives the information their side could know.
+
+For the first prototype, a unit may have only **one active operational order at a time**. A new accepted operational order for that same unit supersedes its previous active operational order, including its attached behaviors, unless the GM explicitly records that the new order is a non-conflicting action that can run concurrently. This prevents two orders from silently controlling the same unit at once.
 
 If enemy contact, a contested route, or a threatened control location interrupts an
 order, use [Prototype Combat and Contested Actions](13-prototype-combat-and-contested-actions.md).
@@ -90,9 +92,9 @@ Triggers should name a sector, route, report condition, time, or observable
 unit condition. The GM may reject vague, impossible, contradictory, or
 unverifiable triggers. A behavior expires when its expiry condition occurs, its
 action completes, its parent order is replaced or canceled, or the unit enters
-an unresolved situation outside the approved action. The commander may cancel
-or replace a behavior through a new accepted order; a later order supersedes
-only the behavior it identifies.
+an unresolved situation outside the approved action. A new accepted operational
+order for the same unit replaces the prior parent order and its attached
+behaviors unless the GM explicitly records a non-conflicting concurrent action.
 
 If a valid trigger occurs while the commander cannot be reached, the GM follows
 the behavior's recorded fallback. If no fallback is recorded, the GM uses the
@@ -113,7 +115,7 @@ Use a role-based chain of command for all game communication:
 - One group channel is available for non-sensitive game communication, public updates, and rules procedure.
 - Each player communicates through their superior and subordinate roles where those roles exist. A player should not bypass an available superior or subordinate to issue or request an operational decision.
 - The GM may contact commanders privately when a report, order clarification, or other information is sensitive.
-- Players may contact opposing players only with permission from their superior and with the GM able to see or review the exchange.
+- **First-prototype opposing contact:** because the only player-controlled roles are the two company commanders, an opposing commander may be contacted only with GM approval and GM visibility. A superior's permission is required only when a higher player-controlled role actually exists.
 - Game-related communication must stay separate from personal chat so the GM can request, review, and preserve the operational record.
 
 The first test uses a Discord server with channels that follow this structure. Discord is the communication platform for orders, reports, notifications, and rulings; it does not replace the authoritative log or map. The shared digital map may use another tool, provided its access rules match the master-map and filtered-view rules.
@@ -184,7 +186,7 @@ The campaign is operationally simultaneous during each active window: the game c
 - A report register showing which side received each report and when.
 - A short decisions log for temporary rulings and unresolved questions.
 
-At 08:00, the game master gives each commander a compact private briefing containing the current time, friendly status, known reports, in-progress orders, pending decisions, and the next deadline. The commander confirms receipt before issuing a new order. The briefing does not include information that role has not earned.
+At 08:00, the game master gives each commander a compact private briefing containing the current time, friendly status, known reports, in-progress orders, pending decisions, and the next deadline. The briefing does not include information that role has not earned.
 
 During the active window, the game master actively manages the session: acknowledging orders, tracking timers, resolving contacts, updating the master map, and sending reports as events occur. Players may take short breaks or be briefly unavailable, but the game remains live and the GM continues to apply the rules and record events. Urgent decisions use the response-window and fallback procedure above.
 
@@ -218,4 +220,4 @@ When the original player returns, or another eligible commander formally assumes
 - Rules questions are logged and answered with a temporary ruling so play can continue.
 - Temporary rulings are reviewed after the scenario, not repeatedly reopened during the active clock.
 
-Advanced intelligence, cyberwarfare, vehicles, air support, and other expansion systems are outside this procedure. The prototype uses observation, written reports, infantry movement, and game-master adjudication only.
+Advanced intelligence, cyberwarfare, vehicles, air support, and other expansion systems are outside this procedure. The prototype uses observation, written orders, infantry movement, and game-master adjudication only.

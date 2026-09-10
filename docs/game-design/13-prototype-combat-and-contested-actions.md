@@ -240,10 +240,10 @@ Possible consequences include:
   created.
 
 After an exchange, a force that is **broken** cannot attack or contest a sector;
-it must withdraw or accept surrender under the scenario's GM ruling. A
-**depleted** force can hold or withdraw but needs a recorded reorganization
-period before a deliberate attack. These are prototype states, not casualty
-tables.
+it must withdraw or otherwise cease contesting the situation under the scenario's
+GM ruling. A **depleted** force can hold or withdraw but needs a recorded
+reorganization period before a deliberate attack. These are prototype states,
+not casualty tables.
 
 ## Withdrawal and disengagement
 

@@ -26,8 +26,8 @@ requiring a detailed real-world map or a scale model.
 The final game is intended to use a continuous playspace. Forces should be able to
 occupy positions and move freely rather than snapping to map cells or treating
 sector edges as physical barriers. A military-style coordinate and reference grid,
-potentially an MGRS-like system, should support reports, orders, and the location
-of terrain features, units, and objectives. Those references identify positions;
+potentially an MGRS-like system, should support reports, orders, and the location of
+terrain features, units, and objectives. Those references identify positions;
 they do not define movement cells, impose hard boundaries, or replace route and
 terrain judgments.
 
@@ -49,21 +49,21 @@ information boundaries, and reporting clarity while allowing finer positions.
         |    (woods)   |    Fields    |    (broken)  |    (broken)  |    Fields    |    (open)   |
         +--------------+--------------+--------------+--------------+--------------+--------------+
   2     | A2 West      | B2 West      | C2 Mill      | D2 Mill      | E2 East      | F2 East      |
-        |    Approach  |    Verge     |    Road      |    Yard      |    Verge     |    Approach  |
-        |    (open)    |    (open)    |    (road)    |    (built)   |    (open)    |    (open)    |
+        |    Approach  |    Verge     |    Road      |    Yard      |    Verge     |    Approach |
+        |    (open)    |    (open)    |    (road)    |    (built)   |    (open)    |    (open)   |
         +--------------+--------------+--------------+--------------+--------------+--------------+
   3     | A3 South     | B3 Orchard  | C3 Market    | D3 Market    | E3 Station   | F3 Station   |
         |    West      |    (broken)  |    Square    |    Square    |    Street    |    Street    |
-        |    (open)    |    (broken)  |    (built)   |    (built)   |    (built)   |    (built)   |
+        |    (open)    |    (broken)  |    (built)   |    (built)   |    (built)   |    (built)  |
         +--------------+--------------+--------------+--------------+--------------+--------------+
   4     | A4 South     | B4 Orchard  | C4 Town Hall | D4 Town Hall | E4 East      | F4 East      |
         |    Track     |    (road)   |    Quarter   |    Quarter   |    Blocks    |    Blocks    |
-        |    (road)    |    (road)    |    (built)   |    (built)   |    (built)   |    (built)   |
+        |    (road)    |    (road)   |    (built)   |    (built)   |    (built)   |    (built)  |
         +--------------+--------------+--------------+--------------+--------------+--------------+
                  Bluewater River: boundary between rows 4 and 5
-  5     | A5 South    | B5 South    | C5 South     | D5 South     | E5 South     | F5 South    |
-        |    Woods     |    Fields   |    Bank       |    Bank       |    Fields     |    Road      |
-        |    (woods)   |    (open)    |    (open)     |    (open)     |   (open)    |    (road)   |
+  5     | A5 South    | B5 South    | C5 South     | D5 South     | E5 Fields    | F5 South    |
+        |    Woods    |    Fields   |    Bank       |    Bank       |    (open)    |    Road      |
+        |    (woods)  |    (open)    |    (open)     |    (open)     |    (open)    |    (road)   |
         +--------------+--------------+--------------+--------------+--------------+--------------+
                          SOUTH: River Road (S)
 ```
@@ -121,6 +121,13 @@ must implement the existing role-based structure with GM visibility:
 - A GM-visible channel or approved procedure for any opposing-side contact.
 - No use of personal direct messages for orders, reports, map updates, or rulings.
 
+For this first prototype, each commander is the highest player-controlled role on
+their side. Therefore, **opposing-player contact requires GM approval and GM
+visibility; superior permission is required only where a higher player-controlled
+role actually exists.** This avoids making opposing contact impossible in the
+three-person prototype while preserving the intended chain-of-command restriction
+for future multi-level tests.
+
 The channel structure and information boundaries are authoritative. The GM must
 confirm channel permissions before play and record the channel names in the setup
 record. A Discord channel must not expose the master map, hidden starting zones,
@@ -167,9 +174,13 @@ The primary objective is **Brackenford town control**. The GM tracks control at 
 sector level and derives the town result from these locations:
 
 - **Market Square:** C3 and D3 are the central control pair. A side must hold both
-  sectors, or the pair is contested.
-- **Town Hall Quarter:** C4 and D4 are the civic control pair. A side must hold
-  both sectors, or the pair is contested.
+  sectors. If both sides have eligible forces in the pair, the pair is contested;
+  if neither side has an eligible presence in both sectors, the pair is not
+  controlled by either side.
+- **Town Hall Quarter:** C4 and D4 are the civic control pair. A side must hold both
+  sectors. If both sides have eligible forces in the pair, the pair is contested;
+  if neither side has an eligible presence in both sectors, the pair is not
+  controlled by either side.
 - **Mill Road Junction:** C2 and D2 are the northern route pair. They are an
   approach objective and a useful observation position, but they are not sufficient
   for town control by themselves.
@@ -179,13 +190,13 @@ sector level and derives the town result from these locations:
 
 For the first scenario, the town is **controlled** only when one side has a credible
 infantry presence in both central control pairs (C3/D3 and C4/D4), with no opposing
-unit contesting any required sector. If either central pair is occupied by opposing
-forces, the town is contested. A side may occupy an approach pair without
-controlling the town. This applies the existing control rule without making the
-entire six-by-five map a single capture location.
+unit contesting any required sector. If either side occupies a required sector
+against an opposing force, the affected control pair is contested and the town is
+not controlled by either side. An empty required sector does not by itself create a
+contested result.
 
 The GM may mark a central pair as uncontrolled when neither side has an eligible
-presence. Control changes are time-stamped and reported to both commanders.
+presence in either required sector. Control changes are time-stamped and reported to both commanders.
 
 ## Balanced asymmetric hidden starting zones
 
