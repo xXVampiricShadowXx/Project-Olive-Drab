@@ -4,8 +4,8 @@
 
 ## Active-Day Procedure
 1. Draft and submit a clear order.
-2. Wait for game-master acknowledgment; revise if returned.
-3. Start the stated timer, report observations, and update the order log.
+2. Wait for game-master acknowledgment and **acceptance**; revise if returned.
+3. After the GM accepts the order, the GM starts and records the timer. Track expected completion and report observations.
 4. At 22:00, pause timers and record remaining time; resume at 08:00.
 
 ## Unit Stats At A Glance
