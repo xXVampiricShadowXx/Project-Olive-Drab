@@ -27,7 +27,7 @@ Use this checklist before and during the first live, supervised prototype. The G
 - [ ] Place each company's markers and record its starting strength, readiness, location, and current order.
 - [ ] Define balanced but asymmetric hidden starting zones and the readiness condition for each side.
 - [ ] Give each commander only their own permitted zone and readiness information.
-- [ ] Review each commander's proposed troop placement and require revision if it creates an unfair immediate advantage, such as placing the entire company directly on the objective.
+- [ ] Review each commander's proposed force-marker placement and require revision if it creates an unfair immediate advantage, such as placing all of the company's subordinate-unit markers directly on the objective.
 - [ ] Record approved starting locations and readiness privately on the master map before revealing the scenario clock.
 - [ ] Choose the starting weather and visibility; write the choice in the master log.
 - [ ] Publish the primary objective and the three control states: controlled, contested, and uncontrolled.
