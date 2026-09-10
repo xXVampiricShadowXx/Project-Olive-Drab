@@ -25,8 +25,9 @@
 | Observe one adjacent sector | 15 min |
 
 For routes spanning multiple sectors, add the applicable movement time for each
-sector and round the total up to the next 15-minute mark. Do not use one terrain
-value for the whole route when sectors differ.
+sector. If the total is not already a multiple of 15 minutes, round it up to
+the next 15-minute multiple. A total already on a 15-minute multiple remains
+unchanged. Do not use one terrain value for the whole route when sectors differ.
 
 ## Contact Quick Reference
 - Stop the routine timer when enemy contact, a blocked route, or a contested objective occurs.
