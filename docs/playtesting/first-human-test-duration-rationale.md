@@ -8,7 +8,7 @@ This is a test-scope decision, not a new game mechanic. The purpose of the first
 
 A seven-day live campaign asks participants and the GM to sustain attention and continuity before the project has established that the basic experience is enjoyable. A one-day test gives the group a complete active cycle while keeping the commitment appropriate for a first human session.
 
-The first test should still use the established 08:00–22:00 active window, flexible player attention, frozen-clock rule if the session reaches 22:00, and all existing order, contact, information, control, and safety procedures. The difference is that the human session ends after the Day 1 active window rather than beginning another scenario day.
+The first test uses the established 08:00–22:00 active window, flexible player attention, and all existing order, contact, information, control, and safety procedures. The session ends after the Day 1 final control-state check rather than beginning another scenario day.
 
 ## What remains outside the first human test
 
