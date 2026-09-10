@@ -9,9 +9,9 @@ the authoritative record.
 - [ ] Confirm one neutral GM, one NATO commander, one Russia commander, and one
   observer. Record preferred display names only; no personal details are
   required.
-- [ ] Record the shared local time zone and the scenario start/end as scenario
-  day and time on the shared clock. The prototype does not require exact
-  calendar dates.
+- [ ] Record the shared local time zone and the first human test start/end as
+  scenario day and time on the shared clock: Day 1, 08:00 through 22:00. The
+  prototype does not require exact calendar dates.
 - [ ] Record the notification method, backup notification method, and who
   checks response deadlines. Test both methods.
 - [ ] Name a primary and backup same-side succession contact for each
@@ -72,8 +72,10 @@ messages are never an order, report, ruling, map update, or notification.
 - [ ] Complete the public and private briefing templates, including map links,
   weather, visibility, starting zones, approved placement, and first deadline.
 - [ ] Publish the objective and control rule before accepting the first order.
-- [ ] Explain the 22:00 freeze, 08:00 restart, response windows, standing
-  behavior fields, and that silence never authorizes an unlisted attack.
+- [ ] Explain the active-day end at 22:00, response windows, standing behavior
+  fields, and that silence never authorizes an unlisted attack. The overnight
+  freeze and next-day restart are broader prototype procedures, not required
+  first-test steps.
 - [ ] Complete the separate [communication rehearsal](human-communication-order-rehearsal.md).
 
 ## 5. Consent, safety, and real-life priority
@@ -90,22 +92,18 @@ The fictionalized setting is not a statement about real nations or current
 events. Keep tactical information inside the game record and do not request
 real operational, political, or personal information.
 
-## 6. Seven-day clock and continuity
+## 6. First-test clock and continuity
 
-- [ ] Record the scenario start at Day 1, 08:00 in the shared local time zone.
-- [ ] At each 22:00 boundary, stop timers, record remaining active time, save
-  the state, and publish the end-of-day note.
-- [ ] At each 08:00 restart, deliver private handoffs and resume the recorded
-  remaining time without recalculation.
-- [ ] For a full-day-or-longer absence, activate the named same-side primary,
-  then backup, using the existing succession order. Do not transfer a player
-  across factions or grant unearned information.
-- [ ] Preserve the state during a pause or hiatus. Restart only after the GM
-  confirms the participants and records the restart time.
-- [ ] Before a pause, hiatus, or overnight freeze, save a labelled snapshot.
-  On restart, verify the snapshot ID, active timers, pending deadlines, and
-  information boundaries before resuming. If the session ends, record closure
-  and apply the agreed retention/deletion date.
+- [ ] Record the first human test start at Day 1, 08:00 in the shared local
+  time zone.
+- [ ] Run the active test window through Day 1, 22:00 and perform the final
+  control-state check before closing the session.
+- [ ] If the session reaches a real-life pause before 22:00, preserve the state
+  and record the restart/closure according to the pause procedure.
+- [ ] Do not extend the first human test into additional scenario days solely
+  to satisfy the broader seven-day prototype schedule.
+- [ ] For longer rehearsal only, use the existing 22:00 freeze, 08:00 restart,
+  and same-side succession procedures. These are not first-test blockers.
 
 ## Final go/no-go
 
@@ -115,7 +113,9 @@ temporary workaround is written and accepted by both commanders. Record:
 ```text
 Readiness result: GO / NO-GO
 Packet version and commit:
-Scenario start and local time zone:
+Scenario start: Day 1, 08:00
+First-test end: Day 1, 22:00
+Scenario local time zone:
 Unresolved blocker:
 Temporary workaround and expiry:
 Both commanders agree: yes / no
