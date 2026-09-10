@@ -213,15 +213,15 @@ Use this succession order:
 
 1. A superior commander on the absent commander's side takes temporary command of the absent commander's forces.
 2. If no superior is available, a commander at the same level on the absent commander's side may take temporary command.
-3. If no superior or equivalent commander is available, a subordinate from the absent commander's own company is preferred.
-4. If no suitable player from that company is available or willing, the game master may temporarily promote another available player from the same side.
-5. If no player from that side can take the role, the game master controls the company using the same limited-information and decision standards that apply to a non-player company.
+3. If no superior or equivalent commander is available, a subordinate from the absent commander's own organization is preferred.
+4. If no suitable player from that organization is available or willing, the game master may temporarily promote another available player from the same side.
+5. If no player from that side can take the role, the game master controls the absent commander's organization using the same limited-information and decision standards that apply to a non-player formation.
 
 Temporary command never crosses faction lines. The temporary commander receives the absent role's current orders, status, reports, and pending decisions, but not information that role has not earned. The game master records who assumed command, when the transfer began, and what authority was delegated.
 
-- A subordinate temporarily promoted to company commander controls the absent company for the duration of the appointment. When the appointment ends, they return to their original unit and retain only that unit's authority.
+- A subordinate temporarily promoted to fill the absent commander's role controls that absent commander's organization for the duration of the appointment. When the appointment ends, they return to their original unit and retain only that unit's authority.
 - A commander at the same level who assumes the absent role controls both their original forces and the temporary forces until the appointment ends.
-- A superior commander does not micromanage the temporary company. They issue objectives, priorities, and broad instructions, while the company is handled under the same higher-level abstraction used for subordinate or non-player formations.
+- A superior commander does not micromanage the temporary organization. They issue objectives, priorities, and broad instructions, while the organization is handled under the same higher-level abstraction used for subordinate or non-player formations.
 
 When the original player returns, or another eligible commander formally assumes the role, the game master announces the transfer, updates the command record, and returns the temporary commander to their normal authority. Orders already accepted remain valid unless the newly recognized commander changes or cancels them through the normal order procedure.
 
