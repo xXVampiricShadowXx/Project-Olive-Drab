@@ -7,7 +7,13 @@ aids, not additional rules. Use `N/A` rather than leaving a field ambiguous.
 
 | Order ID | Day/time received | Side/issuer | Required fields complete | Status | Timer/deadline | Linked report/contact | GM note |
 |---|---|---|---|---|---|---|---|
-| O-001 |  |  | yes / no | received / returned / accepted / resolved / cancelled |  |  |  |
+| O-001 |  |  | yes / no | draft / submitted / acknowledged / returned / accepted / in progress / paused—contact / resolved / cancelled / superseded |  |  |  |
+
+Use the status that matches the current lifecycle state in the operating
+procedure. A superseded order is closed because a newer accepted operational
+order replaced it; a cancelled order is explicitly ended without being replaced
+by another active order. `Paused—contact` records an interruption that is handled
+by the prototype contact procedure.
 
 ## GM event log
 

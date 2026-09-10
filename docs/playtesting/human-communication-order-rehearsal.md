@@ -1,8 +1,10 @@
 # Human Communication and Order Rehearsal
 
-Run this short rehearsal separately from the seven-day playtest. It validates
+Run this short rehearsal separately from the human playtest. It validates
 delivery, records, and continuity without creating an operational result or
-revealing hidden information.
+revealing hidden information. Freeze/restart checks are included because they
+remain useful for the broader multi-day prototype even though they are not a
+requirement of the first one-day human test.
 
 ## Procedure
 
@@ -26,9 +28,10 @@ revealing hidden information.
 7. **Absence handoff:** Simulate a same-side primary contact taking the current
    orders, status, earned reports, and pending decisions. Confirm that private
    opposing information is excluded, then simulate return or backup handoff.
-8. **Freeze/restart:** Simulate an order and response deadline crossing 22:00.
-   Record remaining active time, pause all results overnight, and resume the
-   same remaining time at 08:00.
+8. **Freeze/restart:** For the broader multi-day procedure, simulate an order
+   and response deadline crossing 22:00. Record remaining active time, pause
+   all results overnight, and resume the same remaining time at 08:00. This is
+   not required evidence for the first human test.
 9. **Observer closeout:** The observer confirms that every step has IDs,
    timestamps, visibility, linked source, state before/after, and any open
    question. No observer correction changes live play.
@@ -39,8 +42,9 @@ The rehearsal passes when all messages arrive through game channels, the GM can
 reconstruct the sequence from the registers and observer ledger, incomplete
 orders never start timers, movement/reporting preserves confidence labels,
 contact and deadlines use recorded fallbacks, handoff stays same-side, and
-freeze/restart preserves active time. A failure is a readiness blocker until
-fixed or documented as an accepted temporary workaround.
+freeze/restart preserves active time when that broader procedure is exercised.
+A failure is a readiness blocker until fixed or documented as an accepted
+temporary workaround.
 
 This rehearsal does not test balance, enjoyment, social dynamics, or whether a
 human group wants to play again. Record those questions for the human report.

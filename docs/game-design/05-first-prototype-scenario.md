@@ -29,31 +29,33 @@ These are scenario attributes, not universal statements about real forces. The f
 | NATO | One infantry company commander | Training, cohesion, communications, reconnaissance, precision | Smaller force, fewer replacements, vulnerable to being surrounded or exhausted |
 | Russia | One infantry company commander | Numbers, ability to occupy more ground, massed attacks, redundancy | Training, cohesion, communications, and information are less reliable in this scenario |
 
-The exact troop counts should remain abstract in the first test. We can use unit markers, strength points, or sub-units rather than representing every soldier.
+The exact troop counts should remain abstract in the first test. Each company is represented by a small number of **force markers**. A force marker is an abstract playable representation of part of the company's usable force; it is not a fixed real-world platoon, squad, or other formation. The scenario setup records how many force markers each company uses and their starting locations. Do not treat the marker count as a troop-count estimate.
 
 ## Starting zones and readiness
 
 The game master defines two hidden starting zones that are balanced in opportunity but asymmetric in terrain, approach, and information. Each commander receives only their own permitted zone and starting readiness conditions.
 
-Before the scenario begins, each commander may choose how to place their troop markers within that zone. The GM reviews and approves the placement before revealing the scenario clock. The GM may require a revision when a placement creates an unfair immediate advantage, including putting the entire company directly on the town objective at scenario start.
+Before the scenario begins, each commander may choose how to place their force markers within that zone. The GM reviews and approves the placement before revealing the scenario clock. The GM may require a revision when a placement creates an unfair immediate advantage, including putting the entire company directly on the town objective at scenario start.
 
 The GM records each side's approved starting locations and readiness privately on the master map, then gives each commander the minimum information needed to understand their own force. Starting readiness is a scenario condition, not a hidden penalty invented after play begins.
 
 ## Prototype objectives
 
-The scenario lasts for **one real-time week of play**, ending after seven days on the scenario clock. The commanders' shared operational objective is to secure the town and hold it until the clock runs out.
+For the **first human test**, the scenario runs for **one scenario day**, from 08:00 through 22:00 on the shared scenario clock. The test ends at the close of the Day 1 active window after the final control-state check. This shorter human-test scope is deliberate: it tests the complete active-day command experience without requiring participants to commit to a seven-day campaign before the core experience has been validated with people.
 
-For the prototype, daytime is active and nighttime is frozen. All players are assumed to use the same local time zone. The clock remains live during the active window, but player attention is flexible: a player may check in briefly from work or another obligation, submit an order, receive a GM notification or sitrep, or remain immersed for a longer period. The GM continues processing accepted orders and events. Orders and reports use predetermined communication methods, and the game master maintains the authoritative shared record.
+The underlying prototype remains compatible with the documented seven-day campaign and overnight freeze procedures, which can be exercised separately in solo or AI-assisted rehearsal. Those multi-day procedures are not required evidence for the first human test.
+
+The commanders' shared operational objective is to secure and hold the town through the end of the first test day. The GM continues processing accepted orders and events during the active window, subject to the existing player-attention and response-window procedures.
 
 Suggested side objectives:
 
-- **NATO objective:** Secure the town and hold it until the seven-day scenario clock expires.
-- **Russian objective:** Secure the town and hold it until the seven-day scenario clock expires.
+- **NATO objective:** Secure the town and hold it through the end of the Day 1 active window.
+- **Russian objective:** Secure the town and hold it through the end of the Day 1 active window.
 - **Game master objective:** Present a fair, information-limited situation and record how the asymmetry affects player decisions.
 
-The first test should define control clearly: a side controls the town when its forces occupy the required locations and the opposing side cannot contest them under the scenario rules. If neither side holds the town when the clock expires, the result is unresolved rather than an automatic victory.
+The first test should define control clearly: a side controls the town when its forces occupy the required locations and the opposing side cannot contest them under the scenario rules. If neither side holds the town at the final Day 1 control check, the result is unresolved rather than an automatic victory.
 
-The prototype uses an agreed daytime window of 08:00–22:00 and a nighttime freeze from 22:00–08:00. It also needs an order format, role-based communication chain, and procedure for resuming play each morning. Exact calendar dates are intentionally unspecified. A future always-on version may extend the current GM-validated standing behaviors and fallback procedures for longer periods of player absence, but it must not bypass GM validation or turn silence into an unbounded order; that system is outside the first test.
+The first human test uses the agreed daytime window of 08:00–22:00. The overnight freeze from 22:00–08:00 remains part of the broader prototype procedure but is not required during this first-day session. The test also uses the established order format, role-based communication chain, information boundaries, and contact-resolution procedure. Exact calendar dates remain unspecified.
 
 For the first contact or combat situation not covered by the packet, the GM makes a temporary ruling using the stated fairness principles, records the ruling, and applies it symmetrically to equivalent situations. The live game does not pause for a permanent rules decision; the ruling is reviewed after the scenario.
 
@@ -74,14 +76,15 @@ Avoid adding separate rules for every technology, weapon, or doctrine in version
 
 ## What the scenario should test
 
-The first scenario should answer:
+The first human scenario should answer:
 
 - Can a smaller, higher-quality force use information and positioning effectively?
 - Can a larger force create meaningful pressure without receiving an automatic victory?
 - Do commanders have different viable approaches?
 - Does the GM have enough structure to resolve engagements consistently?
 - Does fog of war make reconnaissance and careful movement valuable?
-- Can the scenario remain understandable with only a few unit markers and condition aids?
+- Can the scenario remain understandable with only a few force markers and condition aids?
+- Does one active day provide enough time for the core command loop to become meaningful?
 
 ## Boundaries
 
@@ -94,5 +97,6 @@ For the first test:
 - Use infantry only.
 - Do not include air support, vehicles, artillery, cyberwarfare, or national-level politics.
 - Keep intelligence limited to basic observation and the prototype fog-of-war rules.
+- Do not extend the first human session into additional scenario days solely to satisfy the broader seven-day prototype schedule.
 
 Those systems may be valuable later, but they would make it harder to identify whether the basic company-level game is working.

@@ -37,7 +37,7 @@ The first rules test should use:
 - One commander per side.
 - One game master.
 - A small number of company-sized units.
-- A short scenario with a clear beginning and end.
+- A bounded scenario with a clear beginning and end; the Brackenford prototype uses a seven-day scenario clock.
 - Simple resolution methods, using components already available at home.
 - A quick-reference aid for movement and other routine actions.
 - Agreed communication channels and an order-submission procedure.

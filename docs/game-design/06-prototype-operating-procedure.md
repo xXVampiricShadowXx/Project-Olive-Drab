@@ -1,14 +1,15 @@
 # Prototype Operating Procedure
 
-This document is the game master's runbook for the first live, supervised campaign. It is written so a new group can understand what happens during an active day, what happens at night, and how the game handles a player who is temporarily unavailable.
+This document is the game master's runbook for the first live, supervised test and the broader multi-day prototype procedure. It is written so a new group can understand what happens during an active day, what happens at night when the broader campaign continues, and how the game handles a player who is temporarily unavailable.
 
 ## Campaign clock
 
-The prototype uses one shared local time zone and a seven-day scenario clock.
+The broader prototype uses one shared local time zone and a seven-day scenario clock. The **first human test uses only Day 1, 08:00–22:00**, ending after the final control-state check.
 
 - **Active window:** 08:00–22:00. Orders may be submitted, acknowledged, and resolved. Movement, observation, combat, and other permitted actions continue according to their stated times.
-- **Frozen window:** 22:00–08:00. The clock advances to 08:00, but no new player action resolves and no action timer counts down. The game master may prepare records and private notes, but does not create a new operational result during the freeze.
-- **Daily boundary:** At 22:00, the game master records every in-progress order, its remaining time, and its current conditions. At 08:00, those orders resume with the same remaining time unless a written scenario rule says otherwise.
+- **Frozen window:** 22:00–08:00. When the broader multi-day campaign continues, the clock advances to 08:00, but no new player action resolves and no action timer counts down. The game master may prepare records and private notes, but does not create a new operational result during the freeze.
+- **Daily boundary:** For the broader multi-day campaign, at 22:00 the game master records every in-progress order, its remaining time, and its current conditions. At 08:00, those orders resume with the same remaining time unless a written scenario rule says otherwise.
+- **First-human-test end:** At the end of Day 1 active time, perform the final control-state check and close the first human session. Do not start a second scenario day solely to continue the first test.
 
 The clock remains live during the active window, but player attention is flexible rather than continuously online. Players may check in briefly from work or another obligation, submit an order, receive GM notifications or situation reports, or remain immersed for longer periods. The GM continues processing accepted orders and events even when a player is away. The schedule is a pacing aid, not a reason to punish players for sleeping.
 
@@ -125,7 +126,7 @@ The first test uses a Discord server with channels that follow this structure. D
 At the start of an active window, the game master:
 
 1. Publishes the current public clock and any scheduled environmental change.
-2. Reconciles the previous day's in-progress orders with the master log.
+2. Reconciles the previous day's in-progress orders with the master log when continuing a multi-day campaign.
 3. Sends each commander their private status and reports.
 4. Lists orders awaiting clarification or acknowledgment.
 
@@ -154,10 +155,10 @@ an automatic change to the master state.
 
 At the end of an active window, the game master:
 
-1. Stops all active timers at 22:00.
+1. Stops all active timers at 22:00 when the broader campaign continues or when the first human test closes.
 2. Records each order's remaining time and current condition.
 3. Publishes the public end-of-day note and any control changes.
-4. Stores the authoritative log and a backup copy before the freeze.
+4. Stores the authoritative log and a backup copy before the freeze when another scenario day will follow.
 
 ## Reports and map updates
 
@@ -178,7 +179,7 @@ The game master issues a commander-map update when a friendly unit moves, a know
 
 ## Shared session and continuity
 
-The campaign is operationally simultaneous during each active window: the game clock and GM processing continue from 08:00 to 22:00, while player participation may be asynchronous through brief check-ins or longer periods of attention. Accepted orders and GM-validated standing behaviors continue under their recorded limits without waiting for everyone to be online. It still has one authoritative operational record. The game master keeps:
+The first human session ends after Day 1 active time. For the broader campaign, play is operationally simultaneous during each active window: the game clock and GM processing continue from 08:00 to 22:00, while player participation may be asynchronous through brief check-ins or longer periods of attention. Accepted orders and GM-validated standing behaviors continue under their recorded limits without waiting for everyone to be online. It still has one authoritative operational record. The game master keeps:
 
 - A master clock log with active/frozen boundaries.
 - An order register containing every order, status, timer, and result.
@@ -186,7 +187,7 @@ The campaign is operationally simultaneous during each active window: the game c
 - A report register showing which side received each report and when.
 - A short decisions log for temporary rulings and unresolved questions.
 
-At 08:00, the game master gives each commander a compact private briefing containing the current time, friendly status, known reports, in-progress orders, pending decisions, and the next deadline. The briefing does not include information that role has not earned.
+At 08:00, the game master gives each commander a compact private briefing containing the current time, friendly status, known reports, in-progress orders, pending decisions, and the next deadline when continuing a multi-day campaign. The briefing does not include information that role has not earned.
 
 During the active window, the game master actively manages the session: acknowledging orders, tracking timers, resolving contacts, updating the master map, and sending reports as events occur. Players may take short breaks or be briefly unavailable, but the game remains live and the GM continues to apply the rules and record events. Urgent decisions use the response-window and fallback procedure above.
 
@@ -194,7 +195,7 @@ If records conflict, the latest time-stamped master log and map snapshot take pr
 
 ## Temporary command and player absence
 
-The game is live during the active window, but a player may be unavailable for a full day or more because of illness, an emergency, or another real-world obligation. The game master records the absence and appoints temporary command before that player's forces need a decision. The absent player does not receive retroactive knowledge when they return; they receive the normal handoff for their role. Brief check-ins and missed response windows do not by themselves trigger succession.
+The game is live during the active window, but a player may be unavailable during a longer campaign because of illness, an emergency, or another real-world obligation. The game master records the absence and appoints temporary command before that player's forces need a decision. The absent player does not receive retroactive knowledge when they return; they receive the normal handoff for their role. Brief check-ins and missed response windows do not by themselves trigger succession.
 
 Use this succession order:
 

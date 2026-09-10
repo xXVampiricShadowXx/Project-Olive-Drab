@@ -17,9 +17,9 @@ requiring a detailed real-world map or a scale model.
   they do not guarantee safety or control.
 - **Edges:** The north, east, south, and west map edges are named approaches and are
   the only off-map entry or exit points for the first test.
-- **Markers:** Put a unit marker in the sector it occupies. If a unit is moving
-  between sectors, the GM records the current sector and next sector in the order
-  register; do not create an unruled halfway position.
+- **Force markers:** Put a force marker in the sector it occupies. If a force marker
+  is moving between sectors, the GM records the current sector and next sector in
+  the order register; do not create an unruled halfway position.
 
 ## Future continuous-playspace model
 
@@ -33,7 +33,7 @@ terrain judgments.
 
 The Brackenford 6-by-5 sector grid remains authoritative for the Phase 3
 prototype. It is a deliberate simplification that makes a first live, flexible-
-attention playtest easy to run with a shared digital map, limited markers, and
+attention playtest easy to run with a shared digital map, limited force markers, and
 consistent timing. The sector grid should therefore be treated as named areas and
 reference anchors for this test, not as a commitment to the final movement model.
 Any future continuous map must preserve the prototype's named features, objectives,
@@ -62,7 +62,7 @@ information boundaries, and reporting clarity while allowing finer positions.
         +--------------+--------------+--------------+--------------+--------------+--------------+
                  Bluewater River: boundary between rows 4 and 5
   5     | A5 South    | B5 South    | C5 South     | D5 South     | E5 Fields    | F5 South    |
-        |    Woods    |    Fields   |    Bank       |    Bank       |    (open)    |    Road      |
+        |    Woods    |    Fields    |    Bank       |    Bank       |    (open)    |    Road      |
         |    (woods)  |    (open)    |    (open)     |    (open)     |    (open)    |    (road)   |
         +--------------+--------------+--------------+--------------+--------------+--------------+
                          SOUTH: River Road (S)
@@ -88,8 +88,8 @@ The digital map should provide:
   markers.
 - Separate GM master state and filtered commander views, whether implemented as
   separate boards, layers, exports, or screens.
-- Moveable friendly-unit markers, a way to show public control state, and a
-  separate place for suspected enemy markers.
+- Moveable friendly force-marker positions, a way to show public control state,
+  and a separate place for suspected enemy markers.
 - A map version or update timestamp so a commander can tell which view is current.
 - An export or snapshot method for the dated master-map record.
 
@@ -98,9 +98,9 @@ The GM should build and test the shared map before the scenario starts:
 1. Reproduce the ASCII grid exactly and compare every cell against the sector table.
 2. Add the public terrain, approaches, objectives, and control-pair labels.
 3. Create the master state and one filtered starting view per commander.
-4. Verify that hidden units, hidden zone boundaries, GM-only conditions, and stale
+4. Verify that hidden force markers, hidden zone boundaries, GM-only conditions, and stale
    reports cannot appear in the other side's view.
-5. Place no live forces until the GM has recorded the approved private starting
+5. Place no live force markers until the GM has recorded the approved private starting
    placements and the initial map version.
 
 The digital map is a presentation and record-keeping layer, not a new rules
@@ -166,7 +166,7 @@ free route to the objective:
 | West Approach (W) | A2, A3, A4 | Open edge feeding the mill and orchard | Several routes, but little concealment before town |
 
 The named roads and approaches are reference features for orders and reports. They
-do not imply that a unit controls an entire edge by occupying one sector.
+do not imply that a force marker controls an entire edge by occupying one sector.
 
 ## Objectives and control locations
 
@@ -190,7 +190,7 @@ sector level and derives the town result from these locations:
 
 For the first scenario, the town is **controlled** only when one side has a credible
 infantry presence in both central control pairs (C3/D3 and C4/D4), with no opposing
-unit contesting any required sector. If either side occupies a required sector
+force marker contesting any required sector. If either side occupies a required sector
 against an opposing force, the affected control pair is contested and the town is
 not controlled by either side. An empty required sector does not by itself create a
 contested result.
@@ -200,7 +200,7 @@ presence in either required sector. Control changes are time-stamped and reporte
 
 ## Balanced asymmetric hidden starting zones
 
-The GM selects one zone for each side before the commander chooses marker placement.
+The GM selects one zone for each side before the commander chooses force-marker placement.
 The zones are asymmetric in terrain and approach, but balanced by access to the
 town, concealment, and route options:
 
@@ -213,10 +213,10 @@ town, concealment, and route options:
 
 The GM may swap the side assignments for a repeat test, but must publish the zone
 shapes and reason for the swap before placement. Each commander may distribute
-their company's markers anywhere inside their own zone, subject to the existing
+their company's force markers anywhere inside their own zone, subject to the existing
 fairness check:
 
-- No starting marker may begin in a central control pair.
+- No starting force marker may begin in a central control pair.
 - A company may not begin with its entire force in one sector unless the GM
   records why that is fair and both sides receive an equivalent opportunity.
 - The GM must give each side at least two plausible first routes toward the town.
@@ -232,8 +232,8 @@ The master map is authoritative. The GM maintains three information layers:
 
 | Information | Master map | NATO commander view | Russia commander view |
 |---|---|---|---|
-| All unit locations and strength | Yes | No | No |
-| Own current locations, orders, readiness, and supply notes | Yes | Yes | Yes |
+| All force-marker locations and strength | Yes | No | No |
+| Own current force-marker locations, orders, readiness, and supply notes | Yes | Yes | Yes |
 | Opposing location | Yes | Only when earned by confirmed or reported information | Only when earned by confirmed or reported information |
 | Control state of every sector | Yes | Public control updates plus own observations | Public control updates plus own observations |
 | Hidden starting-zone boundaries | Yes | NATO zone only | Russia zone only |
@@ -254,8 +254,8 @@ Before play, the GM should:
 3. Mark the two central control pairs and the two approach pairs.
 4. Hide the two starting zones and record each commander's approved placement.
 5. Prepare one filtered starting map per commander with only their zone, public
-   terrain, their own markers, and the published objective.
-6. Keep the full map, hidden conditions, all markers, and the information-release
+   terrain, their own force markers, and the published objective.
+6. Keep the full map, hidden conditions, all force markers, and the information-release
    log on the master map.
 
 The first test uses a shared digital map prepared from the ASCII layout and tables

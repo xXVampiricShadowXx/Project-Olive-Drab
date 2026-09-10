@@ -1,7 +1,7 @@
 # Prototype Combat and Contested Actions
 
 This is the minimum contact procedure for the first live Brackenford test. It is
-GM-run, infantry-only, and deliberately abstract. It is not the final real-time
+a GM-run, infantry-only, and deliberately abstract. It is not the final real-time
 combat system: it does not model weapons, ranges, casualties, formations, or
 continuous fire. It tests whether commanders make useful choices when contact
 interrupts a timed order and information arrives imperfectly.
@@ -128,8 +128,9 @@ attendance:
 - **Routine contact:** 30 active minutes.
 - **Immediate close contact or threatened withdrawal route:** 15 active
   minutes.
-- **A planned attack or deliberate probe:** the next mutually observable
-  decision point, normally 30 active minutes.
+- **A planned attack or deliberate probe:** use the next decision point stated
+  in the contact report; if no specific decision point is stated, use 30 active
+  minutes from the time the report is delivered.
 
 The deadline pauses at 22:00 with all other timers. The GM sends one reminder
 when practical. A commander may answer early, give a standing instruction, or
@@ -156,12 +157,18 @@ after hidden information has been protected:
    Ask one clarification only if the order cannot be executed safely.
 3. **Set the comparison.** Combine the verified portions of both sides'
    status submissions with position/terrain, preparation, commitment, readiness,
-   strength, information, and hidden conditions. The GM may identify one clear
-   advantage and one clear risk for each side; do not stack invented modifiers
-   or treat an unverified self-report as fact.
-4. **Choose the uncertainty band.** Use **favorable**, **even**, or
-   **unfavorable** for each side based on the snapshot. The band describes the
-   situation before the resolution aid, not a hidden bonus.
+   strength, information, and hidden conditions. Identify the single clearest
+   immediate advantage and the single clearest countervailing advantage, using
+   only verified or deliberately hidden conditions that actually affect this
+   exchange. Do not stack multiple speculative advantages or treat an unverified
+   self-report as fact.
+4. **Choose the uncertainty band.** Start at **even**. Shift one side to
+   **favorable** only when its single clearest immediate advantage remains after
+   considering the clearest countervailing advantage. Shift the other side to
+   **unfavorable** in that same case. If the advantages balance, no single factor
+   is clearly decisive, or the GM cannot explain the difference from the recorded
+   snapshot, keep both sides **even**. The band describes the situation before
+   the resolution aid; it is not a hidden arithmetic bonus.
 5. **Use the simple resolution aid.** Roll one six-sided die for each side and
    show each roll to every player directly affected by the outcome. The GM may
    keep hidden information, the comparison, and any unrevealed situation band or

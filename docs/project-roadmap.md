@@ -48,8 +48,8 @@ The phases are deliberately broad. Rules will change during playtesting, so this
 
 - One small town-scale scenario
 - A fictionalized near-future NATO-Russia asymmetric matchup
-- A seven-day town-control scenario clock
-- A daytime-active, nighttime-frozen prototype schedule
+- A documented seven-day campaign-capable scenario clock, with a one-day first-human-test scope
+- A daytime-active, nighttime-frozen procedure for multi-day play
 - One map showing a town and surrounding terrain
 - Two opposing sides
 - One commander per side
@@ -82,7 +82,7 @@ The phases are deliberately broad. Rules will change during playtesting, so this
 
 **Exit test:** The game creates meaningful decisions, roles depend on one another, and the real-time structure adds useful pressure rather than confusion.
 
-**Status:** Preparation complete — AI rules-testing packet ready; communication/order dry run pending
+**Status:** Preparation complete — AI rules-testing packet ready; first human test is scoped to one active day
 
 ## Phase 5: Expand the rules carefully
 
@@ -136,14 +136,14 @@ For each phase:
 
 ## Current focus
 
-Phase 3 documentation is complete, and Phase 4 AI rules-testing preparation is complete. The immediate task is to use the packet documents to run the first complete, infantry-only test:
+Phase 3 documentation is complete, and Phase 4 AI rules-testing preparation is complete. The immediate task is to use the packet documents to run the first complete, infantry-only **one-day human test**:
 
 - One town-scale map and two opposing infantry companies.
 - Commander role sheets, the [prototype roleplay layer](game-design/14-prototype-roleplay-layer.md), and a game-master setup checklist.
 - The order form, timing aids, report format, and filtered map procedure.
-- One complete seven-day daytime-active/nighttime-frozen playtest.
+- One active scenario day from 08:00–22:00, ending after the Day 1 control-state check.
 
-The packet is intentionally documentation-first and live-supervised. The authoritative Brackenford town-map and terrain-sector specification, prototype contact procedure, and Phase 4 AI rules-testing preparation are complete; before the first human test, the group still needs to prepare its shared digital player-facing map, configure the Discord server with GM-visible role-based channels, complete the initial briefing, run the communication/order dry run, and pass the final GM preflight. The Phase 4 packet provides a one-day rehearsal and observer metrics without claiming simulation results. The human-test readiness package now provides a reproducible packet manifest, Discord/map/record checks, a separate communication rehearsal, participant consent and safety guidance, a release-preparation guide, a stable snapshot procedure, a solo seven-day rehearsal, reusable registers, external setup and notification checks, participant onboarding, and a feedback-to-decision framework. These documents do not claim external setup or player actions are complete. The GM will handle any uncovered first-engagement situation through a recorded temporary ruling applied symmetrically. The balanced asymmetric hidden starting zones and readiness conditions remain part of the packet procedure, exact calendar dates remain intentionally unspecified, and the shared daily schedule remains 08:00–22:00 active and 22:00–08:00 frozen.
+The packet is intentionally documentation-first and live-supervised. The authoritative Brackenford town-map and terrain-sector specification, prototype contact procedure, and Phase 4 AI rules-testing preparation are complete; before the first human test, the group still needs to prepare its shared digital player-facing map, configure the Discord server with GM-visible role-based channels, complete the initial briefing, run the communication/order dry run, and pass the final GM preflight. The Phase 4 packet provides a one-day rehearsal and observer metrics without claiming simulation results. The human-test readiness package provides a reproducible packet manifest, Discord/map/record checks, a separate communication rehearsal, participant consent and safety guidance, a release-preparation guide, a stable snapshot procedure, a solo seven-day rehearsal for multi-day continuity, reusable registers, external setup and notification checks, participant onboarding, and a feedback-to-decision framework. These documents do not claim external setup or player actions are complete. The GM will handle any uncovered first-engagement situation through a recorded temporary ruling applied symmetrically. The balanced asymmetric hidden starting zones and readiness conditions remain part of the packet procedure, exact calendar dates remain intentionally unspecified, and the first human test ends at Day 1, 22:00 rather than starting another scenario day.
 
 External readiness is tracked separately from repository completion:
 

@@ -31,13 +31,19 @@ For each day, complete these steps in order:
 6. Create one contact, pause only the affected decision, issue response
    deadlines, resolve the contact using the existing procedure, and record the
    report and map consequence.
-7. On Days 2-6, simulate a same-side absence and activate the primary, then
+7. During at least one contact exchange, create materially equivalent
+   fictional snapshots for both sides in separate rehearsal cases. Confirm that
+   the situation-band procedure starts at **even** and shifts only when one
+   clearly documented immediate advantage remains after the clearest
+   countervailing advantage is considered; otherwise keep both sides even.
+   Record the factor used and confirm that hidden information stays hidden.
+8. On Days 2-6, simulate a same-side absence and activate the primary, then
    backup, handoff. Verify that neither receives opposing private information
    or unearned reports.
-8. At 22:00, stop timers, record remaining active time, save the master and
+9. At 22:00, stop timers, record remaining active time, save the master and
    filtered views, and write an end-of-day summary.
-9. At 08:00, restart only the recorded remaining time, publish the allowed
-   handoff, and continue without recalculating prior results.
+10. At 08:00, restart only the recorded remaining time, publish the allowed
+    handoff, and continue without recalculating prior results.
 
 On Day 7, complete the final map-control check, freeze the state, reconcile
 the observer ledger against the master register, and complete the report's
@@ -47,8 +53,9 @@ checkpoint and metric tables.
 
 The rehearsal passes when the GM can reconstruct all seven days from IDs and
 timestamps; incomplete orders never start timers; confidence and visibility
-labels survive release; contact, standing behavior, handoff, map, pause, and
-freeze/restart records are internally consistent; and no step requires an
+labels survive release; contact, situation bands, standing behavior, handoff,
+map, pause, and freeze/restart records are internally consistent; equivalent
+contact snapshots receive equivalent situation bands; and no step requires an
 unrecorded mechanic. Any failure is a readiness blocker or a documented
 temporary, symmetrical ruling.
 

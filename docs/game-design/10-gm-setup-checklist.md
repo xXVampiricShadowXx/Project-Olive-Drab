@@ -6,10 +6,10 @@ Use this checklist before and during the first live, supervised prototype. The G
 
 - [ ] Confirm two commanders and one GM, with a temporary-command contact for each side.
 - [ ] Confirm the shared local time zone and active window: 08:00–22:00.
-- [ ] Confirm the seven-day scenario clock and frozen window: 22:00–08:00.
+- [ ] Confirm that the first human test uses Day 1 only; the broader prototype also supports a seven-day scenario clock with a frozen window from 22:00–08:00 when multiple days are run.
 - [ ] Confirm one group channel for non-sensitive game communication and public updates.
 - [ ] Confirm the role-based chain: players communicate through available superiors and subordinates; the GM can review all game communication.
-- [ ] Confirm that opposing-player contact requires superior permission and GM visibility.
+- [ ] Confirm that opposing-player contact requires GM approval and GM visibility; a superior's permission is required only when a higher player-controlled role actually exists.
 - [ ] Confirm the selected Discord server is used for game communication and is separate from personal chat; the shared map may use another tool.
 - [ ] Explain that the 08:00–22:00 clock remains live while player attention may be brief or extended.
 - [ ] Define how urgent decisions receive response-by times, notifications, and recorded fallback handling.
@@ -54,10 +54,11 @@ Open rulings/questions:
 
 Give each order, report, map update, and ruling a sequential ID. Record the source, time, affected side, and whether information is public, private, confirmed, reported, or suspected.
 
-## 4. Start each active day
+## 4. Start the first active day
 
-- [ ] Announce the current time, day, weather, visibility, and public control state.
-- [ ] Reconcile each order paused overnight using its recorded remaining time.
+- [ ] Announce Day 1, the current time, weather, visibility, and public control state.
+- [ ] For a first human test, confirm that the session ends after the Day 1 final control-state check at 22:00.
+- [ ] If a multi-day prototype test is being run later, reconcile each order paused overnight using its recorded remaining time.
 - [ ] Give each commander a private briefing with friendly status, known reports, current orders, pending decisions, and the next deadline.
 - [ ] Confirm each commander received the briefing before accepting a new order.
 - [ ] Start the visible active-window timer.
@@ -79,17 +80,19 @@ Give each order, report, map update, and ruling a sequential ID. Record the sour
 - [ ] Give urgent requests a response-by time; if it expires, use the recorded standing instruction or fallback and log the decision.
 - [ ] State and record a temporary ruling when the packet does not cover an edge case; apply it symmetrically.
 
-## 6. Close each active day
+## 6. Close the first active day
 
 - [ ] At 22:00, stop all timers and record remaining time and current conditions.
 - [ ] Resolve only actions completed by the exact deadline.
 - [ ] Publish the public end-of-day note and any control changes.
 - [ ] Save the order register, report register, decisions log, and dated master-map snapshot.
-- [ ] Confirm the next 08:00 restart time and any player handoffs.
+- [ ] Confirm that the first human session has ended after the final control-state check.
+- [ ] For a later multi-day test, confirm the next 08:00 restart time and any player handoffs.
 
 ## 7. End the scenario
 
-- [ ] At the end of Day 7's active window, stop timers and resolve actions completed by the exact deadline.
+- [ ] For the first human test, apply the Day 1 primary result after the final control-state check.
+- [ ] For a broader seven-day test, at the end of Day 7's active window, stop timers and resolve actions completed by the exact deadline.
 - [ ] Record the final master-map state and control state.
 - [ ] Apply the published primary result, then any selected secondary condition.
 - [ ] Send both commanders the same public result and their final private status.

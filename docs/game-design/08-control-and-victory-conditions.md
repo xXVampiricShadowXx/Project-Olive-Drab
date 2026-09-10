@@ -14,29 +14,39 @@ Control is one of three states:
 
 A side does not gain control merely by submitting an order, observing a location, or damaging an opposing unit. A capture attempt becomes effective when the game master resolves the action and updates the map.
 
-## Primary result at the seven-day deadline
+## Primary result for the first human test
 
-At the end of Day 7's active window, the game master checks the town's control state:
+The first human test runs only through **Day 1's active window, 08:00–22:00**. At the end of that window, the game master checks the town's control state:
 
 - **Town controlled:** The controlling side wins the primary objective.
 - **Town contested:** The scenario ends in a draw on the primary objective; the game master reports which side has the stronger position as a secondary narrative result, not as a win.
 - **Town uncontrolled:** Neither side wins the primary objective.
 
-If one side has been unable to field an infantry company because it has been eliminated or has formally withdrawn, the other side wins immediately only if it controls the town. Otherwise, play continues until the deadline.
+The first human session ends after this final control-state check. It does not continue into additional scenario days merely to exercise the broader seven-day campaign clock.
+
+## Primary result for the broader prototype
+
+The broader prototype remains compatible with a seven-day scenario. When a multi-day test is actually run, the primary deadline is the end of **Day 7's active window**:
+
+- **Town controlled:** The controlling side wins the primary objective.
+- **Town contested:** The scenario ends in a draw on the primary objective; the game master reports which side has the stronger position as a secondary narrative result, not as a win.
+- **Town uncontrolled:** Neither side wins the primary objective.
+
+If one side has been unable to field an infantry company because it has been eliminated or has formally withdrawn, the other side wins immediately only if it controls the town. Otherwise, play continues until the applicable deadline for that test.
 
 ## Optional secondary conditions for testing
 
 Use no more than one secondary condition in an early playtest. Possible choices are:
 
 - **Preservation:** A side that controls the town while retaining more of its starting company receives the stronger narrative outcome.
-- **Evacuation:** A side that cannot win control can still achieve a successful withdrawal if its surviving force exits through the designated edge before the deadline.
+- **Evacuation:** A side that cannot win control can still achieve a successful withdrawal if its surviving force exits through the designated edge before the applicable deadline.
 - **Information discipline:** The game master records whether a side made a decision from a confirmed report or a suspected report. This is an observation for playtesting, not a score.
 
 Secondary conditions must never override the clearly stated primary objective during the first test.
 
 ## End-of-scenario procedure
 
-When the deadline or an immediate ending condition is reached, the game master:
+When the applicable deadline or an immediate ending condition is reached, the game master:
 
 1. Stops all timers.
 2. Resolves any action that completed before the exact deadline.
