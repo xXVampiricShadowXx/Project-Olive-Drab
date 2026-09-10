@@ -7,8 +7,8 @@ both commanders.
 
 ## Established rules to verify
 
-- [ ] The scenario is seven scenario days with no exact calendar date required.
-- [ ] The shared clock is 08:00–22:00 active and 22:00–08:00 frozen.
+- [ ] The first human test is one scenario day (Day 1); the broader prototype remains compatible with seven scenario days for later multi-day tests.
+- [ ] The shared clock is 08:00–22:00 active; 22:00–08:00 is frozen only when a multi-day prototype test continues overnight.
 - [ ] Everyone understands that real life always takes precedence. At the GM's
       discretion, consulting players where practical, the GM may pause, suspend,
       place the game on hiatus, otherwise adjust play, or end a session. The GM
@@ -92,7 +92,9 @@ Real-life pause/hiatus procedure:
       status form are available to everyone who needs them.
 - [ ] The GM has the combat sequence, outcome guide, and contact response-window
       aid ready.
-- [ ] The GM has confirmed how 22:00 freezes timers and how 08:00 resumes them.
+- [ ] The GM has confirmed that the first human test ends with the Day 1 final
+      control-state check at 22:00. For a later multi-day test, the GM also knows
+      how 22:00 freezes timers and how 08:00 resumes them.
 - [ ] Standing behaviors have been reviewed for trigger, action, limits, expiry,
       and unreachable fallback.
 - [ ] Any temporary ruling needed before play is written, neutral, and
