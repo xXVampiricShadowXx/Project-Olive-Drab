@@ -184,10 +184,13 @@ after hidden information has been protected:
    result with the side's band: 1–2 is a poor result, 3–4 a mixed result, and
    5–6 a strong result; an unfavorable band treats one step worse and a
    favorable band treats one step better, capped at poor/strong.
-6. **Compare results and intent.** The result pair determines whether one side
-   gains the initiative, both remain locked, or one side must give ground. A
-   strong result against a poor result is a clear edge; equal or adjacent
-   results normally produce a mixed exchange rather than a winner.
+6. **Compare results and intent.** Map the result pair deterministically: strong
+   against poor is a **clear edge** for the strong-result side; strong against
+   mixed, or mixed against poor, is a **narrow edge** for the stronger-result
+   side; and matching results (poor/poor, mixed/mixed, or strong/strong) are an
+   **equal or mixed exchange**. Reverse the relationship symmetrically when the
+   other side has the stronger result. Use the declared objective and existing
+   response limits to select the outcome within that mapped relationship.
 7. **Apply graduated consequences.** Choose one primary consequence and up to
    two linked consequences from the outcome table. Do not eliminate an involved
    force unless the snapshot and prior consequences make continued operation
@@ -230,15 +233,16 @@ authoritative until supported by the log, map, reports, or observed outcome.
 
 ## Outcome guide
 
-Use the result pair and the declared objective to select a result. The GM may
-choose a less severe result when the snapshot does not justify escalation.
+Use the deterministic result relationship and the declared objective to select
+a result. A less severe outcome may be used only when a recorded snapshot
+condition makes the typical outcome inconsistent with an existing tracked state
+or the declared limit, and the GM must record that reason.
 
 | Result relationship | Typical outcome |
 |---|---|
 | Clear edge for one side | The advantaged side achieves its objective or gains the initiative. The other side gives ground, loses readiness, or becomes depleted. |
 | Narrow edge | The advantaged side gains position, information, or control pressure, but the opposing force remains capable of responding. |
 | Equal or mixed exchange | Both sides remain in contact or one side holds while both pay a time/readiness cost. No automatic capture. |
-| Poor result for both | Confusion, delay, or separation. The GM may reveal a stale or incomplete report and require a new decision. |
 
 Possible consequences include:
 
