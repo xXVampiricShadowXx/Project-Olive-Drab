@@ -9,9 +9,9 @@ that form the packet and the external setup that still has to be completed.
 ```text
 Packet version: human-playtest-0.1
 Rules authority: Phase 3 prototype packet on the selected playtest commit
-Scenario: Brackenford, seven scenario days
+Scenario: Brackenford, Day 1 only for first human test
 Map authority: Brackenford sector specification, map v1.0
-Clock: 08:00-22:00 active; 22:00-08:00 frozen
+Clock: Day 1, 08:00-22:00 active; first human session ends at 22:00
 Status: preparation package; not a release
 ```
 
@@ -48,8 +48,11 @@ work.
 
 ## Known limitations
 
-- The first test remains infantry-only and uses the six-by-five Brackenford
+- The first human test remains infantry-only and uses the six-by-five Brackenford
   sector map; no Phase 3 mechanics are expanded here.
+- The first human session is one active scenario day, Day 1 from 08:00 through
+  22:00. The broader seven-day continuity procedure remains documented but is
+  not required evidence for this first test.
 - The repository does not provide a Discord server, shared map, notification
   service, player roster, or backup contacts.
 - The AI dry run used simulated channels and did not validate Discord
@@ -63,7 +66,7 @@ work.
 Before the final go/no-go, the GM and participants must complete the
 [readiness guide](human-playtest-readiness-guide.md), including:
 
-- a shared local time zone, seven-day calendar window, and notification plan;
+- a shared local time zone and the Day 1 08:00–22:00 first-test window;
 - a Discord server with the documented roles, channels, permissions, and
   GM-visible opposing-contact path;
 - a shared map with one GM master view and filtered NATO and Russia views;
