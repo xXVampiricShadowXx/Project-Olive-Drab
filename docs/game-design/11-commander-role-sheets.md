@@ -4,7 +4,11 @@ Print one side-specific sheet for each commander. Both commanders use the same a
 
 ## Shared commander instructions
 
-You command one infantry company of roughly 100–200 troops. The company is represented by the scenario's abstract **force markers**; each marker represents part of the company's usable force and is not a fixed real-world formation. You may choose priorities, routes, formations, positions, and timing within the published scenario objective. You may not see the master map or treat a suspicion as a confirmed fact.
+You command one infantry company of roughly 100–200 troops. The company uses the prototype's fixed hierarchy of **1–4 echelons**, with each echelon containing 2 platoons, each platoon 2 sections, each section 2 squads, and each squad 2 fireteams. In this first test, the company commander directly controls the 1–4 echelon subordinate units. Each subordinate unit is represented by its own **force marker** on the map. A force marker is the map representation of that subordinate unit, not a separate command authority. This organization is a deliberate game abstraction rather than a claim about real-world force structure. citeturn709621view0
+
+For rules purposes, **unit** means any subordinate organizational element under the current commander's control. The same definition scales downward if a future test assigns a player to another echelon: an echelon commander controls 2 platoon units, a platoon commander controls 2 section units, a section commander controls 2 squad units, and a squad commander controls 2 fireteam units. Military organizations use different national terms and structures; the prototype fixes its own hierarchy so order authority remains unambiguous. citeturn709621view0
+
+You may choose priorities, routes, formations, positions, and timing within the published scenario objective. You may not see the master map or treat a suspicion as a confirmed fact.
 
 Use the role-based communication chain: post non-sensitive game communication in the group channel, communicate through your superior and subordinate roles where they exist, and contact an opposing player only with GM approval and GM visibility in this first prototype. A superior's permission is required only when a higher player-controlled role actually exists. Keep all game communication separate from personal chat.
 
@@ -12,8 +16,8 @@ During the active window:
 
 1. Review your filtered map, status, and reports.
 2. Decide what matters and what remains uncertain.
-3. Submit one clear order per purpose.
-4. Attach a standing behavior when you need the unit to act during a flexible-attention period; use the listed behaviors or submit an original behavior for GM approval.
+3. Submit one clear order per purpose to the specific subordinate unit being directed.
+4. Attach a standing behavior when you need that unit to act during a flexible-attention period; use the listed behaviors or submit an original behavior for GM approval.
 5. Use the timing aid for predictable, uncontested actions.
 6. Maintain your current force-status record and submit it when the GM requests an engagement snapshot.
 7. Report observations and requests through the role-based chain and agreed game channel.
@@ -41,10 +45,7 @@ Behavior (optional):
 Commander:
 ```
 
-When attaching a behavior, include its trigger, action, limits, expiry or cancel
-condition, and what the unit does if you cannot be reached. The GM validates the
-trigger and outcome; a behavior is not an automatic override of hidden
-information or the authoritative log.
+The `Unit` field names the specific subordinate unit receiving the order. When attaching a behavior, include its trigger, action, limits, expiry or cancel condition, and what the unit does if you cannot be reached. The GM validates the trigger and outcome; a behavior is not an automatic override of hidden information or the authoritative log.
 
 ## Status card
 
@@ -61,6 +62,8 @@ Suspected information:
 Pending decision:
 ```
 
+The company status is the commander's overall situation summary. Current orders, locations, and conditions for subordinate units remain recorded in the authoritative operational records.
+
 ### Engagement status submission
 
 ```text
@@ -75,8 +78,7 @@ Active order or behavior:
 Known changes since last report:
 ```
 
-Submit this status when requested. The GM checks it against the authoritative
-record; an unverified self-reported change is not automatically applied.
+The `Unit` field names the specific subordinate unit involved in the engagement. Submit this status when requested. The GM checks it against the authoritative record; an unverified self-reported change is not automatically applied.
 
 ## Side A — NATO infantry company
 
