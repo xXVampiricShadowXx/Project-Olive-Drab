@@ -29,7 +29,7 @@ The clock remains live during the active window, but player attention is flexibl
 
 Every action that can change the shared situation uses the same short lifecycle:
 
-1. **Draft:** The commander writes the order using the standard fields: unit, action, destination or target, purpose, start condition, any limits, and an optional standing behavior.
+1. **Draft:** The commander writes the order using the standard fields: unit, action, destination or target, purpose, start condition, any limits, and optional standing behaviors.
 2. **Submitted:** The commander sends the order to the game master through the agreed channel. The submission time is recorded in the shared log.
 3. **Acknowledged:** The game master confirms that the order is legible, identifies the unit and intended action, and states whether anything is missing. Acknowledgment is not approval and does not reveal hidden information.
 4. **Accepted or returned:** A complete order is accepted for processing. An incomplete, impossible, or contradictory order is returned with one clear question; its timer does not start until the commander resubmits it.
@@ -57,7 +57,7 @@ Purpose:
 Start condition:
 Route or formation:
 Limits (engage, halt, withdraw, or avoid):
-Behavior (optional):
+Behaviors (optional; one or more):
 Commander:
 ```
 
@@ -160,7 +160,7 @@ not reveal the master map.
 
 Before an engagement is resolved, each commander submits their current force
 status for the involved unit: position, posture, preparation, readiness,
-strength, reserve/commitment, and any relevant order or behavior. The GM checks
+strength, reserve/commitment, and any relevant order or behaviors. The GM checks
 that submission against the authoritative order and status log, map, reports,
 and observed outcomes. A commander's unverified update is a claim to check, not
 an automatic change to the master state.
