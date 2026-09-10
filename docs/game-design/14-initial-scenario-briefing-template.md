@@ -7,10 +7,9 @@ day and time on the shared clock.
 
 ## Established rules (do not rewrite at briefing)
 
-- The scenario lasts seven scenario days and uses one shared local time zone.
-- The active window is 08:00–22:00. The clock is frozen from 22:00–08:00:
-  timers pause, no new operational result resolves, and orders resume with their
-  recorded remaining time.
+- The **first human test** runs for one scenario day, from 08:00 through 22:00. The session ends after the Day 1 final control-state check.
+- The broader prototype also defines a seven-day scenario clock with an overnight freeze, but the multi-day schedule is not required for this first human session and is exercised separately in rehearsal when needed.
+- The active window is 08:00–22:00. If the session reaches 22:00, the broader prototype freeze rule applies: timers pause, no new operational result resolves, and orders resume with their recorded remaining time when the next scenario day begins. The first human test should normally end at the Day 1 boundary instead of continuing into a second day.
 - Player attention is flexible during the active window. Players may check in
   briefly or remain engaged for longer; the GM continues processing accepted
   orders and events.
@@ -82,20 +81,20 @@ side may receive an unfair immediate route or information advantage.
 
 Read or send the following, inserting only the completed fields:
 
-> This is the seven-day Brackenford infantry prototype. NATO and Russia each
+> This is the one-day Brackenford infantry prototype test. NATO and Russia each
 > command one fictionalized infantry company. The shared objective is to secure
-> and hold Brackenford under the published control rule. The active clock runs
-> from 08:00 to 22:00, then freezes until 08:00. Your attention may be brief or
-> continuous during the active window; accepted orders and GM processing
-> continue. Use the Discord group channel for non-sensitive communication and
-> the role-based channels for private game communication. The GM can review all
-> game communication. Submit clear orders, label uncertainty, and use the
-> standing-behavior fields when you may be unavailable. Contact pauses a routine
-> order and is resolved using the prototype contact procedure. Real life always
-> takes precedence. At the GM's discretion, consulting players where practical,
-> the GM may pause, suspend, place the game on hiatus, otherwise adjust play, or
-> end a session. The GM records and preserves the game state and resumes only when
-> appropriate.
+> and hold Brackenford under the published control rule through the end of the
+> Day 1 active window. The active clock runs from 08:00 to 22:00. Your attention
+> may be brief or continuous during the active window; accepted orders and GM
+> processing continue. Use the Discord group channel for non-sensitive
+> communication and the role-based channels for private game communication. The
+> GM can review all game communication. Submit clear orders, label uncertainty,
+> and use the standing-behavior fields when you may be unavailable. Contact
+> pauses a routine order and is resolved using the prototype contact procedure.
+> Real life always takes precedence. At the GM's discretion, consulting players
+> where practical, the GM may pause, suspend, place the game on hiatus, otherwise
+> adjust play, or end a session. The GM records and preserves the game state and
+> resumes only when appropriate.
 
 Then announce:
 
@@ -106,8 +105,8 @@ Weather and visibility:
 Public objective:
 Public control states:
 Map version:
-Active window:
-Frozen window:
+Active window: 08:00–22:00
+First-test end: Day 1, 22:00
 First status/briefing deadline:
 ```
 
