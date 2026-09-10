@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/first-interaction@v3.1.0
       with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: "Thank you for submitting your first issue!"
-        pr-message: "Thank you for submitting your first pull request!"
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        issue_message: "Thank you for submitting your first issue!"
+        pr_message: "Thank you for submitting your first pull request!"
