@@ -25,7 +25,7 @@ steady. Do not invent numerical modifiers for these states.
 
 Commanders maintain and submit their own current force-status record for an
 engagement. It should state position, posture, preparation, readiness, strength,
-reserve or commitment, and any active order or behavior. This is a commander
+reserve or commitment, and any active order or behaviors. This is a commander
 report, not an automatic state change. The GM checks it against the authoritative
 log, map, reports, and observed outcomes before accepting any correction.
 
@@ -70,11 +70,12 @@ or withdraw. If only one side can reasonably act before the other, the GM uses
 the response deadline and the last standing instruction rather than waiting
 indefinitely.
 
-An accepted movement or position order may include a behavior that acts when a
-specified condition occurs, allowing play to continue while a commander is
-away. Use the behavior rules in the operating procedure. The GM validates the
-trigger, expiry, limits, and fallback before allowing it to act; a triggered
-behavior that creates contact enters this same paused engagement state.
+An accepted movement or position order may include one or more behaviors that
+act when specified conditions occur, allowing play to continue while a commander
+is away. Use the behavior rules in the operating procedure. The GM validates the
+triggers, expiry conditions, limits, and fallbacks before allowing those behaviors
+to act; a triggered behavior that creates contact enters this same paused
+engagement state.
 
 ## Information and report flow
 
@@ -185,8 +186,8 @@ after hidden information has been protected:
    strong result against a poor result is a clear edge; equal or adjacent
    results normally produce a mixed exchange rather than a winner.
 7. **Apply graduated consequences.** Choose one primary consequence and up to
-   two linked consequences from the outcome table. Do not eliminate a company
-   unless the snapshot and prior consequences make continued operation
+   two linked consequences from the outcome table. Do not eliminate an involved
+   force unless the snapshot and prior consequences make continued operation
    implausible.
 8. **Update the map and timers.** Mark position, control, posture, strength,
    readiness, preparation, commitment, and any remaining order time. Resume a
@@ -212,16 +213,16 @@ Commander-submitted status:
 Authoritative status at snapshot:
 Verified changes:
 Unverified claims:
-Active behavior and trigger:
-Behavior action/limits:
-Expiry or cancel condition:
-Unreachable fallback:
+Active behaviors and triggers:
+Behavior actions/limits:
+Expiry or cancel conditions:
+Unreachable fallbacks:
 ```
 
-The GM remains neutral: both commanders use the same verification standard, and
-neither self-reported strength, readiness, preparation, position, or commitment
-becomes authoritative until supported by the log, map, reports, or observed
-outcome.
+Repeat the behavior fields for each attached behavior as needed. The GM remains
+neutral: both commanders use the same verification standard, and neither
+self-reported strength, readiness, preparation, position, or commitment becomes
+authoritative until supported by the log, map, reports, or observed outcome.
 
 ## Outcome guide
 
