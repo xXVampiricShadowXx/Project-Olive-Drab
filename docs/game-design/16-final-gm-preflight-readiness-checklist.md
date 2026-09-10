@@ -17,6 +17,7 @@ both commanders.
       brief absences, subject to response windows and fallbacks.
 - [ ] The sides are one NATO infantry company and one Russian infantry company,
       with one commander per side and one neutral GM.
+- [ ] The selected NATO and Russia echelon counts are recorded before marker placement and remain fixed for this test.
 - [ ] Brackenford's authoritative map, named sectors, approaches, and control
       pairs are available.
 - [ ] Town control is understood as both central control pairs held without
@@ -36,6 +37,8 @@ Starting scenario day/time:
 GM:
 NATO commander:
 Russia commander:
+NATO echelon count:
+Russia echelon count:
 Temporary-command contacts:
 Weather and visibility:
 Master map version/link:
