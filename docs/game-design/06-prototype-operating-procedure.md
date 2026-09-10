@@ -23,6 +23,8 @@ Every action that can change the shared situation uses the same short lifecycle:
 5. **In progress:** The game master records the start time, expected completion time, route or target, and any conditions that can interrupt it. An accepted behavior may execute during the order without a new notification, subject to GM trigger validation. The commander may clarify an order, but a changed objective is a new order.
 6. **Resolved:** The game master updates the master map, affected status, and any reports. The commander receives the information their side could know.
 
+For the first prototype, a unit may have only **one active operational order at a time**. A new accepted operational order for that same unit supersedes its previous active operational order, unless the GM explicitly records that the new order is a non-conflicting action that can run concurrently. This prevents two orders from silently controlling the same unit at once.
+
 If enemy contact, a contested route, or a threatened control location interrupts an
 order, use [Prototype Combat and Contested Actions](13-prototype-combat-and-contested-actions.md).
 The GM records the order as paused—contact rather than silently completing or
@@ -184,7 +186,7 @@ The campaign is operationally simultaneous during each active window: the game c
 - A report register showing which side received each report and when.
 - A short decisions log for temporary rulings and unresolved questions.
 
-At 08:00, the game master gives each commander a compact private briefing containing the current time, friendly status, known reports, in-progress orders, pending decisions, and the next deadline. The briefing does not include information that role has not earned. 
+At 08:00, the game master gives each commander a compact private briefing containing the current time, friendly status, known reports, in-progress orders, pending decisions, and the next deadline. The briefing does not include information that role has not earned.
 
 During the active window, the game master actively manages the session: acknowledging orders, tracking timers, resolving contacts, updating the master map, and sending reports as events occur. Players may take short breaks or be briefly unavailable, but the game remains live and the GM continues to apply the rules and record events. Urgent decisions use the response-window and fallback procedure above.
 
@@ -218,4 +220,4 @@ When the original player returns, or another eligible commander formally assumes
 - Rules questions are logged and answered with a temporary ruling so play can continue.
 - Temporary rulings are reviewed after the scenario, not repeatedly reopened during the active clock.
 
-Advanced intelligence, cyberwarfare, vehicles, air support, and other expansion systems are outside this procedure. The prototype uses observation, written reports, infantry movement, and game-master adjudication only.
+Advanced intelligence, cyberwarfare, vehicles, air support, and other expansion systems are outside this procedure. The prototype uses observation, written orders, infantry movement, and game-master adjudication only.
