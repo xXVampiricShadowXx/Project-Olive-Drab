@@ -23,7 +23,7 @@ Keep the commander's identity, motivation, strength, complication, and
 relationship in view as decision prompts. They shape intent and communication,
 not the published rules, hidden information, or resolution outcomes.
 
-At 22:00, active timers freeze. At 08:00, the GM briefs you and resumes each order with its recorded remaining time. If you are absent, you receive only the normal role handoff when you return.
+For the **broader multi-day prototype**, active timers freeze at 22:00 and resume at 08:00 with the GM briefing and recorded remaining time. For the **first human test**, Day 1 ends after the 22:00 final control-state check; the session closes and orders or response deadlines do not carry into a second scenario day. If you are absent, you receive only the normal role handoff when you return.
 
 ## Order card
 
@@ -42,8 +42,8 @@ Commander:
 ```
 
 When attaching a behavior, include its trigger, action, limits, expiry or cancel
-condition, and what the unit does if you cannot be reached. The GM validates
-the trigger and outcome; a behavior is not an automatic override of hidden
+condition, and what the unit does if you cannot be reached. The GM validates the
+trigger and outcome; a behavior is not an automatic override of hidden
 information or the authoritative log.
 
 ## Status card
