@@ -6,9 +6,9 @@ the authoritative record.
 
 ## 1. People, roles, and contact
 
-- [ ] Confirm one neutral GM, one NATO commander, one Russia commander, and one
-  observer. Record preferred display names only; no personal details are
-  required.
+- [ ] Confirm one neutral GM, one NATO commander, and one Russia commander. These three roles are the defined minimum first-test arrangement.
+- [ ] If an observer is available, optionally assign one. The observer is a support/audit role and does not count as a required fourth participant.
+- [ ] Record preferred display names only; no personal details are required.
 - [ ] Record the shared local time zone and the first human test start/end as
   scenario day and time on the shared clock: Day 1, 08:00 through 22:00. The
   prototype does not require exact calendar dates.
@@ -31,7 +31,7 @@ messages are never an order, report, ruling, map update, or notification.
 | Role or channel | Required access |
 |---|---|
 | GM | All game channels, master record, master map, and private views |
-| Observer | Public transcript and redacted feed; no live opposing private state |
+| Observer | Public transcript and redacted feed; no live opposing private state; optional support role |
 | NATO commander | Group channel, NATO private channel, and permitted same-side path |
 | Russia commander | Group channel, Russia private channel, and permitted same-side path |
 | Group channel | Both commanders and GM; public updates and non-sensitive procedure |
@@ -41,6 +41,7 @@ messages are never an order, report, ruling, map update, or notification.
 | GM record channels/files | GM only, with an explicit backup location |
 
 - [ ] Test read, post, and attachment permissions with harmless messages.
+- [ ] If an observer is used, verify the observer receives only the documented public/redacted view.
 - [ ] Verify that no commander can view the master map, opposing private
   reports, hidden starting zone, or GM-only conditions.
 - [ ] Verify notifications and the backup notification route, including a
