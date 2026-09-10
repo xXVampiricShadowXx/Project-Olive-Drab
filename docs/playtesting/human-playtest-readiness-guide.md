@@ -9,8 +9,9 @@ the authoritative record.
 - [ ] Confirm one neutral GM, one NATO commander, one Russia commander, and one
   observer. Record preferred display names only; no personal details are
   required.
-- [ ] Record the shared local time zone, the seven scenario-day start and end
-  dates, and the 08:00-22:00 active window.
+- [ ] Record the shared local time zone and the scenario start/end as scenario
+  day and time on the shared clock. The prototype does not require exact
+  calendar dates.
 - [ ] Record the notification method, backup notification method, and who
   checks response deadlines. Test both methods.
 - [ ] Name a primary and backup same-side succession contact for each
@@ -36,7 +37,7 @@ messages are never an order, report, ruling, map update, or notification.
 | Group channel | Both commanders and GM; public updates and non-sensitive procedure |
 | NATO private | NATO commander and GM; no Russia access |
 | Russia private | Russia commander and GM; no NATO access |
-| Opposing-contact path | Only when approved by the relevant superior; GM can review it |
+| Opposing-contact path | GM approval and GM visibility in the first prototype; superior permission applies only when a higher player-controlled role exists |
 | GM record channels/files | GM only, with an explicit backup location |
 
 - [ ] Test read, post, and attachment permissions with harmless messages.
