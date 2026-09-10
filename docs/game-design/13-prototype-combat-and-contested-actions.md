@@ -142,10 +142,9 @@ recorded and cannot be used to gain information after the original deadline.
 
 If the deadline expires during an active window, use the unit's last accepted
 limits and fallback. If none exists, the GM chooses **Hold** for a unit in a
- defensible position,
-**Withdraw** along the safest available route for a unit in an untenable
-position, or **Reserve/commit** only as needed to prevent an immediate
-unresolved overlap. Record why; do not treat silence as an attack order.
+defensible position, **Withdraw** along the safest available route for a unit
+in an untenable position, or **Reserve/commit** only as needed to prevent an
+immediate unresolved overlap. Record why; do not treat silence as an attack order.
 
 ## Transparent GM resolution sequence
 
