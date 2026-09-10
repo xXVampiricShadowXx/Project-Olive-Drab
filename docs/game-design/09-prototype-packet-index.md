@@ -31,8 +31,8 @@ playtest. It does not replace this packet or add rules.
 
 - One shared digital Brackenford town-scale map with named sectors and surrounding terrain, prepared from the [authoritative town map specification](12-town-map-and-terrain-sectors.md).
 - One hidden master map and one filtered map or status sheet per side.
-- One marker for each company's sub-unit or strength point.
-- Two GM-defined hidden starting zones, asymmetric but balanced, with approved commander-selected troop placement and readiness conditions.
+- A small number of **force markers** for each company, as defined in the scenario setup. A force marker is an abstract playable representation of part of the company's usable force, not a fixed real-world formation.
+- Two GM-defined hidden starting zones, asymmetric but balanced, with approved commander-selected force-marker placement and readiness conditions.
 - A visible clock, a timer, and a shared order register.
 - Printed or shared copies of the GM checklist, commander sheets, order form, timing aid, and report format.
 - One Discord server with a group channel for non-sensitive game communication, GM-visible role-based commander/superior/subordinate channels where needed, and a GM-visible path for any approved opposing-side contact.
