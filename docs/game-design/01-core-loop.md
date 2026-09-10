@@ -30,14 +30,14 @@ Keep the first prototype small enough to answer these questions:
 
 ## Boundaries for version 0.1
 
-The first rules test should use:
+The first human test should use:
 
 - One small town-scale map with surrounding terrain.
 - Two opposing sides.
+- One infantry company per side.
 - One commander per side.
 - One game master.
-- A small number of company-sized units.
-- A bounded scenario with a clear beginning and end; the Brackenford prototype uses a seven-day scenario clock.
+- A bounded scenario with a clear beginning and end; the Brackenford first human test uses Day 1 only, while the broader prototype supports a seven-day scenario clock.
 - Simple resolution methods, using components already available at home.
 - A quick-reference aid for movement and other routine actions.
 - Agreed communication channels and an order-submission procedure.
