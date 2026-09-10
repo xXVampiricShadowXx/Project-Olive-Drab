@@ -19,10 +19,10 @@ Russia commander: Ilya Petrov (fictional)
 
 ```text
 O-NATO-004 received 09:10; complete
-Intent: hold North Bridge and observe the east approach
-Route/action: move one element from N2 to N3, then report
+Intent: hold Mill Road Junction and observe the east approach
+Route/action: move one element from C2 to D2, then report
 Trigger/limit: do not initiate contact; stop if contact is reported
-Standing behavior: return to N3 if the element cannot report by 10:00
+Standing behavior: return to C2 if the element cannot report by 10:00
 Accepted 09:12; timer recorded; resolved 09:42
 R-NATO-004 released 09:45; confirmed own position, suspected movement east
 ```
@@ -34,7 +34,7 @@ position.
 ## Contact and combat
 
 ```text
-C-002 10:03: contact at East Approach, affecting O-NATO-004
+C-002 10:03: contact at East Road, affecting O-NATO-004
 Response-by 10:15; affected order paused; other orders continue
 NATO response: hold and observe
 Russia response: withdraw from contact area
@@ -44,7 +44,7 @@ R-C-002 10:18: both sides receive only their earned result
 
 ## Standing behavior
 
-The trigger is “cannot report by 10:00,” the action is “return to N3,” the
+The trigger is “cannot report by 10:00,” the action is “return to C2,” the
 limit is “do not initiate contact,” the expiry is the end of Day 2, and the
 unreachable fallback is “hold current position.” `O-NATO-005` cancels it at
 11:00. The GM records the cancellation and does not leave the old behavior
@@ -60,9 +60,11 @@ and the GM records the end time. No faction changes.
 
 ## Map control and end-of-day freeze
 
-At 21:40, the master map shows NATO control of North Bridge and Russia control
-of East Approach. The GM records the control pairs using the published control
-test; the filtered views show only information each side has earned.
+At 21:40, the master map shows NATO control pressure at Mill Road Junction and
+Russia control pressure at Station Street. The GM records each control pair
+using the published sector-control test; the filtered views show only
+information each side has earned. These approach positions do not by themselves
+establish town control.
 
 At 22:00, `T-002` records 18 minutes remaining on `O-NATO-006`. The GM stops
 the timer, saves the map snapshot, and publishes:
