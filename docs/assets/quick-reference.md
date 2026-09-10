@@ -6,10 +6,11 @@
 1. Draft and submit a clear order.
 2. Wait for game-master acknowledgment and **acceptance**; revise if returned.
 3. After the GM accepts the order, the GM starts and records the timer. Track expected completion and report observations.
-4. At 22:00, pause timers and record remaining time; resume at 08:00.
+4. **First human test:** Day 1 ends after the 22:00 final control-state check. Orders and response deadlines do not carry into a second scenario day.
+5. **Broader multi-day prototype:** at 22:00, pause timers and record remaining time; resume at 08:00 with the GM briefing and recorded remaining time.
 
-## Unit Stats At A Glance
-| Unit | Status | Location | Current order | Expected completion |
+## Force Markers At A Glance
+| Force marker | Status | Location | Current order | Expected completion |
 |------|--------|----------|---------------|---------------------|
 |      |        |          |               |                     |
 
@@ -43,7 +44,7 @@ value for the whole route when sectors differ.
 |-----------|--------|
 | Poor visibility | Add 15 min; reduce confirmation |
 | Heavy rain | Add 15 min to movement/preparation |
-| Night (22:00–08:00) | Freeze; no action resolves |
+| Night (22:00–08:00) | Freeze; no action resolves in the broader multi-day prototype |
 
 ---
 
