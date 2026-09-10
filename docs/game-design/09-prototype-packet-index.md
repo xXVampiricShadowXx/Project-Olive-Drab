@@ -1,6 +1,8 @@
 # Prototype Packet Index
 
-This index is the smallest complete packet for the first live, supervised Olive Drab test. It is designed for two commanders and one game master controlling one infantry company per side.
+This index is the smallest complete packet for the **first human test**. It is designed for two commanders and one game master controlling one infantry company per side.
+
+The packet is intentionally a bounded slice of the broader Olive Drab architecture. The first human test is **one company vs. one company, one company commander per side, and one GM, on Day 1 only**. The broader game may place players at different command echelons and use the same hierarchical command model with their immediate subordinate units.
 
 ## Read in this order
 
@@ -31,7 +33,7 @@ playtest. It does not replace this packet or add rules.
 
 - One shared digital Brackenford town-scale map with named sectors and surrounding terrain, prepared from the [authoritative town map specification](12-town-map-and-terrain-sectors.md).
 - One hidden master map and one filtered map or status sheet per side.
-- A small number of **force markers** for each company, as defined in the scenario setup. A force marker is an abstract playable representation of part of the company's usable force, not a fixed real-world formation.
+- A small number of **force markers** for each company, as defined in the scenario setup. For the first human test, each marker represents one immediate subordinate echelon of the company. The broader hierarchy uses one marker for each immediate subordinate unit at the command level being played.
 - Two GM-defined hidden starting zones, asymmetric but balanced, with approved commander-selected force-marker placement and readiness conditions.
 - A visible clock, a timer, and a shared order register.
 - Printed or shared copies of the GM checklist, commander sheets, order form, timing aid, and report format.
@@ -41,7 +43,7 @@ playtest. It does not replace this packet or add rules.
 
 ## Packet boundaries
 
-This packet defines the **first human test** as one scenario day: 08:00–22:00 active, ending after the Day 1 final control check. The packet retains the seven-day overnight-capable procedures for separate solo/AI rehearsal and future multi-day tests; those procedures are not required to run the first human session. It does not add vehicles, air support, artillery, cyberwarfare, national politics, detailed equipment, or software.
+This packet defines the **first human test** as one company vs. one company on one scenario day: 08:00–22:00 active, ending after the Day 1 final control check. The packet retains the seven-day overnight-capable procedures for separate solo/AI rehearsal and future multi-day tests; those procedures are not required to run the first human session. The broader game architecture is hierarchical and may support players at different command echelons, but those additional roles are outside this packet unless explicitly added to a later test scope. It does not add vehicles, air support, artillery, cyberwarfare, national politics, detailed equipment, or software.
 
 ## Before play
 
