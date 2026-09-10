@@ -35,13 +35,15 @@ For rules purposes, **unit** means a subordinate organizational element under th
 
 The map mirrors that hierarchy. A force marker represents one subordinate unit at the command level being played. Therefore the company commander has **1–4 echelon force markers** on the map. If an echelon is played by its own commander, that echelon commander has **2 platoon force markers**; lower-level commanders likewise receive markers for their immediate subordinate units. A force marker is therefore not an independently commanded abstraction by itself: it is the map representation of a specific subordinate unit within the rigid hierarchy. The scenario setup records the number and starting locations of the applicable subordinate-unit markers.
 
+**First-test setup requirement:** Before either commander places a marker and before the scenario clock is revealed, the GM records the actual number of echelons used by each company for that test. The chosen counts are part of the setup record and remain fixed for the session. Repeat tests should reuse those recorded counts unless the purpose of the test is explicitly to vary this setup parameter.
+
 The exact troop counts remain abstract. Do not treat marker count as a real-world troop-count estimate or as permission to change the fixed hierarchy during play.
 
 ## Starting zones and readiness
 
 The game master defines two hidden starting zones that are balanced in opportunity but asymmetric in terrain, approach, and information. Each commander receives only their own permitted zone and starting readiness conditions.
 
-Before the scenario begins, each commander may choose how to place their force markers within that zone. The GM reviews and approves the placement before revealing the scenario clock. The GM may require a revision when a placement creates an unfair immediate advantage, including putting the entire company directly on the town objective at scenario start.
+Before the scenario begins, each commander may choose how to place their force markers within that zone. The GM reviews and approves the placement before revealing the scenario clock. The GM may require a revision when a placement creates an unfair immediate advantage, including putting all of the company's subordinate-unit markers directly on the town objective at scenario start.
 
 The GM records each side's approved starting locations and readiness privately on the master map, then gives each commander the minimum information needed to understand their own force. Starting readiness is a scenario condition, not a hidden penalty invented after play begins.
 
