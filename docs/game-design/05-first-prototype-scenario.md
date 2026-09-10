@@ -29,13 +29,13 @@ These are scenario attributes, not universal statements about real forces. The f
 | NATO | One infantry company commander | Training, cohesion, communications, reconnaissance, precision | Smaller force, fewer replacements, vulnerable to being surrounded or exhausted |
 | Russia | One infantry company commander | Numbers, ability to occupy more ground, massed attacks, redundancy | Training, cohesion, communications, and information are less reliable in this scenario |
 
-The exact troop counts should remain abstract in the first test. We can use unit markers, strength points, or sub-units rather than representing every soldier.
+The exact troop counts should remain abstract in the first test. Each company is represented by a small number of **force markers**. A force marker is an abstract playable representation of part of the company's usable force; it is not a fixed real-world platoon, squad, or other formation. The scenario setup records how many force markers each company uses and their starting locations. Do not treat the marker count as a troop-count estimate.
 
 ## Starting zones and readiness
 
 The game master defines two hidden starting zones that are balanced in opportunity but asymmetric in terrain, approach, and information. Each commander receives only their own permitted zone and starting readiness conditions.
 
-Before the scenario begins, each commander may choose how to place their troop markers within that zone. The GM reviews and approves the placement before revealing the scenario clock. The GM may require a revision when a placement creates an unfair immediate advantage, including putting the entire company directly on the town objective at scenario start.
+Before the scenario begins, each commander may choose how to place their force markers within that zone. The GM reviews and approves the placement before revealing the scenario clock. The GM may require a revision when a placement creates an unfair immediate advantage, including putting the entire company directly on the town objective at scenario start.
 
 The GM records each side's approved starting locations and readiness privately on the master map, then gives each commander the minimum information needed to understand their own force. Starting readiness is a scenario condition, not a hidden penalty invented after play begins.
 
@@ -81,7 +81,7 @@ The first scenario should answer:
 - Do commanders have different viable approaches?
 - Does the GM have enough structure to resolve engagements consistently?
 - Does fog of war make reconnaissance and careful movement valuable?
-- Can the scenario remain understandable with only a few unit markers and condition aids?
+- Can the scenario remain understandable with only a few force markers and condition aids?
 
 ## Boundaries
 
