@@ -4,7 +4,7 @@ Print one side-specific sheet for each commander. Both commanders use the same a
 
 ## Shared commander instructions
 
-You command one infantry company of roughly 100–200 troops. You may choose priorities, routes, formations, positions, and timing within the published scenario objective. You may not see the master map or treat a suspicion as a confirmed fact.
+You command one infantry company of roughly 100–200 troops. The company is represented by the scenario's abstract **force markers**; each marker represents part of the company's usable force and is not a fixed real-world formation. You may choose priorities, routes, formations, positions, and timing within the published scenario objective. You may not see the master map or treat a suspicion as a confirmed fact.
 
 Use the role-based communication chain: post non-sensitive game communication in the group channel, communicate through your superior and subordinate roles where they exist, and contact an opposing player only with GM approval and GM visibility in this first prototype. A superior's permission is required only when a higher player-controlled role actually exists. Keep all game communication separate from personal chat.
 
@@ -86,7 +86,7 @@ record; an unverified self-reported change is not automatically applied.
 
 **Command priorities:** use confirmed information carefully, preserve the company while securing the town, and avoid treating information access as automatic control.
 
-**Starting information:** [GM fills in the permitted hidden starting zone, readiness condition, strength, known routes, weather, visibility, and any confirmed reports. Commander proposes troop placement within the zone for GM approval.]
+**Starting information:** [GM fills in the permitted hidden starting zone, readiness condition, strength, known routes, weather, visibility, and any confirmed reports. Commander proposes force-marker placement within the zone for GM approval.]
 
 **Private notes:** [GM fills in side-specific information only this commander has earned.]
 
@@ -98,7 +98,7 @@ record; an unverified self-reported change is not automatically applied.
 
 **Command priorities:** use numbers and position to pressure the town, protect routes and key terrain, and avoid assuming that occupying more ground automatically establishes control.
 
-**Starting information:** [GM fills in the permitted hidden starting zone, readiness condition, strength, known routes, weather, visibility, and any confirmed reports. Commander proposes troop placement within the zone for GM approval.]
+**Starting information:** [GM fills in the permitted hidden starting zone, readiness condition, strength, known routes, weather, visibility, and any confirmed reports. Commander proposes force-marker placement within the zone for GM approval.]
 
 **Private notes:** [GM fills in side-specific information only this commander has earned.]
 
