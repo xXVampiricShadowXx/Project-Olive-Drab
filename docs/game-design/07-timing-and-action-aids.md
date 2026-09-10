@@ -4,7 +4,9 @@ The prototype uses a small number of consistent timing bands instead of detailed
 
 ## Timing principles
 
-An action timer runs only during the active window. The timer pauses at 22:00 and resumes at 08:00 with the same remaining time. The game master may pause a timer while waiting for a clarification only when the order cannot be interpreted safely; the pause and reason are recorded.
+For the broader multi-day prototype, an action timer runs only during the active window. The timer pauses at 22:00 and resumes at 08:00 with the same remaining time. For the **first human test**, Day 1 ends after the 22:00 final control-state check; timers and response windows do not carry into a second scenario day because that test is closed at that point.
+
+The game master may pause a timer while waiting for a clarification only when the order cannot be interpreted safely; the pause and reason are recorded.
 
 Estimate the base time first, then apply one clear condition adjustment. Do not stack several speculative penalties. If an action is contested or its outcome is uncertain, stop the routine timer and adjudicate it.
 
@@ -40,7 +42,7 @@ The game master chooses the smallest adjustment that describes the situation:
 
 - **Poor visibility:** add 15 minutes to movement or observation, and reduce what can be confirmed.
 - **Heavy rain or comparable weather:** add 15 minutes to movement and preparation.
-- **Night:** no action resolves because the prototype is frozen.
+- **Night:** no action resolves because the broader prototype is frozen. The first human test ends before the frozen window begins.
 - **Readiness or supply problem:** pause the routine timer and request a ruling; do not invent a numerical penalty.
 - **Enemy contact:** stop the timer, create a contact record, and use the prototype contact procedure.
 
@@ -52,7 +54,7 @@ Commanders may calculate:
 
 - A route's estimated active time from the movement table.
 - The next expected completion time.
-- Whether the order crosses the 22:00 freeze.
+- Whether the order crosses the 22:00 freeze in a broader multi-day run, or reaches the 22:00 session endpoint in the first human test.
 - Which known terrain or weather condition is being applied.
 
 Commanders do not calculate hidden enemy positions, combat outcomes, surprise, or disputed control. Those belong to the game master.
@@ -74,6 +76,8 @@ Result:
 
 For a contact, also record the Contact ID, response-by time, paused order,
 posture, preparation, commitment, result pair, consequences, and next decision
-window. Use active time for response windows; pause them at 22:00.
+window. Use active time for response windows; pause them at 22:00 only when a
+broader multi-day campaign continues. In the first human test, the response
+window terminates with session closure at the final 22:00 control-state check.
 
-At the end of a frozen window, the game master resumes the recorded remaining time rather than recalculating from memory. If conditions changed overnight in a way that the prototype rules do not cover, record a temporary ruling before resuming and use it symmetrically.
+At the end of a frozen window, the game master resumes the recorded remaining time rather than recalculating from memory. This applies only when another scenario day will follow. If conditions changed overnight in a way that the prototype rules do not cover, record a temporary ruling before resuming and use it symmetrically.
