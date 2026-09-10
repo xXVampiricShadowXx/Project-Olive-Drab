@@ -23,7 +23,7 @@ Every action that can change the shared situation uses the same short lifecycle:
 5. **In progress:** The game master records the start time, expected completion time, route or target, and any conditions that can interrupt it. An accepted behavior may execute during the order without a new notification, subject to GM trigger validation. The commander may clarify an order, but a changed objective is a new order.
 6. **Resolved:** The game master updates the master map, affected status, and any reports. The commander receives the information their side could know.
 
-For the first prototype, a unit may have only **one active operational order at a time**. A new accepted operational order for that same unit supersedes its previous active operational order, unless the GM explicitly records that the new order is a non-conflicting action that can run concurrently. This prevents two orders from silently controlling the same unit at once.
+For the first prototype, a unit may have only **one active operational order at a time**. A new accepted operational order for that same unit supersedes its previous active operational order, including its attached behaviors, unless the GM explicitly records that the new order is a non-conflicting action that can run concurrently. This prevents two orders from silently controlling the same unit at once.
 
 If enemy contact, a contested route, or a threatened control location interrupts an
 order, use [Prototype Combat and Contested Actions](13-prototype-combat-and-contested-actions.md).
@@ -92,9 +92,9 @@ Triggers should name a sector, route, report condition, time, or observable
 unit condition. The GM may reject vague, impossible, contradictory, or
 unverifiable triggers. A behavior expires when its expiry condition occurs, its
 action completes, its parent order is replaced or canceled, or the unit enters
-an unresolved situation outside the approved action. The commander may cancel
-or replace a behavior through a new accepted order; a later order supersedes
-only the behavior it identifies.
+an unresolved situation outside the approved action. A new accepted operational
+order for the same unit replaces the prior parent order and its attached
+behaviors unless the GM explicitly records a non-conflicting concurrent action.
 
 If a valid trigger occurs while the commander cannot be reached, the GM follows
 the behavior's recorded fallback. If no fallback is recorded, the GM uses the
