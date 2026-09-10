@@ -4,13 +4,15 @@ This document defines the intended division of responsibility for the first prot
 
 ## First prototype roles
 
-The smallest complete game has three people:
+The **first human test** has the smallest complete player arrangement currently being tested:
 
 - One infantry company commander for Side A.
 - One infantry company commander for Side B.
 - One game master.
 
 Each commander controls one company of roughly 100–200 troops. The numbers are an abstraction for play, not a requirement to model every individual soldier.
+
+The first test's company-command arrangement is intentionally a bounded slice of the broader game architecture. Later scenarios may place players at other echelons and add subordinate or superior player roles without changing the basic distinction between a commander and the subordinate units they control.
 
 ## What commanders do
 
@@ -19,12 +21,14 @@ Commanders should spend most of their time making decisions and roleplaying thei
 They are responsible for:
 
 - Understanding their orders, objectives, and available information.
-- Choosing priorities and issuing clear orders.
+- Choosing priorities and issuing clear orders to subordinate units.
 - Choosing routes, formations, positions, and timing.
-- Tracking their own company's known status.
+- Tracking their own organization's known status.
 - Using quick-reference aids to resolve routine movement and other uncontested actions.
-- Reporting what their company observes and what it needs.
+- Reporting what their organization observes and what it needs.
 - Accepting that incomplete information and delayed reports are part of the game.
+
+For the **first human test**, “commander” refers to the company commander and their immediate subordinate echelon units. In a future hierarchical test, the same responsibilities apply at the selected command level, with the commander's immediate subordinate units receiving the relevant orders.
 
 Commanders should not need to calculate detailed combat mathematics for every action. If a routine action requires a long calculation, the reference aid is too complicated for the first prototype.
 
@@ -56,13 +60,21 @@ The master map is the source of truth. Commanders should not be expected to see 
 
 For the first prototype:
 
-- Each commander sees their own company's known position and status.
+- Each commander sees their own organization's known position and status.
 - Enemy forces are hidden unless revealed by direct observation, an engagement, a scenario briefing, or another explicitly allowed source.
 - The game master decides what a commander can observe based on distance, terrain, visibility, movement, and other scenario conditions.
 - A commander may record beliefs or suspected enemy locations, but suspicions are not treated as confirmed facts.
 - The game master updates each side's map or information sheet separately.
 
 This can be implemented with separate paper maps, screens, folders, or an agreed physical barrier. The exact presentation can change; the separation of information should remain consistent.
+
+## Future hierarchical play
+
+The full game is intended to support players at different command echelons rather than fixing company command as the permanent player scale. The prototype uses the rigid hierarchy defined in the scenario and operating procedure: a company contains 1–4 echelons; each echelon contains 2 platoons; each platoon contains 2 sections; each section contains 2 squads; and each squad contains 2 fireteams.
+
+At any selected command echelon, the player's immediate subordinate organizational elements are the units they may direct, and those subordinate units are represented by the corresponding force markers. A future scenario may therefore have a player commanding an echelon, platoon, section, squad, or fireteam-level organization while other players occupy superior or subordinate roles. The first human test does not require those additional player roles; it uses only the company-vs-company slice.
+
+This is a deliberate game abstraction. Real military terminology and organization vary among countries; the game fixes its own hierarchy so player authority and map representation remain repeatable. The broader concept is consistent with the general distinction between commanders, organizational units, and subordinate elements used in military organization.
 
 ## Future information systems
 

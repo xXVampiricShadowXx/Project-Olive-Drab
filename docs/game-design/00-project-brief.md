@@ -47,17 +47,17 @@ These are working assumptions for the first complete prototype. They are deliber
 
 - **Minimum group:** 3 people — one commander for each opposing side and one game master.
 - **Additional players:** New commanders can be added as the scenario's scale and command structure expand. There is no fixed theoretical maximum; the practical limit is how many players the game master can support clearly.
-- **First command level:** One infantry company commander per side, representing roughly 100–200 troops.
+- **First human test:** One infantry company commander per side, one company vs. one company, representing roughly 100–200 troops per side, with one game master. This is the initial playable slice, not the ceiling of the game architecture.
 - **First map:** A small town and its surrounding terrain, rather than an entire country or theater.
 - **First scenario:** A small, fictionalized near-future NATO-Russia crisis around a town, using asymmetric company forces without attempting to simulate real national militaries in detail.
-- **Prototype schedule:** A real-time week with daytime play active and nighttime play frozen. All players are assumed to share one local time zone.
+- **First human-test duration:** One scenario day, 08:00–22:00, ending after the Day 1 final control-state check.
+- **Broader prototype schedule:** A real-time week with daytime play active and nighttime play frozen. The broader schedule is exercised separately in solo/AI rehearsal and later multi-day tests; it is not a first-human-test requirement.
 - **Prototype participation:** Players act together during the active window under game-master supervision. Short breaks are allowed, and the absence procedure covers players who cannot attend.
-- **Prototype scenario duration:** One week on the scenario clock, with the town-control objective lasting until the seven-day clock expires.
 - **Primary experience:** Making real-time command decisions while accounting for terrain, weather, distance, logistics, uncertainty, and communication.
 - **Game master:** Resolves engagements and hidden information, controls scenario events, interprets unusual situations, moderates fair play, and keeps the game moving.
 - **Information model:** The game master maintains the authoritative map. Each commander sees their own forces and only the enemy information their side has legitimately obtained.
 - **Future systems:** Intelligence analysis, counter-intelligence, cyberwarfare, and broader information operations are expansion systems, not requirements for the first prototype.
-- **Long-term scale:** Larger scenarios may support players commanding battalions, brigades, divisions, armies, or corps, with the game master coordinating the full operational picture.
+- **Long-term hierarchical architecture:** The game is intended to support commanders at different organizational echelons, from fireteam/crew level through larger formations and theater-level commands. Each commander controls their immediate subordinate units using the same hierarchical command model; the first human test exercises only the company-command slice of that architecture.
 
 These targets are provisional. They should be revisited after the first few playtests rather than treated as promises.
 
@@ -75,6 +75,7 @@ The first prototype packet resolves the initial implementation questions:
 - Player attention may be intermittent. Accepted orders and GM-validated
   standing behaviors continue under their recorded limits, with response
   windows, fallbacks, and temporary command covering longer absences.
+- **Scope boundary:** The first human test is intentionally company-vs-company. The broader hierarchical game architecture may use different player command echelons and subordinate-unit representations without changing that first-test scope.
 
 ## Remaining questions
 
