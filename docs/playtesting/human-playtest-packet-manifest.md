@@ -37,7 +37,7 @@ Read and use these files at the recorded commit:
 | Go/no-go | [Final GM preflight](../game-design/16-final-gm-preflight-readiness-checklist.md) | Blocking readiness gate |
 | Safety and roleplay | [Prototype roleplay layer](../game-design/14-prototype-roleplay-layer.md) | Bounded fictional roleplay |
 | Quick reference | [Quick reference](../assets/quick-reference.md) | Live reference aid |
-| Observer record | [Observer event ledger](observer-event-ledger-template.md) | Append-only event and closeout record |
+| Observer record | [Observer event ledger](observer-event-ledger-template.md) | Append-only event and closeout record when an observer is used |
 | Report | [Playtest report template](playtest-report-template.md) | Rules and human-specific results |
 | Private records | [GM-only records and data handling](gm-private-records-and-data-handling.md) | Access, redaction, backup, and retention boundaries |
 
@@ -72,8 +72,8 @@ Before the final go/no-go, the GM and participants must complete the
 - a shared map with one GM master view and filtered NATO and Russia views;
 - primary and backup same-side succession contacts for each commander;
 - the scenario briefing, consent/safety briefing, and communication rehearsal;
-- an observer, authoritative registers, backup location, and pause/hiatus
-  procedure.
+- authoritative registers, backup location, and pause/hiatus procedure;
+- an observer and observer ledger only when an optional observer is actually used.
 
 The GM must also establish the private working-record location, backup, and
 retention period before the first order. This is a repository guide, not proof
