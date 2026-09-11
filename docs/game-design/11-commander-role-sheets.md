@@ -52,9 +52,9 @@ The `Unit` field names the specific subordinate unit receiving the order. Each a
 ```text
 Scenario day/time:
 Company status:
-Known location:
-Current order:
-Expected completion:
+Known locations:
+Current orders:
+Expected completions:
 Readiness or supply note:
 Confirmed reports:
 Reported information:
@@ -62,7 +62,10 @@ Suspected information:
 Pending decision:
 ```
 
-The company status is the commander's overall situation summary. Current orders, locations, and conditions for subordinate units remain recorded in the authoritative operational records.
+The company status is the commander's overall situation summary. The known locations,
+current orders, and expected completions can cover multiple subordinate units; the
+specific unit-level orders, locations, conditions, and remaining times remain recorded
+in the authoritative operational records.
 
 ### Engagement status submission
 
@@ -82,7 +85,7 @@ The `Unit` field names the specific subordinate unit involved in the engagement.
 
 ## Side A — NATO infantry company
 
-**Scenario strengths:** higher training and cohesion; better communication, reconnaissance, and precision support abstraction.
+**Scenario strengths:** higher training and cohesion; better communication and reconnaissance; any precision-support distinction is narrative framing only and provides no separate first-test support mechanic.
 
 **Scenario limitations:** smaller force; fewer replacements; vulnerable to being surrounded or exhausted.
 
