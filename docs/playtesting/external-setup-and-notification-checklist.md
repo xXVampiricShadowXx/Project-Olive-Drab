@@ -6,12 +6,12 @@ not prove any item below is complete.
 ## Discord
 
 - [ ] Create a game-only server or isolated channel group.
-- [ ] Add GM, observer, NATO commander, and Russia commander roles.
+- [ ] Add GM, NATO commander, and Russia commander roles. If an observer participates, add the observer role as an optional support role.
 - [ ] Create group, NATO-private, Russia-private, approved opposing-contact, and
   GM-record channels.
 - [ ] Set read, post, attachment, history, and mention permissions for each
   role; test with harmless messages.
-- [ ] Confirm the observer sees only the public/redacted feed.
+- [ ] If an observer participates, confirm the observer sees only the public/redacted feed.
 - [ ] Confirm personal direct messages are not part of the record.
 - [ ] Test primary and backup notification methods and response-by reminders.
 
@@ -35,6 +35,7 @@ Backup notification:
 Response-deadline test result:
 Map access test result:
 Permissions blocker/workaround:
+Observer used: yes / no
 GM sign-off:
 ```
 
