@@ -39,7 +39,9 @@ The broader prototype remains compatible with a seven-day scenario. When a multi
 - **Town contested:** The scenario ends in a draw on the primary objective; the game master reports which side has the stronger position as a secondary narrative result, not as a win.
 - **Town uncontrolled:** Neither side wins the primary objective.
 
-If one side has been unable to field an infantry company because it has been eliminated or has formally withdrawn, the other side wins immediately only if it controls the town. Otherwise, play continues until the applicable deadline for that test.
+For the first human test, a company is considered **unable to field** when every one of that company's recorded echelon subordinate units is either **broken** or has a recorded **formal withdrawal from the scenario**. This condition is derived from the existing subordinate-unit states; it does not create a separate company strength state. If all recorded echelons meet that condition, the company is treated as eliminated or formally withdrawn for the immediate-victory check. Otherwise, the company remains fieldable for this purpose.
+
+If one side is unable to field an infantry company under that definition, the other side wins immediately only if it controls the town. Otherwise, play continues until the applicable deadline for that test.
 
 ## Optional secondary conditions for testing
 
@@ -56,7 +58,7 @@ Secondary conditions must never override the clearly stated primary objective du
 When the applicable deadline or an immediate ending condition is reached, the game master:
 
 1. Stops all timers.
-2. Resolves any action that completed before the exact deadline.
+2. Resolves any action that completed before the exact deadline. Any contact or contested action still unresolved at the exact **22:00 first-test boundary** produces no new post-deadline result; its last authoritative state remains the state used for the final control-state check, and the affected order/contact remains recorded as unresolved at session close.
 3. Records the final master-map state.
 4. Checks the primary condition, then any selected secondary condition.
 5. Sends both commanders the same public result and their final private status.
