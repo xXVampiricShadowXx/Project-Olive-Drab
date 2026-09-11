@@ -33,8 +33,7 @@ involved unit when a commander has more than one unit in the engagement.
 
 ## Contact triggers
 
-Pause the affected routine timer and create a contact record when any of these
-occurs:
+For each trigger below, pause the active routine timer for **every affected unit** and create a contact record:
 
 1. A force enters a sector containing an opposing force it did not know was
    there.
@@ -43,8 +42,8 @@ occurs:
 3. Opposing forces attempt to occupy, pass through, withdraw from, or establish a
    position in the same sector or an immediately relevant adjacent sector.
 4. A route, objective, or control pair becomes contested.
-5. A commander declares an attack, probe, hold-under-pressure, or withdrawal
-   against an opposing force.
+5. A commander declares an **Attack**, **Probe**, **Hold**, or **Withdraw** against
+   an opposing force.
 
 A distant or uncertain sighting is an information event, not automatically an
 engagement. The GM sends a report and continues the timer unless the sighting
@@ -54,9 +53,10 @@ not about a marker merely being nearby.
 ## Pause and engagement state
 
 When a trigger occurs, the GM records the exact time, current sector, last
-accepted order, remaining routine time, and what each side knows. The affected
-order enters **paused—contact**. No movement or preparation completes while the
-GM is establishing the engagement, but unrelated orders continue.
+accepted order, remaining routine time, and what each side knows. The active order
+for **each affected unit** enters **paused—contact**. No movement or preparation
+completes while the GM is establishing the engagement, but unrelated orders
+continue.
 
 The engagement has three states:
 
@@ -64,13 +64,23 @@ The engagement has three states:
   still choose a response.
 - **Engaged:** the GM has received the available responses and resolves the
   current exchange.
-- **Disengaged:** one side has withdrawn, been forced out, broken, or both sides
-  have accepted a hold; the GM resumes, replaces, or closes the paused order.
+- **Disengaged:** opposing forces no longer remain in the same or otherwise
+  contested position, or one side has withdrawn, been forced out, or broken;
+  the GM resumes, replaces, or closes the paused order after recording the new
+  posture and any changed control.
 
-Contact does not mean combat must happen. A commander may hold, probe, commit,
-or withdraw. If only one side can reasonably act before the other, the GM uses
-the response deadline and the last standing instruction rather than waiting
-indefinitely.
+Contact does not mean combat must happen. A commander may choose **Hold, Probe,
+Attack, Prepare, Reserve/commit, or Withdraw** from the established decision menu.
+If only one side can reasonably act before the other, the GM uses the response
+deadline and the last standing instruction rather than waiting indefinitely.
+
+For disengagement after a response exchange, the GM may mark the engagement
+**Disengaged** only when the opposing forces no longer share a sector or an
+actively contested position and neither side has an **Attack** or **Probe** response
+still being executed. A **Withdraw** response counts as disengagement only after
+the withdrawal has separated the opposing forces or otherwise ended the contest.
+**Hold** or **Prepare** alone does not end contact while the opposing forces still
+share or actively contest a position.
 
 An accepted movement or position order may include one or more behaviors that
 act when specified conditions occur, allowing play to continue while a commander
@@ -121,8 +131,8 @@ limit or fallback:
 
 The commander should state the objective (delay, seize, hold, learn, preserve,
 or disengage), the intended posture, and the maximum acceptable commitment. A
-standing instruction may cover a predictable response, such as “hold unless
-withdrawal is the only way to avoid becoming broken.”
+standing instruction may cover a predictable response, such as “Hold unless
+Withdraw is the only way to avoid becoming broken.”
 
 ## Flexible attention and response deadlines
 
@@ -201,9 +211,9 @@ after hidden information has been protected:
    force unless the snapshot and prior consequences make continued operation
    implausible.
 8. **Update the map and timers.** Mark position, control, posture, strength,
-   readiness, preparation, commitment, and any remaining order time. Resume a
-   paused order only if its objective and route still make sense; otherwise
-   close it and request a new order.
+   readiness, preparation, commitment, and any remaining order time for each
+   affected unit. Resume a paused order only if its objective and route still
+   make sense; otherwise close it and request a new order.
 9. **Report and set the next window.** Send each side its result, known
    consequences, confidence, and next decision-by time. Preserve hidden facts
    for later reports.
@@ -275,13 +285,34 @@ A withdrawal is an order, not an automatic escape. The commander names a route,
 destination, and limit (preserve strength, delay, or avoid further contact).
 The GM compares the withdrawal against the opponent's posture and the route's
 terrain. A successful withdrawal resumes the movement aid after the engagement
-and normally gives up the contested sector. A pressured withdrawal may cost
-readiness, time, or one additional sector. A failed withdrawal leaves the force
-engaged and may make it depleted or broken.
+and normally gives up the contested sector.
 
-When both sides choose Hold, Prepare, or Withdraw and no side can safely force
-contact, the GM may mark the engagement disengaged. The last accepted orders
-resume only after the GM records the new posture and any changed control.
+A **pressured withdrawal** uses the existing result relationship and applies the
+least severe existing consequence that still matches the recorded snapshot and
+the commander's limit. Apply consequences in this order only as needed:
+
+1. Give ground one additional sector when the named route and current position
+   allow it and doing so matches the declared withdrawal limit.
+2. If that is not appropriate, reduce readiness one existing step (for example,
+   steady to shaken) when the force can absorb that change.
+3. If neither position nor readiness can account for the pressure, add the
+   existing minimum time consequence of 15 active minutes to the withdrawal or
+   remaining paused order.
+
+Do not select a consequence merely for variety; the GM records why the chosen
+existing consequence follows from the snapshot and withdrawal limit. A failed
+withdrawal leaves the force engaged and may make it depleted or broken.
+
+A withdrawal counts as disengagement only after the opposing forces are no longer
+in the same or actively contested position. A failed withdrawal does not
+establish disengagement.
+
+When both sides choose **Hold** or **Prepare** while still sharing or actively
+contesting a position, the engagement remains active. When both sides choose
+**Hold**, **Prepare**, or **Withdraw** and the opposing forces have separated so
+that no active contest remains, the GM marks the engagement **Disengaged** and
+records the new posture and any changed control. The last accepted orders resume
+only after the GM records the new posture and any changed control.
 
 ## Prototype boundaries and review questions
 
