@@ -10,7 +10,9 @@ requiring a detailed real-world map or a scale model.
 - **Grid:** Six columns (`A`–`F`) west to east and five rows (`1`–`5`) north to
   south. A cell is a named sector, not a precise position.
 - **North:** The top of the diagram is north. The GM may rotate or redraw the map
-  only if the grid labels and named approaches remain unchanged.
+  as a visual presentation change only if the authoritative grid geometry, labels,
+  named approaches, adjacency, route features, and objective locations remain
+  unchanged.
 - **Adjacent:** Sectors sharing an edge are adjacent. Diagonal movement is not
   adjacent and requires a route through an edge-sharing sector.
 - **Routes:** A route is a sequence of adjacent sectors. Roads affect movement time;
