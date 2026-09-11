@@ -1,6 +1,6 @@
 # Game Master and Player Roles
 
-This document defines the intended division of responsibility for the first prototype. It is a starting point for testing, not a final authority structure.
+This document defines the division of responsibility for the first prototype and is a prototype responsibility/runbook document. The project's full playable hierarchy is defined separately and is not made provisional by the narrower first-test scope.
 
 ## First prototype roles
 
