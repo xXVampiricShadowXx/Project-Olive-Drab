@@ -43,4 +43,4 @@ The first human test should use:
 - Agreed communication channels and an order-submission procedure.
 - A shared local-time schedule for active and frozen periods.
 
-Do not begin by modeling every country, weapon system, historical event, or command rank. Those details can be added after the core loop proves enjoyable.
+Do not begin by modeling every country, weapon system, historical event, or detailed military specialization. Those details can be added after the core loop proves enjoyable; the project's supported command hierarchy is defined separately from this first-test scope.
