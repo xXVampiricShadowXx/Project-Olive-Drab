@@ -16,7 +16,7 @@ The packet is intentionally a bounded slice of the broader Olive Drab architectu
 8. [Timing and action aids](07-timing-and-action-aids.md) — routine movement and action times.
 9. [GM setup checklist](10-gm-setup-checklist.md) — prepare and start a session.
 10. [Initial scenario briefing template](14-initial-scenario-briefing-template.md) — fill and deliver the opening briefings.
-11. [Communication and order dry run](15-communication-and-order-dry-run.md) — verify channels, orders, reports, and freeze/restart handling.
+11. [Communication and order rehearsal](../playtesting/human-communication-order-rehearsal.md) — verify channels, orders, reports, and broader freeze/restart handling.
 12. [Final GM preflight and readiness checklist](16-final-gm-preflight-readiness-checklist.md) — make the final go/no-go decision.
 13. [Prototype combat and contested actions](13-prototype-combat-and-contested-actions.md) — resolve contact without a full combat simulation.
 14. [Commander role sheets](11-commander-role-sheets.md) — hand one private sheet to each commander.
@@ -49,7 +49,7 @@ This packet defines the **first human test** as one company vs. one company on o
 
 The group must prepare the shared digital map from the authoritative ASCII specification, choose its map platform and access controls, configure the Discord server and its GM-visible role-based channels, and confirm the hidden starting zones and readiness conditions and any scenario-specific terrain or weather. Exact calendar dates are not part of the prototype packet. The first human test uses one active day from 08:00–22:00; the overnight freeze remains a broader prototype procedure rather than a first-test requirement. The GM publishes the victory test and the real-life priority rule: real life takes precedence, and the GM may adjust or end play at discretion while preserving the game state. Personal chat is not part of the game record.
 
-Complete the briefing template, run the communication and order dry run, and pass
+Complete the briefing template, run the communication and order rehearsal, and pass
 the final GM preflight before accepting the first operational order.
 
 For human-test preparation, use the [human playtest packet manifest](../playtesting/human-playtest-packet-manifest.md),
