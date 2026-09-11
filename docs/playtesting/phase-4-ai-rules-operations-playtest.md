@@ -171,10 +171,12 @@ The observer:
 Every release must identify its confidence (`confirmed`, `reported`, or
 `suspected`) and possible staleness. Personal chat is never a game record.
 
-## One-day Brackenford test sequence
+## First-day focused sequence and broader continuity exercise
 
-Use one scenario day to exercise the rules. This is a focused operational
-sequence, not a replacement for the seven-day scenario rules.
+Use the first scenario day to exercise the first-test rules. This focused sequence
+then deliberately includes a separate freeze/restart exercise to rehearse the
+broader seven-day continuity procedure; that Day 2 restart is **not** part of the
+first human test.
 
 | Scenario time | Exercise | Expected record |
 |---|---|---|
@@ -188,8 +190,8 @@ sequence, not a replacement for the seven-day scenario rules.
 | 12:30 | GM resolves one exchange using the Phase 3 sequence | Rolls, hidden-information handling, result pair, consequences |
 | 13:30 | Map/control update tests an approach pair without town control | Master update first, filtered updates, control state explanation |
 | 15:00 | One response deadline expires while a commander is unreachable | Reminder, fallback, reason, no invented attack order |
-| 16:00 | An order crosses a simulated 22:00 freeze boundary | Remaining time, freeze record, no overnight resolution |
-| 08:00 next day | GM restarts the frozen order for the final checkpoint | Morning briefing, unchanged remaining time, restart receipt |
+| 16:00 | Broader freeze/restart exercise begins; an order is set to cross the 22:00 boundary | Remaining time, freeze record, no overnight resolution |
+| 08:00 next day | Broader continuity exercise restarts the frozen order | Morning briefing, unchanged remaining time, restart receipt |
 
 At each exercise, the observer records the first point at which a role needed
 clarification, the elapsed GM processing time, and whether the expected state
