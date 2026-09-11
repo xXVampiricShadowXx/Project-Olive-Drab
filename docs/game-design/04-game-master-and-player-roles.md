@@ -76,7 +76,28 @@ The full game uses the complete organizational hierarchy shown in the authoritat
 
 Every tier in this chain is part of the intended playable architecture. At any selected command tier, a player commands that organization and may direct its immediate subordinate tier using the same command, order, status, map-marker, and information-boundary principles defined elsewhere in the prototype documentation. “Unit” remains context-dependent: it means the immediate subordinate organizational element under the current commander's control.
 
-The full hierarchy does not require every higher-tier organization to use the same fixed subordinate count. Higher formations retain the constituent-unit ranges and equivalents represented by the authoritative hierarchy chart. The rigid game structure beginning at Company is intentionally defined separately: a company contains **1–4 echelons**; each echelon contains **2 platoons**; each platoon contains **2 sections**; each section contains **2 squads**; and each squad contains **2 fireteams**. This fixed Company → Echelon → Platoon → Section → Squad → Fireteam/Crew chain is the project's repeatable game abstraction for the lower hierarchy.
+The authoritative hierarchy uses the following immediate-subordinate relationships and ranges. These are recorded from the project's full hierarchy chart; they are not additional game mechanics:
+
+| Command tier | Immediate subordinate tier / constituent units |
+|---|---|
+| Combatant Command / equivalent region or theater | 4+ army groups |
+| Army Group / Front / equivalent | 2+ armies |
+| Field Army | 2–4 corps |
+| Corps | 2+ divisions |
+| Division | 2–8 brigades or regiments |
+| Brigade | 2+ regiments or groups, or 3–8 battalions/equivalent |
+| Regiment | 2+ battalions/equivalent |
+| Battalion | 2–6 sub-units (company/equivalent) |
+| Company / equivalent | 2–8 platoons/equivalent in the chart; this project's lower game model expresses those as 1–4 echelons × 2 platoons |
+| Staff / Echelon | 2 platoons/troops or 6–10 sections in the chart; this project's lower game model fixes the echelon at 2 platoons |
+| Platoon / equivalent | 2+ sections/equivalent |
+| Section / patrol | 2–3 squads or 3–6 fireteams |
+| Squad | 2–3 fireteams or 1+ cell |
+| Fireteam / crew | No further constituent unit specified in the chart |
+
+Every tier remains playable at the commander's selected level. Higher-tier organizations retain the chart's constituent-unit ranges rather than being forced into the rigid lower-level counts.
+
+The rigid game structure beginning at Company is intentionally defined separately: a company contains **1–4 echelons**; each echelon contains **2 platoons**; each platoon contains **2 sections**; each section contains **2 squads**; and each squad contains **2 fireteams**. A company therefore still contains 2–8 platoons/equivalent through its echelons, matching the chart's company range, while preserving the project's deterministic lower hierarchy.
 
 The **first human test uses only the Company → Echelon slice** of that full architecture: one company commander per side directs the company's 1–4 echelon subordinate units. Platoon, section, squad, fireteam/crew, and every higher command tier remain part of the full game and may be used in later tests without redefining the underlying hierarchy.
 
