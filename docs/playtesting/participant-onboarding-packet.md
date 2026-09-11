@@ -20,10 +20,14 @@ fields. A missing field may cause the GM to return an order before its timer
 starts. Silence does not authorize an unlisted attack. The GM may pause,
 adjust, or end play when real life requires it.
 
-The active window is 08:00-22:00 in the shared local time zone. Results freeze
-overnight and resume at 08:00 from the recorded state. A same-side temporary
-commander may receive earned information during an absence; opposing private
-information is not transferred.
+For the **first human test**, the active window is Day 1, 08:00–22:00 in the
+shared local time zone, and the session closes after the Day 1 final control-state
+check. The broader prototype can freeze overnight and resume at 08:00 when a
+multi-day test actually continues; that broader procedure is not a continuation
+of the first human session.
+
+A same-side temporary commander may receive earned information during an
+absence; opposing private information is not transferred.
 
 ## Consent and exit
 

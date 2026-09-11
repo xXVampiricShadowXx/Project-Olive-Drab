@@ -45,7 +45,7 @@ The game master is responsible for:
 - Maintaining the authoritative record of time, locations, conditions, and events.
 - Confirming routine actions when necessary.
 - Adjudicating contested actions and engagements using the agreed resolution system.
-- Applying battle conditions such as terrain, weather, visibility, surprise, readiness, and supply.
+- Applying battle conditions already defined for the first test, such as terrain, weather, visibility, surprise, and readiness. Supply is handled only through the existing resupply/setup conditions rather than as an independent combat state or modifier.
 - Controlling opposing forces or events that are not directly assigned to a player.
 - Delivering reports according to what each side could reasonably know.
 - Resolving unusual situations consistently and explaining rulings clearly.

@@ -50,10 +50,13 @@ are not part of the game record.
 ## Before starting
 
 Each participant should know the role, channel path, notification method,
-pause/hiatus signal, seven-day clock, active and frozen windows, and how to
-contact the GM privately. No one is required to disclose personal details,
-medical information, identity, availability beyond what is needed for the
-handoff, or reasons for a boundary.
+pause/hiatus signal, and the **first-human-test window of Day 1, 08:00–22:00**.
+The session closes after the Day 1 final control-state check. The broader
+seven-day clock and overnight frozen-window procedure are later/multi-day
+prototype context and are not the first-test session schedule.
+
+No one is required to disclose personal details, medical information, identity,
+availability beyond what is needed for the handoff, or reasons for a boundary.
 
 The GM asks for a simple confirmation:
 
