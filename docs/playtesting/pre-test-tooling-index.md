@@ -2,8 +2,11 @@
 
 This index is the repository-side preparation package for the first human
 playtest. It makes the existing Phase 3 packet runnable and auditable without
-adding mechanics. The scenario remains fictional, infantry-only, seven days,
-08:00-22:00 active, and 22:00-08:00 frozen.
+adding mechanics. **For the first human test, Day 1 runs 08:00–22:00 and ends
+with the final control-state check.** The broader prototype remains a fictional,
+infantry-only seven-day scenario with 08:00–22:00 active windows and
+22:00–08:00 overnight freezes; that broader schedule is exercised separately
+in solo/AI rehearsal and later multi-day tests.
 
 ## Use in this order
 

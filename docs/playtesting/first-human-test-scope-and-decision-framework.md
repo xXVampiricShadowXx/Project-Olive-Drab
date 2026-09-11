@@ -2,10 +2,13 @@
 
 ## Explicit first-test scope
 
-The first human test covers one neutral GM, one observer, one commander per
-side, one infantry company per side, the six-by-five Brackenford map, written
-orders, reports, contact/contested actions, standing behavior, map control,
-roleplay boundaries, and one active scenario day from 08:00 through 22:00.
+The first human test covers one neutral GM, one commander per side, one infantry
+company per side, the six-by-five Brackenford map, written orders, reports,
+contact/contested actions, standing behavior, map control, roleplay boundaries,
+and one active scenario day from 08:00 through 22:00. **Observer participation
+is optional.** When an observer participates, they may use the observer ledger and
+closeout procedures without becoming part of command authority or the minimum
+player arrangement.
 
 The first human test ends after the Day 1 active window and final control-state
 check. The overnight freeze and multi-day continuity procedures remain part of

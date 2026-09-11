@@ -150,7 +150,7 @@ Purpose:
 Start condition:
 Route or formation:
 Limits (engage, halt, withdraw, or avoid):
-Behavior (optional):
+Behaviors (optional; one or more):
 Commander:
 ```
 
