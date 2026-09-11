@@ -28,9 +28,9 @@ For each day, complete these steps in order:
    earned by the receiving side.
 5. Create one standing behavior with a trigger, action, limits, expiry or
    cancellation, and unreachable fallback. Replace it with a later order.
-6. Create one contact, pause only the affected decision, issue response
-   deadlines, resolve the contact using the existing procedure, and record the
-   report and map consequence.
+6. Create one contact, pause the active order/timer for **each affected unit**,
+   issue response deadlines, resolve the contact using the existing procedure,
+   and record the report and map consequence. Unrelated unit orders continue.
 7. During at least one contact exchange, create materially equivalent
    fictional snapshots for both sides in separate rehearsal cases. Confirm that
    the situation-band procedure starts at **even** and shifts only when one

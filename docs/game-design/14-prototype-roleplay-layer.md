@@ -106,11 +106,11 @@ Use the established role-based communication chain. A commander can:
 - Build trust or create friction through consistent communication.
 - Request GM-framed NPC or opposing-side contact when the procedure allows it.
 
-Relationships should affect what people say, how quickly they respond, and
-which options feel credible. They do not bypass the chain of command, turn a
-request into an order for another player, or make a report true. The GM should
-keep NPC reactions proportionate to the established situation and should offer
-the commander a meaningful choice rather than dictating a personality.
+Relationships should affect the fictional dialogue, framing, and perceived
+credibility of interactions; they do not alter published response windows,
+action timers, or other formal procedures. The GM should keep NPC reactions
+proportionate to the established situation and should offer the commander a
+meaningful choice rather than dictating a personality.
 
 When attention is intermittent, write relationship intent into the order:
 
@@ -222,7 +222,7 @@ This layer is deliberately smaller than a full character system:
 | Five-minute commander identity prompts | In-depth character creation and lifepaths |
 | One motivation, strength, and complication | Quantified traits, progression, and advancement |
 | GM-framed lightweight relationships | A full roster of recurring NPCs and relationship tracks |
-| Existing superior/subordinate communication chain | Multiple command levels and detailed staff roles |
+| Existing superior/subordinate communication chain | Additional staff/roleplay detail for the already-defined command hierarchy |
 | Fictionalized contact within approved procedures | Diplomacy, national politics, and civilian-role systems |
 | Roleplay as intent and decision context | Social mechanics, reputation scores, and character abilities |
 
