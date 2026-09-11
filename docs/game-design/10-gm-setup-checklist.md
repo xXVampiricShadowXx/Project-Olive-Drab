@@ -24,7 +24,7 @@ Use this checklist before and during the first live, supervised prototype. The G
 - [ ] Name and label every town sector, approach, road, open area, broken ground, and difficult feature on the town-scale map.
 - [ ] Prepare one hidden master map showing all starting forces, routes, control states, and scenario conditions.
 - [ ] Prepare one filtered map or status sheet for each commander showing only their starting information.
-- [ ] Place each company's markers and record its starting strength, readiness, location, and current order.
+- [ ] Place each company's markers and record the company's starting strength/readiness summary plus each marker's starting location and current order.
 - [ ] Before marker placement, record the actual number of echelons used by each company for this test; keep those counts fixed for the session.
 - [ ] Define balanced but asymmetric hidden starting zones and the readiness condition for each side.
 - [ ] Give each commander only their own permitted zone and readiness information.
