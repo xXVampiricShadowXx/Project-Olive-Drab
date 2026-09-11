@@ -26,7 +26,7 @@ A side does not gain control merely by submitting an order, observing a location
 The first human test runs only through **Day 1's active window, 08:00–22:00**. At the end of that window, the game master checks the town's control state:
 
 - **Town controlled:** The controlling side wins the primary objective.
-- **Town contested:** The scenario ends in a draw on the primary objective; the game master reports which side has the stronger position as a secondary narrative result, not as a win.
+- **Town contested:** The scenario ends in a draw on the primary objective; the game master reports which side has the stronger position as a **non-authoritative narrative result**, not as a win.
 - **Town uncontrolled:** Neither side wins the primary objective.
 
 The first human session ends after this final control-state check. It does not continue into additional scenario days merely to exercise the broader seven-day campaign clock.
@@ -36,7 +36,7 @@ The first human session ends after this final control-state check. It does not c
 The broader prototype remains compatible with a seven-day scenario. When a multi-day test is actually run, the primary deadline is the end of **Day 7's active window**:
 
 - **Town controlled:** The controlling side wins the primary objective.
-- **Town contested:** The scenario ends in a draw on the primary objective; the game master reports which side has the stronger position as a secondary narrative result, not as a win.
+- **Town contested:** The scenario ends in a draw on the primary objective; the game master reports which side has the stronger position as a **non-authoritative narrative result**, not as a win.
 - **Town uncontrolled:** Neither side wins the primary objective.
 
 For the first human test, a company is considered **unable to field** when every one of that company's recorded echelon subordinate units is either **broken** or has a recorded **formal withdrawal from the scenario**. This condition is derived from the existing subordinate-unit states; it does not create a separate company strength state. If all recorded echelons meet that condition, the company is treated as eliminated or formally withdrawn for the immediate-victory check. Otherwise, the company remains fieldable for this purpose.
@@ -47,7 +47,7 @@ If one side is unable to field an infantry company under that definition, the ot
 
 Use no more than one secondary condition in an early playtest. Possible choices are:
 
-- **Preservation:** A side that controls the town while retaining more of its starting company receives the stronger narrative outcome.
+- **Preservation:** A side that controls the town while retaining more of its starting company receives the **stronger narrative outcome**.
 - **Evacuation:** A side that cannot win control can still achieve a successful withdrawal if its surviving force exits through the designated edge before the applicable deadline.
 - **Information discipline:** The game master records whether a side made a decision from a confirmed report or a suspected report. This is an observation for playtesting, not a score.
 
