@@ -8,7 +8,7 @@ interrupts a timed order and information arrives imperfectly.
 
 ## What this procedure tracks
 
-The GM tracks each involved force with five simple states:
+The GM tracks each involved force using five simple **state/record categories**:
 
 - **Position:** current sector, route, and whether the force is in contact.
 - **Posture:** moving, probing, holding, attacking, withdrawing, or reorganizing.
