@@ -45,7 +45,7 @@ The game master chooses the smallest adjustment that describes the situation:
 - **Poor visibility:** add 15 minutes to movement or observation, and reduce what can be confirmed.
 - **Heavy rain or comparable weather:** add 15 minutes to movement and preparation.
 - **Night:** no action resolves because the broader prototype is frozen. The first human test ends before the frozen window begins.
-- **Readiness or supply problem:** pause the routine timer and request a ruling; do not invent a numerical penalty.
+- **Readiness problem or recorded resupply prerequisite issue:** pause the routine timer and request a ruling; do not invent a numerical penalty or an independent supply state.
 - **Enemy contact:** stop the timer, create a contact record, and use the prototype contact procedure.
 
 Terrain and weather should be visible on the commander reference when they are known. Hidden conditions are communicated through reports or revealed by the game master when they affect an action.
