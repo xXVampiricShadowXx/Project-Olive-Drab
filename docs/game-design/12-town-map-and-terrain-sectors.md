@@ -204,7 +204,7 @@ contested and the town is not controlled by either side. An empty required secto
 does not by itself create a contested result.
 
 The GM may mark a central pair as uncontrolled when neither side has an eligible
-presence in either required sector. Control changes are time-stamped and reported to both commanders.
+presence in **both required sectors**. Control changes are time-stamped and reported to both commanders.
 
 ## Balanced asymmetric hidden starting zones
 
