@@ -1,6 +1,6 @@
 # Prototype Packet Index
 
-This index is the smallest complete packet for the **first human test**. It is designed for two commanders and one game master controlling one infantry company per side.
+This index is the **assembled packet** for the **first human test**. It is designed for two commanders and one game master controlling one infantry company per side. The packet is assembled as the complete file set for the current test scope; documented open rules questions remain open until resolved.
 
 The packet is intentionally a bounded slice of the broader Olive Drab architecture. The first human test is **one company vs. one company, one company commander per side, and one GM, on Day 1 only**. The broader game may place players at different command echelons and use the same hierarchical command model with their immediate subordinate units.
 
@@ -59,3 +59,7 @@ and [participant briefing](../playtesting/consent-safety-participant-briefing.md
 The complete [pre-test tooling index](../playtesting/pre-test-tooling-index.md)
 adds snapshot preparation, the solo seven-day rehearsal, operational templates,
 external setup checks, onboarding, and post-test decision guidance.
+
+The packet is assembled for the current scope, but open documented questions are
+not silently treated as resolved by this index. See issue #127 for the outstanding
+formal-withdrawal definition question affecting the existing victory check.
