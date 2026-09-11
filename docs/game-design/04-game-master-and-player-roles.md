@@ -61,7 +61,7 @@ The master map is the source of truth. Commanders should not be expected to see 
 For the first prototype:
 
 - Each commander sees their own organization's known position and status.
-- Enemy forces are hidden unless revealed by direct observation, an engagement, a scenario briefing, or another explicitly allowed source.
+- Enemy forces are hidden unless revealed by direct observation, an explicitly authorized report or scenario briefing/result, or another explicitly allowed source. An engagement by itself does not reveal a hidden opposing marker.
 - The game master decides what a commander can observe based on distance, terrain, visibility, movement, and other scenario conditions.
 - A commander may record beliefs or suspected enemy locations, but suspicions are not treated as confirmed facts.
 - The game master updates each side's map or information sheet separately.
