@@ -65,8 +65,10 @@ out of public reports.
 
 ## Project status
 
-Phase 3 documentation is complete: the smallest playable prototype packet is
-assembled for live, supervised testing. Phase 4 AI rules-testing preparation is
-also complete; the communication/order dry run and first focused playtest are
-still pending. The packet remains provisional, and playtest findings should be
-recorded, tested, and revised openly.
+Phase 3's first-test packet is assembled for live, supervised testing, but the
+repository still contains documented rule-owner questions that are not silently
+resolved by packet assembly, including #127 (formal withdrawal) and #146
+(Reserve/commit terminology). Phase 4 AI rules-testing preparation is also
+complete; the communication/order dry run and first focused human playtest are
+still pending. External setup and human participation remain separate readiness
+checks and are not implied by repository completion.
