@@ -16,11 +16,9 @@ The first planned setting is a Europe-focused WW3 scenario involving NATO and Ru
 ### Player roles
 
 - **Civilian government roles** — Set national priorities, make economic and diplomatic decisions, and issue strategic direction.
-- **Military roles** — Translate political direction into operations at the appropriate command level.
-  - Corps Commander — Used on the largest maps.
-  - Army Commander — The default highest military rank.
-  - Division Commander — The base military rank.
-  - Brigade Commander — Used on the smallest maps.
+- **Military command roles** — The full game supports command at every tier of the authoritative hierarchy: Combatant Command/equivalent region or theater → Army Group/Front → Field Army → Corps → Division → Brigade → Regiment → Battalion → Company/equivalent → Staff/Echelon → Platoon → Section → Squad → Fireteam/Crew.
+  - At any selected military command tier, the commander directs the immediate subordinate tier using the project's hierarchy and unit model.
+  - **First human test:** only the Company → Echelon slice is player-controlled, with one company commander per side; this is a test slice, not the limit of the game's command architecture.
 
 ## Where to work
 
