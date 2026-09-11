@@ -57,9 +57,9 @@ These are working assumptions for the first complete prototype. They are deliber
 - **Game master:** Resolves engagements and hidden information, controls scenario events, interprets unusual situations, moderates fair play, and keeps the game moving.
 - **Information model:** The game master maintains the authoritative map. Each commander sees their own forces and only the enemy information their side has legitimately obtained.
 - **Future systems:** Intelligence analysis, counter-intelligence, cyberwarfare, and broader information operations are expansion systems, not requirements for the first prototype.
-- **Long-term hierarchical architecture:** The game is intended to support commanders at different organizational echelons, from fireteam/crew level through larger formations and theater-level commands. Each commander controls their immediate subordinate units using the same hierarchical command model; the first human test exercises only the company-command slice of that architecture.
+- **Long-term hierarchical architecture:** The game supports commanders at different organizational echelons, from fireteam/crew level through larger formations and theater-level commands. Each commander controls their immediate subordinate units using the same hierarchical command model; the first human test exercises only the company-command slice of that architecture.
 
-These targets are provisional. They should be revisited after the first few playtests rather than treated as promises.
+The initial prototype targets above are provisional and should be revisited after the first few playtests. The full-game hierarchy and its defined command tiers are documented separately and are not provisional merely because the first-test scope is narrow.
 
 ## Resolved prototype decisions
 
