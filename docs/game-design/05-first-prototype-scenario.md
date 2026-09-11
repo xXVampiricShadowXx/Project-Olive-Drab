@@ -10,23 +10,23 @@ The NATO company has:
 
 - Fewer troops.
 - Better training and cohesion.
-- Better access to communications, reconnaissance, and precision support.
-- A higher ability to coordinate and react to information.
+- Better access to communications and reconnaissance as represented by the existing information and command procedures.
+- A better **precision-support abstraction** only as a narrative description of the scenario's broader asymmetry; it has no separate support, strike, weapon, or numerical modifier rule in the first human test.
 
 The Russian company has:
 
 - More troops.
 - Lower average training and cohesion for this prototype.
-- Less effective access to advanced information and precision systems.
+- Less effective access to advanced information and precision systems as a narrative scenario distinction only; these do not introduce separate equipment or support mechanics in the first human test.
 - The ability to compensate through numbers, prepared positions, concentration of force, and control of key terrain.
 
-These are scenario attributes, not universal statements about real forces. The first test should use simple ratings that can later be replaced or revised without changing the core rules.
+These are scenario attributes, not universal statements about real forces. The first test should use only the existing abstract information, command, movement, control, and contact procedures. They can later be replaced or revised without changing the core rules.
 
 ## Initial sides
 
 | Side | Command | Relative strengths | Relative limitations |
 |------|---------|--------------------|----------------------|
-| NATO | One infantry company commander | Training, cohesion, communications, reconnaissance, precision | Smaller force, fewer replacements, vulnerable to being surrounded or exhausted |
+| NATO | One infantry company commander | Training, cohesion, communications, reconnaissance, precision-support abstraction | Smaller force, fewer replacements, vulnerable to being surrounded or exhausted |
 | Russia | One infantry company commander | Numbers, ability to occupy more ground, massed attacks, redundancy | Training, cohesion, communications, and information are less reliable in this scenario |
 
 The prototype uses a rigid command hierarchy so that map representation and command authority remain unambiguous. For this scenario, the player is the **company commander**. The company contains **1–4 echelons**. Each echelon contains **2 platoons**; each platoon contains **2 sections**; each section contains **2 squads**; and each squad contains **2 fireteams**. This is a deliberate game abstraction rather than a claim about real-world organization.
@@ -69,7 +69,7 @@ For the first contact or combat situation not covered by the packet, the GM make
 
 ## Recommended asymmetry
 
-Use only a few broad factors at first:
+Use only a few broad factors at first. In the first human test, the listed communications, reconnaissance, and precision-support differences are represented only through existing information/command procedures; they do not create separate support or equipment mechanics.
 
 | Factor | NATO starting position | Russia starting position |
 |--------|------------------------|---------------------------|
@@ -77,10 +77,10 @@ Use only a few broad factors at first:
 | Training | Higher | Lower |
 | Cohesion | Higher | Lower |
 | Information access | Better | Worse |
-| Precision or support | Better | Worse |
+| Precision-support abstraction | Better narrative framing; no separate first-test mechanic | Worse narrative framing; no separate first-test mechanic |
 | Ability to hold multiple locations | Worse | Better |
 
-Avoid adding separate rules for every technology, weapon, or doctrine in version 0.1. If an advantage cannot be explained quickly through the prototype's reference aids and communication procedures, it probably belongs in a later version.
+Avoid adding separate rules for every technology, weapon, or doctrine in version 0.1. If an advantage cannot be explained quickly through the prototype's existing reference aids and communication procedures, it belongs in a later version rather than becoming an unlisted first-test mechanic.
 
 ## What the scenario should test
 
@@ -100,7 +100,7 @@ For the first test:
 
 - Use fictional town and terrain names.
 - Avoid modeling real-world operational plans or current events.
-- Keep technology abstracted into a few scenario modifiers.
+- Keep technology abstracted into a few scenario modifiers only when those modifiers are explicitly represented by the existing rules and reference aids.
 - Do not treat the scenario's ratings as a universal comparison of national militaries.
 - Use infantry only.
 - Do not include air support, vehicles, artillery, cyberwarfare, or national-level politics.

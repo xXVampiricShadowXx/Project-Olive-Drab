@@ -198,10 +198,10 @@ sector level and derives the town result from these locations:
 
 For the first scenario, the town is **controlled** only when one side has a credible
 infantry presence in both central control pairs (C3/D3 and C4/D4), with no opposing
-force marker contesting any required sector. If either side occupies a required sector
-against an opposing force, the affected control pair is contested and the town is
-not controlled by either side. An empty required sector does not by itself create a
-contested result.
+**eligible force marker** contesting any required sector. If either side occupies a
+required sector against an opposing eligible force, the affected control pair is
+contested and the town is not controlled by either side. An empty required sector
+does not by itself create a contested result.
 
 The GM may mark a central pair as uncontrolled when neither side has an eligible
 presence in either required sector. Control changes are time-stamped and reported to both commanders.

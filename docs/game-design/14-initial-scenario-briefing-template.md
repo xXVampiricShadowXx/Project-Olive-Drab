@@ -24,7 +24,8 @@ day and time on the shared clock.
 - Brackenford and its six-column by five-row named-sector map are authoritative
   for this prototype.
 - Town control requires a credible presence in both central control pairs
-  (C3/D3 and C4/D4), with no opposing force marker contesting a required sector.
+  (C3/D3 and C4/D4), with no opposing **eligible force marker** contesting a
+  required sector.
 - Infantry, movement, observation, written orders, reports, and the prototype
   combat and contested-action procedure are in scope. Vehicles, artillery, air
   support, cyberwarfare, national politics, and detailed equipment are out of
