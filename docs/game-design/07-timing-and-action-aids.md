@@ -31,10 +31,12 @@ For a route spanning multiple sectors, **add the applicable base time for each s
 | Establish a temporary position | 30 minutes | Unit remains in place and has a defensible position |
 | Observe one adjacent sector | 15 minutes | Visibility and terrain permit observation |
 | Search a town sector | 30 minutes | Unit can enter and inspect without opposition |
-| Resupply from an established friendly point | 30 minutes | Supply point is accessible and uncontested |
+| Resupply from an established friendly point | 30 minutes | The point is accessible and uncontested, and the GM has already designated or recorded it as a friendly resupply point before the resupply attempt. The resupply action does not itself establish a new point. |
 | Withdraw one sector | Use the movement aid | Route is available |
 
 These times are not promises that an action succeeds. They only describe how long an uncontested attempt takes. Contact, fire, blocked routes, or a change in conditions moves the action to game-master adjudication.
+
+An **established friendly point** is a location that the GM has explicitly designated in the scenario setup or authoritative master record as available for friendly resupply before the order to resupply is accepted. The designation and location should be recorded so the same condition is applied consistently to both sides. The first human test does not require a resupply point unless the scenario setup explicitly includes one.
 
 ## Conditions and adjustments
 
