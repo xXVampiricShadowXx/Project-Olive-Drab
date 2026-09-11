@@ -68,13 +68,19 @@ For the first prototype:
 
 This can be implemented with separate paper maps, screens, folders, or an agreed physical barrier. The exact presentation can change; the separation of information should remain consistent.
 
-## Future hierarchical play
+## Full-game hierarchical play
 
-The full game is intended to support players at different command echelons rather than fixing company command as the permanent player scale. The prototype uses the rigid hierarchy defined in the scenario and operating procedure: a company contains 1–4 echelons; each echelon contains 2 platoons; each platoon contains 2 sections; each section contains 2 squads; and each squad contains 2 fireteams.
+The full game uses the complete organizational hierarchy shown in the authoritative project hierarchy chart. From highest to lowest, the supported tiers are:
 
-At any selected command echelon, the player's immediate subordinate organizational elements are the units they may direct, and those subordinate units are represented by the corresponding force markers. A future scenario may therefore have a player commanding an echelon, platoon, section, squad, or fireteam-level organization while other players occupy superior or subordinate roles. The first human test does not require those additional player roles; it uses only the company-vs-company slice.
+**Combatant Command (or equivalent region/theater) → Army Group/Front (or equivalent) → Field Army → Corps → Division → Brigade → Regiment → Battalion → Company (or equivalent) → Staff/Echelon → Platoon → Section → Squad → Fireteam/Crew.**
 
-This is a deliberate game abstraction. Real military terminology and organization vary among countries; the game fixes its own hierarchy so player authority and map representation remain repeatable. The broader concept is consistent with the general distinction between commanders, organizational units, and subordinate elements used in military organization.
+Every tier in this chain is part of the intended playable architecture. At any selected command tier, a player commands that organization and may direct its immediate subordinate tier using the same command, order, status, map-marker, and information-boundary principles defined elsewhere in the prototype documentation. “Unit” remains context-dependent: it means the immediate subordinate organizational element under the current commander's control.
+
+The full hierarchy does not require every higher-tier organization to use the same fixed subordinate count. Higher formations retain the constituent-unit ranges and equivalents represented by the authoritative hierarchy chart. The rigid game structure beginning at Company is intentionally defined separately: a company contains **1–4 echelons**; each echelon contains **2 platoons**; each platoon contains **2 sections**; each section contains **2 squads**; and each squad contains **2 fireteams**. This fixed Company → Echelon → Platoon → Section → Squad → Fireteam/Crew chain is the project's repeatable game abstraction for the lower hierarchy.
+
+The **first human test uses only the Company → Echelon slice** of that full architecture: one company commander per side directs the company's 1–4 echelon subordinate units. Platoon, section, squad, fireteam/crew, and every higher command tier remain part of the full game and may be used in later tests without redefining the underlying hierarchy.
+
+This is a deliberate game abstraction. Real military terminology and organization vary among countries; the project hierarchy fixes its own supported tiers and the lower-level repeatable relationships so player authority and map representation remain consistent.
 
 ## Future information systems
 
