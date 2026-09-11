@@ -49,8 +49,11 @@ For each trigger below, pause the active routine timer for **every affected unit
 
 A distant or uncertain sighting is an information event, not automatically an
 engagement. The GM sends a report and continues the timer unless the sighting
-changes what the unit can safely do. Contact is about a decision being required,
-not about a marker merely being nearby.
+changes what the unit can safely do. The GM records the sighting and the reason
+for treating it as an information event or as a contact trigger, using the
+existing temporary-ruling/record standard when the packet does not otherwise
+cover the case. Contact is about a decision being required, not about a marker
+merely being nearby.
 
 ## Pause and engagement state
 

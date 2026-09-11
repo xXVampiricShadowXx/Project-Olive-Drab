@@ -19,9 +19,7 @@ requirement of the first one-day human test.
 4. **Movement and reporting:** The commander submits a route and a harmless
    observation report. The GM demonstrates sector naming, confidence labels,
    filtered release, and the observer ledger link.
-5. **Contact and deadline:** The GM simulates contact, pauses only the affected
-   order, sends separate reports with a response-by time, and shows the
-   standing fallback if a commander cannot respond.
+5. **Contact and deadline:** The GM simulates contact, pauses the active order/timer for each affected unit, sends separate reports with a response-by time, and shows the standing fallback if a commander cannot respond. Unrelated unit orders continue.
 6. **Standing behavior:** The commander supplies trigger, action, limits,
    expiry/cancel condition, and unreachable fallback. The GM validates and
    then cancels it through a replacement order.
@@ -32,9 +30,10 @@ requirement of the first one-day human test.
    and response deadline crossing 22:00. Record remaining active time, pause
    all results overnight, and resume the same remaining time at 08:00. This is
    not required evidence for the first human test.
-9. **Observer closeout:** The observer confirms that every step has IDs,
-   timestamps, visibility, linked source, state before/after, and any open
-   question. No observer correction changes live play.
+9. **Observer closeout:** If an observer participates, the observer confirms
+   that every step has IDs, timestamps, visibility, linked source, state
+   before/after, and any open question. If no observer participates, the GM
+   performs and records the same closeout checks.
 
 ## Pass criteria
 
