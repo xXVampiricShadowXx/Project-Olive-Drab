@@ -9,6 +9,10 @@
 **Packet version or commit:** Phase 4 AI rules and operations playtest packet; branch base `cb7deae`
 **Map version:** Brackenford sector specification, map v1.0
 
+## Historical evidence status
+
+This report is retained as historical validation of the rules snapshot identified above. Later repository revisions changed several of the rules exercised here, so this report does not establish readiness of the current `main` ruleset. Preserve the event transcript and metrics as historical evidence; use the current playtest packet, current rehearsals, and final GM preflight for present readiness decisions.
+
 ## Channel-simulation workaround
 
 This was a controlled channel simulation, not a Discord session and not an
@@ -174,13 +178,14 @@ bands when the result tiers and consequences are released without the bands.
 
 ## Decision
 
-**Rules-ready for human test.**
+**Rules-ready for human test — historical snapshot only; superseded as current readiness evidence.**
 
 The focused sequence completed with no blocked checkpoint, no information
-boundary leak, no timer/restart error, and no combat or control-rule defect.
-This decision is limited to rules and operations validation. A human test still
-needs real channel permissions, delivery checks, consent/safety procedures, and
-the final GM preflight.
+boundary leak, no timer/restart error, and no combat or control-rule defect in
+the recorded `cbf33f8` rules snapshot. Later rule revisions changed the
+repository materially. This report therefore must not be cited as validation
+of the current `main` ruleset. Current readiness depends on the present packet,
+current rehearsals, and the final GM preflight.
 
 ## Open decisions
 
