@@ -221,7 +221,7 @@ Use this succession order:
 
 Temporary command never crosses faction lines. The temporary commander receives the absent role's current orders, status, reports, and pending decisions, but not information that role has not earned. The game master records who assumed command, when the transfer began, and what authority was delegated.
 
-- A subordinate temporarily promoted to fill the absent commander's role controls that absent commander's organization for the duration of the appointment. When the appointment ends, they return to their original unit and retain only that unit's authority.
+- A subordinate temporarily promoted to fill the absent commander's role exercises the temporary higher role's authority over the absent commander's organization for the duration of the appointment. Their original subordinate command is subsumed for the duration and is not exercised as a second independent authority. When the appointment ends, they return to their original unit and retain only that unit's authority.
 - A commander at the same level who assumes the absent role controls both their original forces and the temporary forces until the appointment ends.
 - A superior commander does not micromanage the temporary organization. They issue objectives, priorities, and broad instructions, while the organization is handled under the same higher-level abstraction used for subordinate or non-player formations.
 
