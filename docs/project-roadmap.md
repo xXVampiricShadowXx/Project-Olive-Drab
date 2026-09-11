@@ -97,8 +97,9 @@ The phases are deliberately broad. Rules will change during playtesting, so this
 - Counter-intelligence and cyberwarfare
 - Morale and readiness
 - Real-time combat engagements with evolving reports and commander decision windows
-- More command levels
 - Additional scenarios and factions
+
+Additional command levels are not a Phase 5 addition: the full-game hierarchy is already defined from Combatant Command/equivalent region or theater through Fireteam/Crew. Later tests may exercise those already-defined command levels and their immediate subordinate units; the first human test remains Company → Echelon.
 
 **Exit test:** Each new system has a clear purpose and has been tested separately or as part of a complete scenario.
 
