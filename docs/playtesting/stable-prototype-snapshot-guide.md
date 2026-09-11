@@ -1,9 +1,9 @@
 # Stable Prototype Snapshot and Tag Preparation
 
-This is a preparation guide, not a release. A repository tag is allowed only
+This is a preparation guide, not a release. A repository snapshot/tag is allowed only
 after the focused readiness PR has merged into `main`, the merged commit has
-passed validation, and the project owner has requested the human-test
-snapshot. Do not publish a GitHub release.
+passed validation, and the project owner has requested the human-test snapshot.
+Do not publish a GitHub release.
 
 ## Snapshot procedure
 
@@ -26,13 +26,14 @@ snapshot. Do not publish a GitHub release.
 Packet version: human-playtest-0.1
 Snapshot name: olive-drab-human-playtest-0.1
 Rules authority: <main commit SHA>
+Status: supervised prototype snapshot; external human-test readiness is recorded separately
 Map authority: Brackenford map v1.0
-Status: supervised prototype preparation; not a release
 ```
 
 If requested after merge, create an annotated repository tag named
-`prototype-v0.1-human-test-ready` on the exact merged `main` commit. This is a
-repository tag, not a published release. Record the commit SHA, packet
+`prototype-v0.1-human-test-snapshot` on the exact merged `main` commit. This is
+a repository tag, not a published release, and the tag name does not by itself
+claim that external human-test setup is complete. Record the commit SHA, packet
 manifest, map version, observer ledger, and report template alongside the tag.
 State that the packet is provisional, infantry-only, and does not expand Phase
 3 mechanics.
