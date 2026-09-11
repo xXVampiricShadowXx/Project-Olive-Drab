@@ -9,7 +9,7 @@ rule has been empirically validated.
 
 ## Foundation
 
-- [x] Game objective and victory
+- [x] Game objective and victory — covered for the current packet; one victory-definition edge case remains open in [#127](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/127).
 - [x] Player count and role assignment
 - [x] Setup
 - [x] Definitions and terminology used by the prototype
@@ -68,3 +68,6 @@ rule has been empirically validated.
 The unchecked topics above are not blockers for the current infantry-only prototype
 unless they are required by a specific scenario rule. They remain deferred or
 subject to human-playtest validation rather than being implied as complete.
+
+The checked victory topic denotes packet coverage, not closure of every edge case;
+see issue #127 for the outstanding formal-withdrawal definition question.
