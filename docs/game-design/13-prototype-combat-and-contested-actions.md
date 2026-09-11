@@ -268,7 +268,10 @@ Possible consequences include:
   route. Do not create halfway positions.
 - **Readiness:** steady, shaken, or recovering after a reorganization period.
 - **Strength:** fresh, pressured, depleted, or broken. A depleted force must
-  withdraw or reorganize before another deliberate attack.
+  withdraw or reorganize before another deliberate attack. The reorganization
+  period must be recorded in the affected unit's order/timer record before a
+  new deliberate attack begins; use an existing applicable action timing aid,
+  or record a temporary ruling when no existing timing aid covers the action.
 - **Control:** a sector or control pair becomes controlled, contested, or
   uncontrolled under the existing control rules.
 - **Future options:** a reserve is committed, a route is exposed or blocked, a
