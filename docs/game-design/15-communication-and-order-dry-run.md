@@ -21,8 +21,12 @@ not create an operational result or reveal hidden information.
   resolved result.
 - Standing behaviors require a trigger, action, limits, expiry or cancel
   condition, and unreachable fallback.
-- Urgent decisions have a response-by time. The deadline pauses at 22:00 and
-  resumes at 08:00. Expiry uses the last accepted limits and fallback.
+- **First human test:** urgent decisions have a response-by time, but the
+  deadline terminates with the Day 1 22:00 final control-state check; it does
+  not pause and resume on a later scenario day.
+- **Broader multi-day prototype:** urgent decision deadlines may pause at 22:00
+  and resume at 08:00 with the active timers when the scenario actually
+  continues into another day. Expiry uses the last accepted limits and fallback.
 - Contact reports separate observation from inference and use confirmed,
   reported, or suspected confidence labels.
 - Real life always takes precedence. At the GM's discretion, consulting players
@@ -122,6 +126,10 @@ GM-only conditions.
 - [ ] GM resumes the recorded remaining time at 08:00 without recalculating it.
 - [ ] GM demonstrates the morning private briefing and commander receipt
       confirmation.
+- [ ] GM labels this freeze/restart evidence as **broader multi-day prototype
+      procedure**, not first-human-test behavior. For the first human test, the
+      simulated Day 1 response deadline ends at the 22:00 final control-state
+      check instead of resuming on another day.
 
 ### 7. Real-life pause and hiatus test
 
