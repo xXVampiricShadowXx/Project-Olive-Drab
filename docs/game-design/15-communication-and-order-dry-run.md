@@ -107,8 +107,9 @@ GM-only conditions.
 - [ ] GM sends a harmless report with source, observed fact, confidence, and
       possible staleness.
 - [ ] Each commander identifies what is observed versus inferred.
-- [ ] GM simulates contact, pauses the affected order, and issues separate
-      contact reports.
+- [ ] GM simulates contact, pauses the active routine order/timer for each
+      affected unit, and issues separate contact reports; unrelated unit orders
+      continue.
 - [ ] Each report includes a Contact ID and response-by time.
 - [ ] Commanders submit a harmless response with objective, posture,
       commitment, and limit.

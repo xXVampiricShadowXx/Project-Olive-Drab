@@ -36,9 +36,10 @@ day and time on the shared clock.
   limits, expiry or cancel condition, and unreachable fallback. The GM
   validates triggers and resolves contact; silence never authorizes an unlisted
   attack or unlimited commitment.
-- Contact pauses the affected routine order. The GM uses the transparent
-  prototype sequence, visible resolution rolls, hidden-information protection,
-  and graduated consequences.
+- Contact pauses the active routine order/timer for **each affected unit**. The
+  GM uses the transparent prototype sequence, visible resolution rolls,
+  hidden-information protection, and graduated consequences; unrelated unit
+  orders continue.
 
 ## GM completion fields
 
@@ -91,7 +92,8 @@ Read or send the following, inserting only the completed fields:
 > communication and the role-based channels for private game communication. The
 > GM can review all game communication. Submit clear orders, label uncertainty,
 > and use the standing-behavior fields when you may be unavailable. Contact
-> pauses a routine order and is resolved using the prototype contact procedure.
+> pauses the active routine order/timer for each affected unit and is resolved
+> using the prototype contact procedure; unrelated unit orders continue.
 > Real life always takes precedence. At the GM's discretion, consulting players
 > where practical, the GM may pause, suspend, place the game on hiatus, otherwise
 > adjust play, or end a session. The GM records and preserves the game state and
