@@ -14,8 +14,10 @@ The GM tracks each involved force with five simple states:
 - **Posture:** moving, probing, holding, attacking, withdrawing, or reorganizing.
 - **Preparation:** unprepared, ready, or fortified. Preparation describes time
   spent making a position usable; it is not a permanent bonus.
-- **Strength:** fresh, pressured, depleted, or broken. The GM may record a
-  company as a few strength markers rather than individual losses.
+- **Strength:** fresh, pressured, depleted, or broken. The authoritative strength
+  state belongs to each involved **Unit/force marker**. A company-wide summary may
+  be recorded separately for narrative context, but it never replaces the
+  subordinate-unit strength records used for adjudication.
 - **Control and options:** which sectors are controlled or contested, and which
   routes, reserves, or withdrawals remain available.
 
@@ -221,8 +223,8 @@ after hidden information has been protected:
 The dice are an uncertainty aid, not the whole decision. Impacted players see
 the resolution rolls, but not necessarily the hidden facts that shaped the
 comparison or situation bands. Commander choices, map position, preparation,
-commitment, information quality, and consequences must be visible in the
-record when the affected side could know them.
+commitment, information quality, and consequences must be visible in the record
+when the affected side could know them.
 
 ### Status submission and behavior record
 
