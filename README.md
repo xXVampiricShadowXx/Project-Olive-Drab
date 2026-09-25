@@ -72,3 +72,8 @@ resolved by packet assembly, including #127 (formal withdrawal) and #146
 complete; the communication/order dry run and first focused human playtest are
 still pending. External setup and human participation remain separate readiness
 checks and are not implied by repository completion.
+
+Development tooling for this repository uses AI assistance for technical
+work such as repository setup and code; see
+[CONTRIBUTING.md](CONTRIBUTING.md#use-of-ai-tools) for what that does and
+does not cover.
