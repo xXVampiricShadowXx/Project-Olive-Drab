@@ -4,6 +4,15 @@ Thank you for helping develop Project Olive Drab. This repository is a
 documentation-first design project for a human-moderated, real-time,
 roleplaying wargame.
 
+## Use of AI tools
+
+AI assistants are used for parts of this project's technical work —
+repository setup, tooling, and any future software implementation. Game
+design, rules content, and all written material are human-authored, not
+AI-generated. This is separate from the Phase 4 AI rules-testing described
+in the project roadmap, which uses AI to dry-run written rules for clarity
+before human playtesting, not to write them.
+
 ## Before opening an issue or pull request
 
 1. Read the [README](README.md) and the [project roadmap](docs/project-roadmap.md).
