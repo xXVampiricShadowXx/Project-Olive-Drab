@@ -4,6 +4,9 @@ Welcome to a supervised Olive Drab prototype. The setting and factions are
 fictionalized. This is a test of communication, command decisions, timing, and
 the GM record—not a statement about real nations or current events.
 
+For a fuller role-by-role guide for commanders, the GM, and observers, see the
+[player playtest packet](player-playtest-packet.md). It adds no rules.
+
 ## Before play
 
 - Read the [prototype packet index](../game-design/09-prototype-packet-index.md).

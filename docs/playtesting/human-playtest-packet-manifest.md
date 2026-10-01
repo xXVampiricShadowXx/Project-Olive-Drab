@@ -40,6 +40,7 @@ Read and use these files at the recorded commit:
 | Observer record | [Observer event ledger](observer-event-ledger-template.md) | Append-only event and closeout record when an observer is used |
 | Report | [Playtest report template](playtest-report-template.md) | Rules and human-specific results |
 | Private records | [GM-only records and data handling](gm-private-records-and-data-handling.md) | Access, redaction, backup, and retention boundaries |
+| Participant guide | [Player playtest packet](player-playtest-packet.md) | Plain-language, role-by-role summary of the files above; adds no rules |
 
 The [Phase 4 AI packet](phase-4-ai-rules-operations-playtest.md) and its
 dry-run report are validation context only. They do not replace a human

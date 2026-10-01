@@ -5,7 +5,9 @@ a new scenario or rules authority. Use the complete
 [Prototype Packet Index](09-prototype-packet-index.md) and its linked documents
 to prepare and run the session. The packet index and
 [Rule-Owner Decisions](18-open-rule-owner-decisions.md) page identify the
-recorded clarifications and their related rule text.
+recorded clarifications and their related rule text. For a plain-language,
+role-by-role guide for commanders, the GM, and observers, see the
+[player playtest packet](../playtesting/player-playtest-packet.md).
 
 ## Test boundary
 
