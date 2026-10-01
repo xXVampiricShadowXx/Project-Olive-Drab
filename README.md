@@ -65,13 +65,15 @@ out of public reports.
 
 ## Project status
 
-Phase 3's first-test packet is assembled for live, supervised testing, but the
-repository still contains documented rule-owner questions that are not silently
-resolved by packet assembly, including #127 (formal withdrawal) and #146
-(Reserve/commit terminology). Phase 4 AI rules-testing preparation is also
-complete; the communication/order dry run and first focused human playtest are
-still pending. External setup and human participation remain separate readiness
-checks and are not implied by repository completion.
+Phase 3's first-test packet is assembled for live, supervised testing. Proposed
+clarifications for the four audit questions are recorded in the
+[Rule-Owner Decisions](docs/game-design/18-open-rule-owner-decisions.md) page
+and are reflected in the draft rules on [the audit-cleanup pull request](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/pull/168); they
+become part of the current packet only when those changes merge. Phase 4 AI
+rules-testing preparation is also complete; the communication/order dry run
+and first focused human playtest are still pending. External setup and human
+participation remain separate readiness checks and are not implied by repository
+completion.
 
 Development tooling for this repository uses AI assistance for technical
 work such as repository setup and code; see

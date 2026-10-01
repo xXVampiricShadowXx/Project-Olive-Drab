@@ -9,11 +9,25 @@ body:
     attributes:
       value: |
         Proposals should explain the player problem and how the idea can be tested.
+  - type: input
+    id: context
+    attributes:
+      label: Affected rule or document
+      description: Link the relevant rule, document, or roadmap area.
+    validations:
+      required: true
   - type: textarea
     id: problem
     attributes:
       label: Problem or opportunity
       description: What player decision, design goal, or observed issue motivates this?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and boundaries
+      description: What is in scope, and what should this proposal explicitly leave unchanged?
     validations:
       required: true
   - type: textarea

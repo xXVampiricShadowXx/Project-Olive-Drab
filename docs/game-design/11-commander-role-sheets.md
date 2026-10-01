@@ -1,6 +1,6 @@
 # Commander Role Sheets
 
-Print one side-specific sheet for each commander. Both commanders use the same authority, order lifecycle, timing aid, and victory test. Use the [prototype roleplay layer](14-prototype-roleplay-layer.md) for the five-minute identity prompts and roleplay boundaries. The GM fills in the bracketed fields before handing over the private section.
+Print one side-specific sheet for each commander. Both commanders use the same authority, order lifecycle, timing aid, and victory test. Use the [prototype roleplay layer](17-prototype-roleplay-layer.md) for the five-minute identity prompts and roleplay boundaries. The GM fills in the bracketed fields before handing over the private section.
 
 ## Shared commander instructions
 

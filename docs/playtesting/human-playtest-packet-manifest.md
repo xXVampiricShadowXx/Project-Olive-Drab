@@ -35,7 +35,7 @@ Read and use these files at the recorded commit:
 | Briefing | [Initial scenario briefing](../game-design/14-initial-scenario-briefing-template.md) | Public and private briefing fields |
 | Rehearsal | [Communication and order dry run](../game-design/15-communication-and-order-dry-run.md) | Pre-play channel and order test |
 | Go/no-go | [Final GM preflight](../game-design/16-final-gm-preflight-readiness-checklist.md) | Blocking readiness gate |
-| Safety and roleplay | [Prototype roleplay layer](../game-design/14-prototype-roleplay-layer.md) | Bounded fictional roleplay |
+| Safety and roleplay | [Prototype roleplay layer](../game-design/17-prototype-roleplay-layer.md) | Bounded fictional roleplay |
 | Quick reference | [Quick reference](../assets/quick-reference.md) | Live reference aid |
 | Observer record | [Observer event ledger](observer-event-ledger-template.md) | Append-only event and closeout record when an observer is used |
 | Report | [Playtest report template](playtest-report-template.md) | Rules and human-specific results |

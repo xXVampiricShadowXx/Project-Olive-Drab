@@ -16,7 +16,7 @@ The first test's company-command arrangement is intentionally a bounded slice of
 
 ## What commanders do
 
-Commanders should spend most of their time making decisions and roleplaying their responsibilities. Use the [prototype roleplay layer](14-prototype-roleplay-layer.md) for lightweight identity, relationship, NPC, and safety guidance; it does not add hidden mechanical advantages.
+Commanders should spend most of their time making decisions and roleplaying their responsibilities. Use the [prototype roleplay layer](17-prototype-roleplay-layer.md) for lightweight identity, relationship, NPC, and safety guidance; it does not add hidden mechanical advantages.
 
 They are responsible for:
 
