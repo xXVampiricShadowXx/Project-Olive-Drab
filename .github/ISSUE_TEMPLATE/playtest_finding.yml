@@ -16,11 +16,30 @@ body:
       description: Link the report or identify the session date and rules version.
     validations:
       required: true
+  - type: input
+    id: scenario_version
+    attributes:
+      label: Scenario and rules version
+      description: Record the scenario/version used for this finding.
+    validations:
+      required: true
+  - type: input
+    id: event_id
+    attributes:
+      label: Event ID
+      description: If available, provide the event or ledger ID for the observation.
   - type: textarea
     id: setup
     attributes:
       label: Setup
       description: Scenario, roles, participants, and relevant conditions.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did the current rule or procedure lead you to expect?
     validations:
       required: true
   - type: textarea

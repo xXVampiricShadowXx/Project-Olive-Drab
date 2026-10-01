@@ -56,7 +56,7 @@ information boundaries, and reporting clarity while allowing finer positions.
               A              B              C              D              E              F
         +--------------+--------------+--------------+--------------+--------------+--------------+
   1     | A1 Pine Rise | B1 North     | C1 Old Quarry| D1 Old Quarry| E1 North     | F1 Pine Road |
-        |    (woods)   |    Fields    |    (broken)  |    (broken)  |    Fields    |    (open)   |
+        |    (woods)   |    (open)    |    (broken)  |    (broken)  |    (open)    |    (open)   |
         +--------------+--------------+--------------+--------------+--------------+--------------+
   2     | A2 West      | B2 West      | C2 Mill      | D2 Mill      | E2 East      | F2 East      |
         |    Approach  |    Verge     |    Road      |    Yard      |    Verge     |    Approach |
@@ -152,7 +152,7 @@ consistently:
 
 | Category | Sectors | Default movement aid | Observation/use |
 |---|---|---:|---|
-| Open | B1, E1, F1, A2, B2, E2, F2, A3, B5, E5 | 30 min | Long sight lines unless blocked by a town or weather condition |
+| Open | B1, E1, F1, A2, B2, E2, F2, A3, B5, C5, D5, E5 | 30 min | Long sight lines unless blocked by a town or weather condition |
 | Road | C2, A4, B4, F5 | 30 min | Known route; road movement does not remove opposition or observation risk |
 | Broken | C1, D1, B3 | 45 min | Orchards, quarry margins, and scattered obstacles limit observation |
 | Built | D2, C3, D3, E3, F3, C4, D4, E4, F4 | 60 min | Dense town movement; observation is sector-limited unless the GM rules otherwise |

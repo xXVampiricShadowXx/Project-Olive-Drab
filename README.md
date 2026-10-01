@@ -66,9 +66,13 @@ out of public reports.
 ## Project status
 
 Phase 3's first-test packet is assembled for live, supervised testing, but the
-repository still contains documented rule-owner questions that are not silently
-resolved by packet assembly, including #127 (formal withdrawal) and #146
-(Reserve/commit terminology). Phase 4 AI rules-testing preparation is also
+repository still contains four open rule-owner questions that are not silently
+resolved by packet assembly: [#127](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/127),
+[#146](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/146),
+[#155](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/155), and
+[#164](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/164). See
+the [Open Rule-Owner Decisions](docs/game-design/18-open-rule-owner-decisions.md)
+page for their status and affected rules. Phase 4 AI rules-testing preparation is also
 complete; the communication/order dry run and first focused human playtest are
 still pending. External setup and human participation remain separate readiness
 checks and are not implied by repository completion.

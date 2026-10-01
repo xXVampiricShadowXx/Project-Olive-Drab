@@ -2,6 +2,9 @@
 
 This is the working outline for the rules. A section is not complete until it has been written clearly and tested in an actual player-and-game-master session.
 
+The open owner decisions affecting the current prototype are tracked in the
+[Open Rule-Owner Decisions](18-open-rule-owner-decisions.md) status page.
+
 For the current prototype, a checked item means the topic is covered sufficiently
 for the first playable packet. An unchecked item is either intentionally deferred
 or still needs a human-playtest validation. Prototype coverage does not mean the
@@ -70,4 +73,5 @@ unless they are required by a specific scenario rule. They remain deferred or
 subject to human-playtest validation rather than being implied as complete.
 
 The checked victory topic denotes packet coverage, not closure of every edge case;
-see issue #127 for the outstanding formal-withdrawal definition question.
+see the [open rule-owner decisions](18-open-rule-owner-decisions.md) page for the
+formal-withdrawal question.

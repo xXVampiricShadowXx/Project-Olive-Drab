@@ -131,7 +131,7 @@ limit or fallback:
 | **Probe** | Commit limited strength to learn or pressure; preserve a reserve, but risk losing time and position. |
 | **Attack** | Commit the main force to gain position or control; may create a decisive advantage, but risks strength and readiness. |
 | **Prepare** | Stay in place and improve the position; gains a better future option, but gives the opponent time. |
-| **Reserve/commit** | Keep a named portion uncommitted or commit it now; preserves flexibility or increases immediate pressure. |
+| **Reserve/commit** | Keep a named portion uncommitted or commit it now; preserves flexibility or increases immediate pressure. The distinction in this response label remains an owner decision in [#146](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/146). |
 | **Withdraw** | Leave by a stated route or sector; preserve future options, but give up position or control and may expose the retreat. |
 
 The commander should state the objective (delay, seize, hold, learn, preserve,
@@ -266,7 +266,7 @@ declared limit, and the GM must record that reason.
 
 Possible consequences include:
 
-- **Time:** add 15–60 active minutes, or leave the paused order incomplete.
+- **Time:** add 15–60 active minutes, or leave the paused order incomplete. How the existing range maps to a result or snapshot remains an owner decision in [#164](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/164).
 - **Position:** advance one sector, hold, give ground one sector, or lose a
   route. Do not create halfway positions.
 - **Readiness:** steady, shaken, or recovering after a reorganization period.

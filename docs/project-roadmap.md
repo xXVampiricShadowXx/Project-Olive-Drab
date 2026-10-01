@@ -140,7 +140,7 @@ For each phase:
 The Phase 3 first-test packet is assembled, and Phase 4 AI rules-testing preparation is complete. The immediate task is to use the packet documents to run the first complete, infantry-only **one-day human test**:
 
 - One town-scale map and two opposing infantry companies.
-- Commander role sheets, the [prototype roleplay layer](game-design/14-prototype-roleplay-layer.md), and a game-master setup checklist.
+- Commander role sheets, the [prototype roleplay layer](game-design/17-prototype-roleplay-layer.md), and a game-master setup checklist.
 - The order form, timing aids, report format, and filtered map procedure.
 - One active scenario day from 08:00–22:00, ending after the Day 1 control-state check.
 

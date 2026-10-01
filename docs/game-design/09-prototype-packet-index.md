@@ -4,6 +4,9 @@ This index is the **assembled packet** for the **first human test**. It is desig
 
 The packet is intentionally a bounded slice of the broader Olive Drab architecture. The first human test is **one company vs. one company, one company commander per side, and one GM, on Day 1 only**. The broader game may place players at different command echelons and use the same hierarchical command model with their immediate subordinate units.
 
+The current owner questions remain open and are listed in the
+[Open Rule-Owner Decisions](18-open-rule-owner-decisions.md) status page.
+
 ## Read in this order
 
 1. [Project brief](00-project-brief.md) — scope, tone, and design boundaries.
@@ -20,7 +23,7 @@ The packet is intentionally a bounded slice of the broader Olive Drab architectu
 12. [Final GM preflight and readiness checklist](16-final-gm-preflight-readiness-checklist.md) — make the final go/no-go decision.
 13. [Prototype combat and contested actions](13-prototype-combat-and-contested-actions.md) — resolve contact without a full combat simulation.
 14. [Commander role sheets](11-commander-role-sheets.md) — hand one private sheet to each commander.
-15. [Prototype roleplay layer](14-prototype-roleplay-layer.md) — create a lightweight commander identity and run safe, bounded roleplay.
+15. [Prototype roleplay layer](17-prototype-roleplay-layer.md) — create a lightweight commander identity and run safe, bounded roleplay.
 16. [Quick reference](../assets/quick-reference.md) — keep visible during play.
 
 ## Phase 4 follow-on
@@ -61,5 +64,6 @@ adds snapshot preparation, the solo seven-day rehearsal, operational templates,
 external setup checks, onboarding, and post-test decision guidance.
 
 The packet is assembled for the current scope, but open documented questions are
-not silently treated as resolved by this index. See issue #127 for the outstanding
-formal-withdrawal definition question affecting the existing victory check.
+not silently treated as resolved by this index. See the
+[open rule-owner decisions](18-open-rule-owner-decisions.md) page for the
+questions affecting the existing rules.

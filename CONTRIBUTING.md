@@ -57,6 +57,18 @@ Before requesting review, run the repository's available validation commands and
 `git diff --check`. Review rendered Markdown links and check that templates and
 workflow YAML remain valid.
 
+The Markdown-link check used by CI can also be run locally with Python 3:
+
+```sh
+python scripts/validate_markdown_links.py
+```
+
+It checks every repository Markdown file for relative links that escape the
+repository or point to missing paths. It ignores fragment-only and external
+links, matching `.github/workflows/validate-docs.yml`; it uses only Python's
+standard library. The workflow runs this same script on pull requests to `main`
+and pushes to `main`.
+
 ## Review expectations
 
 Reviewers focus on clarity, testability, internal consistency, accessibility,
