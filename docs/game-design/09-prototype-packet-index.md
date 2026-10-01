@@ -1,11 +1,15 @@
 # Prototype Packet Index
 
-This index is the **assembled packet** for the **first human test**. It is designed for two commanders and one game master controlling one infantry company per side. The packet is assembled as the complete file set for the current test scope; proposed clarifications to four audited rule questions are documented pending review and merge.
+This index is the **assembled packet** for the **first human test**. It is designed for two commanders and one game master controlling one infantry company per side. The packet is assembled as the complete file set for the current test scope; the four audit clarifications have been merged and are recorded in the Rule-Owner Decisions page. Human-test validation of the current packet remains pending.
 
 The packet is intentionally a bounded slice of the broader Olive Drab architecture. The first human test is **one company vs. one company, one company commander per side, and one GM, on Day 1 only**. The broader game may place players at different command echelons and use the same hierarchical command model with their immediate subordinate units.
 
-The proposed clarifications are listed in the
-[Rule-Owner Decisions](18-open-rule-owner-decisions.md) page.
+The four merged audit clarifications and any remaining rule-owner decisions are
+recorded on the [Rule-Owner Decisions](18-open-rule-owner-decisions.md) page.
+
+For a brief entry point and acceptance crosswalk, see the
+[First Human Test: Quick Start and Acceptance Crosswalk](19-first-human-test-quick-start.md).
+This aid does not replace the packet or its rules.
 
 ## Read in this order
 
