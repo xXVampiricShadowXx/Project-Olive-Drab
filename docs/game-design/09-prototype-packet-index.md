@@ -1,11 +1,11 @@
 # Prototype Packet Index
 
-This index is the **assembled packet** for the **first human test**. It is designed for two commanders and one game master controlling one infantry company per side. The packet is assembled as the complete file set for the current test scope; documented open rules questions remain open until resolved.
+This index is the **assembled packet** for the **first human test**. It is designed for two commanders and one game master controlling one infantry company per side. The packet is assembled as the complete file set for the current test scope; proposed clarifications to four audited rule questions are documented pending review and merge.
 
 The packet is intentionally a bounded slice of the broader Olive Drab architecture. The first human test is **one company vs. one company, one company commander per side, and one GM, on Day 1 only**. The broader game may place players at different command echelons and use the same hierarchical command model with their immediate subordinate units.
 
-The current owner questions remain open and are listed in the
-[Open Rule-Owner Decisions](18-open-rule-owner-decisions.md) status page.
+The proposed clarifications are listed in the
+[Rule-Owner Decisions](18-open-rule-owner-decisions.md) page.
 
 ## Read in this order
 
@@ -63,7 +63,6 @@ The complete [pre-test tooling index](../playtesting/pre-test-tooling-index.md)
 adds snapshot preparation, the solo seven-day rehearsal, operational templates,
 external setup checks, onboarding, and post-test decision guidance.
 
-The packet is assembled for the current scope, but open documented questions are
-not silently treated as resolved by this index. See the
-[open rule-owner decisions](18-open-rule-owner-decisions.md) page for the
-questions affecting the existing rules.
+The packet is assembled for the current scope. See the
+[rule-owner decisions](18-open-rule-owner-decisions.md) page for the recorded
+clarifications to the existing rules.

@@ -2,8 +2,8 @@
 
 This is the working outline for the rules. A section is not complete until it has been written clearly and tested in an actual player-and-game-master session.
 
-The open owner decisions affecting the current prototype are tracked in the
-[Open Rule-Owner Decisions](18-open-rule-owner-decisions.md) status page.
+The clarifications proposed for the current prototype are recorded in the
+[Rule-Owner Decisions](18-open-rule-owner-decisions.md) page pending review.
 
 For the current prototype, a checked item means the topic is covered sufficiently
 for the first playable packet. An unchecked item is either intentionally deferred
@@ -12,7 +12,7 @@ rule has been empirically validated.
 
 ## Foundation
 
-- [x] Game objective and victory — covered for the current packet; one victory-definition edge case remains open in [#127](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/127).
+- [x] Game objective and victory — covered for the current packet; see the [proposed rule-owner decisions](18-open-rule-owner-decisions.md) for clarified withdrawal and Evacuation cases.
 - [x] Player count and role assignment
 - [x] Setup
 - [x] Definitions and terminology used by the prototype
@@ -72,6 +72,6 @@ The unchecked topics above are not blockers for the current infantry-only protot
 unless they are required by a specific scenario rule. They remain deferred or
 subject to human-playtest validation rather than being implied as complete.
 
-The checked victory topic denotes packet coverage, not closure of every edge case;
-see the [open rule-owner decisions](18-open-rule-owner-decisions.md) page for the
-formal-withdrawal question.
+The checked victory topic denotes packet coverage, not empirical validation;
+see the [rule-owner decisions](18-open-rule-owner-decisions.md) page for
+clarifications proposed for the current prototype.
