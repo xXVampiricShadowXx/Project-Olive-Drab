@@ -2,8 +2,9 @@
 
 This is the working outline for the rules. A section is not complete until it has been written clearly and tested in an actual player-and-game-master session.
 
-The clarifications proposed for the current prototype are recorded in the
-[Rule-Owner Decisions](18-open-rule-owner-decisions.md) page pending review.
+The four audited rule-owner clarifications are incorporated in the current
+packet and recorded in the [Rule-Owner Decisions](18-open-rule-owner-decisions.md)
+page. Human-playtest validation remains pending.
 
 For the current prototype, a checked item means the topic is covered sufficiently
 for the first playable packet. An unchecked item is either intentionally deferred
@@ -12,7 +13,7 @@ rule has been empirically validated.
 
 ## Foundation
 
-- [x] Game objective and victory — covered for the current packet; see the [proposed rule-owner decisions](18-open-rule-owner-decisions.md) for clarified withdrawal and Evacuation cases.
+- [x] Game objective and victory — covered for the current packet; see the [recorded rule-owner decisions](18-open-rule-owner-decisions.md) for clarified withdrawal and Evacuation cases.
 - [x] Player count and role assignment
 - [x] Setup
 - [x] Definitions and terminology used by the prototype
@@ -73,5 +74,6 @@ unless they are required by a specific scenario rule. They remain deferred or
 subject to human-playtest validation rather than being implied as complete.
 
 The checked victory topic denotes packet coverage, not empirical validation;
-see the [rule-owner decisions](18-open-rule-owner-decisions.md) page for
-clarifications proposed for the current prototype.
+see the [rule-owner decisions](18-open-rule-owner-decisions.md) page for the
+clarifications incorporated in the current prototype. Human-playtest validation
+remains pending.

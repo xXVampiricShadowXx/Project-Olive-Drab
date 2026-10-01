@@ -1,9 +1,10 @@
 # Rule-Owner Decisions
 
-These proposed decisions clarify existing prototype text without adding a new
-combat mechanic, threshold, or withdrawal state. The linked issues remain the
-audit trail for each question. The updated rule text is in [PR #168](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/pull/168)
-and becomes current when that change is merged.
+These four recorded decisions clarify existing prototype text without adding a
+new combat mechanic, threshold, or withdrawal state. The linked issues remain
+the audit trail for each question. The updated rule text was incorporated into
+the current packet by merged [PR #168](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/pull/168).
+Human-playtest validation of these decisions remains pending.
 
 | Issue | Decision | Affected rule |
 |---|---|---|
