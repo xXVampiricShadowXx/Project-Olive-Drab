@@ -38,6 +38,7 @@ Real-life priority, consent, privacy, the right to pause or withdraw, and the
 fictional framing apply to every rehearsal and test.
 
 Newcomers should start with the [participant onboarding
-packet](participant-onboarding-packet.md), then use the [human playtest
+packet](participant-onboarding-packet.md) and the role-by-role [player playtest
+packet](player-playtest-packet.md), then use the [human playtest
 readiness guide](human-playtest-readiness-guide.md). The GM should read the
 private-records guide before creating any working files or channels.
