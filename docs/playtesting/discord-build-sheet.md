@@ -55,7 +55,7 @@ reports, rulings, map updates, or game notifications.
    (non-sensitive procedure and public updates), `#nato-private` (NATO and GM orders/reports),
    `#russia-private` (Russia and GM orders/reports),
    `#opposing-contact` (GM-approved, GM-visible relay),
-   `#public-redacted-feed` (optional Observer's curated public transcript),
+   `#public-redacted-feed` (curated public transcript),
    `#observer-response` (optional, GM-visible interaction only),
    `#gm-orders-reports`, and `#gm-map-record` (GM-only records). Set the
    per-channel access levels below via **Edit Channel > Permissions >
@@ -70,7 +70,10 @@ reports, rulings, map updates, or game notifications.
    asks through `#group` only when the question
    is non-sensitive, or through their own private channel otherwise; the
    GM relays only the permitted question and any redacted response. Never
-   paste a live opposing private report into the Observer channel.
+   paste a live opposing private report into the Observer channel. The
+   Observer already has read-only access to every game channel as the
+   playtest auditor (see the matrix) and must never reveal one side's
+   private information or GM-only notes to either commander.
    Keep the feed even without an Observer only if useful to the GM; do not
    assign another audience to it. Store the master map and private register
    links only in GM-only locations, with a separate backup per the
@@ -111,12 +114,12 @@ audited separately.
 | Channel | @everyone | GM | NATO commander | Russia commander | Observer |
 |---|---|---|---|---|---|
 | `#group` | No access | Post | Post | Post | Read-only |
-| `#nato-private` | No access | Post | Post | No access | No access |
-| `#russia-private` | No access | Post | No access | Post | No access |
+| `#nato-private` | No access | Post | Post | No access | Read-only |
+| `#russia-private` | No access | Post | No access | Post | Read-only |
 | `#opposing-contact` | No access | Post | Read-only | Read-only | Read-only |
 | `#public-redacted-feed` | No access | Post | Read-only | Read-only | Read-only |
-| `#gm-orders-reports` | No access | Post | No access | No access | No access |
-| `#gm-map-record` | No access | Post | No access | No access | No access |
+| `#gm-orders-reports` | No access | Post | No access | No access | Read-only |
+| `#gm-map-record` | No access | Post | No access | No access | Read-only |
 | `#observer-response` (only if Observer used) | No access | Post | No access | No access | Text reply (answers GM-placed questions only) |
 
 | Discord permission (real setting name) | No access | Read-only | Text reply (Observer only) | Post |
@@ -184,13 +187,12 @@ guide](https://support.discord.com/hc/en-us/articles/360055709773-View-Server-As
 | Russia in `#group`, `#russia-private` | Can see/read, post harmless text and attach harmless file | Missing expected access or failed post/attachment |
 | Russia in `#opposing-contact`, `#public-redacted-feed` | Can see/read but cannot post, attach, react, create or post in threads, or run commands | Any write/attachment/reaction/thread/command succeeds |
 | Russia in `#nato-private`, both GM records and optional observer response | Cannot see/read/post/attach or get a working channel link | Any content or action accessible |
-| Observer (if used) in `#group`, `#opposing-contact`, `#public-redacted-feed` | Can see and read history of public channels and the curated feed; cannot post, attach, react, thread, or run commands | Missing access or any write action succeeds |
-| Observer (if used) in `#nato-private`, `#russia-private`, and both GM record channels | Cannot see/read/post/attach or follow a channel link | Any private side or GM-only content accessible |
-| Observer in `#observer-response` (if used) | Reads the GM's permitted question and can reply with text only, visible to GM; cannot attach, react, thread, or see private opposing content | Attachment or other write action succeeds, a commander can see the channel, or any private opposing content is visible |
+| Observer (if used) in all seven core channels | Can see and read history of every game channel, including both private side channels and both GM records; cannot post, attach, react, thread, or run commands | Missing access to any channel or any write action succeeds |
+| Observer in `#observer-response` (if used) | Reads the GM's permitted question and can reply with text only, visible to GM; cannot attach, react, or thread | Attachment or other write action succeeds, or a commander can see the channel |
 | Server owner/setup administrator and other privileged identities | Owner/admin is GM-only; other moderators/bots cannot access or leak private game content | Commander/Observer is owner/admin, or privileged third party exposes records: NO-GO until isolated and retested |
 | Each game role, including GM, in every accessible channel | Cannot use `@everyone`/`@here`, manage messages/channels/roles/threads, or create private/public threads | Any such privilege succeeds |
 | GM pings a commander role in that commander's private channel | Role mention delivers a notification to that commander only | Mention fails or another participant is notified |
-| Opposing contact, with both commanders | Private request visible only to requester and GM; only GM can approve and post relay; both read approved relay; Observer can read the approved relay only, never the private request | Direct unapproved post, missing GM record, or private request exposed |
+| Opposing contact, with both commanders | Private request visible only to requester and GM; only GM can approve and post relay; both read approved relay; Observer can read both the private request and the relay but cannot post | Direct unapproved post, missing GM record, or private request exposed |
 | Each commander's role-ping deadline and `<backup contact method>` | Intended commander receives harmless reminder by both tested routes; GM records delivery and response-by time | No delivery, wrong audience, or unrecorded backup route |
 
 Do not mark issue #14 or the final preflight complete from this build sheet.

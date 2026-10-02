@@ -452,9 +452,10 @@ From the [GM-only records and data handling guide](gm-private-records-and-data-h
   unrelated identifying details.
 - **Never** put GM-only records, private briefings, hidden maps, contact
   details, or access links in the repository, issues, PRs, commits, public
-  channels, or the observer feed.
-- Build observer copies from the authoritative record, redact them, label
-  them `observer-redacted`, and recheck before sharing.
+  channels, or the curated public feed.
+- The observer (if any) has read-only audit access to these records. When
+  sharing records beyond the GM and observer, build a redacted copy, label it
+  `observer-redacted`, and recheck before sharing.
 - Snapshot before a pause, after a major ruling, and at closeout. Delete or
   destroy records after the agreed review period.
 - If private information may have leaked: stop sharing, preserve the event ID,
@@ -497,7 +498,7 @@ Also:
 - [ ] Consent confirmations collected; pause/hiatus signal agreed.
 - [ ] Public and private briefings delivered and receipts confirmed.
 - [ ] Dry run passed; final preflight result is **GO**.
-- [ ] Observer (if any) has only the public transcript and redacted feed.
+- [ ] Observer (if any) can read every game channel and record but cannot post.
 - [ ] Combat sequence, outcome guide, response-window aid, and decision log
       ready.
 
@@ -514,9 +515,9 @@ either side. There are no observers in the final actual game
 
 ### What you see
 
-- The **public transcript** and a **redacted feed** only. You have no live
-  access to either side's private state, the master map, or hidden
-  information ([readiness guide §2](human-playtest-readiness-guide.md#2-discord-roles-channels-and-permissions);
+- **Everything.** You have read-only access to every game channel and record,
+  including both sides' private channels, the GM records, and the master
+  map, so you can audit the whole playtest ([readiness guide §2](human-playtest-readiness-guide.md#2-discord-roles-channels-and-permissions);
   [observer ledger](observer-event-ledger-template.md)).
 
 ### The ledger
@@ -535,8 +536,9 @@ Use the [observer event ledger template](observer-event-ledger-template.md):
 
 ### Privacy
 
-- Do not put unreleased opposing positions, hidden situation bands, or private
-  reports into your copy
+- **Never reveal** one side's private information, the master map, or GM-only
+  notes to either commander, during play or before closeout.
+- Keep your ledger access-controlled; it may contain private information
   ([observer ledger](observer-event-ledger-template.md)).
 - Do not record personal details or why someone paused or withdrew
   ([redacted observer copies](gm-private-records-and-data-handling.md#redacted-observer-copies);

@@ -3,9 +3,12 @@
 Use one append-only row per operational event. An observer is a playtest-only
 role that watches and documents; they do not post in the game unless a commander
 or GM interacts with them. There are no observers in the final actual game.
-The observer may receive the public transcript and a redacted feed only; the GM
-keeps the complete master state. Do not put unreleased opposing positions,
-hidden situation bands, or private reports into the observer copy.
+The observer audits the playtest with read-only access to every game channel
+and record, including private side channels, GM records and the master map.
+The GM keeps the authoritative master state. The ledger may contain private
+information, so keep it access-controlled like a GM record and never show it
+to either commander before closeout. Redact any copy shared beyond the GM and
+observer.
 
 Copy the header and table for each scenario day. If a field does not apply,
 write `N/A`; do not leave whether it was considered ambiguous.
