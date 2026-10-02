@@ -3,26 +3,80 @@
 The [Brackenford map specification](../game-design/12-town-map-and-terrain-sectors.md)
 is authoritative (map v1.0 in the
 [packet manifest](human-playtest-packet-manifest.md)); this sheet only
-implements it. No platform is selected and
-no map or human access has been configured. If a rendering conflicts with
-the source's ASCII grid or sector tables, correct the rendering and record
-the correction against the time-stamped GM master.
+implements it. A repository-built static PNG renderer is the **proposed**
+method for issue #15, pending user confirmation and human verification; no
+map or human access has been configured. If a rendering conflicts with the
+source's ASCII grid or sector tables, correct the rendering and record the
+correction against the time-stamped GM master. This proposal adds no game
+mechanics and does not change the authority of doc 12.
 
 ## Reproduce the public base
 
-1. The user creates a **six-column (`A`–`F`, west to east) by five-row
-   (`1`–`5`, north to south)** sector grid, north at top, with edge-sharing
-   adjacency only. Copy each cell ID, name, and terrain below exactly; do not
-   reinterpret a cell as a precise position.
-2. Add the north arrow, named edge approaches, Bluewater River boundary
-   between rows 4 and 5, and the two difficult crossing routes `C4–C5` and
-   `D4–D5`. Mark the two central control pairs and the two approach pairs
-   below. Compare the result directly
-   with the source ASCII diagram and sector tables before adding state.
-3. Create a separate GM master and two filtered commander views. Keep the
-   public base identical in all three. Do not place live force markers before
-   the GM privately records approved starting placements and the initial map
-   version. A route or a control-pair label does not by itself change control.
+1. The committed public definition is `data/map/base.toml`: a **six-column
+   (`A`–`F`, west to east) by five-row (`1`–`5`, north to south)** grid, north
+   at top, with edge-sharing adjacency only. It records each cell ID, name,
+   terrain, the four approaches, river boundary and crossings, objectives,
+   and control pairs. It does not reinterpret a cell as a precise position.
+2. The map renderer builds separate master, NATO, and Russia PNGs from the
+   public base and a private GM TOML file. The GM keeps that file outside the
+   repository; it contains version/time, control, zones, live master markers,
+   side-owned markers, GM notes, and a separate release record for each side.
+   Give every side-owned marker a `cite` containing that side's own order or
+   report ID. Each opposing release has a side-visible `release_id` and
+   `released_at`; its `source_id` and `marker_id` remain private. Number
+   `release_id` independently for each side: NATO releases use `R-N-###`
+   and Russia releases use `R-R-###`, counting only that side's own releases.
+   Never use a shared sequence that reveals the opponent's release count.
+   A sector in `control` is an announced public state only; keep unannounced
+   internal control assessments in GM notes, not in that public table.
+   A side image reads opposing locations **only** from that side's release
+   records. Updating a live marker does not move or refresh an already released
+   report; stale reports remain stale. A report may have a different confidence
+   for each side.
+3. The public base is identical across outputs. Side PNGs contain only their
+   own zone and markers plus the portion released to that side. A route or
+   control-pair label does not by itself change control. The GM privately
+   records approved starting placements and the initial map version before
+   adding live force markers.
+
+The GM machine is the user's PC, which has Python 3.12.10 available as
+`py -3`; Pillow is not installed yet. Install the pinned renderer dependency
+from the repository root with `py -3 -m pip install -r requirements-map.txt`.
+The GM dry run still needs to confirm that rendering works on this machine.
+In Command Prompt, from the repository root, create the private game file
+outside the repository from the fictional fixture, then **replace all test
+content** with approved live-game data before real use:
+
+```text
+mkdir "%USERPROFILE%\OliveDrabPrivate"
+copy tests\fixtures\fictional-game.toml "%USERPROFILE%\OliveDrabPrivate\game.toml"
+```
+
+Keep all private paths outside the repository. After replacing the fixture's
+test data, validate the game file and preview the five-entry posting manifest:
+
+```text
+py -3 scripts/render_map.py %USERPROFILE%\OliveDrabPrivate\game.toml --out %USERPROFILE%\OliveDrabPrivate\exports --check
+```
+
+If validation succeeds, render using the same inputs without `--check`:
+
+```text
+py -3 scripts/render_map.py %USERPROFILE%\OliveDrabPrivate\game.toml --out %USERPROFILE%\OliveDrabPrivate\exports
+```
+
+The output directory must resolve outside the repository, including through
+symlinks, and the game file must also be outside the repository (except the
+committed fictional test fixture). Write `updated_at` and each `released_at`
+with the shared local time-zone offset (for example, `-07:00`). Each
+side receives its own output folder, a PNG, and a text caption. Filenames
+include only the map version and side; every PNG banner and caption carries
+the matching version and update time. The tool refuses unknown fields,
+visibility values, confidence values, and unearned opposing markers rather
+than guessing. Do not place real personal data in the game file, fixtures, or
+repository.
+The [fictional test fixture](../../tests/fixtures/fictional-game.toml) is a
+schema example for automated tests only; it is not a live game file.
 
 | Row | A | B | C | D | E | F |
 |---|---|---|---|---|---|---|
@@ -53,37 +107,82 @@ control-pair labels distinct from the public control state issued by the GM.
 
 | View | Contents and boundary |
 |---|---|
-| GM master | All force locations and strength, both hidden starting zones, orders/readiness/supply notes, conditions and unresolved rulings, current and stale reports, control, map version and information-release log. GM-only edit access; the Observer (if used) has view-only audit access. |
-| NATO filtered | Public terrain/grid/approaches/objectives and public control updates; own zone and current friendly markers/status/orders/readiness/supply, own observations and information earned from confirmed or reported releases. Opposing positions appear only when earned. Commander annotations of uncertain positions are clearly `suspected` and separate from confirmed markers. No Russia zone or private reports. |
-| Russia filtered | Same public base and release rules; own zone and current friendly markers/status/orders/readiness/supply, own observations and earned releases. Opposing positions appear only when earned. Uncertain commander annotations are clearly `suspected`, never overwriting confirmed markers. No NATO zone or private reports. |
-| Observer audit (only if Observer used) | View-only access to the GM master and both filtered views, for auditing the playtest. No edit, comment, or share rights. The Observer never reveals master or opposing content to either commander. |
+| GM master | All live master markers, both hidden starting zones, public control, version/time, and the GM's private working state. Keep the source TOML and master PNG in GM-controlled private storage. The Observer (if used) has read-only audit access to the actual channels; the GM master is never posted to a side channel. |
+| NATO filtered | Public terrain/grid/approaches/objectives and public control; own zone and current friendly markers from NATO's own data, with each friendly marker's `cite` order/report ID; opposing positions only from NATO's released records, with side-visible `release_id` and `released_at`. Commander suspected-position notes, if used, remain in a separate private note/copy and do not alter the GM markers. No Russia zone, live master position, GM notes, opposing `marker_id`, private `source_id`, or master descriptions. |
+| Russia filtered | Same public base and release boundary; own zone and current friendly markers from Russia's own data, with each friendly marker's `cite` order/report ID; opposing positions only from Russia's released records, with side-visible `release_id` and `released_at`. Separate commander notes are non-mechanical and never overwrite a GM marker. No NATO zone, live master position, GM notes, opposing `marker_id`, private `source_id`, or master descriptions. |
+| Observer audit (only if Observer used) | The Observer has read-only access to the Discord channels needed for audit, including both side channels and `#gm-map-record`. The Observer never reveals master or opposing content to either commander. |
 
-The GM updates and time-stamps the master first, then publishes only the
-portion earned by each side, with the operating procedure's `confirmed`,
-`reported`, or `suspected` confidence label and the source report/order ID.
-Replace superseded friendly markers, not the audit record. Do not copy a
-stale opposing report or GM-only condition into a filtered view. Each view
-shows its version/update timestamp; restricted notes and share links stay
-out of the public feed and other side's view.
+The GM updates and time-stamps the master first, then records separately for
+each side the released sector, confidence, label/description, `released_at`,
+and side-visible `release_id`. Assign each new NATO release the next
+`R-N-###` and each new Russia release the next `R-R-###` in its own sequence;
+neither side's ID reveals how many releases the other side received. The side
+PNG shows these release IDs and times
+plus each friendly marker's own `cite`, tagging each list entry OWN or OPP
+so ownership is not shown by color alone. The text caption is the
+phone-readable layer: a `vN SIDE timestamp` header, a static confidence
+legend, one line per own or released record (number, sector, label,
+confidence, OWN/OPP, `cite` or `release_id`, and `released_at` for
+releases), then the released descriptions. Neither output includes GM notes, opposing internal `marker_id`,
+private `source_id`, or master descriptions. A `suspected` marker must represent a report actually released
+to that side, not GM inference. The renderer never draws private content and
+then hides or crops it. It renders each side from an allowlisted set of that
+side's own data and release records.
 
-## Platform comparison, without a recommendation
+## Proposed method, pending confirmation
 
-| Option | Useful affordance | Leak and maintenance risk to test |
-|---|---|---|
-| Shared spreadsheet | Explicit 30-cell table, formulas/timestamps, easy dated copies | Hidden sheets, protected ranges, formulas, comments, edit history and whole-workbook export may reveal master or opposing data; separate files and access grants may be necessary. |
-| Drawing/whiteboard tool | Clear visual labels, movable markers, separated boards/layers | Hidden layers, frames, previews, object metadata, share links and full-board export can expose concealed content; accidental screen share may show the master. |
-| Virtual tabletop (VTT) | Map markers, tokens, role views and snapshots | GM overlays, token properties, fog/layer settings, player permissions, exports and history may expose hidden state; test the actual player account, not only GM preview. |
+This static renderer is proposed in issue #15; user confirmation is still
+pending. It writes `nato/v{N}-nato.png` and
+`nato/v{N}-nato-caption.txt` for the NATO private channel,
+`russia/v{N}-russia.png` and `russia/v{N}-russia-caption.txt` for the Russia
+private channel, and `gm-master/v{N}-GM-MASTER-DO-NOT-POST.png` for
+`#gm-map-record`. Confirm and record the exact NATO and Russia Discord text
+channel labels in the private setup record; the manifest's channel names must
+match the real channel labels before use. The `GM-MASTER-DO-NOT-POST` file is
+never for commander posting.
 
-The user chooses and records a platform and access arrangement in issue #15
-and [external setup](external-setup-and-notification-checklist.md). Dev/QA
-checks the finished views against this sheet and the source, not a preferred
-vendor.
+### Pre-post checklist
+
+1. Run `--check` against the private game file and output path immediately
+   before rendering. Read its five-entry manifest: NATO PNG and caption to
+   `#nato-private`, Russia PNG and caption to `#russia-private`, and
+   `GM-MASTER-DO-NOT-POST` to `#gm-map-record`. Confirm that those exact
+   channel labels match the private setup record; resolve any mismatch before
+   posting.
+2. Render and post **one generated file at a time**, checking before each
+   upload that **destination channel = banner side = filename side = map
+   version** (and that each caption matches its paired PNG). Keep sides in
+   separate folders; never multi-file drag or select from mixed folders.
+   Upload the PNG and its caption file directly, not a screenshot, re-export,
+   clipboard copy, or URL.
+3. Post both sides' PNGs and captions at the same version before posting the
+   master record.
+4. Confirm the master file went **only** to `#gm-map-record`, never to a
+   commander channel. The private master TOML and backup are not uploads.
+
+If a file goes to the wrong channel, stop **all further posting** until the
+GM ruling is recorded. Deletion is not a fix: record the time, content, and
+who could see it; route the incident to the GM ruling process in
+[doc 06](../game-design/06-prototype-operating-procedure.md). After the
+ruling, correct and re-post at a **new map version**, never by editing an
+image in place or reusing the compromised version.
+
+The master TOML and dated master snapshots/backups stay in private storage
+outside the repository and Discord. `#gm-map-record` is a posting destination,
+not a backup. The renderer output and the private backup are separate things.
+Use the [external setup checklist](external-setup-and-notification-checklist.md)
+and record the method and result in the [final GM preflight](../game-design/16-final-gm-preflight-readiness-checklist.md).
 
 ## Human leak test and snapshots
 
-Use fictional test markers and reports, not live hidden placements. For each
-side, test from that side's actual access identity, plus a fresh viewer of
-each share link and a screen-share recipient; GM preview alone is not proof.
+Use fictional test markers and reports, not live hidden placements. The
+static-renderer equivalents for the prior leak surfaces are: layers/objects
+become renderer inclusion and filtering; share links become Discord
+channel permissions; exports/downloads become the generated file and
+caption; edit history becomes superseded Discord posts; screen sharing
+remains a separate human check. Test with each commander's actual account
+and confirm that a phone can display the PNG legibly; GM preview alone is
+not proof.
 Record each result as `PASS` or `FAIL` in issue #15 and the
 [readiness guide section 3](human-playtest-readiness-guide.md), without
 publishing private URLs, account identifiers, or unreleased map content.
@@ -93,11 +192,11 @@ temporary workaround is documented.
 | Test | Expected PASS | Expected FAIL |
 |---|---|---|
 | Grid and public base | All 30 IDs, names, terrain, approaches, crossings, river boundary, two control pairs and two approach pairs match doc 12 in all views | Any missing, changed, shifted, or extra feature |
-| Layers/objects | NATO/Russia see only own zone, markers/status and earned releases; hidden layers, object metadata, formulas and stale reports stay inaccessible | Master, other zone/marker/report, GM condition or stale private state exposed by toggling or inspecting |
-| Share links/permissions | Side link opens only that side's view for its intended identity; unauthorized or anonymous recipient cannot open master/other view | Link forwards or role inheritance expose any unearned content |
-| Exports/downloads/print | Side export, preview, download, and print contain only that side's permitted view | Master, hidden layer, notes or other side's data appears anywhere in output |
-| Version/edit history | Side can read its current version/time but cannot recover master or opposing state through history, comments, undo, deleted items or old links | Any unearned or stale private content recoverable |
-| Observer audit access (if used) | Observer can open the master and both filtered views but cannot edit, comment, share, or change any marker | Any edit or share action succeeds, or a view is missing |
+| Render inclusion/filtering | Side image contains public base, its own markers, and only records explicitly released to that side; moving a live opposing marker does not update an older release | Live master location, other side's release, hidden zone, GM note, internal ID/source, or unearned marker is drawn or placed in rendered text |
+| Discord channel permissions | Commander account can view only its own private channel; GM can view all; Observer (if used) can read all game channels but cannot post in them (except a text reply to a GM-placed question in `#observer-response`); `#gm-map-record` is GM record-only | Commander can read opposing private channel or master record, or Observer can post in a game channel outside that limited reply |
+| Generated files and captions | Each direct-upload file and caption has the same side/version as its banner and is posted to the matching channel; the master is confined to `#gm-map-record` | A mixed-side file/caption, private text, unearned state, or master file is posted to a side |
+| Superseded Discord posts | Newer versions are identifiable; private master and backup remain outside Discord | A superseded post reveals unearned content or is treated as the only backup |
+| Observer audit access (if used) | Observer can read `#gm-map-record` and both side channels but cannot attach a file, post in those channels, or reveal a view to a commander | A required channel is unreadable, or an unauthorized post, attachment, or disclosure succeeds |
 | Screen sharing | Sharing the intended filtered window reveals only that view, with no master tab, notifications, thumbnails or private URLs | Master, other side, hidden state or private report appears on screen |
 
 Record the following in the GM's
@@ -120,7 +219,29 @@ Leak-test results and retest reference:
 
 At the initial approved version and after each material map update, the GM
 time-stamps the master, captures a dated master snapshot and the two permitted
-filtered outputs, stores the master and backup in separate access-controlled
-locations, and checks that a restore preserves the version and information
-boundaries. A commander export is never a master backup. Human verification
-and GM sign-off are still pending; issue #15 remains an external prerequisite.
+filtered outputs, stores the master snapshot and a backup in separate
+access-controlled private storage outside Discord, and checks that a restore
+preserves the version and information boundaries. A commander export and
+`#gm-map-record` are never a master backup.
+
+Use this repository record template for the proposal and the [final GM
+preflight completion fields](../game-design/16-final-gm-preflight-readiness-checklist.md)
+for readiness. Store any private file path or access details only in the GM's
+private records, never in the repository:
+
+```text
+Renderer version / map version / update time:
+Private master TOML and snapshot location:
+NATO output/channel (exact Discord label):
+Russia output/channel (exact Discord label):
+Master output/channel: #gm-map-record
+Python 3.12.10 / `py -3` GM-machine dry run:
+Phone readability check:
+Commander account channel-boundary checks:
+Observer read-only check (if used):
+Private backup and restore result:
+Leak-test results and incident reference:
+```
+
+Human verification and GM sign-off are still pending; issue #15 remains an
+external prerequisite.

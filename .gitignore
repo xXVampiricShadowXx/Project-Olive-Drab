@@ -1,0 +1,8 @@
+# Private GM state and rendered map exports
+GAME.toml
+game.toml
+*.game.toml
+map-exports/
+map-output/
+__pycache__/
+*.py[cod]
