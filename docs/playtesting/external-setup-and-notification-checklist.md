@@ -23,10 +23,26 @@ not prove any item below is complete.
 
 - [ ] Reproduce Brackenford labels, sectors, approaches, and control pairs from
   the authoritative map document.
+- [ ] Treat the repository-built static PNG renderer as the **proposed**
+  #15 method only; the platform choice remains pending user confirmation and
+  human leak testing.
+- [ ] The GM machine is the user's PC with Python 3.12.10 available as
+  `py -3`; Pillow is not installed yet. Install it with
+  `py -3 -m pip install -r requirements-map.txt`, then complete an unaided
+  dry run using `py -3 scripts/render_map.py GAME.toml --out DIR --check`
+  and a real render to confirm the renderer works on that machine.
+- [ ] Keep the private `GAME.toml` and master snapshots outside the repository
+  and Discord. Confirm the actual Discord text-channel names for the NATO,
+  Russia, and GM records destinations before posting.
 - [ ] Create one GM master view and filtered NATO and Russia views.
 - [ ] Test that hidden markers, layers, links, exports, and screen sharing do
-  not leak opposing private information.
-- [ ] Record map version, access list, snapshot method, and backup location.
+  not leak opposing private information; commanders can view only their own
+  private channel, while an Observer (if used) has read-only access to all
+  channels.
+- [ ] Confirm that players can read the PNGs on a phone and that each commander
+  account sees only its own side's channel.
+- [ ] Record map version, exact channel names, access list, snapshot method,
+  private backup location, restore result, and leak-test results.
 
 ## Record and notification check
 

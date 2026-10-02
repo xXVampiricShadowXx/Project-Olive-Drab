@@ -1,0 +1,204 @@
+name = "Brackenford"
+columns = ["A", "B", "C", "D", "E", "F"]
+rows = [1, 2, 3, 4, 5]
+river_name = "Bluewater River"
+river_boundary = "between rows 4 and 5"
+crossings = ["C4-C5", "D4-D5"]
+
+[[sectors]]
+id = "A1"
+name = "Pine Rise"
+terrain = "woods"
+
+[[sectors]]
+id = "B1"
+name = "North"
+terrain = "open"
+
+[[sectors]]
+id = "C1"
+name = "Old Quarry"
+terrain = "broken"
+
+[[sectors]]
+id = "D1"
+name = "Old Quarry"
+terrain = "broken"
+
+[[sectors]]
+id = "E1"
+name = "North"
+terrain = "open"
+
+[[sectors]]
+id = "F1"
+name = "Pine Road"
+terrain = "open"
+
+[[sectors]]
+id = "A2"
+name = "West Approach"
+terrain = "open"
+
+[[sectors]]
+id = "B2"
+name = "West Verge"
+terrain = "open"
+
+[[sectors]]
+id = "C2"
+name = "Mill Road"
+terrain = "road"
+
+[[sectors]]
+id = "D2"
+name = "Mill Yard"
+terrain = "built"
+
+[[sectors]]
+id = "E2"
+name = "East Verge"
+terrain = "open"
+
+[[sectors]]
+id = "F2"
+name = "East Approach"
+terrain = "open"
+
+[[sectors]]
+id = "A3"
+name = "South West"
+terrain = "open"
+
+[[sectors]]
+id = "B3"
+name = "Orchard"
+terrain = "broken"
+
+[[sectors]]
+id = "C3"
+name = "Market Square"
+terrain = "built"
+
+[[sectors]]
+id = "D3"
+name = "Market Square"
+terrain = "built"
+
+[[sectors]]
+id = "E3"
+name = "Station Street"
+terrain = "built"
+
+[[sectors]]
+id = "F3"
+name = "Station Street"
+terrain = "built"
+
+[[sectors]]
+id = "A4"
+name = "South Track"
+terrain = "road"
+
+[[sectors]]
+id = "B4"
+name = "Orchard"
+terrain = "road"
+
+[[sectors]]
+id = "C4"
+name = "Town Hall Quarter"
+terrain = "built"
+
+[[sectors]]
+id = "D4"
+name = "Town Hall Quarter"
+terrain = "built"
+
+[[sectors]]
+id = "E4"
+name = "East Blocks"
+terrain = "built"
+
+[[sectors]]
+id = "F4"
+name = "East Blocks"
+terrain = "built"
+
+[[sectors]]
+id = "A5"
+name = "South Woods"
+terrain = "woods"
+
+[[sectors]]
+id = "B5"
+name = "South Fields"
+terrain = "open"
+
+[[sectors]]
+id = "C5"
+name = "South Bank"
+terrain = "open"
+
+[[sectors]]
+id = "D5"
+name = "South Bank"
+terrain = "open"
+
+[[sectors]]
+id = "E5"
+name = "Fields"
+terrain = "open"
+
+[[sectors]]
+id = "F5"
+name = "South Road"
+terrain = "road"
+
+[[approaches]]
+name = "Pine Road (N)"
+edge = "north"
+sectors = ["A1", "F1"]
+
+[[approaches]]
+name = "East Road (E)"
+edge = "east"
+sectors = ["F2", "F3", "F4"]
+
+[[approaches]]
+name = "River Road (S)"
+edge = "south"
+sectors = ["A5", "F5"]
+
+[[approaches]]
+name = "West Approach (W)"
+edge = "west"
+sectors = ["A2", "A3", "A4"]
+
+[[objectives]]
+name = "Market Square"
+kind = "central control"
+sectors = ["C3", "D3"]
+
+[[objectives]]
+name = "Town Hall Quarter"
+kind = "civic control"
+sectors = ["C4", "D4"]
+
+[[objectives]]
+name = "Mill Road Junction"
+kind = "approach"
+sectors = ["C2", "D2"]
+
+[[objectives]]
+name = "Station Street"
+kind = "approach"
+sectors = ["E3", "F3"]
+
+[[control_pairs]]
+name = "Market Square"
+sectors = ["C3", "D3"]
+
+[[control_pairs]]
+name = "Town Hall Quarter"
+sectors = ["C4", "D4"]
