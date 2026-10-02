@@ -27,6 +27,7 @@ CHANNELS = {
     "master": "#gm-map-record",
 }
 FIXTURE_PATH = Path("tests/fixtures/fictional-game.toml")
+ID_PATTERN = re.compile(r"^[A-Za-z0-9-]{1,24}$")
 
 CANVAS = (1600, 1400)
 GRID_LEFT, GRID_TOP, CELL_WIDTH, CELL_HEIGHT = 95, 300, 235, 150
@@ -54,6 +55,13 @@ def _text(value: Any, where: str, *, nonempty: bool = True) -> str:
     if not isinstance(value, str) or (nonempty and not value.strip()):
         raise MapError(f"{where} must be {'a non-empty ' if nonempty else 'a '}string")
     return value
+
+
+def _identifier(value: Any, where: str) -> str:
+    identifier = _text(value, where)
+    if not ID_PATTERN.fullmatch(identifier):
+        raise MapError(f"{where} must match ^[A-Za-z0-9-]{{1,24}}$")
+    return identifier
 
 
 def _list_of_strings(value: Any, where: str) -> list[str]:
@@ -92,13 +100,19 @@ def _validate_marker(
     expected_visibility: str | None = None,
     own_marker: bool = False,
 ) -> dict[str, Any]:
+    marker_fields = {"id", "owner", "sector", "label", "description", "visibility", "confidence"}
+    if own_marker:
+        marker_fields.add("cite")
     marker = _keys(
         item,
-        {"id", "owner", "sector", "label", "description", "visibility", "confidence"},
+        marker_fields,
         where,
     )
-    for field in ("id", "owner", "sector", "label", "description", "visibility", "confidence"):
+    for field in ("owner", "sector", "label", "description", "visibility", "confidence"):
         _text(marker[field], f"{where}.{field}")
+    _identifier(marker["id"], f"{where}.id")
+    if own_marker:
+        _identifier(marker["cite"], f"{where}.cite")
     if marker["owner"] not in SIDES:
         raise MapError(f"{where}.owner must be nato or russia")
     if expected_owner and marker["owner"] != expected_owner:
@@ -195,8 +209,10 @@ def validate_game(game: Any, base: dict[str, Any]) -> dict[str, Any]:
                 },
                 where,
             )
-            for field in ("release_id", "marker_id", "sector", "confidence", "label", "description", "source_id"):
+            for field in ("sector", "confidence", "label", "description"):
                 _text(release[field], f"{where}.{field}")
+            for field in ("release_id", "marker_id", "source_id"):
+                _identifier(release[field], f"{where}.{field}")
             if release["release_id"] in release_ids:
                 raise MapError(f"duplicate release id {release['release_id']}")
             release_ids.add(release["release_id"])
@@ -270,6 +286,14 @@ def marker_records(game: dict[str, Any], side: str) -> list[dict[str, Any]]:
     return records
 
 
+def visible_zones(game: dict[str, Any], side: str) -> dict[str, list[str]]:
+    if side == "master":
+        return game["zones"]
+    if side not in SIDES:
+        raise MapError("side must be nato, russia, or master")
+    return {side: game["zones"][side]}
+
+
 def visible_text_inputs(game: dict[str, Any], base: dict[str, Any], side: str) -> list[str]:
     """Expose dynamic strings approved for a view image or its caption."""
     records = game["master_markers"] if side == "master" else marker_records(game, side)
@@ -282,9 +306,13 @@ def visible_text_inputs(game: dict[str, Any], base: dict[str, Any], side: str) -
     text.extend(approach["name"] for approach in base["approaches"])
     text.extend(objective["name"] for objective in base["objectives"])
     text.extend(f"{sector} {state.upper()}" for sector, state in game["control"].items())
-    text.extend(f"{item['label']} {item['sector']} {item['confidence'].upper()}" for item in records)
-    if side != "master":
-        text.extend(item["description"] for item in game["releases"][side])
+    for item in records:
+        text.append(f"{item['label']} {item['sector']} {item['confidence'].upper()}")
+        if item["kind"] == "friendly":
+            text.append(f"Cite: {item['cite']}")
+        elif item["kind"] == "released":
+            text.append(f"{item['release_id']}  {item['released_at']}")
+            text.append(item["description"])
     return text
 
 
@@ -397,6 +425,11 @@ def render_png(game: dict[str, Any], base: dict[str, Any], side: str, destinatio
             f"{index:02d}  {record['sector']}  {record['label']}{owner}  "
             f"{record['confidence'].upper()}"
         )
+        if not is_master:
+            if record["kind"] == "friendly":
+                record_text += f"  CITE {record['cite']}"
+            else:
+                record_text += f"  {record['release_id']}  {record['released_at']}"
         record_lines.append(_wrap(measuring_draw, record_text, record_font, 470))
     marker_rows = [record_lines[index : index + 3] for index in range(0, len(record_lines), 3)]
     marker_row_heights = [max((len(lines) for lines in row), default=1) * 23 for row in marker_rows]
@@ -430,10 +463,10 @@ def render_png(game: dict[str, Any], base: dict[str, Any], side: str, destinatio
     for index, record in enumerate(records, start=1):
         indexed_records.setdefault(record["sector"], []).append((index, record))
 
-    visible_zones = game["zones"] if is_master else {side: game["zones"][side]}
+    side_zones = visible_zones(game, side)
     zone_for = {
         sector: zone_side
-        for zone_side, sectors in visible_zones.items()
+        for zone_side, sectors in side_zones.items()
         for sector in sectors
     }
     sector_by_id = {sector["id"]: sector for sector in base["sectors"]}

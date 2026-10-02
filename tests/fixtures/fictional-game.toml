@@ -30,16 +30,16 @@ confidence = "confirmed"
 
 [own]
 nato = [
-  { id = "own-nato-1", owner = "nato", sector = "C1", label = "NATO test unit", description = "Friendly test unit", visibility = "nato", confidence = "confirmed" },
+  { id = "own-nato-1", cite = "O-N-001", owner = "nato", sector = "C1", label = "Friendly NATO unit", description = "Friendly test unit", visibility = "nato", confidence = "confirmed" },
 ]
 russia = [
-  { id = "own-russia-1", owner = "russia", sector = "F2", label = "Russia test unit", description = "Friendly test unit", visibility = "russia", confidence = "confirmed" },
+  { id = "own-russia-1", cite = "O-R-001", owner = "russia", sector = "F2", label = "Russia test unit", description = "Friendly test unit", visibility = "russia", confidence = "confirmed" },
 ]
 
 [releases]
 nato = [
-  { release_id = "release-n-01", marker_id = "unit-rus-7-private", sector = "A2", confidence = "reported", label = "Opposing test unit", description = "Fictional opposing unit reported at A2.", released_at = "2026-10-01T12:00:00Z", source_id = "order-private-99", visibility = "nato" },
+  { release_id = "R-N-001", marker_id = "unit-rus-7-private", sector = "A2", confidence = "reported", label = "Opposing test unit", description = "Fictional opposing unit reported at A2.", released_at = "2026-10-01T12:00:00Z", source_id = "order-private-99", visibility = "nato" },
 ]
 russia = [
-  { release_id = "release-r-01", marker_id = "unit-nato-2", sector = "B3", confidence = "suspected", label = "NATO test unit", description = "Fictional test contact suspected near B3.", released_at = "2026-10-01T12:10:00Z", source_id = "report-private-42", visibility = "russia" },
+  { release_id = "R-R-001", marker_id = "unit-nato-2", sector = "B3", confidence = "suspected", label = "NATO test unit", description = "Fictional test contact suspected near B3.", released_at = "2026-10-01T12:10:00Z", source_id = "report-private-42", visibility = "russia" },
 ]
