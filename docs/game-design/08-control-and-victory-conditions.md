@@ -47,13 +47,17 @@ If one side is unable to field an infantry company under that definition, the ot
 
 ## Optional secondary conditions for testing
 
-All three secondary conditions are in play in every playtest; none is selected in advance. They are:
+Both secondary conditions are in play in every playtest; neither is selected in advance. They are:
 
 - **Preservation:** A side that controls the town while retaining more of its starting company receives the **stronger narrative outcome**.
 - **Evacuation:** A side that cannot win control can still achieve this optional secondary condition if at least one echelon unit is not recorded as **broken** and every such unit has a completed, successful **Withdraw** order that exits the map through a designated approach by the applicable deadline. Broken units do not count as surviving force. The GM records each qualifying unit's route and completion time in the authoritative unit/map log, using the formal-withdrawal record described above. This condition does not change the primary town-control result.
-- **Information discipline:** The game master records whether a side made a decision from a confirmed report or a suspected report. This is an observation for playtesting, not a score.
+The GM publishes both secondary conditions to both commanders before the first order, alongside the primary objective and control rule. After the game ends, the GM determines, in context and using each condition's stated criteria, whether either side achieved any of them, just as the GM determines the primary result. A side may achieve more than one secondary condition, or none. Secondary conditions must never override the clearly stated primary objective during the first test.
 
-The GM publishes all three secondary conditions to both commanders before the first order, alongside the primary objective and control rule. After the game ends, the GM determines, in context and using each condition's stated criteria, whether either side achieved any of them, just as the GM determines the primary result. A side may achieve more than one secondary condition, or none. Secondary conditions must never override the clearly stated primary objective during the first test.
+## Information discipline
+
+Information discipline is not a secondary victory condition. It is a standing expectation for every commander throughout play. The game master records whether a side made a decision from a confirmed report or a suspected report. This is an observation for playtesting, not a score. Information boundaries themselves are defined in the [prototype roleplay layer](17-prototype-roleplay-layer.md#information-and-roleplay-boundaries) and the [participant briefing](../playtesting/consent-safety-participant-briefing.md#information-boundaries).
+
+Consequences for breaking information discipline are pending a rule-owner decision ([#179](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/179)). Until then, the GM records any breach for post-game review and applies no improvised penalty.
 
 ## End-of-scenario procedure
 
@@ -68,7 +72,7 @@ When the applicable deadline or an immediate ending condition is reached, the ga
 
 ## Fairness safeguards
 
-- The primary objective and control rule, plus all three secondary conditions, are published to both commanders before the first order is submitted.
+- The primary objective and control rule, plus both secondary conditions, are published to both commanders before the first order is submitted.
 - The game master uses the same definition of presence, contest, and control for both sides.
 - A control change is time-stamped and linked to the order or adjudication that caused it.
 - If an ambiguous edge case can change the result, the game master states the temporary interpretation before resolving it and records it for review.
