@@ -112,8 +112,12 @@ control-pair labels distinct from the public control state issued by the GM.
 The GM updates and time-stamps the master first, then records separately for
 each side the released sector, confidence, label/description, `released_at`,
 and side-visible `release_id`. The side PNG shows these release IDs and times
-plus each friendly marker's own `cite`; the text caption lists only released
-descriptions. Neither output includes GM notes, opposing internal `marker_id`,
+plus each friendly marker's own `cite`, tagging each list entry OWN or OPP
+so ownership is not shown by color alone. The text caption is the
+phone-readable layer: a `vN SIDE timestamp` header, a static confidence
+legend, one line per own or released record (number, sector, label,
+confidence, OWN/OPP, `cite` or `release_id`, and `released_at` for
+releases), then the released descriptions. Neither output includes GM notes, opposing internal `marker_id`,
 private `source_id`, or master descriptions. A `suspected` marker must represent a report actually released
 to that side, not GM inference. The renderer never draws private content and
 then hides or crops it. It renders each side from an allowlisted set of that

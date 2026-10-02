@@ -189,6 +189,78 @@ class FilteringTests(unittest.TestCase):
         self.assertNotIn("report-private-42", russia_caption)
         self.assertNotIn("unit-nato-2", russia_caption)
 
+    def test_caption_is_phone_text_layer_with_legend_and_tagged_records(self):
+        self.assertEqual(
+            render_map.caption_text(self.game, "nato"),
+            "v3 NATO 2026-10-01T12:30:00Z\n"
+            "Legend: solid = CONFIRMED | outline = REPORTED | dashed ? = SUSPECTED\n"
+            "Markers:\n"
+            "01  C1  Friendly NATO unit  CONFIRMED  OWN  CITE O-N-001\n"
+            "02  A2  Opposing test unit  REPORTED  OPP  R-N-001  2026-10-01T12:00:00Z\n"
+            "Released descriptions:\n"
+            "R-N-001: Fictional opposing unit reported at A2.\n",
+        )
+        self.assertEqual(
+            render_map.caption_text(self.game, "russia"),
+            "v3 RUSSIA 2026-10-01T12:30:00Z\n"
+            "Legend: solid = CONFIRMED | outline = REPORTED | dashed ? = SUSPECTED\n"
+            "Markers:\n"
+            "01  F2  Russia test unit  CONFIRMED  OWN  CITE O-R-001\n"
+            "02  B3  NATO test unit  SUSPECTED  OPP  R-R-001  2026-10-01T12:10:00Z\n"
+            "Released descriptions:\n"
+            "R-R-001: Fictional test contact suspected near B3.\n",
+        )
+        with self.assertRaises(render_map.MapError):
+            render_map.caption_text(self.game, "master")
+
+    def test_caption_lines_use_only_own_and_released_side_values(self):
+        token_pattern = re.compile(r"[A-Za-z0-9]+(?:[-:][A-Za-z0-9]+)*")
+        static_tokens = set(
+            token_pattern.findall(
+                "v Legend solid outline dashed CONFIRMED REPORTED SUSPECTED Markers "
+                "OWN OPP CITE Released descriptions None"
+            )
+        )
+        for side, opponent in (("nato", "russia"), ("russia", "nato")):
+            with self.subTest(side=side):
+                caption = render_map.caption_text(self.game, side)
+                forbidden = [
+                    *(value for marker in self.game["master_markers"] for value in (marker["id"], marker["description"])),
+                    *self.game["gm_notes"],
+                    *(release["source_id"] for releases in self.game["releases"].values() for release in releases),
+                    *(release["marker_id"] for releases in self.game["releases"].values() for release in releases),
+                    *(
+                        value
+                        for release in self.game["releases"][opponent]
+                        for value in (release["release_id"], release["label"], release["description"])
+                    ),
+                    *(
+                        value
+                        for marker in self.game["own"][opponent]
+                        for value in (marker["id"], marker["cite"], marker["label"], marker["description"])
+                    ),
+                    *(marker["id"] for marker in self.game["own"][side]),
+                    *(marker["description"] for marker in self.game["own"][side]),
+                ]
+                for value in forbidden:
+                    self.assertNotIn(value, caption)
+
+                safe_values = [f"v{self.game['version']}", side.upper(), self.game["updated_at"]]
+                for marker in self.game["own"][side]:
+                    safe_values.extend((marker["cite"], marker["sector"], marker["label"]))
+                for release in self.game["releases"][side]:
+                    safe_values.extend(
+                        release[field]
+                        for field in ("release_id", "sector", "label", "description", "released_at")
+                    )
+                approved = static_tokens | {f"{index:02d}" for index in range(1, 10)}
+                approved |= {token for value in safe_values for token in token_pattern.findall(value)}
+                for line in caption.splitlines():
+                    self.assertTrue(
+                        set(token_pattern.findall(line)) <= approved,
+                        f"caption line contains an unapproved token: {line!r}",
+                    )
+
 
 class SchemaTests(unittest.TestCase):
     def validate_copy(self, mutate):
@@ -381,6 +453,7 @@ class PillowSmokeTests(unittest.TestCase):
             "CONFIRMED REPORTED SUSPECTED",
             "CONTROL: N=NATO  R=RUSSIA  C=CONTESTED  U=UNCONTROLLED",
             "MARKERS (shape and status identify confidence)",
+            "MARKERS (shape = confidence | OWN = your side | OPP = released opposing report)",
             "VERSION Updated CITE ZONE NATO ZONE RUSSIA ZONE SIDE MAP",
             "GM MASTER DO NOT POST",
             "01 02 03 04 05 06",
@@ -465,6 +538,94 @@ class PillowSmokeTests(unittest.TestCase):
                     self.assertIn(own_cite, joined_drawn)
                     self.assertIn(own_release["release_id"], joined_drawn)
                     self.assertIn(own_release["released_at"], joined_drawn)
+                    self.assertIn(f"OWN CITE {own_cite}", joined_drawn)
+                    self.assertIn(f"OPP {own_release['release_id']} {own_release['released_at']}", joined_drawn)
+
+    @staticmethod
+    def crowded_game():
+        """Fictional overflow case: four markers in C1 and three in D1."""
+        game = render_map.validate_game(tomllib.loads(FIXTURE.read_text(encoding="utf-8")), render_map.load_base())
+        template = game["own"]["nato"][0]
+        for number, sector in ((2, "C1"), (3, "C1"), (4, "D1"), (5, "D1"), (6, "D1"), (7, "C1")):
+            game["own"]["nato"].append(
+                {
+                    **template,
+                    "id": f"own-nato-{number}",
+                    "cite": f"O-N-00{number}",
+                    "sector": sector,
+                    "label": "Fictional very long platoon label for wrap testing" if number == 2 else f"Unit {number}",
+                }
+            )
+        return game
+
+    @unittest.skipUnless(importlib.util.find_spec("PIL"), "Pillow is not installed")
+    def test_every_drawn_font_meets_phone_minimum_and_glyphs_are_large(self):
+        from PIL import ImageDraw
+
+        self.assertGreaterEqual(render_map.MIN_FONT_PX, 22)
+        self.assertGreaterEqual(render_map.MARKER_GLYPH_PX, 30)
+        base = render_map.load_base()
+        fixture_game = render_map.validate_game(tomllib.loads(FIXTURE.read_text(encoding="utf-8")), base)
+        original_ellipse = ImageDraw.ImageDraw.ellipse
+        with tempfile.TemporaryDirectory() as temporary:
+            for label, game in (("fixture", fixture_game), ("crowded", self.crowded_game())):
+                for side in ("nato", "russia", "master"):
+                    with self.subTest(game=label, side=side):
+                        ellipses = []
+
+                        def capture_ellipse(draw, xy, *args, **kwargs):
+                            ellipses.append(xy)
+                            return original_ellipse(draw, xy, *args, **kwargs)
+
+                        with patch.object(ImageDraw.ImageDraw, "ellipse", capture_ellipse):
+                            captured = self.render_with_text_capture(
+                                game, base, side, Path(temporary) / f"{label}-{side}.png"
+                            )
+                        self.assertTrue(captured)
+                        for drawn, font_size in captured:
+                            self.assertGreaterEqual(
+                                font_size, render_map.MIN_FONT_PX, f"{drawn!r} drawn at {font_size}px"
+                            )
+                        self.assertTrue(ellipses)
+                        for x0, y0, x1, y1 in ellipses:
+                            self.assertGreaterEqual(x1 - x0, render_map.MARKER_GLYPH_PX)
+                            self.assertGreaterEqual(y1 - y0, render_map.MARKER_GLYPH_PX)
+
+    @unittest.skipUnless(importlib.util.find_spec("PIL"), "Pillow is not installed")
+    def test_cell_text_and_overflow_stay_inside_their_cells(self):
+        from PIL import ImageDraw
+
+        base = render_map.load_base()
+        game = self.crowded_game()
+        boxes = []
+        original_text = ImageDraw.ImageDraw.text
+
+        def capture(draw, xy, text, *args, **kwargs):
+            boxes.append((text, draw.textbbox(xy, text, font=kwargs.get("font"))))
+            return original_text(draw, xy, text, *args, **kwargs)
+
+        with tempfile.TemporaryDirectory() as temporary:
+            image_path = Path(temporary) / "v3-nato.png"
+            with patch.object(ImageDraw.ImageDraw, "text", capture):
+                render_map.render_png(game, base, "nato", image_path)
+            from PIL import Image
+
+            with Image.open(image_path) as image:
+                width, height = image.size
+
+        grid_bottom = render_map.GRID_TOP + 5 * render_map.CELL_HEIGHT
+        drawn = [text for text, _ in boxes]
+        self.assertIn("+2", drawn)
+        self.assertIn("06", drawn)
+        self.assertNotIn("07", drawn)
+        for text, (left, top, right, bottom) in boxes:
+            self.assertLessEqual(right, width - 35, text)
+            self.assertLessEqual(bottom, height, text)
+            if render_map.GRID_TOP <= top < grid_bottom:
+                column = (left - render_map.GRID_LEFT) // render_map.CELL_WIDTH
+                row = (top - render_map.GRID_TOP) // render_map.CELL_HEIGHT
+                self.assertLessEqual(right, render_map.GRID_LEFT + (column + 1) * render_map.CELL_WIDTH, text)
+                self.assertLessEqual(bottom, render_map.GRID_TOP + (row + 1) * render_map.CELL_HEIGHT, text)
 
     @unittest.skipUnless(importlib.util.find_spec("PIL"), "Pillow is not installed")
     def test_render_outputs_side_directories_and_captions(self):

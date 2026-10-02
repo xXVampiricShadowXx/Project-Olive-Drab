@@ -44,8 +44,11 @@ not prove any item below is complete.
   side PNG and caption contains only public and earned side-visible data,
   never opposing live markers, hidden zones, GM notes, `source_id`, opposing
   `marker_id`, or master descriptions. Verify the side PNG shows friendly
-  `cite` and opposing `release_id` and `released_at`; the text caption lists
-  released descriptions only. Moving a live marker must not silently update
+  `cite` and opposing `release_id` and `released_at`, with list entries
+  tagged OWN or OPP; the text caption repeats only those own and released
+  record lines under a confidence legend, then the released descriptions.
+  Downscale each side PNG to 400px wide and confirm the marker list is
+  readable. Moving a live marker must not silently update
   an older released report.
 - [ ] Test Discord permissions with each actual commander account: each sees
   only its own private channel, not the opposing channel or

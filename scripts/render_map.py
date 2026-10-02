@@ -29,8 +29,13 @@ CHANNELS = {
 FIXTURE_PATH = Path("tests/fixtures/fictional-game.toml")
 ID_PATTERN = re.compile(r"^[A-Za-z0-9-]{1,24}$")
 
-CANVAS = (1600, 1400)
-GRID_LEFT, GRID_TOP, CELL_WIDTH, CELL_HEIGHT = 95, 300, 235, 150
+CANVAS = (1600, 1700)
+GRID_LEFT, GRID_TOP, CELL_WIDTH, CELL_HEIGHT = 95, 300, 235, 190
+# Legibility floor for a 1600px PNG shown at roughly phone width in Discord.
+MIN_FONT_PX = 22
+MARKER_GLYPH_PX = 30
+CELL_TEXT_PX = 24
+CELL_MARKER_SLOTS = 3
 
 
 class MapError(ValueError):
@@ -324,10 +329,23 @@ def banner_lines(game: dict[str, Any], side: str) -> tuple[str, str]:
     )
 
 
+CAPTION_LEGEND = "Legend: solid = CONFIRMED | outline = REPORTED | dashed ? = SUSPECTED"
+
+
 def caption_text(game: dict[str, Any], side: str) -> str:
-    descriptions = [release["description"] for release in game["releases"][side]]
-    lines = [f"v{game['version']} {side.upper()} {game['updated_at']}", "Released descriptions:"]
-    lines.extend(descriptions or ["None"])
+    """Phone-readable text layer built only from the side's own and release records."""
+    if side not in SIDES:
+        raise MapError("captions are only produced for nato or russia")
+    lines = [f"v{game['version']} {side.upper()} {game['updated_at']}", CAPTION_LEGEND, "Markers:"]
+    records = marker_records(game, side)
+    lines.extend(_record_line(index, record, False) for index, record in enumerate(records, start=1))
+    if not records:
+        lines.append("None")
+    lines.append("Released descriptions:")
+    releases = game["releases"][side]
+    lines.extend(f"{release['release_id']}: {release['description']}" for release in releases)
+    if not releases:
+        lines.append("None")
     return "\n".join(lines) + "\n"
 
 
@@ -389,18 +407,39 @@ def _wrap(draw, text: str, font, max_width: int) -> list[str]:
     return lines
 
 
-def _draw_confidence(draw, x: int, y: int, confidence: str, color: tuple[int, int, int]) -> None:
+def _draw_confidence(
+    draw, x: int, y: int, confidence: str, color: tuple[int, int, int], size: int = MARKER_GLYPH_PX
+) -> None:
     if confidence == "confirmed":
-        draw.ellipse((x, y, x + 22, y + 22), fill=color, outline=(20, 30, 40), width=2)
+        draw.ellipse((x, y, x + size, y + size), fill=color, outline=(20, 30, 40), width=2)
     elif confidence == "reported":
-        draw.ellipse((x, y, x + 22, y + 22), fill=(250, 250, 244), outline=color, width=4)
+        draw.ellipse((x, y, x + size, y + size), fill=(250, 250, 244), outline=color, width=5)
     else:
-        for start in range(0, 22, 8):
-            draw.line((x + start, y, x + min(start + 4, 22), y), fill=color, width=3)
-            draw.line((x + start, y + 22, x + min(start + 4, 22), y + 22), fill=color, width=3)
-        draw.line((x, y, x, y + 22), fill=color, width=3)
-        draw.line((x + 22, y, x + 22, y + 22), fill=color, width=3)
-        draw.text((x + 6, y - 1), "?", fill=(20, 30, 40), font=_font(19, bold=True))
+        dash, gap = 6, 5
+        for start in range(0, size, dash + gap):
+            stop = min(start + dash, size)
+            draw.line((x + start, y, x + stop, y), fill=color, width=3)
+            draw.line((x + start, y + size, x + stop, y + size), fill=color, width=3)
+            draw.line((x, y + start, x, y + stop), fill=color, width=3)
+            draw.line((x + size, y + start, x + size, y + stop), fill=color, width=3)
+        mark_font = _font(MIN_FONT_PX, bold=True)
+        box = draw.textbbox((0, 0), "?", font=mark_font)
+        draw.text(
+            (x + (size - (box[2] - box[0])) / 2 - box[0], y + (size - (box[3] - box[1])) / 2 - box[1]),
+            "?",
+            fill=(20, 30, 40),
+            font=mark_font,
+        )
+
+
+def _record_line(index: int, record: dict[str, Any], is_master: bool) -> str:
+    """One marker-list entry; side views tag ownership as text, not color alone."""
+    line = f"{index:02d}  {record['sector']}  {record['label']}  {record['confidence'].upper()}"
+    if is_master:
+        return f"{line}  {record['owner'].upper()}"
+    if record["kind"] == "friendly":
+        return f"{line}  OWN  CITE {record['cite']}"
+    return f"{line}  OPP  {record['release_id']}  {record['released_at']}"
 
 
 def render_png(game: dict[str, Any], base: dict[str, Any], side: str, destination: Path) -> None:
@@ -409,33 +448,13 @@ def render_png(game: dict[str, Any], base: dict[str, Any], side: str, destinatio
     navy = (24, 42, 59)
     text = (27, 39, 48)
     is_master = side == "master"
-    side_records = marker_records(game, side) if not is_master else []
-    master_records = (
+    records = (
         [{**marker, "kind": "master"} for marker in game["master_markers"]]
         if is_master
-        else []
+        else marker_records(game, side)
     )
-    records = master_records if is_master else side_records
-    record_lines = []
-    record_font = _font(16)
-    measuring_draw = ImageDraw.Draw(Image.new("RGB", (1, 1)))
-    for index, record in enumerate(records, start=1):
-        owner = f" {record['owner'].upper()}" if is_master else ""
-        record_text = (
-            f"{index:02d}  {record['sector']}  {record['label']}{owner}  "
-            f"{record['confidence'].upper()}"
-        )
-        if not is_master:
-            if record["kind"] == "friendly":
-                record_text += f"  CITE {record['cite']}"
-            else:
-                record_text += f"  {record['release_id']}  {record['released_at']}"
-        record_lines.append(_wrap(measuring_draw, record_text, record_font, 470))
-    marker_rows = [record_lines[index : index + 3] for index in range(0, len(record_lines), 3)]
-    marker_row_heights = [max((len(lines) for lines in row), default=1) * 23 for row in marker_rows]
-    marker_start_y = 1365
-    canvas_height = max(CANVAS[1], marker_start_y + sum(marker_row_heights) + 12)
-    image = Image.new("RGB", (CANVAS[0], canvas_height), (248, 247, 239))
+    # Draw on a tall working canvas, then trim to the laid-out content height.
+    image = Image.new("RGB", (CANVAS[0], 6000), (248, 247, 239))
     draw = ImageDraw.Draw(image)
     terrain_fill = {
         "open": (240, 235, 210),
@@ -445,31 +464,27 @@ def render_png(game: dict[str, Any], base: dict[str, Any], side: str, destinatio
         "woods": (196, 216, 194),
     }
     side_colors = {"nato": (34, 91, 150), "russia": (152, 65, 52)}
-    version = game["version"]
-    updated = game["updated_at"]
+    cell_bold = _font(CELL_TEXT_PX, bold=True)
+    body_font = _font(26)
+    body_bold = _font(26, bold=True)
     draw.rounded_rectangle((35, 24, 1565, 172), radius=18, fill=navy)
     banner_title, banner_updated = banner_lines(game, side)
     draw.text((65, 42), banner_title, fill="white", font=_font(43, bold=True))
     draw.text((67, 108), banner_updated, fill=(225, 235, 242), font=_font(28))
-    draw.text((GRID_LEFT, 238), "NORTH: Pine Road (N)", fill=text, font=_font(25, bold=True))
-    draw.text(
-        (GRID_LEFT, 1067),
-        "SOUTH: River Road (S) | BLUEWATER RIVER: boundary between rows 4 and 5",
-        fill=text,
-        font=_font(22, bold=True),
-    )
+    draw.text((GRID_LEFT, 238), "NORTH: Pine Road (N)", fill=text, font=_font(26, bold=True))
 
     indexed_records: dict[str, list[tuple[int, dict[str, Any]]]] = {}
     for index, record in enumerate(records, start=1):
         indexed_records.setdefault(record["sector"], []).append((index, record))
 
-    side_zones = visible_zones(game, side)
     zone_for = {
         sector: zone_side
-        for zone_side, sectors in side_zones.items()
+        for zone_side, sectors in visible_zones(game, side).items()
         for sector in sectors
     }
     sector_by_id = {sector["id"]: sector for sector in base["sectors"]}
+    name_font = _font(32, bold=True)
+    slot_width = MARKER_GLYPH_PX + 4 + draw.textbbox((0, 0), "00", font=cell_bold)[2] + 8
     for row in range(1, 6):
         for column_index, column in enumerate("ABCDEF"):
             sector_id = f"{column}{row}"
@@ -483,30 +498,36 @@ def render_png(game: dict[str, Any], base: dict[str, Any], side: str, destinatio
                 fill = tuple(round(fill[i] * 0.82 + zone_color[i] * 0.18) for i in range(3))
             draw.rectangle((left, top, right, bottom), fill=fill, outline=(78, 86, 88), width=2)
             if sector_id in zone_for:
-                zone_side = zone_for[sector_id]
                 draw.rectangle(
                     (left + 4, top + 4, right - 4, bottom - 4),
-                    outline=side_colors[zone_side],
+                    outline=side_colors[zone_for[sector_id]],
                     width=3,
                 )
             draw.text((left + 12, top + 8), sector_id, fill=navy, font=_font(36, bold=True))
-            draw.text((right - 78, top + 17), sector["terrain"].upper(), fill=(67, 75, 72), font=_font(14, bold=True))
+            terrain_label = sector["terrain"].upper()
+            terrain_width = draw.textbbox((0, 0), terrain_label, font=cell_bold)[2]
+            draw.text((right - 12 - terrain_width, top + 14), terrain_label, fill=(55, 62, 60), font=cell_bold)
             control = game["control"].get(sector_id)
             if control:
                 control_letter = {"nato": "N", "russia": "R", "contested": "C", "uncontrolled": "U"}[control]
-                draw.rounded_rectangle((left + 76, top + 9, left + 108, top + 37), radius=5, fill=navy)
-                draw.text((left + 87, top + 13), control_letter, fill="white", font=_font(16, bold=True))
-            name_font = _font(32, bold=True)
-            name_lines = _wrap(draw, sector["name"], name_font, CELL_WIDTH - 22)
-            name_y = top + 50
-            for line in name_lines[:2]:
+                draw.rounded_rectangle((left + 72, top + 9, left + 106, top + 43), radius=5, fill=navy)
+                letter_box = draw.textbbox((0, 0), control_letter, font=cell_bold)
+                draw.text(
+                    (left + 89 - (letter_box[0] + letter_box[2]) / 2, top + 26 - (letter_box[1] + letter_box[3]) / 2),
+                    control_letter,
+                    fill="white",
+                    font=cell_bold,
+                )
+            name_y = top + 52
+            for line in _wrap(draw, sector["name"], name_font, CELL_WIDTH - 22)[:2]:
                 draw.text((left + 12, name_y), line, fill=text, font=name_font)
                 name_y += 34
             cell_records = indexed_records.get(sector_id, [])
-            marker_y = bottom - 28
-            visible_cells = cell_records[:5] if len(cell_records) > 6 else cell_records[:6]
-            for marker_index, (record_index, record) in enumerate(visible_cells):
-                marker_x = left + 9 + marker_index * 35
+            overflow = len(cell_records) > CELL_MARKER_SLOTS
+            shown = cell_records[: CELL_MARKER_SLOTS - 1] if overflow else cell_records
+            marker_y = bottom - MARKER_GLYPH_PX - 10
+            for slot, (record_index, record) in enumerate(shown):
+                marker_x = left + 10 + slot * slot_width
                 _draw_confidence(
                     draw,
                     marker_x,
@@ -514,69 +535,98 @@ def render_png(game: dict[str, Any], base: dict[str, Any], side: str, destinatio
                     record["confidence"],
                     side_colors.get(record["owner"], (67, 77, 86)),
                 )
-                draw.text((marker_x + 24, marker_y + 3), f"{record_index:02d}", fill=text, font=_font(11, bold=True))
-            if len(cell_records) > 6:
-                draw.text((left + 9 + 5 * 35, marker_y + 3), f"+{len(cell_records) - 5}", fill=text, font=_font(14, bold=True))
+                draw.text(
+                    (marker_x + MARKER_GLYPH_PX + 4, marker_y + 3),
+                    f"{record_index:02d}",
+                    fill=text,
+                    font=cell_bold,
+                )
+            if overflow:
+                draw.text(
+                    (left + 10 + len(shown) * slot_width, marker_y + 3),
+                    f"+{len(cell_records) - len(shown)}",
+                    fill=text,
+                    font=cell_bold,
+                )
 
     river_y = GRID_TOP + 4 * CELL_HEIGHT
     draw.line((GRID_LEFT, river_y, GRID_LEFT + 6 * CELL_WIDTH, river_y), fill=(50, 117, 158), width=8)
     for crossing_column in (2, 3):
         center_x = GRID_LEFT + crossing_column * CELL_WIDTH + CELL_WIDTH // 2
         draw.line((center_x - 42, river_y, center_x + 42, river_y), fill=(70, 55, 41), width=14)
-    feature_y = 1110
-    draw.text((95, feature_y), "WEST: West Approach (W) | EAST: East Road (E)", fill=text, font=_font(21, bold=True))
-    draw.text((95, feature_y + 37), "Crossings: C4-C5, D4-D5", fill=text, font=_font(20))
-    objective_text = "Objectives: " + " | ".join(
-        f"{objective['name']} ({'/'.join(objective['sectors'])})" for objective in base["objectives"]
-    )
-    objective_font = _font(18, bold=True)
-    for line_number, line in enumerate(_wrap(draw, objective_text, objective_font, 1410)):
-        draw.text((95, feature_y + 73 + line_number * 23), line, fill=text, font=objective_font)
 
-    legend_y = 1255
-    draw.text((95, legend_y), "TERRAIN: open | road | broken | built | woods", fill=text, font=_font(20, bold=True))
-    legend_y += 34
-    for offset, (confidence, label) in enumerate(
-        (("confirmed", "CONFIRMED"), ("reported", "REPORTED"), ("suspected", "SUSPECTED"))
-    ):
-        x = 105 + offset * 310
-        _draw_confidence(draw, x, legend_y, confidence, (53, 92, 128))
-        draw.text((x + 32, legend_y + 1), label, fill=text, font=_font(18, bold=True))
-    if is_master:
-        draw.rectangle((1080, legend_y + 2, 1100, legend_y + 22), outline=side_colors["nato"], width=3)
-        draw.text((1106, legend_y + 1), "NATO ZONE", fill=text, font=_font(16, bold=True))
-        draw.rectangle((1230, legend_y + 2, 1250, legend_y + 22), outline=side_colors["russia"], width=3)
-        draw.text((1256, legend_y + 1), "RUSSIA ZONE", fill=text, font=_font(16, bold=True))
-    elif game["zones"][side]:
-        zone_color = side_colors[side]
-        draw.rectangle((1080, legend_y + 2, 1100, legend_y + 22), outline=zone_color, width=3)
-        draw.text((1106, legend_y + 1), f"{side.upper()} ZONE", fill=text, font=_font(16, bold=True))
-    draw.text(
-        (95, 1314),
-        "CONTROL: N=NATO  R=RUSSIA  C=CONTESTED  U=UNCONTROLLED",
-        fill=text,
-        font=_font(16, bold=True),
+    text_width = 6 * CELL_WIDTH
+    y = GRID_TOP + 5 * CELL_HEIGHT + 16
+
+    def paragraph(value: str, font, gap: int = 12) -> None:
+        nonlocal y
+        line_height = draw.textbbox((0, 0), "Ag", font=font)[3] + 8
+        for line in _wrap(draw, value, font, text_width):
+            draw.text((GRID_LEFT, y), line, fill=text, font=font)
+            y += line_height
+        y += gap
+
+    paragraph("SOUTH: River Road (S) | BLUEWATER RIVER: boundary between rows 4 and 5", body_bold)
+    paragraph("WEST: West Approach (W) | EAST: East Road (E)", body_bold)
+    paragraph("Crossings: C4-C5, D4-D5", body_font)
+    paragraph(
+        "Objectives: "
+        + " | ".join(
+            f"{objective['name']} ({'/'.join(objective['sectors'])})" for objective in base["objectives"]
+        ),
+        _font(24, bold=True),
+        gap=24,
     )
+    paragraph("TERRAIN: open | road | broken | built | woods", body_bold)
+
+    legend_items = [
+        ("confirmed", "CONFIRMED", (53, 92, 128)),
+        ("reported", "REPORTED", (53, 92, 128)),
+        ("suspected", "SUSPECTED", (53, 92, 128)),
+    ]
+    x = GRID_LEFT
+    for confidence, label, color in legend_items:
+        _draw_confidence(draw, x, y, confidence, color)
+        draw.text((x + MARKER_GLYPH_PX + 10, y + 1), label, fill=text, font=body_bold)
+        x += MARKER_GLYPH_PX + 10 + draw.textbbox((0, 0), label, font=body_bold)[2] + 40
+    y += MARKER_GLYPH_PX + 18
+    zone_sides = list(SIDES) if is_master else [side]
+    x = GRID_LEFT
+    for zone_side in zone_sides:
+        draw.rectangle((x, y + 2, x + MARKER_GLYPH_PX, y + 2 + MARKER_GLYPH_PX), outline=side_colors[zone_side], width=4)
+        zone_label = f"{zone_side.upper()} ZONE"
+        draw.text((x + MARKER_GLYPH_PX + 10, y + 3), zone_label, fill=text, font=body_bold)
+        x += MARKER_GLYPH_PX + 10 + draw.textbbox((0, 0), zone_label, font=body_bold)[2] + 40
+    y += MARKER_GLYPH_PX + 22
+    paragraph("CONTROL: N=NATO  R=RUSSIA  C=CONTESTED  U=UNCONTROLLED", body_bold, gap=24)
 
     if records:
-        draw.text((95, marker_start_y - 28), "MARKERS (shape and status identify confidence)", fill=text, font=_font(17, bold=True))
-        current_y = marker_start_y
-        for row_index, row in enumerate(marker_rows):
-            for column_index, wrapped in enumerate(row):
-                x = 95 + column_index * 485
-                record_index = row_index * 3 + column_index
-                record = records[record_index]
-                _draw_confidence(
-                    draw,
-                    x,
-                    current_y,
-                    record["confidence"],
-                    side_colors.get(record["owner"], (67, 77, 86)),
-                )
-                for line_number, line in enumerate(wrapped):
-                    draw.text((x + 31, current_y + line_number * 21), line, fill=text, font=record_font)
-            current_y += marker_row_heights[row_index]
+        header = (
+            "MARKERS (shape and status identify confidence)"
+            if is_master
+            else "MARKERS (shape = confidence | OWN = your side | OPP = released opposing report)"
+        )
+        paragraph(header, body_bold)
+        list_font = body_font
+        line_height = draw.textbbox((0, 0), "Ag", font=list_font)[3] + 8
+        for index, record in enumerate(records, start=1):
+            entry_top = y
+            _draw_confidence(
+                draw,
+                GRID_LEFT,
+                y,
+                record["confidence"],
+                side_colors.get(record["owner"], (67, 77, 86)),
+            )
+            entry_x = GRID_LEFT + MARKER_GLYPH_PX + 12
+            lines = _wrap(draw, _record_line(index, record, is_master), list_font, text_width - MARKER_GLYPH_PX - 12)
+            for line in lines:
+                draw.text((entry_x, y), line, fill=text, font=list_font)
+                y += line_height
+            y = max(y, entry_top + MARKER_GLYPH_PX) + 8
 
+    height = max(CANVAS[1], y + 24)
+    image = image.crop((0, 0, CANVAS[0], height))
     destination.parent.mkdir(parents=True, exist_ok=True)
     image.save(destination, format="PNG", optimize=False)
 
