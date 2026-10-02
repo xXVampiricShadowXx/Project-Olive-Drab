@@ -69,14 +69,20 @@ Before the final go/no-go, the GM and participants must complete the
 
 - a shared local time zone and the Day 1 08:00–22:00 first-test window;
 - a Discord server with the documented roles, channels, permissions, and
-  GM-visible opposing-contact path;
-- a shared map with one GM master view and filtered NATO and Russia views;
+  GM-visible opposing-contact path (use the [Discord build
+  sheet](discord-build-sheet.md));
+- a shared map with one GM master view and filtered NATO and Russia views
+  (use the [shared map build sheet](shared-map-build-sheet.md));
 - primary and backup same-side succession contacts only when a side has
   additional eligible commanders; none are required in the two-player
   arrangement;
 - the scenario briefing, consent/safety briefing, and communication rehearsal;
 - authoritative registers, backup location, and pause/hiatus procedure;
 - an observer and observer ledger only when an optional observer is actually used.
+
+Use the [collaborative setup session agenda](collaborative-setup-session-agenda.md)
+to record the user-led decisions and Dev/QA checks; it does not replace the
+GM's final readiness decision.
 
 The GM must also establish the private working-record location, backup, and
 retention period before the first order. This is a repository guide, not proof
