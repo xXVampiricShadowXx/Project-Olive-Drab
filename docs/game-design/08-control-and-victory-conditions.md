@@ -53,7 +53,7 @@ Use no more than one secondary condition in an early playtest. Possible choices 
 - **Evacuation:** A side that cannot win control can still achieve this optional secondary condition if at least one echelon unit is not recorded as **broken** and every such unit has a completed, successful **Withdraw** order that exits the map through a designated approach by the applicable deadline. Broken units do not count as surviving force. The GM records each qualifying unit's route and completion time in the authoritative unit/map log, using the formal-withdrawal record described above. This condition does not change the primary town-control result.
 - **Information discipline:** The game master records whether a side made a decision from a confirmed report or a suspected report. This is an observation for playtesting, not a score.
 
-Secondary conditions must never override the clearly stated primary objective during the first test.
+The GM selects no more than one secondary condition, if any, and publishes the selection to both commanders before the first order, alongside the primary objective and control rule. The GM adjudicates whether a side achieved the selected condition using its stated criteria, just as the GM determines the primary result. Secondary conditions must never override the clearly stated primary objective during the first test.
 
 ## End-of-scenario procedure
 
@@ -62,13 +62,13 @@ When the applicable deadline or an immediate ending condition is reached, the ga
 1. Stops all timers.
 2. Resolves any action that completed before the exact deadline. Any contact or contested action still unresolved at the exact **22:00 first-test boundary** produces no new post-deadline result; its last authoritative state remains the state used for the final control-state check, and the affected order/contact remains recorded as unresolved at session close.
 3. Records the final master-map state.
-4. Checks the primary condition, then any selected secondary condition.
+4. Checks the primary condition, then adjudicates whether either side achieved the selected secondary condition, if any.
 5. Sends both commanders the same public result and their final private status.
 6. Preserves the order, report, and map logs for the playtest review.
 
 ## Fairness safeguards
 
-- The victory test is published before the first order is submitted.
+- The primary objective and control rule, plus any selected secondary condition, are published to both commanders before the first order is submitted.
 - The game master uses the same definition of presence, contest, and control for both sides.
 - A control change is time-stamped and linked to the order or adjudication that caused it.
 - If an ambiguous edge case can change the result, the game master states the temporary interpretation before resolving it and records it for review.
