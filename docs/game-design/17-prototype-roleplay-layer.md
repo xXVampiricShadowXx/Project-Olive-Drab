@@ -174,7 +174,8 @@ information.
 Before play, the GM explains the setting, the fictionalized NATO/Russia
 matchup, the communication channels, and the table safety rule. Each
 participant may pause for a real-world safety concern. The GM records the
-pause and resumes only when everyone agrees.
+pause and decides when play resumes after discussing it with the players to
+confirm everyone is ready.
 
 Players may set boundaries around themes, language, impersonation, violence,
 politics, personal experiences, or direct contact scenes. No one has to portray

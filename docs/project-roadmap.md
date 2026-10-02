@@ -150,4 +150,4 @@ External readiness is tracked separately from repository completion. Issues #14â
 
 - [Configure Discord roles, channels, and notifications](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/14)
 - [Prepare shared Brackenford map and filtered views](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/15)
-- [Confirm human playtest roster, succession, and consent briefing](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/16)
+- [Confirm human playtest roster, applicable succession arrangements, and consent briefing](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/16)

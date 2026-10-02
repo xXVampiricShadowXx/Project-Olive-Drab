@@ -32,7 +32,8 @@ not create an operational result or reveal hidden information.
 - Real life always takes precedence. At the GM's discretion, consulting players
   where practical, the GM may pause, suspend, place the game on hiatus, otherwise
   adjust play, or end a session. The GM records and preserves the game state and
-  resumes only when appropriate.
+  decides when play resumes after discussing it with the players to confirm
+  everyone is ready.
 
 ## GM completion fields
 
@@ -140,8 +141,8 @@ GM-only conditions.
       practical.
 - [ ] GM records and preserves the current game state, including affected timers
       and response windows.
-- [ ] GM confirms that play resumes only when appropriate and records the restart
-      time and any handoff.
+- [ ] GM decides when play resumes after discussing it with the players to
+      confirm everyone is ready, then records the restart time and any handoff.
 
 ## Dry-run sign-off
 

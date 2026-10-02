@@ -3,6 +3,10 @@
 *This is a one-page summary that players can use during a game.*
 
 ## Active-Day Procedure
+Scenario time advances at the same rate as real time: one real-time minute
+equals one scenario-clock minute. During the overnight freeze, scenario time
+proceeds to 08:00, but no action resolves and action timers do not count down.
+
 1. Draft and submit a clear order.
 2. Wait for game-master acknowledgment and **acceptance**; revise if returned.
 3. After the GM accepts the order, the GM starts and records the timer. Track expected completion and report observations.

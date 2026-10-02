@@ -12,7 +12,8 @@ both commanders.
 - [ ] Everyone understands that real life always takes precedence. At the GM's
       discretion, consulting players where practical, the GM may pause, suspend,
       place the game on hiatus, otherwise adjust play, or end a session. The GM
-      records and preserves the game state and resumes only when appropriate.
+      records and preserves the game state and decides when play resumes after
+      discussing it with the players to confirm everyone is ready.
 - [ ] Flexible player attention is supported; accepted orders continue during
       brief absences, subject to response windows and fallbacks.
 - [ ] The sides are one NATO infantry company and one Russian infantry company,
@@ -39,7 +40,7 @@ NATO commander:
 Russia commander:
 NATO echelon count:
 Russia echelon count:
-Temporary-command contacts:
+Temporary-command contacts (if applicable; otherwise N/A):
 Weather and visibility:
 Master map version/link:
 NATO filtered map/link:
@@ -57,14 +58,15 @@ Real-life pause/hiatus procedure:
 ### People and authority
 
 - [ ] Both commanders understand their authority and information limits.
-- [ ] The GM has a temporary-command contact for each side.
-- [ ] For each side, the GM has named a primary and backup same-side
-      succession contact, recorded the selection tier and handoff path, and
+- [ ] In the two-player arrangement, succession and temporary command do not
+      apply and no succession contacts are required. If a side has additional
+      eligible commanders, the GM has named primary and backup same-side
+      succession contacts, recorded the selection tier and handoff path, and
       confirmed that each contact will receive only the absent role's earned
       information.
 - [ ] The GM has explained the real-life priority rule, GM discretion,
-      pause/hiatus recording, game-state preservation, and appropriate resumption
-      procedure.
+      pause/hiatus recording, game-state preservation, and that the GM decides
+      when play resumes after discussing readiness with the players.
 - [ ] Both commanders have received and acknowledged their private briefing.
 
 ### Map and hidden information

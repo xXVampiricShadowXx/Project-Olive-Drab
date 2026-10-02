@@ -2,9 +2,10 @@
 
 This is the working outline for the rules. A section is not complete until it has been written clearly and tested in an actual player-and-game-master session.
 
-The four audited rule-owner clarifications are incorporated in the current
-packet and recorded in the [Rule-Owner Decisions](18-open-rule-owner-decisions.md)
-page. Human-playtest validation remains pending.
+The recorded rule-owner clarifications are incorporated in the current packet
+and listed in the [Rule-Owner Decisions](18-open-rule-owner-decisions.md) page,
+including four decisions from issue [#173](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/173).
+Human-playtest validation remains pending.
 
 For the current prototype, a checked item means the topic is covered sufficiently
 for the first playable packet. An unchecked item is either intentionally deferred

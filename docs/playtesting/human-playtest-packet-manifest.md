@@ -11,7 +11,7 @@ Packet version: human-playtest-0.1
 Rules authority: Phase 3 prototype packet on the selected playtest commit
 Scenario: Brackenford, Day 1 only for first human test
 Map authority: Brackenford sector specification, map v1.0
-Clock: Day 1, 08:00-22:00 active; first human session ends at 22:00
+Clock: scenario time runs 1:1 with real time; Day 1, 08:00-22:00 active; first human session ends at 22:00
 Status: preparation package; not a release
 ```
 
@@ -71,7 +71,9 @@ Before the final go/no-go, the GM and participants must complete the
 - a Discord server with the documented roles, channels, permissions, and
   GM-visible opposing-contact path;
 - a shared map with one GM master view and filtered NATO and Russia views;
-- primary and backup same-side succession contacts for each commander;
+- primary and backup same-side succession contacts only when a side has
+  additional eligible commanders; none are required in the two-player
+  arrangement;
 - the scenario briefing, consent/safety briefing, and communication rehearsal;
 - authoritative registers, backup location, and pause/hiatus procedure;
 - an observer and observer ledger only when an optional observer is actually used.

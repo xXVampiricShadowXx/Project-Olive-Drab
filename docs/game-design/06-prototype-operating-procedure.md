@@ -6,6 +6,8 @@ This document is the game master's runbook for the first live, supervised test a
 
 The broader prototype uses one shared local time zone and a seven-day scenario clock. The **first human test uses only Day 1, 08:00–22:00**, ending after the final control-state check.
 
+Scenario time advances at the same rate as real time: one real-time minute equals one scenario-clock minute. During the overnight 22:00–08:00 frozen window, scenario time proceeds to 08:00, but no new action resolves and action timers do not count down.
+
 - **Active window:** 08:00–22:00. Orders may be submitted, acknowledged, and resolved. Movement, observation, combat, and other permitted actions continue according to their stated times.
 - **Frozen window:** 22:00–08:00. When the broader multi-day campaign continues, the clock advances to 08:00, but no new player action resolves and no action timer counts down. The game master may prepare records and private notes, but does not create a new operational result during the freeze.
 - **Daily boundary:** For the broader multi-day campaign, at 22:00 the game master records every in-progress order, its remaining time, and its current conditions. At 08:00, those orders resume with the same remaining time unless a written scenario rule says otherwise.
@@ -121,7 +123,7 @@ unlimited commitment. Behaviors do not resolve during the frozen window.
 
 An urgent report or decision request must include a response-by time. The GM sends it through the role-based game channel and records when it was delivered. A player may respond with a decision, a standing instruction, or an explicit request for more time.
 
-If the response window expires, the GM uses the last accepted order and any standing limits or fallback instruction already recorded for that unit. If no safe fallback exists, the GM pauses only that decision, takes the least-committal action consistent with the unit's last accepted order, and records the reason. The active clock and unrelated orders continue. A full-day-or-longer absence still uses the separate temporary-command and succession procedure below.
+If the response window expires, the GM uses the last accepted order and any standing limits or fallback instruction already recorded for that unit. If no safe fallback exists, the GM pauses only that decision, takes the least-committal action consistent with the unit's last accepted order, and records the reason. The active clock and unrelated orders continue. In games with additional eligible commanders, a full-day-or-longer absence uses the separate temporary-command and succession procedure below.
 
 ## Communication and chain of command
 
@@ -208,6 +210,8 @@ During the active window, the game master actively manages the session: acknowle
 If records conflict, the latest time-stamped master log and map snapshot take precedence. The game master announces the correction, preserves the earlier entry for auditability, and applies the same correction standard to both sides.
 
 ## Temporary command and player absence
+
+In a two-player game with one commander per side, succession and temporary command do not apply, and no succession contacts are required. The procedure below applies to games with additional eligible commanders.
 
 The game is live during the active window, but a player may be unavailable during a longer campaign because of illness, an emergency, or another real-world obligation. The game master records the absence and appoints temporary command before that player's forces need a decision. The absent player does not receive retroactive knowledge when they return; they receive the normal handoff for their role. Brief check-ins and missed response windows do not by themselves trigger succession.
 

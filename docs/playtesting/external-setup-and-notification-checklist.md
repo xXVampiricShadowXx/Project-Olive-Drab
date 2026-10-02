@@ -11,7 +11,9 @@ not prove any item below is complete.
   GM-record channels.
 - [ ] Set read, post, attachment, history, and mention permissions for each
   role; test with harmless messages.
-- [ ] If an observer participates, confirm the observer sees only the public/redacted feed.
+- [ ] If an observer participates, confirm the observer sees only the
+  public/redacted feed and cannot post in game channels unless a commander or GM
+  interacts with them; observers are playtest-only.
 - [ ] Confirm personal direct messages are not part of the record.
 - [ ] Test primary and backup notification methods and response-by reminders.
 
