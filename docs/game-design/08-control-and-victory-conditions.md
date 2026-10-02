@@ -57,7 +57,26 @@ The GM publishes both secondary conditions to both commanders before the first o
 
 Information discipline is not a secondary victory condition. It is a standing expectation for every commander throughout play. The game master records whether a side made a decision from a confirmed report or a suspected report. This is an observation for playtesting, not a score. Information boundaries themselves are defined in the [prototype roleplay layer](17-prototype-roleplay-layer.md#information-and-roleplay-boundaries) and the [participant briefing](../playtesting/consent-safety-participant-briefing.md#information-boundaries).
 
-Consequences for breaking information discipline are pending a rule-owner decision ([#179](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/179)). Until then, the GM records any breach for post-game review and applies no improvised penalty.
+### Consequences for breaches
+
+For the first playtest, the game master decides whether a breach of information discipline has a consequence and what that consequence is ([#179](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/179)). No penalty is required. The GM records every breach they identify, and any consequence applied, for post-game review.
+
+Guidelines for the GM:
+
+- Be proportionate. Treat an honest mistake differently from a deliberate breach, and a first breach differently from a repeated one.
+- Be consistent. Handle the same kind of breach in the same way for both sides.
+- Be transparent. Tell the affected commander what the breach was and what consequence, if any, applies.
+- Keep the game fair. If information leaked, undo or neutralise its effect where practical, rather than only punishing it.
+- Real life and safety come first. A safety or consent concern is handled under the [participant briefing](../playtesting/consent-safety-participant-briefing.md), not as a game penalty.
+
+Optional examples a GM may use instead of designing their own. None is required, and the GM may combine, adapt, or ignore them:
+
+- **Note only:** record the breach for the post-game review, with no in-game effect.
+- **Warning:** a private reminder of the information boundary to the commander involved.
+- **Reset:** void or re-issue an order that was based on leaked or improperly obtained information.
+- **In-fiction friction:** reflect the breach in play, for example through a delayed or less certain report to the breaching side.
+- **Result note:** record the breach next to that side's result in the post-game record.
+- **Removal:** for repeated or deliberate breaches after a warning, the GM may remove a participant from the playtest.
 
 ## End-of-scenario procedure
 
