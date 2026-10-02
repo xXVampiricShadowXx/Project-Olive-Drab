@@ -30,7 +30,9 @@ reports, rulings, map updates, or game notifications.
    `GM`, `NATO commander`, `Russia commander`, and `Observer` only if used.
    On each role's **Permissions** tab, keep game-role server-wide privileges
    minimal: leave `Administrator` and the management permissions in the matrix
-   disabled.
+   disabled. On the `NATO commander` and `Russia commander` roles' **Display**
+   tab, turn on **Allow anyone to @mention this role** so the GM can ping a
+   commander without any mass-mention permission.
    Save changes and assign each participant only their intended game role
    through the role's **Manage Members** tab. Audit all additional roles and
    application/bot principals; record role names in
@@ -56,11 +58,11 @@ reports, rulings, map updates, or game notifications.
    `#public-redacted-feed` (optional Observer's curated public transcript),
    `#observer-response` (optional, GM-visible interaction only),
    `#gm-orders-reports`, and `#gm-map-record` (GM-only records). Set the
-   per-channel permission profiles below via **Edit Channel > Permissions >
+   per-channel access levels below via **Edit Channel > Permissions >
    Add Roles or Members**. Save each override, including an explicit denial
-   for every role assigned `None`; inspect whether the channel is unsynced.
+   for every role assigned `No access`; inspect whether the channel is unsynced.
    Create `#observer-response` only if an Observer participates. Keep it
-   hidden from both commanders. Observer has standing text-only `Reply`
+   hidden from both commanders. Observer has standing `Text reply`
    access there for the whole playtest, but by conduct rule posts only to
    answer a question the GM has placed in that channel; the GM logs each
    question and reply and handles any unprompted post as a conduct matter,
@@ -83,9 +85,9 @@ reports, rulings, map updates, or game notifications.
    role actually exists in a later arrangement; do not invent one here.
 7. For a response-by reminder, the GM sends the deadline in the relevant
    private channel and pings only that commander's game role (not `@everyone`
-   or `@here`). The GM-only `Notify` profile on those two channels permits
-   non-mentionable role pings; it also permits mass mentions, which the GM
-   must not use. No commander receives that permission. Confirm delivery to
+   or `@here`). Because the commander roles are mentionable (step 3), the
+   GM's ordinary `Post` access is enough; no role, including GM, is granted
+   **Mention @everyone, @here, and All Roles**. Confirm delivery to
    the intended recipient. Record delivery time and the
    response-by time in the relevant register. Test the primary game-channel
    notification and the separately agreed `<backup contact method>` with a
@@ -95,10 +97,12 @@ reports, rulings, map updates, or game notifications.
 
 ## Permission matrix
 
-Apply each profile to the named role **on each channel**. `@everyone` uses
-`None` everywhere, including the category; `Observer` is optional. The
-profiles enumerate the actual Discord permission switches, not merely
-visibility. `A` means Allow and `D` means Deny; set explicit denies on each
+Apply each access level to the named role **on each channel**. The access
+levels (`No access`, `Read-only`, `Text reply`, `Post`) are this sheet's
+shorthand, not Discord settings: each one is a bundle of the real Discord
+permission switches listed in the second table. `@everyone` uses
+`No access` everywhere, including the category; `Observer` is optional.
+`A` means Allow and `D` means Deny; set explicit denies on each
 private channel rather than relying on an absent allow. `Manage Roles` is a
 server-level role permission, not a text-channel switch; it remains denied on
 all game roles. Server owner/administrator access is an exception that must be
@@ -106,40 +110,39 @@ audited separately.
 
 | Channel | @everyone | GM | NATO commander | Russia commander | Observer |
 |---|---|---|---|---|---|
-| `#group` | None | Post | Post | Post | None |
-| `#nato-private` | None | Notify | Post | None | None |
-| `#russia-private` | None | Notify | None | Post | None |
-| `#opposing-contact` | None | Post | Read | Read | None |
-| `#public-redacted-feed` | None | Post | Read | Read | Read |
-| `#gm-orders-reports` | None | Post | None | None | None |
-| `#gm-map-record` | None | Post | None | None | None |
-| `#observer-response` (only if Observer used) | None | Post | None | None | Reply (standing; answers GM-placed questions only) |
+| `#group` | No access | Post | Post | Post | No access |
+| `#nato-private` | No access | Post | Post | No access | No access |
+| `#russia-private` | No access | Post | No access | Post | No access |
+| `#opposing-contact` | No access | Post | Read-only | Read-only | No access |
+| `#public-redacted-feed` | No access | Post | Read-only | Read-only | Read-only |
+| `#gm-orders-reports` | No access | Post | No access | No access | No access |
+| `#gm-map-record` | No access | Post | No access | No access | No access |
+| `#observer-response` (only if Observer used) | No access | Post | No access | No access | Text reply (answers GM-placed questions only) |
 
-| Discord permission | None | Read | Reply (Observer only) | Post | Notify (GM only) |
-|---|:---:|:---:|:---:|:---:|:---:|
-| View Channels | D | A | A | A | A |
-| Send Messages | D | D | A | A | A |
-| Send Messages in Threads | D | D | D | D | D |
-| Create Public Threads | D | D | D | D | D |
-| Create Private Threads | D | D | D | D | D |
-| Read Message History | D | A | A | A | A |
-| Attach Files | D | D | D | A | A |
-| Embed Links | D | D | D | A | A |
-| Add Reactions | D | D | D | D | D |
-| Mention @everyone, @here, and All Roles | D | D | D | D | A |
-| Manage Messages | D | D | D | D | D |
-| Manage Channels | D | D | D | D | D |
-| Manage Roles (server-level role setting) | D | D | D | D | D |
-| Manage Threads | D | D | D | D | D |
-| Use Application Commands | D | D | D | D | D |
+| Discord permission (real setting name) | No access | Read-only | Text reply (Observer only) | Post |
+|---|:---:|:---:|:---:|:---:|
+| View Channels | D | A | A | A |
+| Send Messages | D | D | A | A |
+| Send Messages in Threads | D | D | D | D |
+| Create Public Threads | D | D | D | D |
+| Create Private Threads | D | D | D | D |
+| Read Message History | D | A | A | A |
+| Attach Files | D | D | D | A |
+| Embed Links | D | D | D | A |
+| Add Reactions | D | D | D | D |
+| Mention @everyone, @here, and All Roles | D | D | D | D |
+| Manage Messages | D | D | D | D |
+| Manage Channels | D | D | D | D |
+| Manage Roles (server-level role setting) | D | D | D | D |
+| Manage Threads | D | D | D | D |
+| Use Application Commands | D | D | D | D |
 
 The GM uses `Post` to place curated copies in the feed; commanders and
-Observer cannot post there. `Reply` is Observer's fixed text-only access in
+Observer cannot post there. `Text reply` is Observer's fixed text-only access in
 `#observer-response` for the whole playtest; Observer uses it only to answer a
-GM-placed question. `Notify` permits the GM to ping a
-non-mentionable
-commander role in its private channel; the GM must never use that grant for
-`@everyone` or `@here`. Disable application integrations/bots with extra
+GM-placed question. Role pings work because the two commander roles have
+**Allow anyone to @mention this role** turned on; nobody can use `@everyone`
+or `@here`. Disable application integrations/bots with extra
 access or test them as separate principals. Discord permission overrides and
 role stacking can change effective access, so the matrix is not a substitute
 for a live test. See Discord's [channel permission
@@ -185,7 +188,8 @@ guide](https://support.discord.com/hc/en-us/articles/360055709773-View-Server-As
 | Observer (if used) in all six other core channels | Cannot see/read/post/attach or follow a channel link | Any private or live group content accessible |
 | Observer in `#observer-response` (if used) | Reads the GM's permitted question and can reply with text only, visible to GM; cannot attach, react, thread, or see private opposing content | Attachment or other write action succeeds, a commander can see the channel, or any private opposing content is visible |
 | Server owner/setup administrator and other privileged identities | Owner/admin is GM-only; other moderators/bots cannot access or leak private game content | Commander/Observer is owner/admin, or privileged third party exposes records: NO-GO until isolated and retested |
-| Each non-GM game role in every accessible channel | Cannot mass-mention, manage messages/channels/roles/threads, or create private/public threads | Any such privilege succeeds |
+| Each game role, including GM, in every accessible channel | Cannot use `@everyone`/`@here`, manage messages/channels/roles/threads, or create private/public threads | Any such privilege succeeds |
+| GM pings a commander role in that commander's private channel | Role mention delivers a notification to that commander only | Mention fails or another participant is notified |
 | Opposing contact, with both commanders | Private request visible only to requester and GM; only GM can approve and post relay; both read approved relay; Observer cannot see it | Direct unapproved post, missing GM record, or private request exposed |
 | Each commander's role-ping deadline and `<backup contact method>` | Intended commander receives harmless reminder by both tested routes; GM records delivery and response-by time | No delivery, wrong audience, or unrecorded backup route |
 
