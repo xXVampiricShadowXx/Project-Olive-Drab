@@ -33,7 +33,7 @@ Use this checklist before and during the first live, supervised prototype. The G
 - [ ] Review each commander's proposed force-marker placement and require revision if it creates an unfair immediate advantage, such as placing all of the company's subordinate-unit markers directly on the objective.
 - [ ] Record approved starting locations and readiness privately on the master map before revealing the scenario clock.
 - [ ] Choose the starting weather and visibility; write the choice in the master log.
-- [ ] Publish the primary objective and the three control states: controlled, contested, and uncontrolled.
+- [ ] Publish the primary objective, the three control states (controlled, contested, and uncontrolled), and the selected secondary condition, if any, to both commanders before the first order.
 - [ ] Put the movement aid, routine action aid, order form, report format, and victory conditions where they can be used.
 - [ ] Put the prototype contact procedure, contact register, and response-window aid where they can be used.
 - [ ] Confirm that every player directly impacted by a combat or contested-action outcome can see the resolution roll; keep hidden information and unrevealed situation bands or modifiers under GM control.
@@ -99,6 +99,6 @@ Give each order, report, map update, and ruling a sequential ID. Record the sour
 - [ ] For the first human test, apply the Day 1 primary result after the final control-state check.
 - [ ] For a broader seven-day test, at the end of Day 7's active window, stop timers and resolve actions completed by the exact deadline.
 - [ ] Record the final master-map state and control state.
-- [ ] Apply the published primary result, then any selected secondary condition.
+- [ ] Apply the published primary result, then adjudicate whether either side achieved the selected secondary condition, if any.
 - [ ] Send both commanders the same public result and their final private status.
 - [ ] Preserve the logs and list unresolved questions for the playtest report.
