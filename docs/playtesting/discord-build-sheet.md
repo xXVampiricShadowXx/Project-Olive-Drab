@@ -110,10 +110,10 @@ audited separately.
 
 | Channel | @everyone | GM | NATO commander | Russia commander | Observer |
 |---|---|---|---|---|---|
-| `#group` | No access | Post | Post | Post | No access |
+| `#group` | No access | Post | Post | Post | Read-only |
 | `#nato-private` | No access | Post | Post | No access | No access |
 | `#russia-private` | No access | Post | No access | Post | No access |
-| `#opposing-contact` | No access | Post | Read-only | Read-only | No access |
+| `#opposing-contact` | No access | Post | Read-only | Read-only | Read-only |
 | `#public-redacted-feed` | No access | Post | Read-only | Read-only | Read-only |
 | `#gm-orders-reports` | No access | Post | No access | No access | No access |
 | `#gm-map-record` | No access | Post | No access | No access | No access |
@@ -184,13 +184,13 @@ guide](https://support.discord.com/hc/en-us/articles/360055709773-View-Server-As
 | Russia in `#group`, `#russia-private` | Can see/read, post harmless text and attach harmless file | Missing expected access or failed post/attachment |
 | Russia in `#opposing-contact`, `#public-redacted-feed` | Can see/read but cannot post, attach, react, create or post in threads, or run commands | Any write/attachment/reaction/thread/command succeeds |
 | Russia in `#nato-private`, both GM records and optional observer response | Cannot see/read/post/attach or get a working channel link | Any content or action accessible |
-| Observer (if used) in `#public-redacted-feed` | Sees only curated public/redacted text and history; cannot post, attach, react, thread, or run commands | Missing feed or any write action succeeds |
-| Observer (if used) in all six other core channels | Cannot see/read/post/attach or follow a channel link | Any private or live group content accessible |
+| Observer (if used) in `#group`, `#opposing-contact`, `#public-redacted-feed` | Can see and read history of public channels and the curated feed; cannot post, attach, react, thread, or run commands | Missing access or any write action succeeds |
+| Observer (if used) in `#nato-private`, `#russia-private`, and both GM record channels | Cannot see/read/post/attach or follow a channel link | Any private side or GM-only content accessible |
 | Observer in `#observer-response` (if used) | Reads the GM's permitted question and can reply with text only, visible to GM; cannot attach, react, thread, or see private opposing content | Attachment or other write action succeeds, a commander can see the channel, or any private opposing content is visible |
 | Server owner/setup administrator and other privileged identities | Owner/admin is GM-only; other moderators/bots cannot access or leak private game content | Commander/Observer is owner/admin, or privileged third party exposes records: NO-GO until isolated and retested |
 | Each game role, including GM, in every accessible channel | Cannot use `@everyone`/`@here`, manage messages/channels/roles/threads, or create private/public threads | Any such privilege succeeds |
 | GM pings a commander role in that commander's private channel | Role mention delivers a notification to that commander only | Mention fails or another participant is notified |
-| Opposing contact, with both commanders | Private request visible only to requester and GM; only GM can approve and post relay; both read approved relay; Observer cannot see it | Direct unapproved post, missing GM record, or private request exposed |
+| Opposing contact, with both commanders | Private request visible only to requester and GM; only GM can approve and post relay; both read approved relay; Observer can read the approved relay only, never the private request | Direct unapproved post, missing GM record, or private request exposed |
 | Each commander's role-ping deadline and `<backup contact method>` | Intended commander receives harmless reminder by both tested routes; GM records delivery and response-by time | No delivery, wrong audience, or unrecorded backup route |
 
 Do not mark issue #14 or the final preflight complete from this build sheet.
