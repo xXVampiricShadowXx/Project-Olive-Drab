@@ -341,9 +341,10 @@ From [control and victory conditions](../game-design/08-control-and-victory-cond
   primary objective
   ([secondary conditions](../game-design/08-control-and-victory-conditions.md#optional-secondary-conditions-for-testing)).
 - **Information discipline** is not a victory condition. It is a standing
-  expectation throughout play. Breaches are recorded for review; consequences
-  are pending a rule-owner decision
-  ([information discipline](../game-design/08-control-and-victory-conditions.md#information-discipline)).
+  expectation throughout play. The GM records breaches and decides whether
+  any consequence applies; no penalty is required, and optional examples are
+  provided
+  ([consequences for breaches](../game-design/08-control-and-victory-conditions.md#consequences-for-breaches)).
 - The victory test is published before the first order
   ([fairness safeguards](../game-design/08-control-and-victory-conditions.md#fairness-safeguards)).
 
