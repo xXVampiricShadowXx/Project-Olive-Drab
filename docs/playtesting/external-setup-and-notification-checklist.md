@@ -28,19 +28,41 @@ not prove any item below is complete.
   human leak testing.
 - [ ] The GM machine is the user's PC with Python 3.12.10 available as
   `py -3`; Pillow is not installed yet. Install it with
-  `py -3 -m pip install -r requirements-map.txt`, then complete an unaided
-  dry run using `py -3 scripts/render_map.py GAME.toml --out DIR --check`
-  and a real render to confirm the renderer works on that machine.
-- [ ] Keep the private `GAME.toml` and master snapshots outside the repository
-  and Discord. Confirm the actual Discord text-channel names for the NATO,
-  Russia, and GM records destinations before posting.
-- [ ] Create one GM master view and filtered NATO and Russia views.
-- [ ] Test that hidden markers, layers, links, exports, and screen sharing do
-  not leak opposing private information; commanders can view only their own
-  private channel, while an Observer (if used) has read-only access to all
-  channels.
-- [ ] Confirm that players can read the PNGs on a phone and that each commander
-  account sees only its own side's channel.
+  `py -3 -m pip install -r requirements-map.txt` from the repository root.
+  Copy the fictional fixture to `%USERPROFILE%\OliveDrabPrivate\game.toml`
+  outside the repository and replace **all test content** before real use.
+  From the repository root, complete an unaided `--check` and real render
+  using the concrete commands in the
+  [build sheet](shared-map-build-sheet.md).
+- [ ] Keep the private game TOML, master snapshots, and backup outside the
+  repository and Discord. Write `updated_at` and `released_at` with the
+  shared local time-zone offset (for example, `-07:00`). Confirm the exact
+  Discord text-channel names match the renderer's posting manifest.
+- [ ] Render a GM-master PNG and separate filtered NATO and Russia PNGs with
+  captions; the master is for `#gm-map-record` only.
+- [ ] Test renderer inclusion and filtering with fictional markers: each
+  side PNG and caption contains only public and earned side-visible data,
+  never opposing live markers, hidden zones, GM notes, `source_id`, opposing
+  `marker_id`, or master descriptions. Verify the side PNG shows friendly
+  `cite` and opposing `release_id` and `released_at`; the text caption lists
+  released descriptions only. Moving a live marker must not silently update
+  an older released report.
+- [ ] Test Discord permissions with each actual commander account: each sees
+  only its own private channel, not the opposing channel or
+  `#gm-map-record`. If used, the Observer has read-only audit access to all
+  needed channels and cannot post.
+- [ ] Inspect generated PNGs and captions against the manifest: side,
+  version, banner, filename, and channel must agree. Inspect superseded
+  Discord posts for leaks and distinguish newer versions; neither posts nor
+  `#gm-map-record` serve as the private master backup.
+- [ ] Test screen sharing of a filtered view without exposing the master,
+  other side, thumbnails, notifications, or private paths.
+- [ ] With each commander's actual account, verify that a phone displays
+  that side's PNG legibly and cannot see the opposing side or master channel.
+- [ ] Use the [build-sheet pre-post checklist](shared-map-build-sheet.md)
+  for one-file/one-channel posting, and stop all further posts on a
+  wrong-channel incident until the GM ruling is recorded. Deletion is not
+  a fix; corrected re-posts require a new version.
 - [ ] Record map version, exact channel names, access list, snapshot method,
   private backup location, restore result, and leak-test results.
 
