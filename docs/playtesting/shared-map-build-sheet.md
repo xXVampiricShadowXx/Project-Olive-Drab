@@ -23,7 +23,10 @@ mechanics and does not change the authority of doc 12.
    side-owned markers, GM notes, and a separate release record for each side.
    Give every side-owned marker a `cite` containing that side's own order or
    report ID. Each opposing release has a side-visible `release_id` and
-   `released_at`; its `source_id` and `marker_id` remain private.
+   `released_at`; its `source_id` and `marker_id` remain private. Number
+   `release_id` independently for each side: NATO releases use `R-N-###`
+   and Russia releases use `R-R-###`, counting only that side's own releases.
+   Never use a shared sequence that reveals the opponent's release count.
    A sector in `control` is an announced public state only; keep unannounced
    internal control assessments in GM notes, not in that public table.
    A side image reads opposing locations **only** from that side's release
@@ -111,7 +114,10 @@ control-pair labels distinct from the public control state issued by the GM.
 
 The GM updates and time-stamps the master first, then records separately for
 each side the released sector, confidence, label/description, `released_at`,
-and side-visible `release_id`. The side PNG shows these release IDs and times
+and side-visible `release_id`. Assign each new NATO release the next
+`R-N-###` and each new Russia release the next `R-R-###` in its own sequence;
+neither side's ID reveals how many releases the other side received. The side
+PNG shows these release IDs and times
 plus each friendly marker's own `cite`, tagging each list entry OWN or OPP
 so ownership is not shown by color alone. The text caption is the
 phone-readable layer: a `vN SIDE timestamp` header, a static confidence
@@ -187,10 +193,10 @@ temporary workaround is documented.
 |---|---|---|
 | Grid and public base | All 30 IDs, names, terrain, approaches, crossings, river boundary, two control pairs and two approach pairs match doc 12 in all views | Any missing, changed, shifted, or extra feature |
 | Render inclusion/filtering | Side image contains public base, its own markers, and only records explicitly released to that side; moving a live opposing marker does not update an older release | Live master location, other side's release, hidden zone, GM note, internal ID/source, or unearned marker is drawn or placed in rendered text |
-| Discord channel permissions | Commander account can view only its own private channel; GM can view all; Observer (if used) can read all channels but cannot post; `#gm-map-record` is GM record-only | Commander can read opposing private channel or master record, or Observer can post |
+| Discord channel permissions | Commander account can view only its own private channel; GM can view all; Observer (if used) can read all game channels but cannot post in them (except a text reply to a GM-placed question in `#observer-response`); `#gm-map-record` is GM record-only | Commander can read opposing private channel or master record, or Observer can post in a game channel outside that limited reply |
 | Generated files and captions | Each direct-upload file and caption has the same side/version as its banner and is posted to the matching channel; the master is confined to `#gm-map-record` | A mixed-side file/caption, private text, unearned state, or master file is posted to a side |
 | Superseded Discord posts | Newer versions are identifiable; private master and backup remain outside Discord | A superseded post reveals unearned content or is treated as the only backup |
-| Observer audit access (if used) | Observer can open the master and both filtered views but cannot edit, comment, share, or change any marker | Any edit or share action succeeds, or a view is missing |
+| Observer audit access (if used) | Observer can read `#gm-map-record` and both side channels but cannot attach a file, post in those channels, or reveal a view to a commander | A required channel is unreadable, or an unauthorized post, attachment, or disclosure succeeds |
 | Screen sharing | Sharing the intended filtered window reveals only that view, with no master tab, notifications, thumbnails or private URLs | Master, other side, hidden state or private report appears on screen |
 
 Record the following in the GM's
