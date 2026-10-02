@@ -8,6 +8,7 @@ import sys
 import tempfile
 import tomllib
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -148,12 +149,19 @@ class FilteringTests(unittest.TestCase):
         self.assertEqual([item["sector"] for item in russia_records], ["F2", "B3"])
         self.assertEqual(nato_records[1]["confidence"], "reported")
         self.assertEqual(russia_records[1]["confidence"], "suspected")
-        self.assertTrue(all(item["kind"] == "friendly" or item["release_id"] == "release-n-01" for item in nato_records))
-        self.assertTrue(all(item["kind"] == "friendly" or item["release_id"] == "release-r-01" for item in russia_records))
+        self.assertTrue(all(item["kind"] == "friendly" or item["release_id"] == "R-N-001" for item in nato_records))
+        self.assertTrue(all(item["kind"] == "friendly" or item["release_id"] == "R-R-001" for item in russia_records))
         self.assertNotIn("unit-rus-7-private", "\n".join(render_map.visible_text_inputs(self.game, self.base, "nato")))
         self.assertNotIn("GM_SECRET_NEVER_RENDER", "\n".join(render_map.visible_text_inputs(self.game, self.base, "nato")))
         self.assertNotIn("order-private-99", "\n".join(render_map.visible_text_inputs(self.game, self.base, "nato")))
         self.assertNotIn("report-private-42", "\n".join(render_map.visible_text_inputs(self.game, self.base, "russia")))
+
+    def test_side_zones_exclude_opposing_zone(self):
+        for side, opponent in (("nato", "russia"), ("russia", "nato")):
+            zones = render_map.visible_zones(self.game, side)
+            self.assertEqual(set(zones), {side})
+            self.assertNotIn(opponent, zones)
+            self.assertEqual(zones[side], self.game["zones"][side])
 
     def test_stale_release_stays_at_reported_sector_after_master_moves(self):
         stale = self.game["releases"]["nato"][0]
@@ -216,6 +224,29 @@ class SchemaTests(unittest.TestCase):
         with self.assertRaisesRegex(render_map.MapError, "visibility must be master"):
             self.validate_copy(make_opponent_visible)
 
+    def test_own_markers_require_cited_ids_and_all_ids_match_schema(self):
+        with self.assertRaisesRegex(render_map.MapError, "missing field.*cite"):
+            self.validate_copy(lambda game: game["own"]["nato"][0].pop("cite"))
+
+        for field, value in (
+            ("cite", "invalid order id"),
+            ("cite", "O" * 25),
+        ):
+            def mutate(game, field=field, value=value):
+                game["own"]["nato"][0][field] = value
+
+            with self.subTest(field=field, value=value):
+                with self.assertRaisesRegex(render_map.MapError, "must match"):
+                    self.validate_copy(mutate)
+
+        for invalid_id in ("release id", "R" * 25):
+            def mutate(game, invalid_id=invalid_id):
+                game["releases"]["nato"][0]["release_id"] = invalid_id
+
+            with self.subTest(release_id=invalid_id):
+                with self.assertRaisesRegex(render_map.MapError, "must match"):
+                    self.validate_copy(mutate)
+
 
 class PathAndOutputTests(unittest.TestCase):
     def test_cli_check_validates_and_prints_manifest_without_writing_files(self):
@@ -274,38 +305,166 @@ class PathAndOutputTests(unittest.TestCase):
 
 
 class PillowSmokeTests(unittest.TestCase):
+    @staticmethod
+    def render_with_text_capture(game, base, side, image_path):
+        from PIL import ImageDraw
+
+        captured = []
+        original_text = ImageDraw.ImageDraw.text
+
+        def capture(draw, xy, text, *args, **kwargs):
+            font = kwargs.get("font")
+            captured.append((text, getattr(font, "size", None)))
+            return original_text(draw, xy, text, *args, **kwargs)
+
+        with patch.object(ImageDraw.ImageDraw, "text", capture):
+            render_map.render_png(game, base, side, image_path)
+        return captured
+
+    @staticmethod
+    def assert_png_has_only_allowed_chunks(test_case, image_path):
+        from PIL import Image
+
+        with Image.open(image_path) as image:
+            test_case.assertEqual(image.format, "PNG")
+            test_case.assertEqual(set(image.info), set())
+        data = image_path.read_bytes()
+        offset = 8
+        chunk_types = []
+        while offset < len(data):
+            length = int.from_bytes(data[offset : offset + 4], "big")
+            chunk_type = data[offset + 4 : offset + 8].decode("ascii")
+            chunk_types.append(chunk_type)
+            offset += 12 + length
+        test_case.assertEqual(chunk_types[0], "IHDR")
+        test_case.assertEqual(chunk_types[-1], "IEND")
+        test_case.assertTrue(set(chunk_types) <= {"IHDR", "IDAT", "IEND"})
+        test_case.assertEqual(chunk_types.count("IHDR"), 1)
+        test_case.assertEqual(chunk_types.count("IEND"), 1)
+
     @unittest.skipUnless(importlib.util.find_spec("PIL"), "Pillow is not installed")
     def test_png_size_banner_and_chunk_allowlist(self):
         from PIL import Image
 
         game = render_map.validate_game(tomllib.loads(FIXTURE.read_text(encoding="utf-8")), render_map.load_base())
         with tempfile.TemporaryDirectory() as temporary:
-            image_path = Path(temporary) / "v3-nato.png"
-            render_map.render_png(game, render_map.load_base(), "nato", image_path)
-            image = Image.open(image_path)
-            self.assertEqual(image.size[0], render_map.CANVAS[0])
-            self.assertGreaterEqual(image.size[1], render_map.CANVAS[1])
-            self.assertEqual(image.format, "PNG")
-            self.assertEqual(set(image.info), set())
-            image.close()
+            for side, filename in (
+                ("nato", "v3-nato.png"),
+                ("russia", "v3-russia.png"),
+                ("master", "v3-GM-MASTER-DO-NOT-POST.png"),
+            ):
+                with self.subTest(side=side):
+                    image_path = Path(temporary) / filename
+                    render_map.render_png(game, render_map.load_base(), side, image_path)
+                    with Image.open(image_path) as image:
+                        self.assertEqual(image.size[0], render_map.CANVAS[0])
+                        self.assertGreaterEqual(image.size[1], render_map.CANVAS[1])
+                    self.assert_png_has_only_allowed_chunks(self, image_path)
+
             title, updated = render_map.banner_lines(game, "nato")
             self.assertEqual(title, "NATO SIDE MAP  |  VERSION 3")
             self.assertEqual(updated, "Updated: 2026-10-01T12:30:00Z")
             self.assertIn(title, render_map.visible_text_inputs(game, render_map.load_base(), "nato"))
 
-            data = image_path.read_bytes()
-            offset = 8
-            chunk_types = []
-            while offset < len(data):
-                length = int.from_bytes(data[offset : offset + 4], "big")
-                chunk_type = data[offset + 4 : offset + 8].decode("ascii")
-                chunk_types.append(chunk_type)
-                offset += 12 + length
-            self.assertEqual(chunk_types[0], "IHDR")
-            self.assertEqual(chunk_types[-1], "IEND")
-            self.assertTrue(set(chunk_types) <= {"IHDR", "IDAT", "IEND"})
-            self.assertEqual(chunk_types.count("IHDR"), 1)
-            self.assertEqual(chunk_types.count("IEND"), 1)
+    @unittest.skipUnless(importlib.util.find_spec("PIL"), "Pillow is not installed")
+    def test_rendered_side_text_uses_only_safe_side_sources(self):
+        game = render_map.validate_game(tomllib.loads(FIXTURE.read_text(encoding="utf-8")), render_map.load_base())
+        base = render_map.load_base()
+        token_pattern = re.compile(r"[A-Za-z0-9]+(?:[-:][A-Za-z0-9]+)*")
+        static_text = (
+            "NORTH: Pine Road (N)",
+            "SOUTH: River Road (S) | BLUEWATER RIVER: boundary between rows 4 and 5",
+            "WEST: West Approach (W) | EAST: East Road (E)",
+            "Crossings: C4-C5, D4-D5",
+            "Objectives:",
+            "TERRAIN: open | road | broken | built | woods",
+            "CONFIRMED REPORTED SUSPECTED",
+            "CONTROL: N=NATO  R=RUSSIA  C=CONTESTED  U=UNCONTROLLED",
+            "MARKERS (shape and status identify confidence)",
+            "VERSION Updated CITE ZONE NATO ZONE RUSSIA ZONE SIDE MAP",
+            "GM MASTER DO NOT POST",
+            "01 02 03 04 05 06",
+        )
+
+        def allowed_tokens(side):
+            safe_values = list(static_text)
+            safe_values.extend((str(game["version"]), game["updated_at"]))
+            safe_values.extend(game["control"].keys())
+            safe_values.extend(game["control"].values())
+            safe_values.extend(game["zones"][side])
+            safe_values.extend((base["name"], base["river_name"], *base["crossings"]))
+            for sector in base["sectors"]:
+                safe_values.extend(sector.values())
+            for group in ("approaches", "objectives"):
+                for item in base[group]:
+                    safe_values.extend(
+                        value if isinstance(value, str) else " ".join(value)
+                        for value in item.values()
+                    )
+            for marker in game["own"][side]:
+                safe_values.extend(
+                    marker[field]
+                    for field in ("id", "cite", "owner", "sector", "label", "description", "visibility", "confidence")
+                )
+            for release in game["releases"][side]:
+                safe_values.extend(
+                    release[field]
+                    for field in (
+                        "release_id",
+                        "sector",
+                        "confidence",
+                        "label",
+                        "description",
+                        "released_at",
+                        "visibility",
+                    )
+                )
+            source_tokens = {
+                token
+                for value in safe_values
+                for token in token_pattern.findall(str(value))
+            }
+            return source_tokens | {token.upper() for token in source_tokens}
+
+        with tempfile.TemporaryDirectory() as temporary:
+            for side, opponent in (("nato", "russia"), ("russia", "nato")):
+                with self.subTest(side=side):
+                    captured = self.render_with_text_capture(
+                        game, base, side, Path(temporary) / f"v3-{side}.png"
+                    )
+                    self.assertTrue(captured)
+                    drawn_strings = [text for text, _ in captured]
+                    joined_drawn = "\n".join(drawn_strings)
+                    forbidden = [
+                        *(
+                            value
+                            for marker in game["master_markers"]
+                            for value in (marker["id"], marker["description"])
+                        ),
+                        *game["gm_notes"],
+                        *(release["source_id"] for releases in game["releases"].values() for release in releases),
+                        *(
+                            value
+                            for release in game["releases"][opponent]
+                            for value in (release["release_id"], release["label"], release["description"])
+                        ),
+                    ]
+                    for value in forbidden:
+                        self.assertNotIn(value, joined_drawn)
+
+                    approved = allowed_tokens(side)
+                    for drawn, font_size in captured:
+                        self.assertIsInstance(drawn, str)
+                        self.assertIsInstance(font_size, int)
+                        self.assertTrue(
+                            set(token_pattern.findall(drawn)) <= approved,
+                            f"drawn text contains an unapproved token: {drawn!r}",
+                        )
+                    own_cite = game["own"][side][0]["cite"]
+                    own_release = game["releases"][side][0]
+                    self.assertIn(own_cite, joined_drawn)
+                    self.assertIn(own_release["release_id"], joined_drawn)
+                    self.assertIn(own_release["released_at"], joined_drawn)
 
     @unittest.skipUnless(importlib.util.find_spec("PIL"), "Pillow is not installed")
     def test_render_outputs_side_directories_and_captions(self):
