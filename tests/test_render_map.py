@@ -156,6 +156,17 @@ class FilteringTests(unittest.TestCase):
         self.assertNotIn("order-private-99", "\n".join(render_map.visible_text_inputs(self.game, self.base, "nato")))
         self.assertNotIn("report-private-42", "\n".join(render_map.visible_text_inputs(self.game, self.base, "russia")))
 
+    def test_visible_text_inputs_supports_master_and_rejects_unknown_side(self):
+        master_text = render_map.visible_text_inputs(self.game, self.base, "master")
+        self.assertIn("GM MASTER - DO NOT POST  |  VERSION 3", master_text)
+        for marker in self.game["master_markers"]:
+            self.assertIn(
+                f"{marker['label']} {marker['sector']} {marker['confidence'].upper()}",
+                master_text,
+            )
+        with self.assertRaisesRegex(render_map.MapError, "side must be"):
+            render_map.visible_text_inputs(self.game, self.base, "observer")
+
     def test_side_zones_exclude_opposing_zone(self):
         for side, opponent in (("nato", "russia"), ("russia", "nato")):
             zones = render_map.visible_zones(self.game, side)

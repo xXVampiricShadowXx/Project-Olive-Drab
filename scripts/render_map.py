@@ -301,7 +301,12 @@ def visible_zones(game: dict[str, Any], side: str) -> dict[str, list[str]]:
 
 def visible_text_inputs(game: dict[str, Any], base: dict[str, Any], side: str) -> list[str]:
     """Expose dynamic strings approved for a view image or its caption."""
-    records = game["master_markers"] if side == "master" else marker_records(game, side)
+    if side == "master":
+        records = [{**marker, "kind": "master"} for marker in game["master_markers"]]
+    elif side in SIDES:
+        records = marker_records(game, side)
+    else:
+        raise MapError("side must be nato, russia, or master")
     text = [
         *banner_lines(game, side),
         base["name"],
