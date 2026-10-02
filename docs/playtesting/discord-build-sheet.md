@@ -13,17 +13,19 @@ reports, rulings, map updates, or game notifications.
 
 1. **Dedicated server:** The user uses Discord desktop's **Add a Server >
    Create My Own** to create a game-only server, then keeps unrelated members
-   out. The server owner retains setup privileges; do not give a commander
-   or Observer `Administrator`. Record the server choice in issue #14, without
+   out. The server owner/setup administrator must be the GM, not a commander
+   or Observer: privileged access bypasses channel denies. Record the server
+   choice in issue #14, without
    invite links or personal identifiers.
 2. **Existing server:** The user uses the existing server and reserves one
    game-only `Brackenford Game` category. Audit every participant's other
    roles, including moderation roles and `Administrator`: another role or
-   server-wide privilege may defeat a game-channel restriction. Do not put
-   the master map in a generally shared server channel. If an existing
-   privilege bypasses isolation, change that participant's privileges or
-   use another isolated container before play. Record the decision in issue
-   #14.
+   server-wide privilege may defeat a game-channel restriction. The server
+   owner/setup administrator must be the GM, not a commander or Observer.
+   If that cannot be arranged, this variant is **NO-GO**; use an isolated
+   server/platform with a privileged GM owner and retest. Do not put the
+   master map in a generally shared server channel. Record the decision in
+   issue #14.
 3. In either variant, open **Server Settings > Roles > Create Role**. Create
    `GM`, `NATO commander`, `Russia commander`, and `Observer` only if used.
    On each role's **Permissions** tab, keep game-role server-wide privileges
@@ -46,10 +48,21 @@ reports, rulings, map updates, or game notifications.
    `#russia-private` (Russia and GM orders/reports),
    `#opposing-contact` (GM-approved, GM-visible relay),
    `#public-redacted-feed` (optional Observer's curated public transcript),
+   `#observer-response` (optional, GM-visible interaction only),
    `#gm-orders-reports`, and `#gm-map-record` (GM-only records). Set the
    per-channel permission profiles below via **Edit Channel > Permissions >
    Add Roles or Members**. Save each override, including an explicit denial
    for every role assigned `None`; inspect whether the channel is unsynced.
+   Create `#observer-response` only if an Observer participates. Keep it
+   hidden from both commanders, with Observer initially read-only; when
+   a commander or GM explicitly interacts with Observer, the GM grants
+   `Send Messages` to Observer in this channel for that exchange (replace
+   the channel's explicit Deny with Allow), logs the question and reply,
+   then restores Deny and verifies posting is denied again. A commander
+   asks through `#group` only when the question
+   is non-sensitive, or through their own private channel otherwise; the
+   GM relays only the permitted question and any redacted response. Never
+   paste a live opposing private report into the Observer channel.
    Keep the feed even without an Observer only if useful to the GM; do not
    assign another audience to it. Store the master map and private register
    links only in GM-only locations, with a separate backup per the
@@ -94,27 +107,30 @@ audited separately.
 | `#public-redacted-feed` | None | Post | Read | Read | Read |
 | `#gm-orders-reports` | None | Post | None | None | None |
 | `#gm-map-record` | None | Post | None | None | None |
+| `#observer-response` (only if Observer used) | None | Post | None | None | Read; temporary Reply during GM-authorized exchange |
 
-| Discord permission | None | Read | Post | Notify (GM only) |
-|---|:---:|:---:|:---:|:---:|
-| View Channels | D | A | A | A |
-| Send Messages | D | D | A | A |
-| Send Messages in Threads | D | D | D | D |
-| Create Public Threads | D | D | D | D |
-| Create Private Threads | D | D | D | D |
-| Read Message History | D | A | A | A |
-| Attach Files | D | D | A | A |
-| Embed Links | D | D | A | A |
-| Add Reactions | D | D | D | D |
-| Mention @everyone, @here, and All Roles | D | D | D | A |
-| Manage Messages | D | D | D | D |
-| Manage Channels | D | D | D | D |
-| Manage Roles (server-level role setting) | D | D | D | D |
-| Manage Threads | D | D | D | D |
-| Use Application Commands | D | D | D | D |
+| Discord permission | None | Read | Reply (temporary Observer) | Post | Notify (GM only) |
+|---|:---:|:---:|:---:|:---:|:---:|
+| View Channels | D | A | A | A | A |
+| Send Messages | D | D | A | A | A |
+| Send Messages in Threads | D | D | D | D | D |
+| Create Public Threads | D | D | D | D | D |
+| Create Private Threads | D | D | D | D | D |
+| Read Message History | D | A | A | A | A |
+| Attach Files | D | D | D | A | A |
+| Embed Links | D | D | D | A | A |
+| Add Reactions | D | D | D | D | D |
+| Mention @everyone, @here, and All Roles | D | D | D | D | A |
+| Manage Messages | D | D | D | D | D |
+| Manage Channels | D | D | D | D | D |
+| Manage Roles (server-level role setting) | D | D | D | D | D |
+| Manage Threads | D | D | D | D | D |
+| Use Application Commands | D | D | D | D | D |
 
 The GM uses `Post` to place curated copies in the feed; commanders and
-Observer cannot post there. `Notify` permits the GM to ping a non-mentionable
+Observer cannot post there. `Reply` is a time-limited channel override, not
+a standing observer role permission. `Notify` permits the GM to ping a
+non-mentionable
 commander role in its private channel; the GM must never use that grant for
 `@everyone` or `@here`. Disable application integrations/bots with extra
 access or test them as separate principals. Discord permission overrides and
@@ -132,8 +148,11 @@ select **View Server As Role**; select combined roles in the preview bar to
 audit stacked privileges, then **Disable** the preview. Have the actual
 participants check from their own accounts: role preview does not prove
 delivery, attachment behavior, notification receipt, or stacked-role safety.
-Repeat for any participant holding more than one role, for the server owner
-if playing, and after changing permission overrides. For every row below,
+Repeat for any participant holding more than one role and after changing
+permission overrides. Inspect the actual server owner and every administrator
+identity separately: **PASS** only if these privileged identities are GM-only,
+never a commander or Observer, and no other moderator/bot can expose game
+records. Role preview cannot simulate owner/administrator bypass. For every row below,
 record actual `PASS` or `FAIL`, channel name, role, and a redacted observation
 in the [readiness guide section 2](human-playtest-readiness-guide.md) dry-run
 completion fields, [communication rehearsal](human-communication-order-rehearsal.md)
@@ -146,16 +165,18 @@ guide](https://support.discord.com/hc/en-us/articles/360055709773-View-Server-As
 
 | Check (repeat for each named channel/role) | Expected PASS | Expected FAIL to verify |
 |---|---|---|
-| `@everyone` in each of the seven channels | Cannot see, read history, post, or attach | Any channel or history visible, or posting succeeds |
-| GM in each of the seven channels | Can see/read, post harmless text and attach harmless file | Any required channel or action inaccessible |
+| `@everyone` in each of the seven core channels (plus optional `#observer-response`) | Cannot see, read history, post, or attach | Any channel or history visible, or posting succeeds |
+| GM in each core and optional channel | Can see/read, post harmless text and attach harmless file | Any required channel or action inaccessible |
 | NATO in `#group`, `#nato-private` | Can see/read, post harmless text and attach harmless file | Missing expected access or failed post/attachment |
 | NATO in `#opposing-contact`, `#public-redacted-feed` | Can see/read but cannot post, attach, react, create or post in threads, or run commands | Any write/attachment/reaction/thread/command succeeds |
-| NATO in `#russia-private`, both GM records | Cannot see/read/post/attach or get a working channel link | Any content or action accessible |
+| NATO in `#russia-private`, both GM records and optional observer response | Cannot see/read/post/attach or get a working channel link | Any content or action accessible |
 | Russia in `#group`, `#russia-private` | Can see/read, post harmless text and attach harmless file | Missing expected access or failed post/attachment |
 | Russia in `#opposing-contact`, `#public-redacted-feed` | Can see/read but cannot post, attach, react, create or post in threads, or run commands | Any write/attachment/reaction/thread/command succeeds |
-| Russia in `#nato-private`, both GM records | Cannot see/read/post/attach or get a working channel link | Any content or action accessible |
+| Russia in `#nato-private`, both GM records and optional observer response | Cannot see/read/post/attach or get a working channel link | Any content or action accessible |
 | Observer (if used) in `#public-redacted-feed` | Sees only curated public/redacted text and history; cannot post, attach, react, thread, or run commands | Missing feed or any write action succeeds |
-| Observer (if used) in all six other channels | Cannot see/read/post/attach or follow a channel link | Any private or live group content accessible |
+| Observer (if used) in all six other core channels | Cannot see/read/post/attach or follow a channel link | Any private or live group content accessible |
+| Observer in `#observer-response` (if used) | Reads only the GM's permitted question; cannot post/attach before or after a GM-authorized exchange; during it can reply with text only, visible to GM; GM closes the override | Standing post rights, an unlogged reply, attachment, or any private opposing content |
+| Server owner/setup administrator and other privileged identities | Owner/admin is GM-only; other moderators/bots cannot access or leak private game content | Commander/Observer is owner/admin, or privileged third party exposes records: NO-GO until isolated and retested |
 | Each non-GM game role in every accessible channel | Cannot mass-mention, manage messages/channels/roles/threads, or create private/public threads | Any such privilege succeeds |
 | Opposing contact, with both commanders | Private request visible only to requester and GM; only GM can approve and post relay; both read approved relay; Observer cannot see it | Direct unapproved post, missing GM record, or private request exposed |
 | Each commander's role-ping deadline and `<backup contact method>` | Intended commander receives harmless reminder by both tested routes; GM records delivery and response-by time | No delivery, wrong audience, or unrecorded backup route |
