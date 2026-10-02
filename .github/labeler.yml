@@ -1,0 +1,14 @@
+# Path-based PR labels for actions/labeler@v4 (see .github/workflows/label.yml).
+# Only existing repository labels are used.
+documentation:
+  - '**/*.md'
+
+game-design:
+  - docs/game-design/**
+
+playtesting:
+  - docs/playtesting/**
+
+infrastructure:
+  - .github/**
+  - scripts/**
