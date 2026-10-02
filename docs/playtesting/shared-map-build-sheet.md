@@ -53,9 +53,10 @@ control-pair labels distinct from the public control state issued by the GM.
 
 | View | Contents and boundary |
 |---|---|
-| GM master | All force locations and strength, both hidden starting zones, orders/readiness/supply notes, conditions and unresolved rulings, current and stale reports, control, map version and information-release log. GM-only access. |
+| GM master | All force locations and strength, both hidden starting zones, orders/readiness/supply notes, conditions and unresolved rulings, current and stale reports, control, map version and information-release log. GM-only edit access; the Observer (if used) has view-only audit access. |
 | NATO filtered | Public terrain/grid/approaches/objectives and public control updates; own zone and current friendly markers/status/orders/readiness/supply, own observations and information earned from confirmed or reported releases. Opposing positions appear only when earned. Commander annotations of uncertain positions are clearly `suspected` and separate from confirmed markers. No Russia zone or private reports. |
 | Russia filtered | Same public base and release rules; own zone and current friendly markers/status/orders/readiness/supply, own observations and earned releases. Opposing positions appear only when earned. Uncertain commander annotations are clearly `suspected`, never overwriting confirmed markers. No NATO zone or private reports. |
+| Observer audit (only if Observer used) | View-only access to the GM master and both filtered views, for auditing the playtest. No edit, comment, or share rights. The Observer never reveals master or opposing content to either commander. |
 
 The GM updates and time-stamps the master first, then publishes only the
 portion earned by each side, with the operating procedure's `confirmed`,
@@ -96,6 +97,7 @@ temporary workaround is documented.
 | Share links/permissions | Side link opens only that side's view for its intended identity; unauthorized or anonymous recipient cannot open master/other view | Link forwards or role inheritance expose any unearned content |
 | Exports/downloads/print | Side export, preview, download, and print contain only that side's permitted view | Master, hidden layer, notes or other side's data appears anywhere in output |
 | Version/edit history | Side can read its current version/time but cannot recover master or opposing state through history, comments, undo, deleted items or old links | Any unearned or stale private content recoverable |
+| Observer audit access (if used) | Observer can open the master and both filtered views but cannot edit, comment, share, or change any marker | Any edit or share action succeeds, or a view is missing |
 | Screen sharing | Sharing the intended filtered window reveals only that view, with no master tab, notifications, thumbnails or private URLs | Master, other side, hidden state or private report appears on screen |
 
 Record the following in the GM's
@@ -107,6 +109,7 @@ Map version / update timestamp:
 GM master view/location:
 NATO filtered view/location:
 Russia filtered view/location:
+Observer audit access (if used):
 Access list verified (roles only):
 Snapshot method and format:
 Dated master snapshot (scenario day/time and local date in private record):

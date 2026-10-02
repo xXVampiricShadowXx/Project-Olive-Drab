@@ -38,7 +38,7 @@ the live setup and review actions.
 | Role or channel | Required access |
 |---|---|
 | GM | All game channels, master record, master map, and private views |
-| Observer | Public transcript and redacted feed; no live opposing private state; playtest-only watch/document role; no posting unless a commander or GM interacts |
+| Observer | Read-only access to every game channel and record, including both private side channels, GM records and the master map, as a playtest auditor; never reveals private or GM-only information to either commander; playtest-only watch/document role; no posting unless a commander or GM interacts |
 | NATO commander | Group channel, NATO private channel, and permitted same-side path |
 | Russia commander | Group channel, Russia private channel, and permitted same-side path |
 | Group channel | Both commanders and GM; public updates and non-sensitive procedure |
@@ -50,7 +50,7 @@ the live setup and review actions.
 - [ ] Test read, post, and attachment permissions with harmless messages.
 - [ ] Finish all permission setup before the first order. Channel and role
   permissions stay fixed until the playtest ends.
-- [ ] If an observer is used, verify the observer receives only the documented public/redacted view and cannot post in game channels unless a commander or GM interacts with them.
+- [ ] If an observer is used, verify the observer can read every game channel and record and cannot post in game channels unless a commander or GM interacts with them.
 - [ ] Verify that no commander can view the master map, opposing private
   reports, hidden starting zone, or GM-only conditions.
 - [ ] Verify notifications and the backup notification route, including a
