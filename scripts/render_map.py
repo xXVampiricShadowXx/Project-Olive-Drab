@@ -28,6 +28,11 @@ CHANNELS = {
 }
 FIXTURE_PATH = Path("tests/fixtures/fictional-game.toml")
 ID_PATTERN = re.compile(r"^[A-Za-z0-9-]{1,24}$")
+# Per-side sequences, so a side's release IDs reveal nothing about the opponent's release count.
+RELEASE_ID_PATTERNS = {
+    "nato": re.compile(r"^R-N-[0-9]{3}$"),
+    "russia": re.compile(r"^R-R-[0-9]{3}$"),
+}
 
 CANVAS = (1600, 1700)
 GRID_LEFT, GRID_TOP, CELL_WIDTH, CELL_HEIGHT = 95, 300, 235, 190
@@ -149,11 +154,20 @@ def validate_game(game: Any, base: dict[str, Any]) -> dict[str, Any]:
     control = game["control"]
     if not isinstance(control, dict):
         raise MapError("control must be a TOML table")
+    pair_sectors = {sector: pair["sectors"] for pair in base["control_pairs"] for sector in pair["sectors"]}
     for sector, state in control.items():
         if sector not in sectors:
             raise MapError(f"control contains unknown sector {sector}")
+        if sector not in pair_sectors:
+            raise MapError(f"control.{sector} is not a control-pair sector")
         if not isinstance(state, str) or state not in CONTROL_STATES:
             raise MapError(f"control.{sector} is not an allowed control state")
+    for pair in base["control_pairs"]:
+        states = [control.get(sector) for sector in pair["sectors"]]
+        if any(state is not None for state in states) and len(set(states)) != 1:
+            raise MapError(
+                f"control pair {'/'.join(pair['sectors'])} must set both sectors to the same state"
+            )
 
     zones = _keys(game["zones"], set(SIDES), "zones")
     seen_zones: set[str] = set()
@@ -193,10 +207,10 @@ def validate_game(game: Any, base: dict[str, Any]) -> dict[str, Any]:
             ids.add(marker["id"])
 
     releases = _keys(game["releases"], set(SIDES), "releases")
-    release_ids: set[str] = set()
     for side in SIDES:
         if not isinstance(releases[side], list):
             raise MapError(f"releases.{side} must be an array of tables")
+        release_ids: set[str] = set()
         for index, item in enumerate(releases[side]):
             where = f"releases.{side}[{index}]"
             release = _keys(
@@ -218,8 +232,12 @@ def validate_game(game: Any, base: dict[str, Any]) -> dict[str, Any]:
                 _text(release[field], f"{where}.{field}")
             for field in ("release_id", "marker_id", "source_id"):
                 _identifier(release[field], f"{where}.{field}")
+            if not RELEASE_ID_PATTERNS[side].fullmatch(release["release_id"]):
+                raise MapError(
+                    f"{where}.release_id must match {RELEASE_ID_PATTERNS[side].pattern}"
+                )
             if release["release_id"] in release_ids:
-                raise MapError(f"duplicate release id {release['release_id']}")
+                raise MapError(f"duplicate releases.{side} id {release['release_id']}")
             release_ids.add(release["release_id"])
             if release["marker_id"] not in marker_ids or marker_ids[release["marker_id"]] == side:
                 raise MapError(f"{where}.marker_id must identify an opposing master marker")
@@ -275,6 +293,15 @@ def check_paths(game_path: Path, output_path: Path) -> None:
         )
         if tracked.returncode != 0:
             raise MapError("in-repository game files are allowed only as committed test fixtures")
+        unchanged = subprocess.run(
+            ["git", "diff", "--quiet", "HEAD", "--", relative],
+            cwd=repo_resolved,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            check=False,
+        )
+        if unchanged.returncode != 0:
+            raise MapError("in-repository test fixture differs from HEAD; commit or revert it first")
 
 
 def marker_records(game: dict[str, Any], side: str) -> list[dict[str, Any]]:

@@ -188,6 +188,36 @@ class FilteringTests(unittest.TestCase):
         self.assertNotIn("B3", caption)
         self.assertNotIn("order-private-99", caption)
 
+    @unittest.skipUnless(importlib.util.find_spec("PIL"), "Pillow is not installed")
+    def test_stale_release_is_drawn_at_reported_sector_after_master_moves(self):
+        from PIL import ImageDraw
+
+        self.game["master_markers"][0]["sector"] = "B3"
+        self.game["master_markers"][0]["description"] = "INTERNAL_MASTER_LOCATION_B3"
+        drawn = []
+        original_text = ImageDraw.ImageDraw.text
+
+        def capture(draw, xy, text, *args, **kwargs):
+            drawn.append((xy, text))
+            return original_text(draw, xy, text, *args, **kwargs)
+
+        with tempfile.TemporaryDirectory() as temporary:
+            with patch.object(ImageDraw.ImageDraw, "text", capture):
+                render_map.render_png(self.game, self.base, "nato", Path(temporary) / "nato.png")
+        texts = [text for _, text in drawn]
+        self.assertFalse(any("INTERNAL_MASTER_LOCATION_B3" in text for text in texts))
+        opposing_rows = [text for text in texts if "Opposing test unit" in text]
+        self.assertEqual(len(opposing_rows), 1)
+        self.assertIn(" A2 ", opposing_rows[0])
+        self.assertNotIn("B3", opposing_rows[0])
+        number = opposing_rows[0].split()[0]
+        a2_left, a2_top = render_map.GRID_LEFT, render_map.GRID_TOP + render_map.CELL_HEIGHT
+        badges = [xy for xy, text in drawn if text == number]
+        self.assertTrue(badges)
+        for x, y in badges:
+            self.assertTrue(a2_left <= x < a2_left + render_map.CELL_WIDTH, (x, y))
+            self.assertTrue(a2_top <= y < a2_top + render_map.CELL_HEIGHT, (x, y))
+
     def test_captions_contain_only_released_descriptions_and_matching_header(self):
         caption = render_map.caption_text(self.game, "nato")
         self.assertTrue(caption.startswith("v3 NATO 2026-10-01T12:30:00Z\n"))
@@ -330,6 +360,48 @@ class SchemaTests(unittest.TestCase):
                 with self.assertRaisesRegex(render_map.MapError, "must match"):
                     self.validate_copy(mutate)
 
+    def test_release_ids_use_per_side_prefixed_sequences(self):
+        for side, invalid_id in (
+            ("nato", "R-R-002"),
+            ("nato", "001"),
+            ("nato", "R-N-01"),
+            ("russia", "R-N-002"),
+            ("russia", "R-002"),
+        ):
+            def mutate(game, side=side, invalid_id=invalid_id):
+                game["releases"][side][0]["release_id"] = invalid_id
+
+            with self.subTest(side=side, release_id=invalid_id):
+                with self.assertRaisesRegex(render_map.MapError, "must match"):
+                    self.validate_copy(mutate)
+
+        def same_number_both_sides(game):
+            game["releases"]["nato"][0]["release_id"] = "R-N-007"
+            game["releases"]["russia"][0]["release_id"] = "R-R-007"
+
+        game = self.validate_copy(same_number_both_sides)
+        self.assertEqual(game["releases"]["nato"][0]["release_id"], "R-N-007")
+        self.assertEqual(game["releases"]["russia"][0]["release_id"], "R-R-007")
+
+        def duplicate_within_side(game):
+            game["releases"]["nato"].append(dict(game["releases"]["nato"][0]))
+
+        with self.assertRaisesRegex(render_map.MapError, "duplicate releases.nato id"):
+            self.validate_copy(duplicate_within_side)
+
+    def test_control_keys_are_only_matching_doc_12_pairs(self):
+        game = self.validate_copy(lambda game: None)
+        self.assertEqual(game["control"]["C3"], game["control"]["D3"])
+        self.assertEqual(game["control"]["C4"], game["control"]["D4"])
+        self.validate_copy(lambda game: game.update(control={}))
+
+        with self.assertRaisesRegex(render_map.MapError, "not a control-pair sector"):
+            self.validate_copy(lambda game: game["control"].update(C2="nato"))
+        with self.assertRaisesRegex(render_map.MapError, "C3/D3 must set both"):
+            self.validate_copy(lambda game: game["control"].pop("D3"))
+        with self.assertRaisesRegex(render_map.MapError, "C4/D4 must set both"):
+            self.validate_copy(lambda game: game["control"].update(D4="russia"))
+
 
 class PathAndOutputTests(unittest.TestCase):
     def test_cli_check_validates_and_prints_manifest_without_writing_files(self):
@@ -385,6 +457,16 @@ class PathAndOutputTests(unittest.TestCase):
             with tempfile.TemporaryDirectory() as temporary:
                 with self.assertRaisesRegex(render_map.MapError, "outside the repository"):
                     render_map.check_paths(temporary_game, Path(temporary) / "out")
+
+    def test_tracked_fixture_with_working_copy_edits_is_refused(self):
+        original = FIXTURE.read_bytes()
+        self.addCleanup(FIXTURE.write_bytes, original)
+        with tempfile.TemporaryDirectory() as temporary:
+            out = Path(temporary) / "out"
+            render_map.check_paths(FIXTURE, out)
+            FIXTURE.write_bytes(original + b"\n# local edit\n")
+            with self.assertRaisesRegex(render_map.MapError, "differs from HEAD"):
+                render_map.check_paths(FIXTURE, out)
 
 
 class PillowSmokeTests(unittest.TestCase):

@@ -4,7 +4,9 @@ gm_notes = ["GM_SECRET_NEVER_RENDER"]
 
 [control]
 C3 = "nato"
+D3 = "nato"
 C4 = "contested"
+D4 = "contested"
 
 [zones]
 nato = ["A1", "A2", "B1", "B2", "A3"]
