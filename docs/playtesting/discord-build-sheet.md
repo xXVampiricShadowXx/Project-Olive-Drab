@@ -41,7 +41,13 @@ reports, rulings, map updates, or game notifications.
    their intended access to each child channel. Keep game-role server-level
    permissions minimal. Do not rely on a channel's synced category permissions
    for a private channel; edit each channel's permissions and re-check after
-   any category resync, role change, or bot addition. No role except the
+   any category resync, role change, or bot addition during setup.
+   **Permissions are frozen at game start:** finish and verify every role
+   and channel permission before the first order, then make no permission,
+   role, or channel changes until the playtest ends. If a permission fault
+   is discovered during play, the GM records it and may pause under the
+   real-life/pause procedure; any correction is recorded as a deviation and
+   retested before play resumes. No role except the
    server owner/setup administrator needs `Manage Channels` or `Manage Roles`.
 5. Within that category, use **Create Channel > Text** to add `#group`
    (non-sensitive procedure and public updates), `#nato-private` (NATO and GM orders/reports),
@@ -54,11 +60,11 @@ reports, rulings, map updates, or game notifications.
    Add Roles or Members**. Save each override, including an explicit denial
    for every role assigned `None`; inspect whether the channel is unsynced.
    Create `#observer-response` only if an Observer participates. Keep it
-   hidden from both commanders, with Observer initially read-only; when
-   a commander or GM explicitly interacts with Observer, the GM grants
-   `Send Messages` to Observer in this channel for that exchange (replace
-   the channel's explicit Deny with Allow), logs the question and reply,
-   then restores Deny and verifies posting is denied again. A commander
+   hidden from both commanders. Observer has standing text-only `Reply`
+   access there for the whole playtest, but by conduct rule posts only to
+   answer a question the GM has placed in that channel; the GM logs each
+   question and reply and handles any unprompted post as a conduct matter,
+   not by changing permissions. A commander
    asks through `#group` only when the question
    is non-sensitive, or through their own private channel otherwise; the
    GM relays only the permitted question and any redacted response. Never
@@ -107,9 +113,9 @@ audited separately.
 | `#public-redacted-feed` | None | Post | Read | Read | Read |
 | `#gm-orders-reports` | None | Post | None | None | None |
 | `#gm-map-record` | None | Post | None | None | None |
-| `#observer-response` (only if Observer used) | None | Post | None | None | Read; temporary Reply during GM-authorized exchange |
+| `#observer-response` (only if Observer used) | None | Post | None | None | Reply (standing; answers GM-placed questions only) |
 
-| Discord permission | None | Read | Reply (temporary Observer) | Post | Notify (GM only) |
+| Discord permission | None | Read | Reply (Observer only) | Post | Notify (GM only) |
 |---|:---:|:---:|:---:|:---:|:---:|
 | View Channels | D | A | A | A | A |
 | Send Messages | D | D | A | A | A |
@@ -128,8 +134,9 @@ audited separately.
 | Use Application Commands | D | D | D | D | D |
 
 The GM uses `Post` to place curated copies in the feed; commanders and
-Observer cannot post there. `Reply` is a time-limited channel override, not
-a standing observer role permission. `Notify` permits the GM to ping a
+Observer cannot post there. `Reply` is Observer's fixed text-only access in
+`#observer-response` for the whole playtest; Observer uses it only to answer a
+GM-placed question. `Notify` permits the GM to ping a
 non-mentionable
 commander role in its private channel; the GM must never use that grant for
 `@everyone` or `@here`. Disable application integrations/bots with extra
@@ -148,8 +155,9 @@ select **View Server As Role**; select combined roles in the preview bar to
 audit stacked privileges, then **Disable** the preview. Have the actual
 participants check from their own accounts: role preview does not prove
 delivery, attachment behavior, notification receipt, or stacked-role safety.
-Repeat for any participant holding more than one role and after changing
-permission overrides. Inspect the actual server owner and every administrator
+Repeat for any participant holding more than one role and after any setup
+change to permission overrides; complete this rehearsal before game start,
+because permissions do not change during play. Inspect the actual server owner and every administrator
 identity separately: **PASS** only if these privileged identities are GM-only,
 never a commander or Observer, and no other moderator/bot can expose game
 records. Role preview cannot simulate owner/administrator bypass. For every row below,
@@ -175,7 +183,7 @@ guide](https://support.discord.com/hc/en-us/articles/360055709773-View-Server-As
 | Russia in `#nato-private`, both GM records and optional observer response | Cannot see/read/post/attach or get a working channel link | Any content or action accessible |
 | Observer (if used) in `#public-redacted-feed` | Sees only curated public/redacted text and history; cannot post, attach, react, thread, or run commands | Missing feed or any write action succeeds |
 | Observer (if used) in all six other core channels | Cannot see/read/post/attach or follow a channel link | Any private or live group content accessible |
-| Observer in `#observer-response` (if used) | Reads only the GM's permitted question; cannot post/attach before or after a GM-authorized exchange; during it can reply with text only, visible to GM; GM closes the override | Standing post rights, an unlogged reply, attachment, or any private opposing content |
+| Observer in `#observer-response` (if used) | Reads the GM's permitted question and can reply with text only, visible to GM; cannot attach, react, thread, or see private opposing content | Attachment or other write action succeeds, a commander can see the channel, or any private opposing content is visible |
 | Server owner/setup administrator and other privileged identities | Owner/admin is GM-only; other moderators/bots cannot access or leak private game content | Commander/Observer is owner/admin, or privileged third party exposes records: NO-GO until isolated and retested |
 | Each non-GM game role in every accessible channel | Cannot mass-mention, manage messages/channels/roles/threads, or create private/public threads | Any such privilege succeeds |
 | Opposing contact, with both commanders | Private request visible only to requester and GM; only GM can approve and post relay; both read approved relay; Observer cannot see it | Direct unapproved post, missing GM record, or private request exposed |
