@@ -10,13 +10,14 @@ the correction against the time-stamped GM master.
 
 ## Reproduce the public base
 
-1. The user creates a **six-column (`A`â€“`F`, west to east) by five-row
-   (`1`â€“`5`, north to south)** sector grid, north at top, with edge-sharing
+1. The user creates a **six-column (`A`–`F`, west to east) by five-row
+   (`1`–`5`, north to south)** sector grid, north at top, with edge-sharing
    adjacency only. Copy each cell ID, name, and terrain below exactly; do not
    reinterpret a cell as a precise position.
 2. Add the north arrow, named edge approaches, Bluewater River boundary
-   between rows 4 and 5, and the two difficult crossing routes `C4â€“C5` and
-   `D4â€“D5`. Mark the two central control pairs and the two approach pairs below. Compare the result directly
+   between rows 4 and 5, and the two difficult crossing routes `C4–C5` and
+   `D4–D5`. Mark the two central control pairs and the two approach pairs
+   below. Compare the result directly
    with the source ASCII diagram and sector tables before adding state.
 3. Create a separate GM master and two filtered commander views. Keep the
    public base identical in all three. Do not place live force markers before
@@ -37,7 +38,7 @@ the correction against the time-stamped GM master.
 | East Road (E) | East approach; entry sectors F2, F3, F4 |
 | River Road (S) | South approach; entry sectors A5, F5 |
 | West Approach (W) | West approach; entry sectors A2, A3, A4 |
-| Bluewater River | Boundary between rows 4 and 5; difficult crossing routes C4â€“C5 and D4â€“D5 |
+| Bluewater River | Boundary between rows 4 and 5; difficult crossing routes C4–C5 and D4–D5 |
 | Market Square | Central control pair C3 and D3 |
 | Town Hall Quarter | Civic control pair C4 and D4 |
 | Mill Road Junction | Northern route/approach pair C2 and D2 |
