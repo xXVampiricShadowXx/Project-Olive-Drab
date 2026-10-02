@@ -335,9 +335,10 @@ From [control and victory conditions](../game-design/08-control-and-victory-cond
 - **At 22:00** ([first-test result](../game-design/08-control-and-victory-conditions.md#primary-result-for-the-first-human-test)):
   town **controlled** = that side wins the primary objective; **contested** =
   draw on the primary objective; **uncontrolled** = neither side wins it.
-- The GM selects and publishes no more than one optional secondary condition
-  to both commanders before the first order, or none. The GM adjudicates
-  whether a side achieved it; it never overrides the primary objective
+- All three secondary conditions (Preservation, Evacuation, Information
+  discipline) are in play and published before the first order. After the
+  game ends, the GM determines whether either side achieved any of them; they
+  never override the primary objective
   ([secondary conditions](../game-design/08-control-and-victory-conditions.md#optional-secondary-conditions-for-testing)).
 - The victory test is published before the first order
   ([fairness safeguards](../game-design/08-control-and-victory-conditions.md#fairness-safeguards)).
@@ -417,7 +418,7 @@ provided by the repository. Mark them complete only when they actually exist
 | Before marker placement | Each side's private zone and readiness; review and record placement | [Starting zones](../game-design/05-first-prototype-scenario.md#starting-zones-and-readiness) |
 | Before the first order | Public briefing script and announcement | [Public briefing script](../game-design/14-initial-scenario-briefing-template.md#public-briefing-script) |
 | Before the first order | Each side's private briefing; commander confirms receipt | [Private side briefing](../game-design/14-initial-scenario-briefing-template.md#private-side-briefing) |
-| Before the first order | Primary objective and control rule, plus the selected secondary condition or none, published to both commanders | [Fairness safeguards](../game-design/08-control-and-victory-conditions.md#fairness-safeguards) |
+| Before the first order | Primary objective and control rule, plus all three secondary conditions, published to both commanders | [Fairness safeguards](../game-design/08-control-and-victory-conditions.md#fairness-safeguards) |
 | With the first order | The standard order fields, unchanged | [First-order reminder](../game-design/14-initial-scenario-briefing-template.md#first-order-reminder) |
 
 Never expose the master map, the opposing starting zone, GM-only conditions,
