@@ -15,6 +15,8 @@ not prove any item below is complete.
   public/redacted feed and cannot post in game channels unless a commander or GM
   interacts with them; observers are playtest-only.
 - [ ] Confirm personal direct messages are not part of the record.
+- [ ] Freeze all role and channel permissions before the first order; make no
+  permission changes until the playtest ends.
 - [ ] Test primary and backup notification methods and response-by reminders.
 
 ## Shared map

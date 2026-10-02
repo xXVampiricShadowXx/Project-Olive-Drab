@@ -48,6 +48,8 @@ the live setup and review actions.
 | GM record channels/files | GM only, with an explicit backup location |
 
 - [ ] Test read, post, and attachment permissions with harmless messages.
+- [ ] Finish all permission setup before the first order. Channel and role
+  permissions stay fixed until the playtest ends.
 - [ ] If an observer is used, verify the observer receives only the documented public/redacted view and cannot post in game channels unless a commander or GM interacts with them.
 - [ ] Verify that no commander can view the master map, opposing private
   reports, hidden starting zone, or GM-only conditions.
