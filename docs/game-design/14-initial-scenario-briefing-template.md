@@ -55,7 +55,7 @@ Starting scenario day and time:
 Initial weather and visibility:
 Public objective wording:
 Public control-state wording:
-Selected secondary condition (one or none):
+Secondary conditions (all three published):
 Public map version or snapshot link:
 Public group-channel name:
 GM name and contact route:
@@ -100,8 +100,9 @@ Read or send the following, inserting only the completed fields:
 > using the prototype contact procedure; unrelated unit orders continue.
 > Scenario time advances at the same rate as real time: one real-time minute
 > equals one scenario-clock minute.
-> The GM will determine whether either side achieved the published secondary
-> condition, if one was selected; it does not override the primary objective.
+> Preservation, Evacuation, and Information discipline are all in play as
+> secondary conditions. After the game ends, the GM determines whether either
+> side achieved any of them; they do not override the primary objective.
 > Real life always takes precedence. At the GM's discretion, consulting players
 > where practical, the GM may pause, suspend, place the game on hiatus, otherwise
 > adjust play, or end a session. The GM records and preserves the game state and
@@ -116,7 +117,7 @@ Current scenario day/time:
 Weather and visibility:
 Public objective:
 Public control states:
-Selected secondary condition (one or none):
+Secondary conditions: Preservation, Evacuation, Information discipline
 Map version:
 Active window: 08:00–22:00
 First-test end: Day 1, 22:00
