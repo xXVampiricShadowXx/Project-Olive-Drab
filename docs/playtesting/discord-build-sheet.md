@@ -11,40 +11,50 @@ reports, rulings, map updates, or game notifications.
 
 ## Choose the container and build it
 
-1. **Dedicated server:** The user creates a game-only server, assigns the GM
-   and the two commander roles, and optionally assigns Observer only if one is
-   participating. Keep unrelated members out. The server owner retains setup
-   privileges; do not give a commander or Observer `Administrator`. Record the
-   server and role names in [external setup](external-setup-and-notification-checklist.md)
-   without invite links or personal identifiers.
-2. **Existing server:** The user creates one `Brackenford Game` category inside
-   the existing server. Use the same game roles and channel layout below, but
-   audit every member's other roles, including moderation roles and
-   `Administrator`, before admitting them: another role or server-wide privilege
-   may defeat a game-channel restriction. Do not put the master map in a
-   generally shared server channel. If an existing privilege bypasses the
-   isolation, remove that privilege from the game participant or use another
-   isolated container before play. Record the decision in issue #14.
-3. In either variant, create the `Brackenford Game` category. In **Edit
-   Category > Permissions**, deny `View Channels` for `@everyone`; explicitly
-   grant only the game roles their intended access to each child channel. Keep
-   game-role server-level permissions minimal. Do not rely on a channel's
-   synced category permissions for a private channel; edit each channel's
-   permissions and re-check after any category resync, role change, or bot
-   addition. No role except the server owner/setup administrator needs
-   `Manage Channels` or `Manage Roles`.
-4. In **Create Channel > Text**, add `#group` (non-sensitive procedure and
-   public updates), `#nato-private` (NATO and GM orders/reports),
+1. **Dedicated server:** The user uses Discord desktop's **Add a Server >
+   Create My Own** to create a game-only server, then keeps unrelated members
+   out. The server owner retains setup privileges; do not give a commander
+   or Observer `Administrator`. Record the server choice in issue #14, without
+   invite links or personal identifiers.
+2. **Existing server:** The user uses the existing server and reserves one
+   game-only `Brackenford Game` category. Audit every participant's other
+   roles, including moderation roles and `Administrator`: another role or
+   server-wide privilege may defeat a game-channel restriction. Do not put
+   the master map in a generally shared server channel. If an existing
+   privilege bypasses isolation, change that participant's privileges or
+   use another isolated container before play. Record the decision in issue
+   #14.
+3. In either variant, open **Server Settings > Roles > Create Role**. Create
+   `GM`, `NATO commander`, `Russia commander`, and `Observer` only if used.
+   On each role's **Permissions** tab, keep game-role server-wide privileges
+   minimal: leave `Administrator` and the management permissions in the matrix
+   disabled.
+   Save changes and assign each participant only their intended game role
+   through the role's **Manage Members** tab. Audit all additional roles and
+   application/bot principals; record role names in
+   [external setup](external-setup-and-notification-checklist.md).
+4. From the channel list's **Create Channel > Create Category**, create
+   `Brackenford Game`. In **Edit Category > Permissions**, deny
+   `View Channels` for `@everyone`; explicitly grant only the game roles
+   their intended access to each child channel. Keep game-role server-level
+   permissions minimal. Do not rely on a channel's synced category permissions
+   for a private channel; edit each channel's permissions and re-check after
+   any category resync, role change, or bot addition. No role except the
+   server owner/setup administrator needs `Manage Channels` or `Manage Roles`.
+5. Within that category, use **Create Channel > Text** to add `#group`
+   (non-sensitive procedure and public updates), `#nato-private` (NATO and GM orders/reports),
    `#russia-private` (Russia and GM orders/reports),
    `#opposing-contact` (GM-approved, GM-visible relay),
    `#public-redacted-feed` (optional Observer's curated public transcript),
    `#gm-orders-reports`, and `#gm-map-record` (GM-only records). Set the
-   per-channel permission profiles below via **Edit Channel > Permissions**.
+   per-channel permission profiles below via **Edit Channel > Permissions >
+   Add Roles or Members**. Save each override, including an explicit denial
+   for every role assigned `None`; inspect whether the channel is unsynced.
    Keep the feed even without an Observer only if useful to the GM; do not
    assign another audience to it. Store the master map and private register
    links only in GM-only locations, with a separate backup per the
    [private-records guide](gm-private-records-and-data-handling.md).
-5. The GM posts public updates in `#group`. For an opposing contact request,
+6. The GM posts public updates in `#group`. For an opposing contact request,
    the requesting commander writes to their own private channel; the GM
    approves or declines it there, and relays only approved text into
    `#opposing-contact`, with both commanders able to read and the GM able to
@@ -52,7 +62,7 @@ reports, rulings, map updates, or game notifications.
    route. Do not use DMs, private threads, or unlogged voice for this route.
    A higher player's permission applies only if a higher player-controlled
    role actually exists in a later arrangement; do not invent one here.
-6. For a response-by reminder, the GM sends the deadline in the relevant
+7. For a response-by reminder, the GM sends the deadline in the relevant
    private channel and pings only that commander's game role (not `@everyone`
    or `@here`). The GM-only `Notify` profile on those two channels permits
    non-mentionable role pings; it also permits mass mentions, which the GM
@@ -116,8 +126,10 @@ and [permission setup FAQ](https://support.discord.com/hc/en-us/articles/2060297
 ## Human permission and delivery rehearsal
 
 The user and GM run this with harmless fictional text and a harmless file (no
-real orders, placements, private links, or personal data). Use Discord's
-**View Server As Role** for each assigned role, then have the actual
+real orders, placements, private links, or personal data). In Discord desktop,
+open **Server Settings > Roles**, choose each role's **Display** tab and
+select **View Server As Role**; select combined roles in the preview bar to
+audit stacked privileges, then **Disable** the preview. Have the actual
 participants check from their own accounts: role preview does not prove
 delivery, attachment behavior, notification receipt, or stacked-role safety.
 Repeat for any participant holding more than one role, for the server owner
@@ -128,7 +140,9 @@ completion fields, [communication rehearsal](human-communication-order-rehearsal
 step 1, or issue #14 comments; never post participant handles, contact
 addresses, tokens, invite links, private reports, or screenshots of hidden
 state. `FAIL` is a readiness blocker until corrected and retested or an
-accepted temporary workaround is recorded.
+accepted temporary workaround is recorded. The role-preview control is
+documented in Discord's [View Server As Role
+guide](https://support.discord.com/hc/en-us/articles/360055709773-View-Server-As-Role-Permission-Guide).
 
 | Check (repeat for each named channel/role) | Expected PASS | Expected FAIL to verify |
 |---|---|---|
