@@ -30,6 +30,10 @@ the authoritative record.
 
 Create a game-only server or game-only channel structure. Personal direct
 messages are never an order, report, ruling, map update, or notification.
+Use the [Discord build sheet](discord-build-sheet.md) for UI steps, the
+permission matrix, and the human verification script; the
+[collaborative setup agenda](collaborative-setup-session-agenda.md) assigns
+the live setup and review actions.
 
 | Role or channel | Required access |
 |---|---|
@@ -52,6 +56,9 @@ messages are never an order, report, ruling, map update, or notification.
 - [ ] Record channel names and the result in the dry-run completion fields.
 
 ## 3. Shared map and filtered views
+
+Use the [shared map build sheet](shared-map-build-sheet.md) for the exact
+source transcription, filtered-view and leak checks, and snapshot fields.
 
 - [ ] Reproduce the authoritative six-column by five-row Brackenford map,
   labels, approaches, terrain, and control pairs exactly.

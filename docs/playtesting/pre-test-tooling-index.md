@@ -26,6 +26,12 @@ guide](human-playtest-readiness-guide.md), [communication rehearsal](human-commu
 [observer ledger](observer-event-ledger-template.md), or [playtest report
 template](playtest-report-template.md).
 
+For the user-led external setup tracked in issues #14 and #15, use the
+[Discord build sheet](discord-build-sheet.md), [shared map build
+sheet](shared-map-build-sheet.md), and [collaborative setup
+agenda](collaborative-setup-session-agenda.md). They prepare checks, not
+external services or human sign-off.
+
 ## Repository versus external completion
 
 Repository changes can prepare documents, IDs, checklists, examples, and
