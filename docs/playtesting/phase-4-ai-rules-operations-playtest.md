@@ -54,15 +54,19 @@ calendar dates in the scenario clock; use scenario day and time.
 Run each role from a separate prompt or document context. Do not give one role
 another role's private state.
 
-Before the human test, the GM must name a concrete same-side succession contact
-for each commander. Select in the published order: available superior, then
-available same-level commander, then a willing subordinate from that company,
-then another available same-side player temporarily promoted by the GM, and
-finally the GM as a last resort. A contact is eligible only if they can receive
-the absent role's current orders, status, earned reports, and pending decisions
-without receiving the opposing side's private information.
+Before the human test, the GM names a concrete same-side succession contact for
+each commander on a side with additional eligible commanders.
+Select in the published order: available superior, then available same-level
+commander, then a willing subordinate from that company, then another
+available same-side player temporarily promoted by the GM, and finally the GM
+as a last resort. A contact is eligible only if they can receive the absent
+role's current orders, status, earned reports, and pending decisions without
+receiving the opposing side's private information. In the two-player
+arrangement, succession and temporary command do not apply and no succession
+contacts are required.
 
-Record the contact in the preflight and notify them before the first order:
+When applicable, record the contact in the preflight and notify them before
+the first order; enter N/A in the two-player arrangement:
 
 ```text
 Side:
@@ -136,11 +140,13 @@ conditions, or hidden situation bands.
 
 ### Observer role
 
-The observer is a silent auditor, not a third commander and not a second GM.
-The observer receives the public transcript and a timestamped observation feed,
-but no unearned private information. If private observation is required to
-measure information boundaries, the observer receives a redacted copy after
-the checkpoint, never live access to the other side's hidden state.
+The observer is a playtest-only auditor, not a third commander and not a second
+GM. They watch and document, and do not post in the game unless a commander or
+GM interacts with them. They receive the public transcript and a timestamped
+observation feed, but no unearned private information. If private observation
+is required to measure information boundaries, the observer receives a
+redacted copy after the checkpoint, never live access to the other side's
+hidden state. There are no observers in the final actual game.
 
 The observer:
 

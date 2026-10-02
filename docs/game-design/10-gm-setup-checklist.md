@@ -4,7 +4,9 @@ Use this checklist before and during the first live, supervised prototype. The G
 
 ## 1. Confirm the session
 
-- [ ] Confirm two commanders and one GM, with a temporary-command contact for each side.
+- [ ] Confirm two commanders and one GM. For each side with additional eligible
+      commanders, confirm a temporary-command contact; no succession contacts
+      are required in the two-player arrangement.
 - [ ] Confirm the shared local time zone and active window: 08:00–22:00.
 - [ ] Confirm that the first human test uses Day 1 only; the broader prototype also supports a seven-day scenario clock with a frozen window from 22:00–08:00 when multiple days are run.
 - [ ] Confirm one group channel for non-sensitive game communication and public updates.
@@ -13,11 +15,11 @@ Use this checklist before and during the first live, supervised prototype. The G
 - [ ] Confirm the selected Discord server is used for game communication and is separate from personal chat; the shared map may use another tool.
 - [ ] Explain that the 08:00–22:00 clock remains live while player attention may be brief or extended.
 - [ ] Define how urgent decisions receive response-by times, notifications, and recorded fallback handling.
-- [ ] Confirm that full-day-or-longer unavailability uses the separate temporary-command and succession procedure.
+- [ ] Confirm that full-day-or-longer unavailability uses the separate temporary-command and succession procedure when additional eligible commanders are present.
 - [ ] Explain that the game is fictional, infantry-only, and about decisions rather than real-world claims.
 - [ ] Complete the five-minute commander identity prompts and confirm each player's roleplay boundaries from the [prototype roleplay layer](17-prototype-roleplay-layer.md).
-- [ ] Explain the table safety rule: any participant may pause for a real-world safety concern; the GM records the pause and resumes only when everyone agrees.
-- [ ] Explain the real-life priority rule: real life always takes precedence. At the GM's discretion, consulting players where practical, the GM may pause, suspend, place the game on hiatus, otherwise adjust play, or end a session. The GM records and preserves the game state and resumes only when appropriate.
+- [ ] Explain the table safety rule: any participant may pause for a real-world safety concern; the GM records the pause and decides when play resumes after discussing it with the players to confirm everyone is ready.
+- [ ] Explain the real-life priority rule: real life always takes precedence. At the GM's discretion, consulting players where practical, the GM may pause, suspend, place the game on hiatus, otherwise adjust play, or end a session. The GM records and preserves the game state and decides when play resumes after discussing it with the players to confirm everyone is ready.
 
 ## 2. Prepare the table
 

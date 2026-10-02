@@ -15,10 +15,13 @@ day and time on the shared clock.
   orders and events.
 - One GM runs the authoritative record for two commanders, one NATO infantry
   company, and one Russian infantry company.
+- Scenario time advances at the same rate as real time: one real-time minute
+  equals one scenario-clock minute.
 - Real life always takes precedence. At the GM's discretion, consulting players
   where practical, the GM may pause, suspend, place the game on hiatus, otherwise
   adjust play, or end a session. The GM records and preserves the game state and
-  resumes only when appropriate.
+  decides when play resumes after discussing it with the players to confirm
+  everyone is ready.
 - The setting is fictionalized and near-future. It is not a claim about real
   national capabilities, plans, or current events.
 - Brackenford and its six-column by five-row named-sector map are authoritative
@@ -63,7 +66,7 @@ Complete these fields separately for each commander:
 ```text
 Side: NATO / Russia
 Commander:
-Temporary-command contact:
+Temporary-command contact (if applicable; otherwise N/A):
 Permitted hidden starting zone:
 Approved starting placement:
 Starting strength:
@@ -94,10 +97,13 @@ Read or send the following, inserting only the completed fields:
 > and use the standing-behavior fields when you may be unavailable. Contact
 > pauses the active routine order/timer for each affected unit and is resolved
 > using the prototype contact procedure; unrelated unit orders continue.
+> Scenario time advances at the same rate as real time: one real-time minute
+> equals one scenario-clock minute.
 > Real life always takes precedence. At the GM's discretion, consulting players
 > where practical, the GM may pause, suspend, place the game on hiatus, otherwise
 > adjust play, or end a session. The GM records and preserves the game state and
-> resumes only when appropriate.
+> decides when play resumes after discussing it with the players to confirm
+> everyone is ready.
 
 Then announce:
 
@@ -157,6 +163,7 @@ Behaviors (optional; one or more):
 Commander:
 ```
 
-If a commander is unavailable, use the recorded temporary-command and behavior
-fallback procedures; do not invent a calendar deadline or treat silence as an
-attack order.
+If a commander is unavailable, use the recorded behavior fallback procedures.
+Use temporary command only when additional eligible commanders are present; no
+succession contacts are required in the two-player arrangement. Do not invent a
+calendar deadline or treat silence as an attack order.

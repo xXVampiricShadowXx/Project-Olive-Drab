@@ -9,7 +9,9 @@ nations, current events, military capability, or real-world operations.
 Participants may act as GM, observer, NATO commander, Russia commander, or a
 temporary same-side commander. The GM maintains the authoritative record and
 may pause, suspend, place the game on hiatus, adjust, or end play. The observer
-audits records and does not direct a side.
+is a playtest-only role: they watch and document, do not post in the game unless
+a commander or GM interacts with them, and do not direct a side. There are no
+observers in the final actual game.
 
 Roleplay is optional and bounded. It may shape fictional motivation,
 communication, or relationships, but it never changes rules, hidden
@@ -28,8 +30,9 @@ roleplay prompt or request a neutral presentation.
   state and use the recorded fallback.
 - The GM records only the game consequence, such as `commander unavailable`,
   not the participant's personal circumstances.
-- Resume only when appropriate and agreed. A pause is not a failure and does
-  not require an apology.
+- The GM decides when play resumes after discussing it with the players to
+  confirm everyone is ready. A pause is not a failure and does not require an
+  apology.
 
 ## Information boundaries
 

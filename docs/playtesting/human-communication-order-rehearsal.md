@@ -23,9 +23,12 @@ requirement of the first one-day human test.
 6. **Standing behavior:** The commander supplies trigger, action, limits,
    expiry/cancel condition, and unreachable fallback. The GM validates and
    then cancels it through a replacement order.
-7. **Absence handoff:** Simulate a same-side primary contact taking the current
-   orders, status, earned reports, and pending decisions. Confirm that private
-   opposing information is excluded, then simulate return or backup handoff.
+7. **Absence handoff:** In games with additional eligible commanders, simulate
+   a same-side primary contact taking the current orders, status, earned reports,
+   and pending decisions. Confirm that private opposing information is
+   excluded, then simulate return or backup handoff. In the two-player
+   arrangement, succession and temporary command do not apply and no succession
+   contacts are required.
 8. **Freeze/restart:** For the broader multi-day procedure, simulate an order
    and response deadline crossing 22:00. Record remaining active time, pause
    all results overnight, and resume the same remaining time at 08:00. This is

@@ -67,6 +67,10 @@ start](../game-design/19-first-human-test-quick-start.md) are good companions.
 - The test runs **Day 1, 08:00–22:00** on the shared scenario clock, in the
   shared local time zone. No calendar dates are part of the rules
   ([operating procedure](../game-design/06-prototype-operating-procedure.md#campaign-clock)).
+- Scenario time runs at the same rate as real time: one real-time minute equals
+  one scenario-clock minute. The overnight freeze pauses actions and timers, not
+  the progress of scenario time
+  ([campaign clock](../game-design/06-prototype-operating-procedure.md#campaign-clock)).
 - The clock stays live during that window, but **your attention can be
   flexible**: check in briefly or stay for long stretches. The GM keeps
   processing accepted orders while you are away
@@ -97,6 +101,9 @@ From the [consent and safety briefing](consent-safety-participant-briefing.md#co
 - The GM may pause, suspend, place the game on hiatus, adjust, or end play at
   their discretion, consulting players where practical, and preserves the
   game state ([briefing template](../game-design/14-initial-scenario-briefing-template.md#established-rules-do-not-rewrite-at-briefing)).
+- The GM decides when play resumes after discussing it with the players to
+  confirm everyone is ready
+  ([consent and real-life priority](consent-safety-participant-briefing.md#consent-and-real-life-priority)).
 
 Before starting, the GM asks each participant for a simple confirmation. It is
 not a waiver and should not include personal information
@@ -336,12 +343,14 @@ From [control and victory conditions](../game-design/08-control-and-victory-cond
 - Brief check-ins and missed response windows do **not** by themselves trigger
   succession. Urgent decisions fall back to your last accepted order and
   recorded fallback ([urgent decisions](../game-design/06-prototype-operating-procedure.md#urgent-decisions-and-response-windows)).
-- If you are away long enough for temporary command, the GM follows the
-  succession order. Temporary command **never crosses sides**, and a
-  temporary commander receives only your role's earned information
+- In the two-player game (one commander per side), succession and temporary
+  command do not apply, and no succession contacts are required. If a side has
+  additional eligible commanders, the GM uses the succession order; temporary
+  command **never crosses sides**, and a temporary commander receives only your
+  role's earned information
   ([temporary command](../game-design/06-prototype-operating-procedure.md#temporary-command-and-player-absence)).
-- When you return, you get the normal role handoff, **not** retroactive
-  knowledge.
+- When a temporary commander applies and you return, you get the normal role
+  handoff, **not** retroactive knowledge.
 
 ### Commander before-you-start checklist
 
@@ -468,7 +477,9 @@ Also:
       report ([packet identity](human-playtest-packet-manifest.md#packet-identity)).
 - [ ] Shared local time zone and Day 1, 08:00–22:00 recorded.
 - [ ] Echelon counts recorded before marker placement.
-- [ ] Primary and backup same-side succession contacts recorded for each side.
+- [ ] If either side has additional eligible commanders, primary and backup
+      same-side succession contacts are recorded. No succession contacts are
+      required in the two-player arrangement.
 - [ ] Discord channels and permissions, shared map, and filtered views
       actually exist and have been tested.
 - [ ] Private working record, backup, and retention period set **before** the
@@ -484,8 +495,10 @@ Also:
 
 ## 4. Observers (optional)
 
-An observer is a **support and audit role**. You are not a required
-participant and you do **not** direct either side
+An observer is a **playtest-only support and audit role**. You watch and
+document the playtest; do not post in the game unless a commander or GM
+interacts with you. You are not a required participant and do **not** direct
+either side. There are no observers in the final actual game
 ([participant briefing](consent-safety-participant-briefing.md#what-participation-means);
 [readiness guide §1](human-playtest-readiness-guide.md#1-people-roles-and-contact)).
 

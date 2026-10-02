@@ -7,19 +7,22 @@ the authoritative record.
 ## 1. People, roles, and contact
 
 - [ ] Confirm one neutral GM, one NATO commander, and one Russia commander. These three roles are the defined minimum first-test arrangement.
-- [ ] If an observer is available, optionally assign one. The observer is a support/audit role and does not count as a required fourth participant.
+- [ ] If an observer is available, optionally assign one for the playtest only. The observer watches and documents, does not post in the game unless a commander or GM interacts with them, and does not count as a required fourth participant. Observers are not part of the final actual game.
 - [ ] Record preferred display names only; no personal details are required.
 - [ ] Record the shared local time zone and the first human test start/end as
   scenario day and time on the shared clock: Day 1, 08:00 through 22:00. The
   prototype does not require exact calendar dates.
 - [ ] Record the notification method, backup notification method, and who
   checks response deadlines. Test both methods.
-- [ ] Name a primary and backup same-side succession contact for each
-  commander. Record role, contact route, handoff start/end, and that the
-  contact receives only the absent role's earned information.
+- [ ] If a side has additional eligible commanders, name a primary and backup
+  same-side succession contact. Record role, contact route, handoff start/end,
+  and that the contact receives only the absent role's earned information. In
+  the two-player arrangement, succession and temporary command do not apply and
+  no succession contacts are required.
 - [ ] Confirm the real-life pause/hiatus signal and who may invoke it. A
   pause, suspension, hiatus, adjustment, or end is allowed when real life
-  requires it; the GM preserves the state and records the restart or closure.
+  requires it; the GM preserves the state, discusses readiness with the players,
+  decides when play resumes, and records the restart or closure.
 - [ ] Confirm a player may withdraw without explaining personal circumstances.
   The GM records only the operational consequence needed for continuity.
 
@@ -31,7 +34,7 @@ messages are never an order, report, ruling, map update, or notification.
 | Role or channel | Required access |
 |---|---|
 | GM | All game channels, master record, master map, and private views |
-| Observer | Public transcript and redacted feed; no live opposing private state; optional support role |
+| Observer | Public transcript and redacted feed; no live opposing private state; playtest-only watch/document role; no posting unless a commander or GM interacts |
 | NATO commander | Group channel, NATO private channel, and permitted same-side path |
 | Russia commander | Group channel, Russia private channel, and permitted same-side path |
 | Group channel | Both commanders and GM; public updates and non-sensitive procedure |
@@ -41,7 +44,7 @@ messages are never an order, report, ruling, map update, or notification.
 | GM record channels/files | GM only, with an explicit backup location |
 
 - [ ] Test read, post, and attachment permissions with harmless messages.
-- [ ] If an observer is used, verify the observer receives only the documented public/redacted view.
+- [ ] If an observer is used, verify the observer receives only the documented public/redacted view and cannot post in game channels unless a commander or GM interacts with them.
 - [ ] Verify that no commander can view the master map, opposing private
   reports, hidden starting zone, or GM-only conditions.
 - [ ] Verify notifications and the backup notification route, including a
@@ -103,8 +106,9 @@ real operational, political, or personal information.
   and record the restart/closure according to the pause procedure.
 - [ ] Do not extend the first human test into additional scenario days solely
   to satisfy the broader seven-day prototype schedule.
-- [ ] For longer rehearsal only, use the existing 22:00 freeze, 08:00 restart,
-  and same-side succession procedures. These are not first-test blockers.
+- [ ] For longer rehearsal only, use the existing 22:00 freeze and 08:00
+  restart. Use same-side succession only when additional eligible commanders
+  are present; it does not apply to the two-player arrangement.
 
 ## Final go/no-go
 

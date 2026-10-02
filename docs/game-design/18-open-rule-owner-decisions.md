@@ -1,10 +1,12 @@
 # Rule-Owner Decisions
 
-These four recorded decisions clarify existing prototype text without adding a
-new combat mechanic, threshold, or withdrawal state. The linked issues remain
-the audit trail for each question. The updated rule text was incorporated into
-the current packet by merged [PR #168](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/pull/168).
-Human-playtest validation of these decisions remains pending.
+These recorded decisions clarify existing prototype text without adding a new
+combat mechanic, threshold, or withdrawal state. The linked issues remain the
+audit trail for each question. The four decisions from #127, #146, #155, and
+#164 were incorporated into the current packet by merged
+[PR #168](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/pull/168).
+The four decisions from #173 are recorded below. Human-playtest validation of
+these decisions remains pending.
 
 | Issue | Decision | Affected rule |
 |---|---|---|
@@ -12,6 +14,10 @@ Human-playtest validation of these decisions remains pending.
 | [#146 — Reserve/commit response](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/146) | `Reserve/commit` remains one menu response. The commander names the portion and explicitly records whether it remains uncommitted in reserve or is committed now, using the existing reserve/commitment status. | [Commander decision menu](13-prototype-combat-and-contested-actions.md#commander-decision-menu) |
 | [#155 — Optional Evacuation scope](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/155) | The surviving force consists of the non-broken echelon units. At least one must exist, and every such unit must complete a successful withdrawal out of the map through a designated approach before the deadline. Broken units neither satisfy nor block the condition; it never overrides town control. | [Optional secondary conditions](08-control-and-victory-conditions.md#optional-secondary-conditions-for-testing) |
 | [#164 — Time consequence range](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/164) | The 15–60 active-minute range is non-authoritative GM judgment, not a result-to-duration mapping. The GM records the selected duration and snapshot reason, uses the same duration for materially equivalent snapshots unless an existing rule distinguishes them, and records any distinction. | [Combat outcome guide](13-prototype-combat-and-contested-actions.md#outcome-guide) |
+| [#173 — Resuming after a pause](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/173) | The GM decides when play resumes after first discussing it with the players to confirm everyone is ready. | [Consent, safety, and real-life priority](../playtesting/consent-safety-participant-briefing.md#consent-and-real-life-priority) |
+| [#173 — Succession in a two-player game](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/173) | With only one commander per side, succession and temporary command do not apply and no succession contacts are required. The broader procedure remains for games with additional eligible commanders. | [Temporary command and player absence](06-prototype-operating-procedure.md#temporary-command-and-player-absence) |
+| [#173 — Observer role](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/173) | Observers are playtest-only: they watch and document, do not post in the game unless a commander or GM interacts with them, and are not part of the final actual game. | [Observer guidance](../playtesting/player-playtest-packet.md#4-observers-optional) |
+| [#173 — Scenario clock rate](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/173) | Scenario time advances at the same rate as real time: one real-time minute equals one scenario-clock minute. | [Campaign clock](06-prototype-operating-procedure.md#campaign-clock) |
 
 These decisions are limited to the first prototype packet. Further changes to
 the thresholds or mechanics require a separate rules decision and playtest.

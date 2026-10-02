@@ -162,7 +162,7 @@ claim about enjoyment, social dynamics, or whether decisions felt meaningful.
 | Change | Reason | Priority |
 |--------|--------|----------|
 | Use the new [observer event ledger template](observer-event-ledger-template.md) for the next run. | The dry run required a manually enforced record shape; the reusable schema now standardizes rows and closeout counts. | Medium |
-| Select and name primary and backup same-side succession contacts before the human test. | The dry run used a simulated same-level handoff; concrete contacts and a handoff path must be prepared in advance. | High |
+| For games with additional eligible commanders per side, select and name primary and backup same-side succession contacts before the human test. The two-player arrangement does not use succession contacts, per issue [#173](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/173). | The dry run used a simulated same-level handoff; contact preparation applies when additional same-side commanders are available. | High |
 | Validate Discord permissions, notification delivery, and real human absence handoff in the human preflight. | The temporary channel simulation intentionally did not test integration or delivery. | High |
 
 No Phase 3 rule was changed during the sequence. No minimal documentation fix
@@ -190,7 +190,9 @@ current rehearsals, and the final GM preflight.
 ## Open decisions
 
 - Fill the ledger header and event rows for the human test.
-- Name and confirm the primary and backup same-side succession contacts for
-  each faction using the packet's selection order.
+- For games with additional eligible commanders per side, name and confirm
+  primary and backup same-side succession contacts using the packet's selection
+  order. No succession contacts are required in the two-player arrangement
+  ([issue #173](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/173)).
 - Complete actual Discord channel and notification validation; this remains a
   human preflight requirement and was not claimed by this dry run.
