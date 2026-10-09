@@ -1,140 +1,35 @@
+<!-- docs-rework-redirect: compatibility navigation, not a rules source -->
+
+This document moved. Follow the links below to the current sections; this page is not authoritative.
+
 # Human Playtest Readiness Guide
 
-This guide turns the existing GM packet into a human-facing readiness gate. It
-does not change the Phase 3 rules. The GM owns the final go/no-go decision and
-the authoritative record.
+[Read the current section](../gm/setup-and-readiness.md#readiness-guide).
 
 ## 1. People, roles, and contact
 
-- [ ] Confirm one neutral GM, one NATO commander, and one Russia commander. These three roles are the defined minimum first-test arrangement.
-- [ ] If an observer is available, optionally assign one for the playtest only. The observer watches and documents, does not post in the game unless a commander or GM interacts with them, and does not count as a required fourth participant. Observers are not part of the final actual game.
-- [ ] Record preferred display names only; no personal details are required.
-- [ ] Record the shared local time zone and the first human test start/end as
-  scenario day and time on the shared clock: Day 1, 08:00 through 22:00. The
-  prototype does not require exact calendar dates.
-- [ ] Record the notification method, backup notification method, and who
-  checks response deadlines. Test both methods.
-- [ ] If a side has additional eligible commanders, name a primary and backup
-  same-side succession contact. Record role, contact route, handoff start/end,
-  and that the contact receives only the absent role's earned information. In
-  the two-player arrangement, succession and temporary command do not apply and
-  no succession contacts are required.
-- [ ] Confirm the real-life pause/hiatus signal and who may invoke it. A
-  pause, suspension, hiatus, adjustment, or end is allowed when real life
-  requires it; the GM preserves the state, discusses readiness with the players,
-  decides when play resumes, and records the restart or closure.
-- [ ] Confirm a player may withdraw without explaining personal circumstances.
-  The GM records only the operational consequence needed for continuity.
+[Read the current section](../gm/setup-and-readiness.md#readiness-guide-1-people-roles-and-contact).
 
 ## 2. Discord roles, channels, and permissions
 
-Create a game-only server or game-only channel structure. Personal direct
-messages are never an order, report, ruling, map update, or notification.
-Use the [Discord build sheet](discord-build-sheet.md) for UI steps, the
-permission matrix, and the human verification script; the
-[collaborative setup agenda](collaborative-setup-session-agenda.md) assigns
-the live setup and review actions.
-
-| Role or channel | Required access |
-|---|---|
-| GM | All game channels, master record, master map, and private views |
-| Observer | Read-only access to every game channel and record, including both private side channels, GM records and the master map, as a playtest auditor; never reveals private or GM-only information to either commander; playtest-only watch/document role; no posting unless a commander or GM interacts |
-| NATO commander | Group channel, NATO private channel, and permitted same-side path |
-| Russia commander | Group channel, Russia private channel, and permitted same-side path |
-| Group channel | Both commanders and GM; public updates and non-sensitive procedure |
-| NATO private | NATO commander and GM; no Russia access |
-| Russia private | Russia commander and GM; no NATO access |
-| Opposing-contact path | GM approval and GM visibility in the first prototype; superior permission applies only when a higher player-controlled role exists |
-| GM record channels/files | GM only, with an explicit backup location |
-
-- [ ] Test read, post, and attachment permissions with harmless messages.
-- [ ] Finish all permission setup before the first order. Channel and role
-  permissions stay fixed until the playtest ends.
-- [ ] If an observer is used, verify the observer can read every game channel and record and cannot post in game channels unless a commander or GM interacts with them.
-- [ ] Verify that no commander can view the master map, opposing private
-  reports, hidden starting zone, or GM-only conditions.
-- [ ] Verify notifications and the backup notification route, including a
-  response-by reminder.
-- [ ] Record channel names and the result in the dry-run completion fields.
+[Read the current section](../gm/setup-and-readiness.md#readiness-guide-2-discord-roles-channels-and-permissions).
 
 ## 3. Shared map and filtered views
 
-Use the [shared map build sheet](shared-map-build-sheet.md) for the exact
-source transcription, filtered-view and leak checks, and snapshot fields.
-
-- [ ] Reproduce the authoritative six-column by five-row Brackenford map,
-  labels, approaches, terrain, and control pairs exactly.
-- [ ] Create one GM master view containing all forces, hidden conditions,
-  orders, control, and map version.
-- [ ] Create filtered NATO and Russia views with public terrain, own status,
-  earned information, and clearly labelled suspected positions only.
-- [ ] Verify that hidden markers and stale private reports cannot leak through
-  layers, links, exports, or screen sharing.
-- [ ] Record the map version, snapshot method, and backup location.
+[Read the current section](../gm/setup-and-readiness.md#readiness-guide-3-shared-map-and-filtered-views).
 
 ## 4. Records and scenario briefing
 
-- [ ] Prepare sequential order, report, contact, map, ruling, and event IDs.
-- [ ] Prepare the observer ledger, master clock log, order/report registers,
-  decision log, and dated map snapshots.
-- [ ] Read the [GM-only records and data handling
-  guide](gm-private-records-and-data-handling.md); record the access-controlled
-  working location, separate backup, redaction check, restore check, and
-  retention/deletion date without putting those links or details in the
-  repository.
-- [ ] Complete the public and private briefing templates, including map links,
-  weather, visibility, starting zones, approved placement, and first deadline.
-- [ ] Publish the objective and control rule before accepting the first order.
-- [ ] Explain the active-day end at 22:00, response windows, standing behavior
-  fields, and that silence never authorizes an unlisted attack. The overnight
-  freeze and next-day restart are broader prototype procedures, not required
-  first-test steps.
-- [ ] Complete the separate [communication rehearsal](human-communication-order-rehearsal.md).
+[Read the current section](../gm/setup-and-readiness.md#readiness-guide-4-records-and-scenario-briefing).
 
 ## 5. Consent, safety, and real-life priority
 
-Before role assignment, deliver the [participant briefing](consent-safety-participant-briefing.md).
-Confirm privately, without requiring disclosure, that each participant can:
-
-- opt out, pause, take a break, or withdraw at any time;
-- keep personal identity, health, schedule, and other private details private;
-- decline roleplay content or request a lower-intensity presentation; and
-- ask the GM to stop or change the activity for a real-life safety concern.
-
-The fictionalized setting is not a statement about real nations or current
-events. Keep tactical information inside the game record and do not request
-real operational, political, or personal information.
+[Read the current section](../gm/setup-and-readiness.md#readiness-guide-5-consent-safety-and-real-life-priority).
 
 ## 6. First-test clock and continuity
 
-- [ ] Record the first human test start at Day 1, 08:00 in the shared local
-  time zone.
-- [ ] Run the active test window through Day 1, 22:00 and perform the final
-  control-state check before closing the session.
-- [ ] If the session reaches a real-life pause before 22:00, preserve the state
-  and record the restart/closure according to the pause procedure.
-- [ ] Do not extend the first human test into additional scenario days solely
-  to satisfy the broader seven-day prototype schedule.
-- [ ] For longer rehearsal only, use the existing 22:00 freeze and 08:00
-  restart. Use same-side succession only when additional eligible commanders
-  are present; it does not apply to the two-player arrangement.
+[Read the current section](../gm/setup-and-readiness.md#readiness-guide-6-first-test-clock-and-continuity).
 
 ## Final go/no-go
 
-The GM records `GO` only when every blocking item above is checked or a
-temporary workaround is written and accepted by both commanders. Record:
-
-```text
-Readiness result: GO / NO-GO
-Packet version and commit:
-Scenario start: Day 1, 08:00
-First-test end: Day 1, 22:00
-Scenario local time zone:
-Unresolved blocker:
-Temporary workaround and expiry:
-Both commanders agree: yes / no
-GM authorization time:
-First accepted order ID:
-```
-
-If the result is `NO-GO`, do not reveal the scenario clock or start a timer.
+[Read the current section](../gm/setup-and-readiness.md#readiness-guide-final-gono-go).

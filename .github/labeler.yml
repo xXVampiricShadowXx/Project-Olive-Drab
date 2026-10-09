@@ -4,10 +4,14 @@ documentation:
   - '**/*.md'
 
 game-design:
-  - docs/game-design/**
+  - docs/learn/**
+  - docs/reference/**
+  - docs/decisions/**
 
 playtesting:
-  - docs/playtesting/**
+  - docs/gm/**
+  - docs/templates/**
+  - docs/history/**
 
 infrastructure:
   - .github/**
