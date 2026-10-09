@@ -14,7 +14,7 @@ body:
     attributes:
       label: Document or rule
       description: Link the relevant document and section.
-      placeholder: docs/game-design/06-prototype-operating-procedure.md, "Orders"
+      placeholder: docs/reference/prototype/operating-procedure.md, "Order lifecycle"
     validations:
       required: true
   - type: textarea

@@ -2,6 +2,32 @@
 
 Project Olive Drab is a **real-time, roleplaying wargame** set in a fictionalized present-day global conflict. It is being designed as a human-moderated campaign first, using maps, written orders, communication channels, and game-master adjudication. A software version is a possible future direction, not part of the current project.
 
+## Start here
+
+**New player? [Learn to play](docs/learn/index.md)** gives you exactly three
+ordered public pages, then a clear stopping point. The first test is one
+infantry company per side in fictional Brackenford, Day 1 only, 08:00-22:00.
+Your GM provides the private briefing and confirms readiness before play.
+
+| Your role | Start |
+|---|---|
+| Commander | [Player learning route](docs/learn/index.md) |
+| Game master (GM) | [Prepare, set up, rehearse, then go/no-go](docs/gm/index.md) |
+| Observer (optional, playtest-only) | [Observer route](docs/learn/index.md#other-roles) |
+| Contributor or returning reader | [Documentation catalog](docs/index.md) |
+
+**Prototype, not a validated game or software release.** The first-test packet
+and AI rehearsal preparation are assembled; human validation and external
+setup remain pending. Discord, notifications, and map setup issues
+[#14](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/14),
+[#15](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/15), and
+[#16](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/16)
+remain open. The static renderer is a **proposed map method**, not a confirmed
+platform. Learning summaries add no rules; the linked repository governing
+sections remain authoritative. See [project status](#project-status).
+
+## The broader game
+
 The game combines:
 
 - Real-time decision-making instead of traditional turns.
@@ -22,30 +48,25 @@ The first planned setting is a Europe-focused WW3 scenario involving NATO and Ru
 
 ## Where to work
 
-The repository is organized around game design rather than software development:
+The repository is organized around audiences and game design rather than
+software development. These are lookup routes, not extra required player reading:
 
 | Location | Purpose |
 |----------|---------|
-| `docs/game-design/` | The rules and design documents being developed |
-| `docs/playtesting/` | Plans, reports, and lessons from test games |
-| `docs/assets/` | Player-facing reference material |
+| [`docs/learn/`](docs/learn/index.md) | Finite first-test player learning |
+| [`docs/reference/`](docs/reference/prototype/index.md) | Governing rules, map, scenario, timing and contact; live aids |
+| [`docs/gm/`](docs/gm/index.md) | Setup, readiness, rehearsal, and operational tooling |
+| [`docs/templates/`](docs/templates/operational-records.md) | Blank forms; filled private records stay outside the repository |
+| [`docs/project/`](docs/project/game-concept.md) | Project brief, core loop, roadmap, feedback, and optional snapshot preparation |
+| [`docs/decisions/`](docs/decisions/rule-owner-decisions.md) | Recorded clarifications and design notes |
+| [`docs/history/`](docs/index.md) | Test evidence, fictional examples, and optional solo/AI rehearsal |
 | `.github/ISSUE_TEMPLATE/` | Templates for proposing ideas or reporting design problems |
 
-Start with [`docs/game-design/00-project-brief.md`](docs/game-design/00-project-brief.md), then use [`docs/game-design/01-core-loop.md`](docs/game-design/01-core-loop.md) to define what players actually do during play.
-
-The first prototype's commander and game master responsibilities are outlined in [`docs/game-design/04-game-master-and-player-roles.md`](docs/game-design/04-game-master-and-player-roles.md). The assembled live-test materials are indexed in [`docs/game-design/09-prototype-packet-index.md`](docs/game-design/09-prototype-packet-index.md), with a [`GM setup checklist`](docs/game-design/10-gm-setup-checklist.md) and [`commander role sheets`](docs/game-design/11-commander-role-sheets.md).
-
-The initial scenario concept is documented in [`docs/game-design/05-first-prototype-scenario.md`](docs/game-design/05-first-prototype-scenario.md).
-
-The repository-side pre-test materials are collected in the
-[`pre-test tooling index`](docs/playtesting/pre-test-tooling-index.md). They
-prepare a stable snapshot, solo GM rehearsal, operational templates, external
-setup checks, onboarding, and post-test issue/revision decisions without
-publishing a release or claiming a human test.
-
-The prototype operating procedure is documented in [`docs/game-design/06-prototype-operating-procedure.md`](docs/game-design/06-prototype-operating-procedure.md), with timing aids in [`docs/game-design/07-timing-and-action-aids.md`](docs/game-design/07-timing-and-action-aids.md) and draft control conditions in [`docs/game-design/08-control-and-victory-conditions.md`](docs/game-design/08-control-and-victory-conditions.md).
-
-See [`docs/project-roadmap.md`](docs/project-roadmap.md) for the project phases and the current design focus.
+Use the [catalog](docs/index.md) to find roles, scenario, map, operating procedure,
+timing, control conditions, commander sheets, briefing templates, and the
+assembled packet inventory. The [GM route](docs/gm/index.md) gathers pre-test
+tooling without implying a release or completed human test.
+See the [roadmap](docs/project/roadmap.md) for phases and current design focus.
 
 ## Contributing and playtesting
 
@@ -54,6 +75,9 @@ request expectations, and how to record playtest findings. Use the repository's
 issue forms for rules questions, playtest findings, documentation
 inconsistencies, and focused design proposals. Keep player-identifying details
 out of public reports.
+
+[Code of conduct](CODE_OF_CONDUCT.md) · [Security policy](SECURITY.md) ·
+[License](LICENSE.md)
 
 ## Design principles
 
@@ -68,7 +92,7 @@ out of public reports.
 Phase 3's first-test packet is assembled for live, supervised testing. The four
 audited rule-owner clarifications are incorporated in the current packet through
 the merged [audit-cleanup pull request](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/pull/168)
-and recorded in the [Rule-Owner Decisions](docs/game-design/18-open-rule-owner-decisions.md)
+and recorded in the [Rule-Owner Decisions](docs/decisions/rule-owner-decisions.md)
 page. Phase 4 AI rules-testing preparation is also complete; human-playtest
 validation, including the communication/order dry run and first focused human
 playtest, is still pending. External setup and human participation remain
