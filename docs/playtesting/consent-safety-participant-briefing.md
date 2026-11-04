@@ -1,71 +1,23 @@
+<!-- docs-rework-redirect: compatibility navigation, not a rules source -->
+
+This document moved. Follow the links below to the current sections; this page is not authoritative.
+
 # Consent, Safety, and Participant Briefing
 
-Read this before role assignment and again before the first order. Olive Drab
-is a fictionalized, supervised wargame. It is not a statement about real
-nations, current events, military capability, or real-world operations.
+[Read the current section](../learn/consent-and-safety.md#consent-safety-and-participant-briefing).
 
 ## What participation means
 
-Participants may act as GM, observer, NATO commander, Russia commander, or a
-temporary same-side commander. The GM maintains the authoritative record and
-may pause, suspend, place the game on hiatus, adjust, or end play. The observer
-is a playtest-only role: they watch and document, do not post in the game unless
-a commander or GM interacts with them, and do not direct a side. There are no
-observers in the final actual game.
-
-Roleplay is optional and bounded. It may shape fictional motivation,
-communication, or relationships, but it never changes rules, hidden
-information, resolution, or a participant's consent. Players may decline any
-roleplay prompt or request a neutral presentation.
+[Read the current section](../learn/consent-and-safety.md#what-participation-means).
 
 ## Consent and real-life priority
 
-- Participation is voluntary. Anyone may pause, take a break, withdraw, or
-  request a change without giving a personal reason.
-- Real life always takes precedence over the game. A safety concern, illness,
-  emergency, work, caregiving, accessibility need, or private obligation is
-  enough reason to pause or leave.
-- Use the agreed pause/hiatus signal or contact the GM through the safest
-  available route. If a participant cannot explain, the GM should preserve the
-  state and use the recorded fallback.
-- The GM records only the game consequence, such as `commander unavailable`,
-  not the participant's personal circumstances.
-- The GM decides when play resumes after discussing it with the players to
-  confirm everyone is ready. A pause is not a failure and does not require an
-  apology.
+[Read the current section](../learn/consent-and-safety.md#consent-and-real-life-priority).
 
 ## Information boundaries
 
-Use game channels and the GM-visible record for orders, reports, rulings,
-notifications, and map updates. Do not share:
-
-- another side's private reports, hidden map, or GM-only conditions;
-- personal contact details or identifying information;
-- real-world operational information, political claims, or sensitive history;
-  or
-- screenshots or transcripts outside the agreed participant group without
-  removing private and identifying information.
-
-The GM gives a temporary same-side successor only the absent role's current
-orders, status, earned reports, and pending decisions. Personal direct messages
-are not part of the game record.
+[Read the current section](../learn/consent-and-safety.md#information-boundaries).
 
 ## Before starting
 
-Each participant should know the role, channel path, notification method,
-pause/hiatus signal, and the **first-human-test window of Day 1, 08:00–22:00**.
-The session closes after the Day 1 final control-state check. The broader
-seven-day clock and overnight frozen-window procedure are later/multi-day
-prototype context and are not the first-test session schedule.
-
-No one is required to disclose personal details, medical information, identity,
-availability beyond what is needed for the handoff, or reasons for a boundary.
-
-The GM asks for a simple confirmation:
-
-```text
-I understand the fictional scope, information boundaries, pause/withdrawal
-option, and real-life priority rule. I know how to contact the GM privately.
-```
-
-The confirmation is not a waiver and should not include personal information.
+[Read the current section](../learn/consent-and-safety.md#before-starting).

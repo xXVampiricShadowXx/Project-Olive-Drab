@@ -27,8 +27,11 @@ documentation or configuration change.
 
 ## Design and documentation changes
 
-- Put rules and design material in `docs/game-design/`.
-- Put playtest plans, reports, and observations in `docs/playtesting/`.
+- Put governing prototype rules in `docs/reference/prototype/` and player
+  orientation in `docs/learn/`; summaries do not replace their governing sources.
+- Put GM preparation in `docs/gm/`, reusable forms in `docs/templates/`, and
+  historical playtest evidence and optional rehearsals in `docs/history/`.
+- Keep design decisions in `docs/decisions/` and project guidance in `docs/project/`.
 - Update the relevant index or roadmap entry when adding a document.
 - Use descriptive filenames and relative Markdown links.
 - Preserve the distinction between authoritative rules, provisional procedures,
@@ -64,10 +67,10 @@ python scripts/validate_markdown_links.py
 ```
 
 It checks every repository Markdown file for relative links that escape the
-repository or point to missing paths. It ignores fragment-only and external
-links, matching `.github/workflows/validate-docs.yml`; it uses only Python's
-standard library. The workflow runs this same script on pull requests to `main`
-and pushes to `main`.
+repository or point to missing paths or heading fragments, including same-file
+fragments and compatibility redirects. It ignores external links and uses only
+Python's standard library. The workflow runs this same script on pull requests
+to `main` and pushes to `main`.
 
 ## Review expectations
 

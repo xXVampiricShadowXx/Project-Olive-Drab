@@ -1,91 +1,39 @@
+<!-- docs-rework-redirect: compatibility navigation, not a rules source -->
+
+This document moved. Follow the links below to the current sections; this page is not authoritative.
+
 # Project Brief
 
-This document is the starting point for the game design. It describes what Olive Drab is trying to be before individual rules are written.
+[Read the current section](../project/game-concept.md#project-brief).
 
 ## One-sentence pitch
 
-Project Olive Drab is a real-time, roleplaying wargame where commanders coordinate during a fictional modern conflict while dealing with incomplete information, limited resources, and competing objectives.
+[Read the current section](../project/game-concept.md#project-brief-one-sentence-pitch).
 
 ## What kind of game is this?
 
-- **Medium:** Human-moderated, live campaign using maps, written orders, and agreed communication methods.
-- **Players:** Multiple players, divided among opposing factions and command roles.
-- **Time model:** Real time, with a clock driving pressure and coordination.
-- **Setting:** A fictionalized present-day conflict, initially focused on Europe.
-- **Experience:** Leadership, communication, uncertainty, logistics, and consequential decisions.
+[Read the current section](../project/game-concept.md#project-brief-what-kind-of-game-is-this).
 
 ## What this project is not yet
 
-- It is not a video game or software project.
-- It is not a historically exact simulation.
-- It is not a finished ruleset.
-- It is not a promise to reproduce every detail of modern warfare.
+[Read the current section](../project/game-concept.md#project-brief-what-this-project-is-not-yet).
 
 ## Design goals
 
-The game should make players feel:
-
-1. Pressured by time without making thoughtful planning impossible.
-2. Responsible for a role with a distinct perspective and authority.
-3. Uncertain about what is happening outside their immediate knowledge.
-4. Able to succeed through different approaches, not only tactical destruction.
-5. That communication, preparation, and political choices matter as much as combat.
+[Read the current section](../project/game-concept.md#project-brief-design-goals).
 
 ## Success criteria for an early prototype
 
-An early paper prototype is successful if:
-
-- Players can understand their role and immediate objective quickly.
-- The game creates meaningful decisions within the first 15 minutes.
-- Players have reasons to communicate across role boundaries.
-- The real-time structure creates tension without causing confusion.
-- A playtest produces specific observations that can improve the next version.
+[Read the current section](../project/game-concept.md#project-brief-success-criteria-for-an-early-prototype).
 
 ## Initial prototype targets
 
-These are working assumptions for the first complete prototype. They are deliberately narrow so that we can test the game's central experience before expanding it.
-
-- **Minimum group:** 3 people — one commander for each opposing side and one game master.
-- **Additional players:** New commanders can be added as the scenario's scale and command structure expand. There is no fixed theoretical maximum; the practical limit is how many players the game master can support clearly.
-- **First human test:** One infantry company commander per side, one company vs. one company, representing roughly 100–200 troops per side, with one game master. This is the initial playable slice, not the ceiling of the game architecture.
-- **First map:** A small town and its surrounding terrain, rather than an entire country or theater.
-- **First scenario:** A small, fictionalized near-future NATO-Russia crisis around a town, using asymmetric company forces without attempting to simulate real national militaries in detail.
-- **First human-test duration:** One scenario day, 08:00–22:00, ending after the Day 1 final control-state check.
-- **Broader prototype schedule:** A real-time week with daytime play active and nighttime play frozen. The broader schedule is exercised separately in solo/AI rehearsal and later multi-day tests; it is not a first-human-test requirement.
-- **Prototype participation:** Players act together during the active window under game-master supervision. Short breaks are allowed, and the absence procedure covers players who cannot attend.
-- **Primary experience:** Making real-time command decisions while accounting for terrain, weather, distance, logistics, uncertainty, and communication.
-- **Game master:** Resolves engagements and hidden information, controls scenario events, interprets unusual situations, moderates fair play, and keeps the game moving.
-- **Information model:** The game master maintains the authoritative map. Each commander sees their own forces and only the enemy information their side has legitimately obtained.
-- **Future systems:** Intelligence analysis, counter-intelligence, cyberwarfare, and broader information operations are expansion systems, not requirements for the first prototype.
-- **Long-term hierarchical architecture:** The game supports commanders at different organizational echelons, from fireteam/crew level through larger formations and theater-level commands. Each commander controls their immediate subordinate units using the same hierarchical command model; the first human test exercises only the company-command slice of that architecture.
-
-The initial prototype targets above are provisional and should be revisited after the first few playtests. The full-game hierarchy and its defined command tiers are documented separately and are not provisional merely because the first-test scope is narrow.
+[Read the current section](../project/game-concept.md#project-brief-initial-prototype-targets).
 
 ## Resolved prototype decisions
 
-The first prototype packet resolves the initial implementation questions:
-
-- The GM uses the timing aid for movement and routine actions, while the GM
-  adjudicates contact, combat, and unusual situations.
-- Commanders submit orders through the role-based Discord channels; the GM
-  acknowledges, accepts, tracks, and records them.
-- The GM maintains the authoritative master map and filtered commander views.
-- The active window is 08:00–22:00, the nighttime window is frozen, and the
-  shared clock uses one local time zone.
-- Player attention may be intermittent. Accepted orders and GM-validated
-  standing behaviors continue under their recorded limits, with response
-  windows, fallbacks, and temporary command covering longer absences.
-- **Scope boundary:** The first human test is intentionally company-vs-company. The broader hierarchical game architecture may use different player command echelons and subordinate-unit representations without changing that first-test scope.
+[Read the current section](../project/game-concept.md#project-brief-resolved-prototype-decisions).
 
 ## Remaining questions
 
-These questions remain for later playtests or expansion:
-
-- How many players can the smallest complete game support beyond the minimum of
-  three, and what is the shortest satisfying session?
-- How should intelligence and counter-intelligence interact with fog of war in
-  later versions?
-- How are victory and non-military success measured beyond the first town-control
-  objective?
-- What level of abstraction is appropriate for units, geography, and logistics
-  as the game expands?
+[Read the current section](../project/game-concept.md#project-brief-remaining-questions).

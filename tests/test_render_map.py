@@ -18,8 +18,8 @@ import render_map
 
 
 FIXTURE = ROOT / "tests" / "fixtures" / "fictional-game.toml"
-BUILD_SHEET = ROOT / "docs" / "playtesting" / "shared-map-build-sheet.md"
-MAP_SPEC = ROOT / "docs" / "game-design" / "12-town-map-and-terrain-sectors.md"
+BUILD_SHEET = ROOT / "docs" / "gm" / "shared-map-build-sheet.md"
+MAP_SPEC = ROOT / "docs" / "reference" / "prototype" / "map-and-terrain.md"
 
 
 class BaseMapTests(unittest.TestCase):

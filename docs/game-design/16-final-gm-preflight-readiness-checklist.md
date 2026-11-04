@@ -1,122 +1,39 @@
+<!-- docs-rework-redirect: compatibility navigation, not a rules source -->
+
+This document moved. Follow the links below to the current sections; this page is not authoritative.
+
 # Final GM Preflight and Readiness Checklist
 
-Use this as the final go/no-go gate after the initial briefing and communication
-dry run. The GM should not accept the first operational order until every
-blocking item is checked or a temporary workaround is recorded and accepted by
-both commanders.
+[Read the current section](../gm/setup-and-readiness.md#final-preflight).
 
 ## Established rules to verify
 
-- [ ] The first human test is one scenario day (Day 1); the broader prototype remains compatible with seven scenario days for later multi-day tests.
-- [ ] The shared clock is 08:00–22:00 active; 22:00–08:00 is frozen only when a multi-day prototype test continues overnight.
-- [ ] Everyone understands that real life always takes precedence. At the GM's
-      discretion, consulting players where practical, the GM may pause, suspend,
-      place the game on hiatus, otherwise adjust play, or end a session. The GM
-      records and preserves the game state and decides when play resumes after
-      discussing it with the players to confirm everyone is ready.
-- [ ] Flexible player attention is supported; accepted orders continue during
-      brief absences, subject to response windows and fallbacks.
-- [ ] The sides are one NATO infantry company and one Russian infantry company,
-      with one commander per side and one neutral GM.
-- [ ] The selected NATO and Russia echelon counts are recorded before marker placement and remain fixed for this test.
-- [ ] Brackenford's authoritative map, named sectors, approaches, and control
-      pairs are available.
-- [ ] Town control is understood as both central control pairs held without
-      opposing contest.
-- [ ] Standing behaviors and the order lifecycle are understood.
-- [ ] The prototype combat and contested-action procedure is available and will
-      be used for contact, not an invented detailed combat system.
-- [ ] The scope excludes vehicles, artillery, air support, cyberwarfare,
-      national politics, and detailed equipment.
+[Read the current section](../gm/setup-and-readiness.md#final-preflight-established-rules-to-verify).
 
 ## GM completion fields
 
-```text
-Scenario label (no calendar date):
-Shared local time zone:
-Starting scenario day/time:
-GM:
-NATO commander:
-Russia commander:
-NATO echelon count:
-Russia echelon count:
-Temporary-command contacts (if applicable; otherwise N/A):
-Weather and visibility:
-Master map version/link:
-NATO filtered map/link:
-Russia filtered map/link:
-Order register/link:
-Report register/link:
-Contact register/link:
-Decision/ruling log/link:
-Backup location:
-Real-life pause/hiatus procedure:
-```
+[Read the current section](../gm/setup-and-readiness.md#final-preflight-gm-completion-fields).
 
 ## Blocking readiness checks
 
+[Read the current section](../gm/setup-and-readiness.md#final-preflight-blocking-readiness-checks).
+
 ### People and authority
 
-- [ ] Both commanders understand their authority and information limits.
-- [ ] In the two-player arrangement, succession and temporary command do not
-      apply and no succession contacts are required. If a side has additional
-      eligible commanders, the GM has named primary and backup same-side
-      succession contacts, recorded the selection tier and handoff path, and
-      confirmed that each contact will receive only the absent role's earned
-      information.
-- [ ] The GM has explained the real-life priority rule, GM discretion,
-      pause/hiatus recording, game-state preservation, and that the GM decides
-      when play resumes after discussing readiness with the players.
-- [ ] Both commanders have received and acknowledged their private briefing.
+[Read the current section](../gm/setup-and-readiness.md#final-preflight-people-and-authority).
 
 ### Map and hidden information
 
-- [ ] The digital Brackenford map matches the authoritative ASCII specification.
-- [ ] The GM master map contains all forces, hidden zones, conditions, control,
-      routes, and map version information.
-- [ ] Each filtered view contains only public terrain, earned information, and
-      that commander's friendly information.
-- [ ] Hidden starting zones are balanced but asymmetric, and neither force starts
-      in a central control pair.
-- [ ] Each commander has proposed placement and the GM has recorded approval.
-- [ ] Weather, visibility, strength, readiness, and starting conditions are
-      recorded before the clock starts.
+[Read the current section](../gm/setup-and-readiness.md#final-preflight-map-and-hidden-information).
 
 ### Communication and records
 
-- [ ] The Discord group channel and role-based GM-visible channels passed the
-      dry run.
-- [ ] Orders, reports, contacts, rulings, and map updates have sequential IDs.
-- [ ] The GM can timestamp submissions and preserve the authoritative record.
-- [ ] Notification and backup notification methods are tested.
-- [ ] No required game action depends on personal chat.
+[Read the current section](../gm/setup-and-readiness.md#final-preflight-communication-and-records).
 
 ### Rules and aids
 
-- [ ] The order form, timing aid, control rule, report format, and commander
-      status form are available to everyone who needs them.
-- [ ] The GM has the combat sequence, outcome guide, and contact response-window
-      aid ready.
-- [ ] The GM has confirmed that the first human test ends with the Day 1 final
-      control-state check at 22:00. For a later multi-day test, the GM also knows
-      how 22:00 freezes timers and how 08:00 resumes them.
-- [ ] Standing behaviors have been reviewed for trigger, action, limits, expiry,
-      and unreachable fallback.
-- [ ] Any temporary ruling needed before play is written, neutral, and
-      symmetrical.
+[Read the current section](../gm/setup-and-readiness.md#final-preflight-rules-and-aids).
 
 ## Go/no-go decision
 
-```text
-Readiness result: GO / NO-GO
-Blocking item(s), if any:
-Temporary workaround and expiry:
-Both commanders agree to proceed: yes / no
-GM authorization time (scenario day/time):
-First accepted order ID:
-```
-
-If the result is **NO-GO**, record the blocker and do not start a timer or
-reveal the scenario clock. If the result is **GO**, publish the public briefing,
-send the private briefings, and accept the first order through the normal order
-lifecycle.
+[Read the current section](../gm/setup-and-readiness.md#final-preflight-gono-go-decision).

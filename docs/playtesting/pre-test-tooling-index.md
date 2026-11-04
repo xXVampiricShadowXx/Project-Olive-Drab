@@ -1,50 +1,15 @@
+<!-- docs-rework-redirect: compatibility navigation, not a rules source -->
+
+This document moved. Follow the links below to the current sections; this page is not authoritative.
+
 # Pre-test Tooling Index
 
-This index is the repository-side preparation package for the first human
-playtest. It makes the existing Phase 3 packet runnable and auditable without
-adding mechanics. **For the first human test, Day 1 runs 08:00–22:00 and ends
-with the final control-state check.** The broader prototype remains a fictional,
-infantry-only seven-day scenario with 08:00–22:00 active windows and
-22:00–08:00 overnight freezes; that broader schedule is exercised separately
-in solo/AI rehearsal and later multi-day tests.
+[Read the current section](../gm/index.md#preparation-tooling).
 
 ## Use in this order
 
-1. [Stable prototype snapshot and tag preparation](stable-prototype-snapshot-guide.md)
-2. [External setup and notification checks](external-setup-and-notification-checklist.md)
-3. [Participant onboarding packet](participant-onboarding-packet.md)
-4. [Solo GM seven-day rehearsal](solo-gm-seven-day-rehearsal.md)
-5. [Operational templates](operational-templates.md)
-6. [GM-only records and data handling](gm-private-records-and-data-handling.md)
-7. [Filled fictional example packet](filled-fictional-example-packet.md)
-8. [Feedback, issue, and revision framework](feedback-issue-revision-framework.md)
-9. [First-test scope and post-test decision framework](first-human-test-scope-and-decision-framework.md)
-
-These documents complement, and do not replace, the [prototype packet
-index](../game-design/09-prototype-packet-index.md), [readiness
-guide](human-playtest-readiness-guide.md), [communication rehearsal](human-communication-order-rehearsal.md),
-[observer ledger](observer-event-ledger-template.md), or [playtest report
-template](playtest-report-template.md).
-
-For the user-led external setup tracked in issues #14 and #15, use the
-[Discord build sheet](discord-build-sheet.md), [shared map build
-sheet](shared-map-build-sheet.md), and [collaborative setup
-agenda](collaborative-setup-session-agenda.md). They prepare checks, not
-external services or human sign-off.
+[Read the current section](../gm/index.md#preparation-tooling-use-in-this-order).
 
 ## Repository versus external completion
 
-Repository changes can prepare documents, IDs, checklists, examples, and
-rehearsals. They cannot create or verify a Discord account, shared map access,
-notification delivery, participant consent, accessibility needs, or human
-enjoyment. The GM must mark those items separately and must not claim a human
-test occurred until real participants complete it.
-
-Real-life priority, consent, privacy, the right to pause or withdraw, and the
-fictional framing apply to every rehearsal and test.
-
-Newcomers should start with the [participant onboarding
-packet](participant-onboarding-packet.md) and the role-by-role [player playtest
-packet](player-playtest-packet.md), then use the [human playtest
-readiness guide](human-playtest-readiness-guide.md). The GM should read the
-private-records guide before creating any working files or channels.
+[Read the current section](../gm/index.md#preparation-tooling-repository-versus-external-completion).

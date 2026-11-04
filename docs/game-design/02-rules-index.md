@@ -1,80 +1,35 @@
+<!-- docs-rework-redirect: compatibility navigation, not a rules source -->
+
+This document moved. Follow the links below to the current sections; this page is not authoritative.
+
 # Rules Index
 
-This is the working outline for the rules. A section is not complete until it has been written clearly and tested in an actual player-and-game-master session.
-
-The recorded rule-owner clarifications are incorporated in the current packet
-and listed in the [Rule-Owner Decisions](18-open-rule-owner-decisions.md) page,
-including four decisions from issue [#173](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/173).
-Human-playtest validation remains pending.
-
-For the current prototype, a checked item means the topic is covered sufficiently
-for the first playable packet. An unchecked item is either intentionally deferred
-or still needs a human-playtest validation. Prototype coverage does not mean the
-rule has been empirically validated.
+[Read the current section](../reference/prototype/index.md#rules-coverage).
 
 ## Foundation
 
-- [x] Game objective and victory — covered for the current packet; see the [recorded rule-owner decisions](18-open-rule-owner-decisions.md) for clarified withdrawal and Evacuation cases.
-- [x] Player count and role assignment
-- [x] Setup
-- [x] Definitions and terminology used by the prototype
-- [x] Safety, tone, and historical-fiction boundaries
+[Read the current section](../reference/prototype/index.md#rules-coverage-foundation).
 
 ## Time and communication
 
-- [x] How the real-time clock works
-- [x] When the clock can pause
-- [x] How players communicate
-- [x] How orders are issued, recorded, delayed, or misunderstood
-- [x] How rules questions are handled during live play
+[Read the current section](../reference/prototype/index.md#rules-coverage-time-and-communication).
 
 ## Information
 
-- [x] What information is public
-- [x] What information is private
-- [x] Basic observation and reconnaissance for the prototype
-- [x] Fog of war and uncertainty
-- [x] Reports and information delay
+[Read the current section](../reference/prototype/index.md#rules-coverage-information).
 
 ## Command and roles
 
-- [x] Authority of each role in the prototype
-- [x] Responsibilities of each role
-- [x] What happens when roles disagree
-- [x] What players can do without permission
-- [ ] How command structure changes at different map scales
+[Read the current section](../reference/prototype/index.md#rules-coverage-command-and-roles).
 
 ## Operations
 
-- [x] Movement
-- [x] Position and terrain
-- [ ] Supply and logistics beyond the prototype resupply action
-- [x] Combat — prototype procedure in [Prototype Combat and Contested Actions](13-prototype-combat-and-contested-actions.md)
-- [ ] Morale and readiness as a broader system
-- [ ] Reinforcements and replacements
-- [ ] Non-combat operations beyond the prototype procedures
+[Read the current section](../reference/prototype/index.md#rules-coverage-operations).
 
 ## Strategy and resolution
 
-- [ ] Diplomacy
-- [ ] Economy and national resources
-- [ ] Political consequences
-- [ ] Public opinion or legitimacy
-- [ ] Scenario events
-- [x] Victory, defeat, and negotiated outcomes for the prototype scope
+[Read the current section](../reference/prototype/index.md#rules-coverage-strategy-and-resolution).
 
 ## Playtesting
 
-- [x] First playable scenario
-- [x] Playtest procedure
-- [x] Feedback questions
-- [ ] Version history
-
-The unchecked topics above are not blockers for the current infantry-only prototype
-unless they are required by a specific scenario rule. They remain deferred or
-subject to human-playtest validation rather than being implied as complete.
-
-The checked victory topic denotes packet coverage, not empirical validation;
-see the [rule-owner decisions](18-open-rule-owner-decisions.md) page for the
-clarifications incorporated in the current prototype. Human-playtest validation
-remains pending.
+[Read the current section](../reference/prototype/index.md#rules-coverage-playtesting).

@@ -1,0 +1,100 @@
+# Control and Victory Conditions
+
+These are draft conditions for the first town-control scenario. They are intentionally easy to observe and adjudicate. They should be tested before adding broader political, economic, or intelligence objectives.
+
+## Control state
+
+The Brackenford map defines control at the sector and control-pair level. The GM records the authoritative state on the master map and derives the town result from the named objective locations in [Town Map and Terrain Sectors](12-town-map-and-terrain-sectors.md).
+
+- **Market Square:** `C3` and `D3` form the central control pair. A side controls the pair only when it has a **credible infantry presence** in both sectors. A credible infantry presence is an eligible force marker that is not **broken**, has not formally **withdrawn** from the scenario, and is actually occupying the named sector at the time of the control check. A **depleted** or **shaken** force remains eligible to count as present. If both sides have eligible force markers in the pair, the pair is contested and is not controlled by either side. If neither side has an eligible presence in both sectors, the pair is not controlled by either side.
+- **Town Hall Quarter:** `C4` and `D4` form the civic control pair. A side controls the pair only when it has a **credible infantry presence** in both sectors. A credible infantry presence is an eligible force marker that is not **broken**, has not formally **withdrawn** from the scenario, and is actually occupying the named sector at the time of the control check. A **depleted** or **shaken** force remains eligible to count as present. If both sides have eligible force markers in the pair, the pair is contested and is not controlled by either side. If neither side has an eligible presence in both sectors, the pair is not controlled by either side.
+- **Mill Road Junction:** `C2` and `D2` are an approach objective and observation position, but are not sufficient for town control by themselves.
+- **Station Street:** `E3` and `F3` are an approach objective and observation position, but are not sufficient for town control by themselves.
+
+A side controls the **town** only when it controls **both central control pairs** (`C3/D3` and `C4/D4`) and no opposing **eligible force marker** is contesting any required sector. An empty required sector does not by itself make a pair contested; it simply prevents that pair from being controlled. Town control therefore requires a complete, uncontested infantry presence across all four central sectors.
+
+Control is one of three states:
+
+- **Controlled:** One side controls both central control pairs and no opposing **eligible force marker** contests a required sector.
+- **Contested:** At least one central control pair is contested by opposing **eligible force markers**, so the town cannot be controlled while that contest remains.
+- **Uncontrolled:** Neither side currently controls the town and no central control pair is actively contested.
+
+A side does not gain control merely by submitting an order, observing a location, occupying an approach objective, or damaging an opposing force marker. A capture attempt becomes effective when the game master resolves the action and updates the authoritative map state.
+
+## Primary result for the first human test
+
+The first human test runs only through **Day 1's active window, 08:00–22:00**. At the end of that window, the game master checks the town's control state:
+
+- **Town controlled:** The controlling side wins the primary objective.
+- **Town contested:** The scenario ends in a draw on the primary objective; the game master reports which side has the stronger position as a **non-authoritative narrative result**, not as a win.
+- **Town uncontrolled:** Neither side wins the primary objective.
+
+The first human session ends after this final control-state check. It does not continue into additional scenario days merely to exercise the broader seven-day campaign clock.
+
+## Primary result for the broader prototype
+
+The broader prototype remains compatible with a seven-day scenario. When a multi-day test is actually run, the primary deadline is the end of **Day 7's active window**:
+
+- **Town controlled:** The controlling side wins the primary objective.
+- **Town contested:** The scenario ends in a draw on the primary objective; the game master reports which side has the stronger position as a **non-authoritative narrative result**, not as a win.
+- **Town uncontrolled:** Neither side wins the primary objective.
+
+For this rule, a **formal withdrawal from the scenario** is a successful **Withdraw** order that exits the map through one of its existing named off-map exit approaches. The GM records the unit, order, route, exit approach, and completion time in the authoritative unit/map log; only a completed, successful order counts. A withdrawal between sectors or to another destination still on the map changes position but is not a formal withdrawal from the scenario. A declaration or an unsuccessful withdrawal does not count.
+
+For the first human test, a company is considered **unable to field** when every one of that company's recorded echelon subordinate units is either **broken** or has the formal-withdrawal completion recorded as described above. This condition is derived from the existing subordinate-unit states and does not create a separate company strength state. If all recorded echelons meet that condition, the company is treated as eliminated or formally withdrawn for the immediate-victory check. Otherwise, the company remains fieldable for this purpose. Control eligibility and company fieldability use the same formal-withdrawal record.
+
+If one side is unable to field an infantry company under that definition, the other side wins immediately only if it controls the town. Otherwise, play continues until the applicable deadline for that test.
+
+## Optional secondary conditions for testing
+
+Both secondary conditions are in play in every playtest; neither is selected in advance. They are:
+
+- **Preservation:** A side that controls the town while retaining more of its starting company receives the **stronger narrative outcome**.
+- **Evacuation:** A side that cannot win control can still achieve this optional secondary condition if at least one echelon unit is not recorded as **broken** and every such unit has a completed, successful **Withdraw** order that exits the map through a designated approach by the applicable deadline. Broken units do not count as surviving force. The GM records each qualifying unit's route and completion time in the authoritative unit/map log, using the formal-withdrawal record described above. This condition does not change the primary town-control result.
+The GM publishes both secondary conditions to both commanders before the first order, alongside the primary objective and control rule. After the game ends, the GM determines, in context and using each condition's stated criteria, whether either side achieved any of them, just as the GM determines the primary result. A side may achieve more than one secondary condition, or none. Secondary conditions must never override the clearly stated primary objective during the first test.
+
+## Information discipline
+
+Information discipline is not a secondary victory condition. It is a standing expectation for every commander throughout play. The game master records whether a side made a decision from a confirmed report or a suspected report. This is an observation for playtesting, not a score. Information boundaries themselves are defined in the [prototype roleplay layer](17-prototype-roleplay-layer.md#information-and-roleplay-boundaries) and the [participant briefing](../playtesting/consent-safety-participant-briefing.md#information-boundaries).
+
+### Consequences for breaches
+
+For the first playtest, the game master decides whether a breach of information discipline has a consequence and what that consequence is ([#179](https://github.com/xXVampiricShadowXx/Project-Olive-Drab/issues/179)). No penalty is required. The GM records every breach they identify, and any consequence applied, for post-game review.
+
+Guidelines for the GM:
+
+- Be proportionate. Treat an honest mistake differently from a deliberate breach, and a first breach differently from a repeated one.
+- Be consistent. Handle the same kind of breach in the same way for both sides.
+- Be transparent. Tell the affected commander what the breach was and what consequence, if any, applies.
+- Keep the game fair. If information leaked, undo or neutralise its effect where practical, rather than only punishing it.
+- Real life and safety come first. A safety or consent concern is handled under the [participant briefing](../playtesting/consent-safety-participant-briefing.md), not as a game penalty.
+
+Optional examples a GM may use instead of designing their own. None is required, and the GM may combine, adapt, or ignore them:
+
+- **Note only:** record the breach for the post-game review, with no in-game effect.
+- **Warning:** a private reminder of the information boundary to the commander involved.
+- **Reset:** void or re-issue an order that was based on leaked or improperly obtained information.
+- **In-fiction friction:** reflect the breach in play, for example through a delayed or less certain report to the breaching side.
+- **Result note:** record the breach next to that side's result in the post-game record.
+- **Removal:** for repeated or deliberate breaches after a warning, the GM may remove a participant from the playtest.
+
+## End-of-scenario procedure
+
+When the applicable deadline or an immediate ending condition is reached, the game master:
+
+1. Stops all timers.
+2. Resolves any action that completed before the exact deadline. Any contact or contested action still unresolved at the exact **22:00 first-test boundary** produces no new post-deadline result; its last authoritative state remains the state used for the final control-state check, and the affected order/contact remains recorded as unresolved at session close.
+3. Records the final master-map state.
+4. Checks the primary condition, then determines whether either side achieved any of the secondary conditions.
+5. Sends both commanders the same public result and their final private status.
+6. Preserves the order, report, and map logs for the playtest review.
+
+## Fairness safeguards
+
+- The primary objective and control rule, plus both secondary conditions, are published to both commanders before the first order is submitted.
+- The game master uses the same definition of presence, contest, and control for both sides.
+- A control change is time-stamped and linked to the order or adjudication that caused it.
+- If an ambiguous edge case can change the result, the game master states the temporary interpretation before resolving it and records it for review.
+- Players may challenge a ruling for the post-game record, but a challenge does not pause the live clock.
+
+The prototype does not score advanced intelligence, cyberwarfare, vehicle operations, air support, or national-level objectives. Those systems can be evaluated only after the infantry-only control loop is understandable and repeatable.
